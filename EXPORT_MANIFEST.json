@@ -1,0 +1,815 @@
+{
+  "export_root": "/Volumes/Alan/Nips_com/repos/agenthon-t3",
+  "track": 3,
+  "git_initialized": false,
+  "network_or_publish": false,
+  "selected_local_version": "v5b",
+  "Linux_v5b_status": "UNVERIFIED_HOST_CPU_QUOTA_FAILURE",
+  "files": [
+    {
+      "export_path": ".github/workflows/t3-v5b-linux-correctness.yml",
+      "source_path": null,
+      "source_exact": false,
+      "generated_for_export": true,
+      "sha256": "a2f1b3b965438f41ec63fbe544e01b9d124563dcf2b65297a500c25dd96bc267",
+      "bytes": 6665,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": ".github/workflows/t3-v5b-linux-timing.yml",
+      "source_path": "t3/research1008v5b/github_linux/workflow.prepared.yml",
+      "sha256": "b67a07d9eb8e0f3e646db249be519190da2fdb119434baf41af2edbc050784b7",
+      "bytes": 5215,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": ".gitignore",
+      "source_path": null,
+      "source_exact": false,
+      "generated_for_export": true,
+      "sha256": "fc9695d9d3a86d432f751bca9fba7142e71238daec7dd25457d8d707b59905fa",
+      "bytes": 101,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "README.md",
+      "source_path": null,
+      "source_exact": false,
+      "generated_for_export": true,
+      "sha256": "d6a1156f495aae99f68e473953b194aeb3125d9cdda447ae0b5bbef90fc5d63b",
+      "bytes": 2882,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "research/v5_scalar_rejected/decision.json",
+      "source_path": "t3/research1008v5/decision.json",
+      "sha256": "2e3331cf9dbaa94290ecb582b234e175e37062bed935cfdca8e6cdd131ee81fd",
+      "bytes": 739,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "research/v5b/FINAL_REHASH_RECEIPT.json",
+      "source_path": "t3/research1008v5b/FINAL_REHASH_RECEIPT.json",
+      "sha256": "ea3e9dc7628b085c869e09a3c0e5919d128fbd0c0826d0e5c1d5362edf3b8b00",
+      "bytes": 627,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "research/v5b/PROTOCOL.json",
+      "source_path": "t3/research1008v5b/PROTOCOL.json",
+      "sha256": "6fe70efb4f0d7fdf2050f931226d29b5d308cc15e790775239ac161d0dc367bd",
+      "bytes": 5039,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "research/v5b/REPORT.md",
+      "source_path": "t3/research1008v5b/REPORT.md",
+      "sha256": "6631a63621927b5e6db375abd66efd6ef88233a08ed7e62dcf5c9bc2d440af1d",
+      "bytes": 7611,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "research/v5b/STATUS.json",
+      "source_path": "t3/research1008v5b/STATUS.json",
+      "sha256": "96a54f04090b1185e6fc4271730d963480b861b0a1efc6eb03f80d66fcd85d90",
+      "bytes": 910,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "research/v5b/controls_py313.json",
+      "source_path": "t3/research1008v5b/controls_py313.json",
+      "sha256": "b2aa7cdb934b06e4ab9f66365f2e018e74c1720563279771b8f73b1f8afb7103",
+      "bytes": 421,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "research/v5b/controls_py39.json",
+      "source_path": "t3/research1008v5b/controls_py39.json",
+      "sha256": "81bf9045fc9f326d210f5855792c9cb901c6facc3c531be7f557cb62a3cb01b3",
+      "bytes": 445,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "research/v5b/decision.json",
+      "source_path": "t3/research1008v5b/decision.json",
+      "sha256": "702d144fea1928211381cf8110b720c5869ef57197ac2692abe12146ef65efcd",
+      "bytes": 3018,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "research/v5b/independent/SCORE_COMPARABILITY.md",
+      "source_path": "t3/research1008v5b/independent_track2/SCORE_COMPARABILITY.md",
+      "sha256": "288ad98cf255d352f81e7c6c35d4e65d82d48bd4b1da5d90fe00e3e062dd14b5",
+      "bytes": 3440,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "research/v5b/independent/receipt_final.json",
+      "source_path": "t3/research1008v5b/independent_track2/receipt_final.json",
+      "sha256": "dff09d335f33043a64d9dd4bd1cfbc4e25f9a97f1f372402d5e2e7f3d116cce0",
+      "bytes": 2188,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "research/v5b/independent/receipt_timing.json",
+      "source_path": "t3/research1008v5b/independent_track2/receipt_timing.json",
+      "sha256": "ec7e50eab48729541594a4d390423c352dc4cfe47e5fce9f4b28330771a01e0c",
+      "bytes": 1976,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "research/v5b/source_changes.diff",
+      "source_path": "t3/research1008v5b/source_changes.diff",
+      "sha256": "f91be23595c2ebf1b1e21330172d4f29ce6bac5ba942be453c94671db5a906b7",
+      "bytes": 2488,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "research/v5b/source_manifest.json",
+      "source_path": "t3/research1008v5b/source_manifest.json",
+      "sha256": "bdf9079e125297976f61c6917d54af813ca0d75f45ccc296d267806ece7f49a5",
+      "bytes": 11109,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "research/v6_copy_rejected/REPORT.md",
+      "source_path": "t3/research1008v6/REPORT.md",
+      "sha256": "acb5448409847d45d9d6987beac3028561c9047ab372e80a37061f10591c7150",
+      "bytes": 3375,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "research/v6_copy_rejected/STATUS.json",
+      "source_path": "t3/research1008v6/STATUS.json",
+      "sha256": "dd374a21c880950473498ed6ce24c90bdf9447526f60263376d5eb42a2b8527e",
+      "bytes": 818,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "research/v6_copy_rejected/decision.json",
+      "source_path": "t3/research1008v6/decision.json",
+      "sha256": "dd374a21c880950473498ed6ce24c90bdf9447526f60263376d5eb42a2b8527e",
+      "bytes": 818,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/abides_fork/ORGANIZER-LICENSE",
+      "source_path": "t3/research1008v5b/runtime/abides_fork/ORGANIZER-LICENSE",
+      "sha256": "508a77d2e7b51d98adeed32648ad124b7b30241a8e70b2e72c99f92d8e5874d1",
+      "bytes": 1036,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/abides_fork/ORGANIZER-NOTICES.md",
+      "source_path": "t3/research1008v5b/runtime/abides_fork/ORGANIZER-NOTICES.md",
+      "sha256": "9ef70d9c2d374f678c9bad3badaa614e5886210203e0ffccb5b80f3fa9ce208f",
+      "bytes": 2220,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/abides_fork/__init__.py",
+      "source_path": "t3/research1008v5b/runtime/abides_fork/__init__.py",
+      "sha256": "96d421f1362c88d0ef084bd028c82192c05be383dfc4e33d2cae36348471004f",
+      "bytes": 821,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/abides_fork/agents.py",
+      "source_path": "t3/research1008v5b/runtime/abides_fork/agents.py",
+      "sha256": "f4521ce1e9d0093761df7b92e996e63a879ce909b42d158a03458eef552c636a",
+      "bytes": 9763,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/abides_fork/config.py",
+      "source_path": "t3/research1008v5b/runtime/abides_fork/config.py",
+      "sha256": "a207bc8d5cb48be18cd0b172f182fe37ef50d705f622eae963773b114ea52008",
+      "bytes": 13043,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/abides_fork/scenario_io.py",
+      "source_path": "t3/research1008v5b/runtime/abides_fork/scenario_io.py",
+      "sha256": "74d053bddb4ba95f45621b3b6d6277296b0dcce80e4960b59bbceec3fefc22fe",
+      "bytes": 2603,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/abides_fork/simulate.py",
+      "source_path": "t3/research1008v5b/runtime/abides_fork/simulate.py",
+      "sha256": "cd9239a12abb438b7f271b1c84a8ed480e661527937e4ea834e9da5617e67cf7",
+      "bytes": 4899,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/abides_fork/simulate_batch.py",
+      "source_path": "t3/research1008v5b/runtime/abides_fork/simulate_batch.py",
+      "sha256": "2fdab1b7aa622c69328fe76ada06935d77629f161b8df4f1534fcbae7b274f83",
+      "bytes": 4686,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/abides_fork/trace.py",
+      "source_path": "t3/research1008v5b/runtime/abides_fork/trace.py",
+      "sha256": "b7cea49f0b992d60bbde435374d47e8558b2198ed9cb5d164d6c868b0c5aa141",
+      "bytes": 19038,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/agent.py",
+      "source_path": "t3/research1008v5b/runtime/agent.py",
+      "sha256": "3ced49ceac4494653fd0464e46cd7ec6291c8af2c7cfb5db3e83cc598abc9e0d",
+      "bytes": 4013,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/bootstrap.py",
+      "source_path": "t3/research1008v5b/runtime/bootstrap.py",
+      "sha256": "3adc17f325d58c7fadc05201e54bb31f33ec3c9c1761539247e0c74092a43154",
+      "bytes": 426,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/contracts.py",
+      "source_path": "t3/research1008v5b/runtime/contracts.py",
+      "sha256": "868402dcf156d370d897ec611aed1f07a9c6512dce8f20397ca2006a08ef4a87",
+      "bytes": 3252,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/optimizations.py",
+      "source_path": "t3/research1008v5b/runtime/optimizations.py",
+      "sha256": "3ab2723c0064ee85ad62f6b891789e32c7308e18f2111352e1bbc34357e4071f",
+      "bytes": 1925,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/requirements.txt",
+      "source_path": "t3/research1008v5b/runtime/requirements.txt",
+      "sha256": "dd483fe3af7d5eebfc9ef9d2a1333c5e99c4e03cbd8f4b63516d4f8481e50cc4",
+      "bytes": 149,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/simulate",
+      "source_path": "t3/research1008v5b/runtime/simulate",
+      "sha256": "5ec35f8abb9c23c93d811bd4a4cbd785dc129f71f01061784b40f9d27753f87a",
+      "bytes": 80,
+      "source_exact": true,
+      "archive_mode": "0755"
+    },
+    {
+      "export_path": "src/simulate-batch",
+      "source_path": "t3/research1008v5b/runtime/simulate-batch",
+      "sha256": "9e6af3e88dec2cc510ba3b4550127d16f243f87d012b2166418e578bf6a48190",
+      "bytes": 86,
+      "source_exact": true,
+      "archive_mode": "0755"
+    },
+    {
+      "export_path": "src/vendor/abides/LICENSE",
+      "source_path": "t3/research1008v5b/runtime/vendor/abides/LICENSE",
+      "sha256": "eb7436304f90842b81820fe1bff61e4cfba74584021797bd2273680b8c15e8f9",
+      "bytes": 1525,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/vendor/abides/abides-core/abides_core/__init__.py",
+      "source_path": "t3/research1008v5b/runtime/vendor/abides/abides-core/abides_core/__init__.py",
+      "sha256": "9206dbc76e3da5b445a141b93cfccac6a038026a79de7965695f15add8fbc4ab",
+      "bytes": 206,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/vendor/abides/abides-core/abides_core/abides.py",
+      "source_path": "t3/research1008v5b/runtime/vendor/abides/abides-core/abides_core/abides.py",
+      "sha256": "2ec926e5c46327c5f04c05db6f0f6890eacf273d66b3cbbd3b655251852be8d3",
+      "bytes": 1573,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/vendor/abides/abides-core/abides_core/agent.py",
+      "source_path": "t3/research1008v5b/runtime/vendor/abides/abides-core/abides_core/agent.py",
+      "sha256": "d01a48cafcc1324254bf52f7aa9ec7a01349f8409a48e5a6492d95947f00ed17",
+      "bytes": 11834,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/vendor/abides/abides-core/abides_core/generators.py",
+      "source_path": "t3/research1008v5b/runtime/vendor/abides/abides-core/abides_core/generators.py",
+      "sha256": "01230cbdb95ff596e11a6d2284ae7df41f86d007b4e4972bb9ced96a742803c1",
+      "bytes": 2838,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/vendor/abides/abides-core/abides_core/kernel.py",
+      "source_path": "t3/research1008v5b/runtime/vendor/abides/abides-core/abides_core/kernel.py",
+      "sha256": "f4fab71d846c6ba5157addb0cb96fad07c26b60b0e05f34d58fb2e6347e00583",
+      "bytes": 25484,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/vendor/abides/abides-core/abides_core/latency_model.py",
+      "source_path": "t3/research1008v5b/runtime/vendor/abides/abides-core/abides_core/latency_model.py",
+      "sha256": "bdc67c0f5d53829d442d8a53980a5e4242cb302bc4c84c98605a944b0d6a2a61",
+      "bytes": 8166,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/vendor/abides/abides-core/abides_core/message.py",
+      "source_path": "t3/research1008v5b/runtime/vendor/abides/abides-core/abides_core/message.py",
+      "sha256": "c1ddc0f0962d68e8d6750fb00210a2676d7bbdd2dd7f3b021e9fa94287901e48",
+      "bytes": 1828,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/vendor/abides/abides-core/abides_core/utils.py",
+      "source_path": "t3/research1008v5b/runtime/vendor/abides/abides-core/abides_core/utils.py",
+      "sha256": "47e0a84fcb5dab484d01437009b29bdb3d4c4e302cdf18432370784579ff4d23",
+      "bytes": 6468,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/vendor/abides/abides-markets/abides_markets/__init__.py",
+      "source_path": "t3/research1008v5b/runtime/vendor/abides/abides-markets/abides_markets/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/vendor/abides/abides-markets/abides_markets/agents/__init__.py",
+      "source_path": "t3/research1008v5b/runtime/vendor/abides/abides-markets/abides_markets/agents/__init__.py",
+      "sha256": "078f77239c5aa4758258b7bde426661c8b5eed875c38c53a062b45d04923f109",
+      "bytes": 331,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/vendor/abides/abides-markets/abides_markets/agents/background_v2/__init__.py",
+      "source_path": "t3/research1008v5b/runtime/vendor/abides/abides-markets/abides_markets/agents/background_v2/__init__.py",
+      "sha256": "1e4da1a53fa5c3c8ad72d07bcbd4d64439ffe74eb73219ccfdc23f2df23a0434",
+      "bytes": 55,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/vendor/abides/abides-markets/abides_markets/agents/background_v2/core_background_agent.py",
+      "source_path": "t3/research1008v5b/runtime/vendor/abides/abides-markets/abides_markets/agents/background_v2/core_background_agent.py",
+      "sha256": "f45104b75a47213241ddc43d511905fa1e7bf65e08a5f6cc0a40c043356bdb7a",
+      "bytes": 13819,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/vendor/abides/abides-markets/abides_markets/agents/examples/__init__.py",
+      "source_path": "t3/research1008v5b/runtime/vendor/abides/abides-markets/abides_markets/agents/examples/__init__.py",
+      "sha256": "7f0ce2a47f9305b2d359844616009deb29c3d581bddab2bc720b9f0911821e2a",
+      "bytes": 42,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/vendor/abides/abides-markets/abides_markets/agents/examples/momentum_agent.py",
+      "source_path": "t3/research1008v5b/runtime/vendor/abides/abides-markets/abides_markets/agents/examples/momentum_agent.py",
+      "sha256": "ff2a32749d601b50721aeae92b7a38ab3a10b4f9cab53a40c1a743e21cf82008",
+      "bytes": 5795,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/vendor/abides/abides-markets/abides_markets/agents/exchange_agent.py",
+      "source_path": "t3/research1008v5b/runtime/vendor/abides/abides-markets/abides_markets/agents/exchange_agent.py",
+      "sha256": "46eb03bb0c05ed2fe014e4782b4899bf84965c4728fab99546ea6ecc75d1e699",
+      "bytes": 26887,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/vendor/abides/abides-markets/abides_markets/agents/financial_agent.py",
+      "source_path": "t3/research1008v5b/runtime/vendor/abides/abides-markets/abides_markets/agents/financial_agent.py",
+      "sha256": "4333c43a78ceaae40cc33c076b04de7a6ecc927826b49526ae8426f4ebc6ebe6",
+      "bytes": 1129,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/vendor/abides/abides-markets/abides_markets/agents/market_makers/__init__.py",
+      "source_path": "t3/research1008v5b/runtime/vendor/abides/abides-markets/abides_markets/agents/market_makers/__init__.py",
+      "sha256": "a53968350d5e240f538d34f92a61aaaca3cd3440e74fe48c4e49ecd98bb73249",
+      "bytes": 66,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/vendor/abides/abides-markets/abides_markets/agents/market_makers/adaptive_market_maker_agent.py",
+      "source_path": "t3/research1008v5b/runtime/vendor/abides/abides-markets/abides_markets/agents/market_makers/adaptive_market_maker_agent.py",
+      "sha256": "41cfd293d14ef6ab80342aff85c021ee383f43d0829dba097b80f5c65327010e",
+      "bytes": 15139,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/vendor/abides/abides-markets/abides_markets/agents/noise_agent.py",
+      "source_path": "t3/research1008v5b/runtime/vendor/abides/abides-markets/abides_markets/agents/noise_agent.py",
+      "sha256": "453b8c8b72297228e2d9aa5fd03d103336b0eeb0e36b4c757a0d697ef1ec5b3e",
+      "bytes": 4455,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/vendor/abides/abides-markets/abides_markets/agents/trading_agent.py",
+      "source_path": "t3/research1008v5b/runtime/vendor/abides/abides-markets/abides_markets/agents/trading_agent.py",
+      "sha256": "d6393f21f9f6ef4fa821a20611a6c68292de9fa93cf1684074cbbe19c6f362d9",
+      "bytes": 34858,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/vendor/abides/abides-markets/abides_markets/agents/utils.py",
+      "source_path": "t3/research1008v5b/runtime/vendor/abides/abides-markets/abides_markets/agents/utils.py",
+      "sha256": "2cf56551df8ae393ddbc628409ea5e0e01a398d55abe01163d3838e3c1802b29",
+      "bytes": 6370,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/vendor/abides/abides-markets/abides_markets/agents/value_agent.py",
+      "source_path": "t3/research1008v5b/runtime/vendor/abides/abides-markets/abides_markets/agents/value_agent.py",
+      "sha256": "6a672bef3f3b175779a2b56d70c56615c39472634034963a0a7684004999967e",
+      "bytes": 6279,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/vendor/abides/abides-markets/abides_markets/configs/__init__.py",
+      "source_path": "t3/research1008v5b/runtime/vendor/abides/abides-markets/abides_markets/configs/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/vendor/abides/abides-markets/abides_markets/configs/rmsc03.py",
+      "source_path": "t3/research1008v5b/runtime/vendor/abides/abides-markets/abides_markets/configs/rmsc03.py",
+      "sha256": "d7ee646154588f07398ca0f3a3d8e6991df094e800a31925215993407deb89fa",
+      "bytes": 9311,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/vendor/abides/abides-markets/abides_markets/configs/rmsc04.py",
+      "source_path": "t3/research1008v5b/runtime/vendor/abides/abides-markets/abides_markets/configs/rmsc04.py",
+      "sha256": "06b49e3466a536447435ef3b2613442042cf814690e30172908496c8c18962c4",
+      "bytes": 9653,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/vendor/abides/abides-markets/abides_markets/generators.py",
+      "source_path": "t3/research1008v5b/runtime/vendor/abides/abides-markets/abides_markets/generators.py",
+      "sha256": "6d6c3515ef8da970435583b92cc619ca2c1b47e3dfb058fd451eb1977aec202b",
+      "bytes": 2100,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/vendor/abides/abides-markets/abides_markets/messages/__init__.py",
+      "source_path": "t3/research1008v5b/runtime/vendor/abides/abides-markets/abides_markets/messages/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/vendor/abides/abides-markets/abides_markets/messages/market.py",
+      "source_path": "t3/research1008v5b/runtime/vendor/abides/abides-markets/abides_markets/messages/market.py",
+      "sha256": "80ab336bf859d14cd402e54139d431b6fd6eb417ddc88c0cf59e522859aac8b9",
+      "bytes": 1752,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/vendor/abides/abides-markets/abides_markets/messages/marketdata.py",
+      "source_path": "t3/research1008v5b/runtime/vendor/abides/abides-markets/abides_markets/messages/marketdata.py",
+      "sha256": "35db32bc4c8507fdd59ecdd46494cb217b1d8f19cef9e227eae71e24ea5ae0ce",
+      "bytes": 10549,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/vendor/abides/abides-markets/abides_markets/messages/order.py",
+      "source_path": "t3/research1008v5b/runtime/vendor/abides/abides-markets/abides_markets/messages/order.py",
+      "sha256": "72a688d5fe824ca8a4853d675336e0d31d1258e0f380970442b6111b2ce2af71",
+      "bytes": 755,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/vendor/abides/abides-markets/abides_markets/messages/orderbook.py",
+      "source_path": "t3/research1008v5b/runtime/vendor/abides/abides-markets/abides_markets/messages/orderbook.py",
+      "sha256": "136238cf9b1c4de5df060b2c4bd672f32adcdb5f79f94e87130ee0b74d6c8a9c",
+      "bytes": 663,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/vendor/abides/abides-markets/abides_markets/messages/query.py",
+      "source_path": "t3/research1008v5b/runtime/vendor/abides/abides-markets/abides_markets/messages/query.py",
+      "sha256": "08748ab8a15933aad64f8ec0069125a8bec2fc7e0e8d5540c05a0e85903591ba",
+      "bytes": 1461,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/vendor/abides/abides-markets/abides_markets/models/__init__.py",
+      "source_path": "t3/research1008v5b/runtime/vendor/abides/abides-markets/abides_markets/models/__init__.py",
+      "sha256": "fa77ac1dddda0d29c3ef71fdbbb48ff13d9003c67fbefe112ac821167792b4c7",
+      "bytes": 45,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/vendor/abides/abides-markets/abides_markets/models/order_size_model.py",
+      "source_path": "t3/research1008v5b/runtime/vendor/abides/abides-markets/abides_markets/models/order_size_model.py",
+      "sha256": "a6320b0737d6632f56c28ba98afa23bf7906bfdfc74089dfeb24cad26c3bfa71",
+      "bytes": 3878,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/vendor/abides/abides-markets/abides_markets/oracles/__init__.py",
+      "source_path": "t3/research1008v5b/runtime/vendor/abides/abides-markets/abides_markets/oracles/__init__.py",
+      "sha256": "eb093c38b67d8ce9bb68cf58e8deeea80630cb5441eb40f2b16f36a926d611ed",
+      "bytes": 243,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/vendor/abides/abides-markets/abides_markets/oracles/mean_reverting_oracle.py",
+      "source_path": "t3/research1008v5b/runtime/vendor/abides/abides-markets/abides_markets/oracles/mean_reverting_oracle.py",
+      "sha256": "0bdff91b87e2effe75e3233045213e65e065ef6cffc324164a570ebaf66d93e1",
+      "bytes": 5633,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/vendor/abides/abides-markets/abides_markets/oracles/oracle.py",
+      "source_path": "t3/research1008v5b/runtime/vendor/abides/abides-markets/abides_markets/oracles/oracle.py",
+      "sha256": "5c68ecd5a600a43d0304e4f3c083d0b2ec1b81a00ba837c312b1f1e2758df256",
+      "bytes": 205,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/vendor/abides/abides-markets/abides_markets/oracles/sparse_mean_reverting_oracle.py",
+      "source_path": "t3/research1008v5b/runtime/vendor/abides/abides-markets/abides_markets/oracles/sparse_mean_reverting_oracle.py",
+      "sha256": "39f4c9bed2f8947d85542ae801dc45b4dd8f422981d7f2b4f2560d733b2a656b",
+      "bytes": 7926,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/vendor/abides/abides-markets/abides_markets/order_book.py",
+      "source_path": "t3/research1008v5b/runtime/vendor/abides/abides-markets/abides_markets/order_book.py",
+      "sha256": "12b470bfe815764cf025a5383d7d0d2c2703e802a81be63488d0dd7883c31624",
+      "bytes": 31368,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/vendor/abides/abides-markets/abides_markets/orders.py",
+      "source_path": "t3/research1008v5b/runtime/vendor/abides/abides-markets/abides_markets/orders.py",
+      "sha256": "50a3c460ca4acd2d98bd08d0637971c9d4652bc9591655fb3634ffc05eb0be0e",
+      "bytes": 7331,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/vendor/abides/abides-markets/abides_markets/price_level.py",
+      "source_path": "t3/research1008v5b/runtime/vendor/abides/abides-markets/abides_markets/price_level.py",
+      "sha256": "d448ccf12f49c8078994c6d1d2ca150bfed169dbfa393fcfd4d8bc7e4eb9c1b1",
+      "bytes": 9655,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "src/vendor/abides/abides-markets/abides_markets/utils/__init__.py",
+      "source_path": "t3/research1008v5b/runtime/vendor/abides/abides-markets/abides_markets/utils/__init__.py",
+      "sha256": "349cbaa5d0db0268dd62982090bd8f11ef59835520df10eae7d0fd6818d635d6",
+      "bytes": 5583,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "verification/correctness_only/LOCAL_MAC_PREFLIGHT_REFUSAL.json",
+      "source_path": null,
+      "source_exact": false,
+      "generated_for_export": true,
+      "sha256": "601422e55fd11ffff83506f4719a31b7bd136dd0ccaec497c7a4474a0929a1d1",
+      "bytes": 1205,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "verification/correctness_only/LOCAL_STATIC_RECEIPT.json",
+      "source_path": null,
+      "source_exact": false,
+      "generated_for_export": true,
+      "sha256": "b04d3cb210afdd76a846900b865b4e9a9762b1ef648bd09f7f94c8549976862d",
+      "bytes": 1151,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "verification/correctness_only/PROTOCOL.json",
+      "source_path": null,
+      "source_exact": false,
+      "generated_for_export": true,
+      "sha256": "006dd5655b61e5326297f662d0d192304b2e5e8ca6101423036010ac1a700efd",
+      "bytes": 4200,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "verification/correctness_only/README.md",
+      "source_path": null,
+      "source_exact": false,
+      "generated_for_export": true,
+      "sha256": "102d3a0796bc23b48b0e59cb439310cd06aa2788a27546da4fa4bc10d015dc54",
+      "bytes": 2510,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "verification/correctness_only/execute_correctness.py",
+      "source_path": null,
+      "source_exact": false,
+      "generated_for_export": true,
+      "sha256": "f394d8f72c60fefd87f2a238dc5f3a7f9b50cc140c16849ba70f1a7104439562",
+      "bytes": 5988,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "verification/correctness_only/prepare_host.py",
+      "source_path": null,
+      "source_exact": false,
+      "generated_for_export": true,
+      "sha256": "d1fca8a3c4e45234997228d53cf3f0632af4fb48b956161ed82e9aa00fc34e46",
+      "bytes": 3771,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "verification/correctness_only/workflow.prepared.yml",
+      "source_path": null,
+      "source_exact": false,
+      "generated_for_export": true,
+      "sha256": "a2f1b3b965438f41ec63fbe544e01b9d124563dcf2b65297a500c25dd96bc267",
+      "bytes": 6665,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "verification/frozen/BUNDLE_RECEIPT.json",
+      "source_path": "t3/research1008v5b/github_linux/BUNDLE_RECEIPT.json",
+      "sha256": "4fef26121a1b5429ad297216c9097198210ce5773156743eeea2bbb8c258c48c",
+      "bytes": 521,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "verification/frozen/DOCUMENTATION_ANNOTATION.md",
+      "source_path": "t3/research1008v5b/github_linux/DOCUMENTATION_ANNOTATION.md",
+      "sha256": "dd623139951579d1a3a46bc96360b460b39ca1d97c134fd90cfaae07354f412a",
+      "bytes": 1147,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "verification/frozen/LOCAL_STATIC_PREFLIGHT.json",
+      "source_path": "t3/research1008v5b/github_linux/LOCAL_STATIC_PREFLIGHT.json",
+      "sha256": "8a7e0b536e7967ed5323466ddcd27e3fc9f99d37b3f618b651926597fce35296",
+      "bytes": 369,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "verification/frozen/PREEXECUTION_ENVIRONMENT_AMENDMENT.json",
+      "source_path": "t3/research1008v5b/github_linux/PREEXECUTION_ENVIRONMENT_AMENDMENT.json",
+      "sha256": "991e3fbf1d38800c5ae35f252d544c57814ae411c0faea8a42221337d0086dd0",
+      "bytes": 2640,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "verification/frozen/ROOT_STATIC_REVIEW.json",
+      "source_path": "t3/research1008v5b/github_linux/ROOT_STATIC_REVIEW.json",
+      "sha256": "c5e01189fe24f8ccf69cc3fef10d4ecd67d7ca62bfb4f1eca1cf3bb3054b0ff0",
+      "bytes": 1536,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "verification/frozen/SOURCE_MANIFEST.json",
+      "source_path": "t3/research1008v5b/github_linux/SOURCE_MANIFEST.json",
+      "sha256": "e3afaa2a194e7191b725f771a000cd7fc562dedb2c276b0fc63906b98da9b2c8",
+      "bytes": 36786,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "verification/frozen/bundle.tar.gz",
+      "source_path": "t3/research1008v5b/github_linux/bundle.tar.gz",
+      "sha256": "5b34abb947d3e01fd86d2e0ade7590e467e15e762546c77302097b71433cc387",
+      "bytes": 483713,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "verification/history/run37752817228/FAILURE_RECEIPT.json",
+      "source_path": null,
+      "source_exact": false,
+      "generated_for_export": true,
+      "sha256": "5cb1bfa9c6567d1fca95c0c3c50fbae4e7ad38e302a7d4bf8094fa5f1e10572d",
+      "bytes": 875,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "verification/history/run37752817228/PUBLICATION_RECEIPT.json",
+      "source_path": "t3/research1008v5b/github_linux/PUBLICATION_RECEIPT.json",
+      "sha256": "2146d012ecbcaa9d8f2713124db1604d4f818666c1f0533b28cc4e0df51c9f7e",
+      "bytes": 608,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "verification/history/run37752817228/dispatch.txt",
+      "source_path": "t3/research1008v5b/github_linux/dispatch.txt",
+      "sha256": "5493218ff3def4f2f5397b71ea198c01058a3fa7f6763c31bc8824abd116aeca",
+      "bytes": 1997,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "verification/history/run37752817228/failure-hostquota.png",
+      "source_path": "t3/research1008v5b/github_linux/failure-hostquota.png",
+      "sha256": "85d772f401251263626c5116ee6cab6c98ba1cb19ec917d1c3d403ea2eba07a7",
+      "bytes": 65600,
+      "source_exact": true,
+      "archive_mode": "0644"
+    },
+    {
+      "export_path": "verification/history/run37752817228/failure-hostquota.txt",
+      "source_path": "t3/research1008v5b/github_linux/failure-hostquota.txt",
+      "sha256": "db9a3d1c1e7af405fdeb6fadbbd0b530c28d85d6323b86f0249c13ad7161e68f",
+      "bytes": 447,
+      "source_exact": true,
+      "archive_mode": "0644"
+    }
+  ],
+  "file_count": 98,
+  "total_bytes": 1032912,
+  "excluded": [
+    "AppleDouble/resourceforks",
+    "raw reference Parquets",
+    "generated targets/output trees",
+    "OCI layers/credentials",
+    "other track work outside required public evaluator bundle"
+  ],
+  "mode_note": "External filesystem forces permissions; release/bootstrap packaging must use recorded archive_mode."
+}

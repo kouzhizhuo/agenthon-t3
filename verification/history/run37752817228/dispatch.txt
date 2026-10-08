@@ -1,0 +1,27 @@
+Browser tab: 7, Title: "Verify frozen T3 v5b on a dedicated Linux VM · kouzhizhuo/agenthon-t1@c5f4a25", URL: "https://github.com/kouzhizhuo/agenthon-t1/actions/runs/37752817228".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 30-32
+~						13 pop up button (collapsed) Switch repository ( option shift r ), Secondary Actions: Expand
++		44 container Workflow run summary
++			45 text Manually triggered 
++			46 container Oct 8, 2026, 16:53 GMT+8
++				47 text now
++			48 link Description: @kouzhizhuo kouzhizhuo, Value: github.com/kouzhizhuo
++			49 text ⁠
++			50 link Description:  c5f4a25, Value: github.com/kouzhizhuo/agenthon-t1/commit/c5f4a257cf86181585b78e7fce2c428cfe9adfca
++			51 link Description: main, Value: github.com/kouzhizhuo/agenthon-t1/tree/refs/heads/main
++			52 text Status Queued Total duration
++			53 link Description: –, Value: github.com/kouzhizhuo/agenthon-t1/actions/runs/37752817228/usage
++			54 text Artifacts –
++		55 container Workflow run graph
++			56 container
++				57 container
++					58 heading verify-t3-v5b.yml, Value: 2
++						59 link Description: verify-t3-v5b.yml, Value: github.com/kouzhizhuo/agenthon-t1/actions/runs/37752817228/workflow
++					60 text on: workflow_dispatch
++				61 link Description: queued: verify, Value: github.com/kouzhizhuo/agenthon-t1/actions/runs/37752817228/job/113229941662, ID: workflow-job-name-verify
++				62 button (disabled) Fit to window, ID: icon-button-7e688ee9-5e3d-4e9d-a811-ca9cc4742c98
++				63 button (disabled) Zoom out, ID: icon-button-1c924d75-cdd6-449f-aa0a-04c6ab050d90
++				64 button (disabled) Zoom in, ID: icon-button-32b7c7ad-f543-48a2-8ca4-daf8d4bf22db
++		65 container Annotations
+The focused UI element is 1 AXWebArea Verify frozen T3 v5b on a dedicated Linux VM · kouzhizhuo/agenthon-t1@c5f4a25, URL: github.com/kouzhizhuo/agenthon-t1/actions/runs/37752817228

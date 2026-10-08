@@ -1,0 +1,41 @@
+{
+  "reviewer": "track2",
+  "simulator_reruns": 0,
+  "runtime_edits": false,
+  "freeze_source_control_input_hashes_checked": 137,
+  "processes": 60,
+  "order": "Every saved record follows frozen alternating unit/pair parity, including all warmups.",
+  "speed_denominator": "baseline host wall / candidate host wall; equals candidate EPS / baseline EPS because counts are exact.",
+  "memory_denominator": "median candidate peak RSS / median baseline peak RSS, five measured processes per scenario.",
+  "all_returncodes_counts_digest_maps_exact": true,
+  "all_outliers_retained": true,
+  "macro_geomean_speed_ratio": 1.0360021252214604,
+  "descriptive_hierarchical_paired_ci95": [
+    1.0287374243559282,
+    1.0436962305154824
+  ],
+  "bootstrap_seed": 171050,
+  "bootstrap_draws": 20000,
+  "final_speed_medians": [
+    1.0327130487650364,
+    1.0268444921622144,
+    1.0387799182754727,
+    1.034452753209148,
+    1.045993053034858
+  ],
+  "final_median_rss_ratios": [
+    0.964444695940848,
+    0.9827549040741539,
+    0.9973875511131304,
+    0.9976679622431982,
+    0.9771405814416567
+  ],
+  "timing_admission": true,
+  "raw_runs_sha256": "6d25d14ea3180178119686e0e434b2aa529c5d94d250ce4f510d4e96d3a11d48",
+  "summary_sha256": "381d46ddc5eb93aed92fc0186dd1bb5ab87693882cbc28e77a8de8238ffde9db",
+  "protocol_sha256": "6fe70efb4f0d7fdf2050f931226d29b5d308cc15e790775239ac161d0dc367bd",
+  "freeze_sha256": "ed4c89bb53f3fa072677f740a71afdf6856638a0aeff81a886b7615f2c409283",
+  "scope": "Native Mac whole-process evidence; five chosen scenarios and paired repeats provide descriptive uncertainty, no Linux/gVisor rank claim. Audit verifies saved digest maps, not rehashing all timed parquet output bytes.",
+  "future_guard_note": "Benchmark checks frozen protocol/runtime/baseline/input hashes at execution. Independent audit also checks control executable hashes now; benchmark itself does not enforce its stored control hashes. No drift found.",
+  "all71_190_exact": "PENDING"
+}

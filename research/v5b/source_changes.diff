@@ -1,0 +1,51 @@
+--- baseline/abides_fork/trace.py
++++ runtime/abides_fork/trace.py
+@@ -356,7 +356,7 @@
+     return trace.astype(_TRACE_DTYPES)
+ 
+ 
+-def extract_message_trace(end_state: dict[str, Any]) -> pd.DataFrame:
++def _extract_message_trace_original(end_state: dict[str, Any]) -> pd.DataFrame:
+     """Build the v2 message-level enriched trace from the kernel ledger in ``end_state``.
+ 
+     Companion to the order-lifecycle ``trace.parquet``: one row per DELIVERED (sub)message,
+@@ -408,3 +408,39 @@
+         }
+     ).astype(_MSG_DTYPES)
+     return df[MESSAGE_TRACE_COLUMNS]
++
++
++def extract_message_trace(end_state: dict[str, Any]) -> pd.DataFrame:
++    """Bulk exact integer projection of the original filtered/sorted ledger.
++
++    NumPy integer inference never passes nanosecond values through floats.
++    Other inference domains retain the unchanged original extractor. Nullable
++    arrays use the same explicit Pandas construction as the original.
++    """
++    ledger = end_state.get("message_ledger") or []
++    seqmap = end_state.get("deliver_seq_by_key") or {}
++    if type(ledger) is not list or type(seqmap) is not dict or not ledger:
++        return _extract_message_trace_original(end_state)
++    try:
++        rows = [(seq, row) for row in ledger
++            if (seq := seqmap.get((int(row["message_id"]), int(row["dst_id"])))) is not None]
++        if not rows:
++            return _extract_message_trace_original(end_state)
++        rows.sort(key=lambda sr: sr[0])
++        led = [row for _, row in rows]
++        columns = {}
++        for name, dtype in _MSG_DTYPES.items():
++            values = [seq for seq, _ in rows] if name == "seq" else [row[name] for row in led]
++            if dtype in ("string", "Int64"):
++                columns[name] = pd.array(values, dtype=dtype)
++            else:
++                numbers = np.asarray(values)
++                if numbers.dtype.kind not in ("b", "i"):
++                    return _extract_message_trace_original(end_state)
++                lower, upper = (-(1 << 31), 1 << 31) if dtype == "int32" else (-(1 << 63), 1 << 63)
++                if np.any(numbers < lower) or np.any(numbers >= upper):
++                    return _extract_message_trace_original(end_state)
++                columns[name] = numbers.astype(dtype, copy=False)
++        return pd.DataFrame(columns, columns=MESSAGE_TRACE_COLUMNS)
++    except (TypeError, ValueError, KeyError, OverflowError):
++        return _extract_message_trace_original(end_state)

@@ -1,0 +1,13 @@
+{
+  "timing_processes_rehashed": 84,
+  "all_timing_output_files_exact_to_saved_digests": true,
+  "public_units_output_files_rehashed": 71,
+  "all_public_bytes_exact_to_saved_digests_and_incumbent": true,
+  "source_protocol_control_hashes_exact": true,
+  "timing_raw_hashes": {
+    "pilot": "3164b0710db27d05ea41ffe003713919d01d61a9ac9011741b9efcbb145bb5e2",
+    "final": "6d25d14ea3180178119686e0e434b2aa529c5d94d250ce4f510d4e96d3a11d48"
+  },
+  "all71_summary_sha256": "5fb79c7f1ba5d6ab7dc4fdde358fb93159f8fa6d824d1769ce597fe54edc61a3",
+  "decision_sha256": "702d144fea1928211381cf8110b720c5869ef57197ac2692abe12146ef65efcd"
+}

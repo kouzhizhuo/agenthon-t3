@@ -1,0 +1,20 @@
+{
+  "selected": false,
+  "rankable": false,
+  "stage": "PILOT_REJECTED",
+  "pilot_admission_passed": false,
+  "pilot_macro_geomean_ratio": 1.013537312521966,
+  "scenario_medians_ge1": 2,
+  "minimum_scenario_median": 0.9879319954636605,
+  "maximum_median_RSS_ratio": 1.000198570293884,
+  "all24_output_bytes_event_counts_exact": true,
+  "bothstack288_controls_passed": true,
+  "reason": "heterobatch median0.98793199546 belowpredeclared0.99; reject withoutall71/final orrescue",
+  "all71_runs": 0,
+  "final_timing_runs": 0,
+  "retained_incumbent": "research1008v5b",
+  "source_output_rehash_errors": [],
+  "publication_or_submission": false,
+  "protocol_sha256": "daf2f0e439f63099c070444edd85272828392e71c57ce036859583e5c8d85e4a",
+  "freeze_sha256": "1ebc21c934158fa4be6599c6b26aff64325173e90abf2d0739b22390bdfa4eea"
+}

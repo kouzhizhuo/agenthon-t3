@@ -1,0 +1,15 @@
+{
+  "status": "rejected_profile_regression_retained_v3",
+  "rankable": false,
+  "baseline_message_profile_sec": 0.302557042,
+  "candidate_message_profile_sec": 0.402473667,
+  "exact_profile_output_bytes": true,
+  "controls566_bothstacks": true,
+  "full_public_sweep_run": false,
+  "pilot_or_final_timing_run": false,
+  "admission_rule_satisfied": false,
+  "reason": "Guarded scalar column writes/extra rowpasses erase generic-inference savings; matched component profile regresses. No further measurements warranted for this exact candidate.",
+  "candidate_freeze_sha256": "7fc1623ddd19707dfb4e8ebbaf05bc79a4c308b08fe7081b338a853dcf337343",
+  "runtime_retained_for_evidence_only": true,
+  "selected_runtime": "../research1008v3/runtime"
+}

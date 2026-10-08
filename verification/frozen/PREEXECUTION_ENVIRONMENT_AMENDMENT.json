@@ -1,0 +1,20 @@
+{
+  "phase": "PREPARED_ONLY_NOT_DISPATCHED",
+  "original_linux_protocol_sha256": "9f27cdbc0fb901f59471e487d263828361ea749ace9f82388b1d339c80f2e55c",
+  "scope": "GitHub-hosted ubuntu-24.04 ephemeral amd64 VM on the existing authorized repository route; one correctness cohort and one timing cohort; no contestant image build or push.",
+  "reason": "Frozen run.py requires an image and evaluator already present. A fresh hosted VM must install its evaluator and anonymously pull the exact existing image before entering the unchanged harness.",
+  "setup_outside_harness": [
+    "Fetch and verify the exact reviewed source/evaluator/input/reference bundle hash, with safe relative regular-file extraction only.",
+    "Install exact CPython3.13.7 evaluator plus pinned Linux wheels from public Python registry before any cohort; record dependency and wheel hashes.",
+    "Use an empty isolated Docker config to anonymously pull the exact original v2 image digest; no credentials or package publication.",
+    "Record VM CPU/memory/kernel/Docker/cgroup versions and cpuset before any accuracy/timing; no other agent jobs on this VM; numerical threads1.",
+    "Run actual CPython3.11.17 immutable-image differential controls in an evaluator-only writable round with original old/new source read-only, before correctness or timing.",
+    "Run unchanged original frozen harness preflight, correctness and timing; save all warmups/outliers/failures and environment artifacts.",
+    "Always upload evidence as a workflow run artifact, never publish a contestant image or official submission."
+  ],
+  "cpu_limits": "Use all allowed VM CPUs in one fixed cpuset with no imposed CPU quota and no concurrent job steps. The ephemeral VM is dedicated to this job, but physical host contention and steal cannot be excluded; measure and report them, invalidate any observed throttling. This is an explicit departure from strict physical exclusive/nonthrottled host certification, not a silent equivalence claim.",
+  "memory_preflight": "16GiB container cap is unchanged upperlimit, notallocation. Require hostMemTotal>=12GiB (nominal16GiBpublicrunner), hostMemAvailable>=4GiB beforeallcohorts and continuouslyduringrun; private7GiBVMrefused. Observed fullpublicMacmaxRSS3.096GiB is descriptive and notLinuxguarantee. Monitorhost/cgroups/OOM andstop/preserveifavailableguardfails; nocapreduction.",
+  "official_limits": "Hosted runc VM timing is nonrankable practice, no signed C1/C2/C7, GPU UUID or Final hardware attribution; exact packaged v5bOCI remains unvalidated.",
+  "publication_or_submission": false,
+  "requires_root_review_before_dispatch": true
+}

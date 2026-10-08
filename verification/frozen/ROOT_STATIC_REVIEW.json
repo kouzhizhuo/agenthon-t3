@@ -1,0 +1,20 @@
+{
+  "decision": "ALLOW_ONE_FROZEN_GITHUB_LINUX_VERIFICATION",
+  "bundle_sha256": "5b34abb947d3e01fd86d2e0ade7590e467e15e762546c77302097b71433cc387",
+  "bundle_bytes": 483713,
+  "workflow_sha256": "b67a07d9eb8e0f3e646db249be519190da2fdb119434baf41af2edbc050784b7",
+  "original657path_freeze_exact": true,
+  "review": "Reviewed actual-stack controls, pinned public427reference retrieval incl190LFS OIDs, safe extraction, memory>=12GiB/available>=4GiB guard, cpuset/nonquota/cgroup check, actual immutable image version checks,142correctness and120timing cohorts, own-container cleanup, always-artifacts, combined admission. No generated references or credentials in bundle; evaluator/reference bytes stay outside contestant runtime.",
+  "limits": [
+    "Source-mount validation does not certify future OCI image or official Final hardware.",
+    "Nominal GitHub VM physical exclusivity cannot be certified; host CPUstat/steal and cgroupthrottling retained.",
+    "Host memory monitor readerror is not explicitly propagated, standard /proc assumed; preserve observed samples and inspect their continuity.",
+    "This is one fixedcohort; missing resources/dependencies or errors stop, no rescue timing reruns."
+  ],
+  "authorized_external_actions": [
+    "Host reviewed nonprivate compactbundle on existing kouzhizhuo/agenthon-t1 public release",
+    "Publish manual verification workflow on same existing repository",
+    "Dispatch exactlyone fixedcohort and retain evidence"
+  ],
+  "contestant_build_push_or_official_submission": false
+}

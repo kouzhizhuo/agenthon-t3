@@ -1,0 +1,15 @@
+{
+  "prepared_only": true,
+  "dispatch_or_upload": false,
+  "bundle_bytes": 483713,
+  "bundle_sha256": "5b34abb947d3e01fd86d2e0ade7590e467e15e762546c77302097b71433cc387",
+  "source_files": 240,
+  "source_total_bytes": 1946930,
+  "external_public_reference_files": 427,
+  "external_git_lfs_files": 190,
+  "original_freeze_paths": 657,
+  "original_freeze_preserved": true,
+  "workflow_sha256": "b67a07d9eb8e0f3e646db249be519190da2fdb119434baf41af2edbc050784b7",
+  "linux_execution": false,
+  "root_review_required": true
+}

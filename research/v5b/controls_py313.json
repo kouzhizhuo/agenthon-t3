@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "cases": 566,
+  "python": "3.13.7 (main, Sep 18 2025, 22:52:34) [Clang 20.1.4 ]",
+  "numpy": "2.2.6",
+  "pandas": "2.3.3",
+  "source_sha256": "b7cea49f0b992d60bbde435374d47e8558b2198ed9cb5d164d6c868b0c5aa141",
+  "baseline_sha256": "ac4a28892f903f1c5790f54e25833188efa7e57e32fab8e651092a9b329733e7",
+  "scope": "exact frame values/dtypes/index/order and fallback error classes; no forecast/timing"
+}

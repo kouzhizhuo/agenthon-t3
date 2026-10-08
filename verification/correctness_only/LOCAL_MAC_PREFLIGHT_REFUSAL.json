@@ -1,0 +1,45 @@
+{
+  "scope": "correctness_only",
+  "rankable": false,
+  "performance_admission": false,
+  "platform": "darwin",
+  "host": "macOS-27.0.1-arm64-arm-64bit",
+  "machine": "arm64",
+  "memory": null,
+  "cpuset": null,
+  "cpu_max": null,
+  "lscpu": null,
+  "cgroup_v2": false,
+  "read_errors": [
+    {
+      "field": "memory",
+      "type": "FileNotFoundError",
+      "reason": "[Errno 2] No such file or directory: '/proc/meminfo'"
+    },
+    {
+      "field": "cpuset",
+      "type": "AttributeError",
+      "reason": "module 'os' has no attribute 'sched_getaffinity'"
+    },
+    {
+      "field": "cpu_max",
+      "type": "FileNotFoundError",
+      "reason": "[Errno 2] No such file or directory: '/sys/fs/cgroup/cpu.max'"
+    },
+    {
+      "field": "lscpu",
+      "type": "FileNotFoundError",
+      "reason": "[Errno 2] No such file or directory: 'lscpu'"
+    }
+  ],
+  "guard_errors": [
+    "actual Linuxamd64 required",
+    "VMRAM below unchanged environment guard",
+    "readable cgroupv2 required",
+    "nonempty CPU affinity required",
+    "readable well-formed host cpu.max required"
+  ],
+  "guard_passed": false,
+  "host_cpu_quota_imposed": true,
+  "host_cpu_quota_allowed_only_for_correctness": true
+}

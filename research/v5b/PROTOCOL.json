@@ -1,0 +1,87 @@
+{
+  "created": "2026-10-08",
+  "baseline": "exact retained v3 59-file source, immutable BASELINE_MANIFEST.json",
+  "candidate": "one guarded NumPy bulk integer-column projection inside original message extractor; same original rowfilter/sort/nullablearrays, no scalar numeric write guard",
+  "supported": "NumPy inferable bool/signed integer numeric lists with vectorbounds preserving exact original astype; object/float/unsigned/overflow/custom domains fallback original",
+  "correctness": "566 differential controls both stacks, all71 original public units/190frames/developer gates, exact timed parquet bytes/counts",
+  "profile_units": [
+    "t3-gb-base-30agent-30s",
+    "t3-gb-highfreq-40hz-60s",
+    "t3-gbatch-hetero-mix"
+  ],
+  "pilot_units": [
+    "t3-gb-base-30agent-30s",
+    "t3-gb-highfreq-40hz-60s",
+    "t3-gbatch-hetero-mix"
+  ],
+  "separate_final_units": [
+    "t3-mr-deep-book-state-size",
+    "t3-eq-deterministic-baseline",
+    "t3-gbatch-homog-4",
+    "t3-gbatch-varsize",
+    "t3-ra01-fundamental-shock-mid"
+  ],
+  "input_sha256": {
+    "t3-gb-base-30agent-30s": {
+      "scenario.json": "5e7783b77789c3075d6f72fa5ca65a0e661cb421aa33cf369a635455bd338ff0"
+    },
+    "t3-gb-highfreq-40hz-60s": {
+      "scenario.json": "f9efd1a6693436f29ac2940f2ddfa9148ef3316b367c38cca135ab82e8997d6c"
+    },
+    "t3-gbatch-hetero-mix": {
+      "batch.json": "35d67fdb4c4340c93b8b36bca36c8085dfb65e933a2fc78c72d39edbc43f71f9",
+      "scenarios/sub_00_noise.json": "6b08dade5cc3da793c301f6fbaa37a77c538dc092604ae45809dfe3727688177",
+      "scenarios/sub_01_value.json": "885a671c7a0d752367d2046c7cc7945c285e93d9d4c22434691c5162da0ce6e7",
+      "scenarios/sub_02_mm.json": "9e50ce27969a3d491dcfabcb676c3cd24cb8681a3f6dd29034b17be195623006",
+      "scenarios/sub_03_momentum.json": "62ea32772b8bca3834419b67a73bb3693c6b53e9bc8407f49d90d67a1aa2d39c",
+      "scenarios/sub_04_base.json": "c7d68ac77ebb9e8632276040df7e067f030d6fa1da25e7b4127f1cb40fbc1cd3"
+    },
+    "t3-mr-deep-book-state-size": {
+      "scenario.json": "ece8b904b0bca208e2736e85269934e5c799f5299119dca7490092f9db01dfb7"
+    },
+    "t3-eq-deterministic-baseline": {
+      "scenario.json": "a7443084be120140edbaed8db5fd1363c827292ff8b765e277c9b705fb955947"
+    },
+    "t3-gbatch-homog-4": {
+      "batch.json": "347523d405c1139488d56fc73f12eb66611f7b970659890657ab0b5895d5eebe",
+      "scenarios/sub_00.json": "113e5a65f2761a7b1a4187bf6f06573e946ff96fea16c695d7ea4920ae516da9",
+      "scenarios/sub_01.json": "3b72d65e9ed671d4395de20395e9aa93ec2dd587d2f0b5fc4e15cd4a40802014",
+      "scenarios/sub_02.json": "b3d631060cbd68d95bb60215ccbbb51da75be1a377e77e6a38f5a5c6adb49ea2",
+      "scenarios/sub_03.json": "019a9c75626f554bea3668252870cf898bb4b0d84e99a239c75d8a3fd4705335"
+    },
+    "t3-gbatch-varsize": {
+      "batch.json": "6264b574ebaf6be5f7e26674bd7a90495d6097556f26fa4bd728e7f56b3b4fb4",
+      "scenarios/sub_00_short.json": "32f4e13e5f7cbf3fbd55595003b552f7e06cf3480109ca1576cdf8df1f0af8b5",
+      "scenarios/sub_01_med.json": "9a5e0d8ae7aeac7af0d4e3cd62674a681544a374792d245800d227fa9444d573",
+      "scenarios/sub_02_long.json": "a2b6f8d4d20feab96d1468aae97fb33c498ff97a82119a2b140785542a29a225",
+      "scenarios/sub_03_med.json": "9059919f8b6de60cd014c00f5402d58204aab915b5a4498ac4a8103774da896e"
+    },
+    "t3-ra01-fundamental-shock-mid": {
+      "scenario.json": "e773520d16c6ec517dff04347029f6f34a95d6d01b45a8e35a60f9aeafffaff7"
+    }
+  },
+  "pilot": {
+    "warmup_pairs": 1,
+    "measured_pairs": 3
+  },
+  "final": {
+    "warmup_pairs": 1,
+    "measured_pairs": 5
+  },
+  "pair_order": "alternating incumbent/candidate; flip start by unit index+pair index parity",
+  "resources": "fresh source-only subprocesses on existing local Mac; numerical threads1; bytecode writes disabled; CPU isolation coordinated with root; full process cost includes /usr/bin/time wrapper/startup/import/config/simulate/extract/validate/write/shutdown; wallclock parent measured and maxRSS host /usr/bin/time -l measured",
+  "memory_admission": "all final scenario median peakRSS candidate/incumbent <=1.05; no scorewise exclusion",
+  "bootstrap": {
+    "estimator": "hierarchical paired geometric speed ratio; uniformly resample scenarios then paired wall ratios within scenario",
+    "seed": 171050,
+    "draws": 20000,
+    "ci95": [
+      0.025,
+      0.975
+    ]
+  },
+  "admission": "allcorrect, finalmacroCI lower>1, >=4/5 pairedscenario medians>=1, no median<.97, finalmedianRSSratio<=1.05 allscenarios. Pilot warrantsmeasurement only, cannot override final. Retain alloutliers; no repeat for significance. Failedcandidate preserved v3 retained.",
+  "official_limits": "nonrankable nativeMac source evidence; noLinux/gVisor/B200rank claim",
+  "publication_or_submission": "latest user authorizes bounded useful official revisions; root alone manages reviewed Linux packaging and one feedback iteration after result; candidate itself remains research until admission",
+  "previous_candidate": "research1008v5 rejected matched profile scalarcolumn regression; immutable"
+}

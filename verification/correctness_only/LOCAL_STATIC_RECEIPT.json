@@ -1,0 +1,24 @@
+{
+  "phase": "LOCAL_STATIC_ONLY_BEFORE_ROOT_REVIEW",
+  "original_bundle_sha256": "5b34abb947d3e01fd86d2e0ade7590e467e15e762546c77302097b71433cc387",
+  "original_bundle_regular_files": 240,
+  "original657freeze_paths": 657,
+  "original_freeze_hash_errors": [],
+  "source_copy_hashes_pass": true,
+  "runtime_files_exact": 59,
+  "helper_AST_pass": true,
+  "frozen_reference_tail_AST_pass": true,
+  "local_Mac_guard_refusal_receipt": "LOCAL_MAC_PREFLIGHT_REFUSAL.json",
+  "local_Mac_preflight_failed_before_reference": true,
+  "helper_hashes": {
+    "prepare_host.py": "d1fca8a3c4e45234997228d53cf3f0632af4fb48b956161ed82e9aa00fc34e46",
+    "execute_correctness.py": "f394d8f72c60fefd87f2a238dc5f3a7f9b50cc140c16849ba70f1a7104439562"
+  },
+  "workflow_sha256": "a2f1b3b965438f41ec63fbe544e01b9d124563dcf2b65297a500c25dd96bc267",
+  "host_memory_monitor_errors_explicitly_propagated": true,
+  "Linux_helper_execution": false,
+  "controls_or_correctness_runs": 0,
+  "timing_execution": false,
+  "root_review_required": true,
+  "pre_review_strengthening": "Explicit566/controlversion/tracehash admission; no candidate/harness/source/control or rerun change"
+}

@@ -1,0 +1,98 @@
+{
+  "rankable": false,
+  "macro_geomean_speed_ratio": 1.0360021252214604,
+  "descriptive_hierarchical_paired_ci95": [
+    1.0287374243559282,
+    1.0436962305154824
+  ],
+  "controls566_both_stacks": true,
+  "all71_190_exact": true,
+  "all_timing_bytes_exact": true,
+  "medians_atleast1": 5,
+  "none_below097": true,
+  "all_median_rss_ratio_le105": true,
+  "selected": true,
+  "protocol_sha256": "6fe70efb4f0d7fdf2050f931226d29b5d308cc15e790775239ac161d0dc367bd",
+  "units": [
+    {
+      "unit": "t3-mr-deep-book-state-size",
+      "all_bytes_count_exact": true,
+      "paired_ratios": [
+        1.0198955532339462,
+        1.0373059782225151,
+        1.0198626070635461,
+        1.0327130487650364,
+        1.0342661523796792
+      ],
+      "paired_median_ratio": 1.0327130487650364,
+      "geomean_ratio": 1.0287817343593784,
+      "median_peak_rss_ratio": 0.964444695940848,
+      "baseline_median_peak_rss_bytes": 868614144,
+      "candidate_median_peak_rss_bytes": 837730304
+    },
+    {
+      "unit": "t3-eq-deterministic-baseline",
+      "all_bytes_count_exact": true,
+      "paired_ratios": [
+        1.0160011441205496,
+        1.0515273880122986,
+        1.0268444921622144,
+        1.0108393800558388,
+        1.0383577894008467
+      ],
+      "paired_median_ratio": 1.0268444921622144,
+      "geomean_ratio": 1.0286075987953727,
+      "median_peak_rss_ratio": 0.9827549040741539,
+      "baseline_median_peak_rss_bytes": 152010752,
+      "candidate_median_peak_rss_bytes": 149389312
+    },
+    {
+      "unit": "t3-gbatch-homog-4",
+      "all_bytes_count_exact": true,
+      "paired_ratios": [
+        1.0566764353001683,
+        1.0408219691725384,
+        1.0283172792165602,
+        1.035706912440862,
+        1.0387799182754727
+      ],
+      "paired_median_ratio": 1.0387799182754727,
+      "geomean_ratio": 1.0400188367852585,
+      "median_peak_rss_ratio": 0.9973875511131304,
+      "baseline_median_peak_rss_bytes": 144244736,
+      "candidate_median_peak_rss_bytes": 143867904
+    },
+    {
+      "unit": "t3-gbatch-varsize",
+      "all_bytes_count_exact": true,
+      "paired_ratios": [
+        1.0499812070821348,
+        1.046585366102329,
+        1.034452753209148,
+        1.0323258101046007,
+        1.031446392485139
+      ],
+      "paired_median_ratio": 1.034452753209148,
+      "geomean_ratio": 1.038929452300347,
+      "median_peak_rss_ratio": 0.9976679622431982,
+      "baseline_median_peak_rss_bytes": 147537920,
+      "candidate_median_peak_rss_bytes": 147193856
+    },
+    {
+      "unit": "t3-ra01-fundamental-shock-mid",
+      "all_bytes_count_exact": true,
+      "paired_ratios": [
+        1.027123631747644,
+        1.0184803636062787,
+        1.0485994743545388,
+        1.045993053034858,
+        1.0796951658587315
+      ],
+      "paired_median_ratio": 1.045993053034858,
+      "geomean_ratio": 1.0437656370600914,
+      "median_peak_rss_ratio": 0.9771405814416567,
+      "baseline_median_peak_rss_bytes": 205701120,
+      "candidate_median_peak_rss_bytes": 200998912
+    }
+  ]
+}

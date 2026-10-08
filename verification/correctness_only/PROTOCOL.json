@@ -1,0 +1,28 @@
+{
+  "phase": "PREPARED_SEPARATE_CORRECTNESS_ONLY_ENVIRONMENT_AMENDMENT",
+  "root_review_required_before_dispatch": true,
+  "predecessor_run": 37752817228,
+  "predecessor_outcome": "Original strict timing route failed host CPU quota guard before reference, image or cohorts. Preserve it without rescue timing.",
+  "immutable_source_bundle": {
+    "sha256": "5b34abb947d3e01fd86d2e0ade7590e467e15e762546c77302097b71433cc387",
+    "bytes": 483713,
+    "regular_files": 240,
+    "original_freeze_paths": 657,
+    "original_harness_protocol_sha256": "9f27cdbc0fb901f59471e487d263828361ea749ace9f82388b1d339c80f2e55c",
+    "mutation": false
+  },
+  "exact_image": "ghcr.io/kouzhizhuo/agenthon-t3@sha256:5a190afe0bdfe7685e64cbf1aec30d39885199c85f688a971b8d4a0ab8d217eb",
+  "scope": "One finite actual Linux/amd64 source-mount correctness verification only. Exact Python3.11 image and Python3.13.7 host differential controls; original run.py correctness arm invokes both exact v3/v5b over all71 units,142 processes. No timing mode, warmup/pair performance cohort, speedup, CI or promotion inference.",
+  "environment_change": "Only this separate untimed correctness environment records a valid hosted CPU quota instead of rejecting it. Readable cgroupv2, nonempty affinity, actual Linuxamd64, MemTotal>=12GiB, MemAvailable>=4GiB and existing exact image/dependencies remain required. No original bundle or timing guard is relaxed.",
+  "host_receipt": "Write HOST_PREFLIGHT.json before evaluating any guard, including null fields and structured read errors for incomplete host observations. Append guard_errors/guard_passed after checking Linux,architecture,memory,cgroup,affinity,quota syntax and lscpu. Failure preserves receipt before exiting. No reference acquisition on failed preflight.",
+  "monitor": "Read host MemAvailable,/proc/stat and root cgroup cpu.stat every500ms. Catch and record all read/parse errors; any observed error or low memory propagates to the controller, triggers original own-container cleanup, rejects verification and preserves samples/failure receipt. Thread must terminate and all monitor records must be saved. Unexpected disappearance cannot silently certify correctness.",
+  "unchanged_runtime_guards": "Original source/input readonly, networknone,nonroot,capdropall,nnp,16GiB,pid256,FD1024,tmp64MiB,thread1/hashseed0/nobytecode. Fresh outputs; evaluator references only after runtime exit. Exact frozen controls and wheel/reference/image integrity precede correctness.",
+  "telemetry_interpretation": "Original correctness harness emits incidental walls/rates/ratios and container cgroup samples. Retain them as raw diagnostics only; do not evaluate timing admission or report a speed result. Host quota/throttling is recorded rather than used to reject this correctness-only route. Original sampler's successful samples remain required; it is unchanged and its transient discovery/disappearance exception handling does not certify complete telemetry coverage. Separate host-monitor errors propagate explicitly.",
+  "admission": "Exactly566 controls pass on each actual311/313 stack; exactly142 correctness processes and all71units/190referenceframes bothvariants with exactoutputbytes/counts/developer gates; original657freeze intact; no host-monitor/read/memory/cohort failure. Completion verifies source compatibility only, not future OCI source layer, Final hardware or performance.",
+  "failure_policy": "Keep all partial outputs/logs/containerstate/cgroups/controls/acquisition receipts; stop without replacement processes or repeat for success. On signal allow original cleanup up to45seconds,then terminate only own processgroup if necessary. Always upload evidence artifact including failure; no paid/personal compute or OCI push.",
+  "workflow": "Manual dispatch only in the new separate T3 repository. Same HTTPS bundle input and fixed hash. Correctness scripts come from one pinned Git commit via public HTTPS, whose fixed expected SHA256 values are embedded in the reviewed workflow; safe regular archive extraction remains exact.",
+  "timing_execution": false,
+  "performance_admission": false,
+  "official_submission": false,
+  "currently_executed": false
+}

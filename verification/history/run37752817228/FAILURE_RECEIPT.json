@@ -1,0 +1,19 @@
+{
+  "run_id": 37752817228,
+  "run_url": "https://github.com/kouzhizhuo/agenthon-t1/actions/runs/37752817228",
+  "workflow_commit": "c5f4a257cf86181585b78e7fce2c428cfe9adfca",
+  "bundle_sha256": "5b34abb947d3e01fd86d2e0ade7590e467e15e762546c77302097b71433cc387",
+  "status": "FAILED_HOST_PREFLIGHT",
+  "failure": "prepare_host.py rejected an imposed host cgroup CPU quota before writing HOST_PREFLIGHT.json",
+  "memory_guard_reached_and_passed": true,
+  "reference_acquisition_started": false,
+  "image_pull_started": false,
+  "actual_stack_controls_started": false,
+  "correctness_processes": 0,
+  "timing_processes": 0,
+  "host_cpu_max_value_saved": false,
+  "linux_v5b_verified": false,
+  "timing_rerun_authorized": false,
+  "original_timing_guard_preserved": true,
+  "authority": "Root observed and retained GitHub workflow failure UI; no numeric host metrics invented"
+}

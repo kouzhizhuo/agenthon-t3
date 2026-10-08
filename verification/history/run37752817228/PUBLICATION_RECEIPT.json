@@ -1,0 +1,11 @@
+{
+  "repository": "kouzhizhuo/agenthon-t1",
+  "release_url": "https://github.com/kouzhizhuo/agenthon-t1/releases/tag/t3-v5b-linux-20261008",
+  "bundle_url": "https://github.com/kouzhizhuo/agenthon-t1/releases/download/t3-v5b-linux-20261008/bundle.tar.gz",
+  "bundle_sha256": "5b34abb947d3e01fd86d2e0ade7590e467e15e762546c77302097b71433cc387",
+  "workflow_commit": "c5f4a257cf86181585b78e7fce2c428cfe9adfca",
+  "workflow_sha256": "b67a07d9eb8e0f3e646db249be519190da2fdb119434baf41af2edbc050784b7",
+  "workflow_exact": true,
+  "published_via": "Authorized root Codex browser",
+  "official_submission": false
+}

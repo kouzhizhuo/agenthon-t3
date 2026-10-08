@@ -1,0 +1,30 @@
+{
+  "status": "selected_local_research_complete_independent_review_passed",
+  "rankable": false,
+  "baseline": "retained research1008v3/runtime",
+  "candidate_trace_sha256": "b7cea49f0b992d60bbde435374d47e8558b2198ed9cb5d164d6c868b0c5aa141",
+  "controls_both_stacks": {
+    "cases": 566,
+    "passed": true
+  },
+  "pilot": {
+    "processes": 24,
+    "all_bytes_count_exact": true
+  },
+  "final_timing": {
+    "processes": 60,
+    "all_bytes_count_exact": true,
+    "macro_geomean_speed_ratio": 1.0360021252214604,
+    "descriptive_ci95": [
+      1.0287374243559282,
+      1.0436962305154824
+    ]
+  },
+  "no_image_or_submission_by_track3": true,
+  "selection_requires": [],
+  "limits": "nativeMacsource; no Linux/gVisor/B200 official rank",
+  "all71_190_exact": true,
+  "selected_runtime": "runtime",
+  "independent_final_review": "independent_track2/receipt_final.json",
+  "independent_review_passed": true
+}

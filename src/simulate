@@ -1,0 +1,2 @@
+#!/bin/sh
+exec "${T3_PYTHON:-python3}" "$(dirname "$0")/agent.py" simulate "$@"
