@@ -1,0 +1,18 @@
+{
+  "verdict": "PASS_ROOT_SOURCE_GATE_FOR_SEPARATE_PUBLICATION_ONE_CORRECTNESS_COHORT",
+  "freeze_sha256": "98f7ff999eb16d5a0a87bd15fa66e89925cccb61208de60d3cb61d28881a2cf0",
+  "reviewed15hashes": true,
+  "independent_review_sha256": "451864db2ce17e777f0abb7e7e0cd679044380c61f01124d32f427f100b56231",
+  "scope": "One fixed142simulator71unit correctnesscohort and one versionprobe; no timing/replacement/contestupload. Preserve original strictquota failure and all runtime/export/bundle bytes.",
+  "reviewer": "/root",
+  "checks": "Read controller, cleanup, proxy, workflow, narrowdiff, saved17mechanics and14typed receipt; rehash15files and staticAST. No rerun. Null/malformedIDs become unresolved, validotherIDs can reconcile under fullidentity, everyfailure/reconciliation rejects admission.",
+  "limits": [
+    "Original workflow Python311control remains outside controller cleanup scope.",
+    "Unknowndaemonsettlement cannot prove future absence.",
+    "SIGKILL/VMdeath/filesystemfailure remain external limits.",
+    "Correctness only; noLinuxspeedclaim."
+  ],
+  "authorization": "User requested separate public kouzhizhuo repos and independent advancement; reviewed validation publication and one publicGitHubActions cohort within scope.",
+  "publication": "pending",
+  "dispatch": "pending"
+}

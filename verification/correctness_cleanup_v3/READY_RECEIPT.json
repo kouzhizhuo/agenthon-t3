@@ -1,0 +1,28 @@
+{
+  "scope": "V3_NULL_ID_FINALIZATION_DEFECT_REPAIR_STATIC_MECHANICAL_READY_ROOT_GATE_REQUIRED",
+  "freeze_sha256": "98f7ff999eb16d5a0a87bd15fa66e89925cccb61208de60d3cb61d28881a2cf0",
+  "helper_hashes": {
+    "prepare_host.py": "d1fca8a3c4e45234997228d53cf3f0632af4fb48b956161ed82e9aa00fc34e46",
+    "execute_correctness.py": "30136b42185233698f74d4cc23ebec002a865c7bac48fdd9dfacb426a2d6efc8",
+    "cleanup.py": "e6d0da98806d87b268f1b3d30625b61ac19fa65603ebd064f65229999c8836be",
+    "docker_proxy.py": "ed3780d02d793cb8403cccfe96f6d210c232a168f206c25dc014db116d4f3ba8",
+    "workflow.prepared.yml": "88e6cd35818363586271cb39d6e1c473143fddcd41b27cae0c9f3379029c601e"
+  },
+  "mechanical17pass": true,
+  "typed_journal14pass": true,
+  "independent_review_sha256": "451864db2ce17e777f0abb7e7e0cd679044380c61f01124d32f427f100b56231",
+  "independent_static_pass": true,
+  "parent_static_review_sha256": "d3a57fdf738c7cb7cc5b7ffae9127651a2f45d5fb2e64bb32f3ef6603f054973",
+  "v2_hold_gate_receipt_sha256": "09aa4806af4810df139593bb9a137cb07cd7f3392ca08ddba3d44dfb42c9babd",
+  "v2_original657_export98_hash_errors": [],
+  "linux_v5b_verified": false,
+  "root_review_required": true,
+  "publication_or_run": false,
+  "timing_execution": false,
+  "performance_admission": false,
+  "rankable": false,
+  "scope_containers": 143,
+  "prior_workflow_Python311_control_cleanup_in_scope": false,
+  "remaining_limit": "Unresolved daemon create cannot certify future absence; malformed IDs cannot authorize removal; SIGKILL/host death/filesystem failure outside graceful guarantee.",
+  "network_liveDocker_simulator_forecast_calls": 0
+}

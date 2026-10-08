@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "cases": [
+    "exact full owner admission",
+    "ownership refusal image",
+    "ownership refusal name",
+    "ownership refusal user",
+    "ownership refusal command",
+    "ownership refusal RW",
+    "ownership refusal extra_mount",
+    "journal ID mismatch never removes",
+    "exact journal ID removal and absence",
+    "daemon unavailable never proves absence",
+    "original nonzero removal rejects",
+    "complete original process evidence accepted",
+    "missing cgroup evidence rejects",
+    "malformed journal cannot bypass final cleanup",
+    "fake CLI creation settles and journals ID through proxy SIGINT",
+    "cancel marker denies fake CLI new creation",
+    "null-ID journal rejects while final receipts and other journal-owned cleanup complete"
+  ],
+  "case_count": 17,
+  "real_docker_calls": 0,
+  "network_calls": 0,
+  "simulator_or_forecast_runs": 0,
+  "scope": "fake command receipts / pure data / fake CLI proxy SIGINT / actual controller with fake host, harness and daemon / AST; no real Docker daemon"
+}

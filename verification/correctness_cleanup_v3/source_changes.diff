@@ -1,0 +1,332 @@
+--- cleanup_v2/execute_correctness.py
++++ cleanup_v3/execute_correctness.py
+@@ -24,6 +24,10 @@
+     temporary.replace(path)
+ 
+ 
++def valid_id(value):
++    return isinstance(value, str) and re.fullmatch(r"[0-9a-f]{64}", value) is not None
++
++
+ def operations(directory):
+     rows = []
+     for path in sorted(directory.glob("operation-*.json")):
+@@ -31,14 +35,43 @@
+             row = json.loads(path.read_text())
+             if not isinstance(row, dict) or row.get("state") not in ("starting", "pending", "settled", "denied_cancel", "unresolved"):
+                 raise ValueError("invalid proxy journal")
+-            if not isinstance(row.get("name"), str) or not isinstance(row.get("arguments"), list) or not row["arguments"] or not all(isinstance(x, str) for x in row["arguments"]):
++            if not isinstance(row.get("name"), str) or not row["name"] or not isinstance(row.get("arguments"), list) or not row["arguments"] or not all(isinstance(x, str) for x in row["arguments"]) or row["arguments"][0] not in ("create", "run"):
+                 raise ValueError("invalid proxy name/arguments")
+-            if row.get("created_id") is not None and not re.fullmatch(r"[0-9a-f]{64}", row["created_id"]):
++            returncode = row.get("returncode")
++            if (returncode is not None and type(returncode) is not int) or (row["state"] in ("settled", "denied_cancel") and type(returncode) is not int):
++                raise ValueError("invalid proxy returncode")
++            if "created_id" in row and not valid_id(row["created_id"]):
+                 raise ValueError("invalid proxy-created ID")
++            if row["state"] == "settled" and returncode == 0 and row["arguments"][0] == "create" and not valid_id(row.get("created_id")):
++                raise ValueError("successful create requires exact proxy-created ID")
+             rows.append(dict(row, journal=str(path)))
+         except BaseException as exc:
+             rows.append({"state": "unresolved", "error": str(exc), "journal": str(path)})
+     return rows
++
++
++def journal_admission(expected, rows):
++    # Invalid journals are unresolved receipts, not a reason to abort the
++    # controller's final cleanup. Count without assuming optional field types.
++    creates, probes, created_ids = [], [], {}
++    for row in rows:
++        arguments = row.get("arguments")
++        if not isinstance(arguments, list) or not arguments:
++            continue
++        name = row.get("name")
++        identifier = row.get("created_id")
++        if isinstance(name, str) and valid_id(identifier):
++            created_ids[name] = identifier
++        successful = isinstance(name, str) and bool(name) and row.get("state") == "settled" and type(row.get("returncode")) is int and row["returncode"] == 0
++        if successful and arguments[0] == "create" and valid_id(identifier):
++            creates.append(name)
++        if successful and arguments[0] == "run":
++            probes.append(name)
++    passed = (sorted(creates) == sorted(r["name"] for r in expected["containers"] if not r["probe"])
++              and probes == [expected["probe_name"]]
++              and len(rows) == len(expected["containers"])
++              and all(r.get("state") == "settled" and type(r.get("returncode")) is int and r["returncode"] == 0 for r in rows))
++    return {"passed": passed, "successful_creates": creates, "successful_probes": probes, "created_ids": created_ids}
+ 
+ 
+ def settle(directory, timeout=100):
+@@ -60,7 +93,7 @@
+     args = parser.parse_args()
+     output = args.out.resolve()
+     root = Path.cwd().resolve()
+-    state = output / "cleanup_v2"
++    state = output / "cleanup_v3"
+     correctness = output / "correctness"
+     if state.exists() or correctness.exists():
+         raise ValueError("fresh cleanup and correctness directories required")
+@@ -193,12 +226,10 @@
+             finalized["stop_error"] = str(exc)
+         journals, settled = settle(state)
+         save(state / "DOCKER_OPERATIONS.json", journals)
+-        successful_creates = [r["name"] for r in journals if r.get("arguments", [None])[0] == "create" and r.get("state") == "settled" and r.get("returncode") == 0 and len(r.get("created_id", "")) == 64]
+-        successful_probes = [r["name"] for r in journals if r.get("arguments", [None])[0] == "run" and r.get("state") == "settled" and r.get("returncode") == 0]
+-        journal_roster_pass = (sorted(successful_creates) == sorted(r["name"] for r in expected["containers"] if not r["probe"])
+-                              and successful_probes == [expected["probe_name"]]
+-                              and len(journals) == 143 and all(r.get("state") == "settled" and r.get("returncode") == 0 for r in journals))
+-        created_ids = {r["name"]: r["created_id"] for r in journals if r.get("created_id")}
++        journal_summary = journal_admission(expected, journals)
++        journal_roster_pass = journal_summary["passed"]
++        created_ids = journal_summary["created_ids"]
++        save(state / "JOURNAL_ADMISSION.json", journal_summary)
+         clean = cleanup_receipts(expected)
+         save(state / "ORIGINAL_CLEANUP_CHECKS.json", clean)
+         # No same-name object is removed without full image/source/input/output
+--- cleanup_v2/test_mechanical.py
++++ cleanup_v3/test_mechanical.py
+@@ -10,9 +10,132 @@
+ import subprocess
+ import tempfile
+ import time
++from unittest.mock import patch
+ 
+ import cleanup
+ import execute_correctness
++
++
++def null_id_finalization_case(directory):
++    """Run the actual controller with fake process/daemon/host, not a simulator."""
++    root = directory / "null-id-controller"
++    output = root / "evidence"
++    protocol_path = root / "t3/research1008v5b/linux_verification/PROTOCOL.json"
++    protocol_path.parent.mkdir(parents=True)
++    frozen = Path(__file__).resolve().parents[3] / "t3/research1008v5b/linux_verification/PROTOCOL.json"
++    protocol_path.write_bytes(frozen.read_bytes())
++    protocol = json.loads(protocol_path.read_text())
++    output.mkdir()
++    (output / "cpuset.txt").write_text("0")
++    for version, python in (("311", "3.11.17"), ("313", "3.13.7")):
++        controls = output / ("controls" + version)
++        controls.mkdir()
++        (controls / ("controls_py" + version + ".json")).write_text(json.dumps({
++            "passed": True, "cases": 566, "python": python,
++            "source_sha256": "b7cea49f0b992d60bbde435374d47e8558b2198ed9cb5d164d6c868b0c5aa141",
++            "baseline_sha256": "ac4a28892f903f1c5790f54e25833188efa7e57e32fab8e651092a9b329733e7"}))
++    current, daemon_calls, cleanup_checks = {}, [], []
++
++    class FakeHarness:
++        pid = 99999999
++        returncode = 0
++
++        def __init__(self, *arguments, **kwargs):
++            correctness = output / "correctness"
++            correctness.mkdir()
++            raw = []
++            for index, unit in enumerate(protocol["correctness_units"]):
++                for variant in (("v3", "v5b") if index % 2 == 0 else ("v5b", "v3")):
++                    raw.append({"unit": unit, "variant": variant, "pair": 0})
++            (correctness / "raw_runs.json").write_text(json.dumps(raw))
++            (correctness / "summary.json").write_text(json.dumps({"processes": 142,
++                "all_output_bytes_counts_reference_frames_and_developer_gates_exact": True}))
++            state = output / "cleanup_v3"
++            expected = json.loads((state / "PLAN.json").read_text())
++            valid_journals = [{"name": planned["name"], "arguments": ["run" if planned["probe"] else "create"],
++                               "state": "settled", "returncode": 0,
++                               **({} if planned["probe"] else {"created_id": format(index + 1, "064x")})}
++                              for index, planned in enumerate(expected["containers"])]
++            assert execute_correctness.journal_admission(expected, valid_journals)["passed"]
++            row = expected["containers"][0]
++            (state / "operation-1.json").write_text(json.dumps({"name": row["name"],
++                "arguments": ["create", "--name", row["name"]], "state": "settled",
++                "returncode": 0, "created_id": None}))
++            other = expected["containers"][1]
++            (state / "operation-2.json").write_text(json.dumps({"name": other["name"],
++                "arguments": ["create", "--name", other["name"]], "state": "settled",
++                "returncode": 0, "created_id": "b" * 64}))
++            for planned, identifier in ((row, "a" * 64), (other, "b" * 64)):
++                current[planned["name"]] = {"Id": identifier, "Name": "/" + planned["name"],
++                    "Config": {"Image": expected["image"], "Cmd": planned["cmd"], "User": "65534:65534"},
++                    "HostConfig": {"ReadonlyRootfs": True, "NetworkMode": "none"},
++                    "Mounts": [{"Type": "bind", "Source": s, "Destination": d, "RW": rw} for s, d, rw in planned["mounts"]]}
++
++        def poll(self):
++            return 0
++
++    def fake_daemon(docker, arguments):
++        daemon_calls.append(arguments)
++        if arguments[:1] == ["logs"]:
++            assert arguments[1] == "b" * 64, "null journal must not authorize logs"
++            return {"returncode": 0, "stdout": "preserved own log", "stderr": ""}
++        if arguments[:3] == ["container", "rm", "--force"]:
++            assert arguments[3] == "b" * 64, "null journal must not authorize removal"
++            name = next(name for name, obj in current.items() if obj["Id"] == arguments[3])
++            del current[name]
++            return {"returncode": 0, "stdout": arguments[3], "stderr": ""}
++        assert arguments[:2] == ["container", "inspect"]
++        name = arguments[2]
++        if name in current:
++            return {"returncode": 0, "stdout": json.dumps([current[name]]), "stderr": ""}
++        return {"returncode": 1, "stdout": "[]\n", "stderr": "Error response from daemon: No such container: " + name + "\n"}
++
++    def fake_cleanup(expected):
++        cleanup_checks.append(True)
++        return {"passed": True, "checks": [], "errors": []}
++
++    read_text = Path.read_text
++
++    def fake_host_read(path, *arguments, **kwargs):
++        values = {"/proc/meminfo": "MemAvailable: 8388608 kB\n", "/proc/stat": "cpu 1 2 3 4\n",
++                  "/sys/fs/cgroup/cpu.stat": "usage_usec 1\n"}
++        return values[str(path)] if str(path) in values else read_text(path, *arguments, **kwargs)
++
++    previous_directory = Path.cwd()
++    try:
++        os.chdir(root)
++        with patch.object(sys, "argv", ["execute_correctness.py", "--out", str(output)]), \
++                patch.object(execute_correctness.shutil, "which", return_value="fake-docker"), \
++                patch.object(execute_correctness.subprocess, "Popen", FakeHarness), \
++                patch.object(cleanup, "command", fake_daemon), \
++                patch.object(execute_correctness, "cleanup_receipts", fake_cleanup), \
++                patch.object(Path, "read_text", fake_host_read), \
++                patch.object(execute_correctness.signal, "signal"):
++            try:
++                execute_correctness.main()
++            except RuntimeError as exc:
++                assert str(exc) == "correctness/cleanup admission failed; preserved without rerun"
++            else:
++                raise AssertionError("malformed null-ID journal must reject admission")
++    finally:
++        os.chdir(previous_directory)
++    state = output / "cleanup_v3"
++    for name in ("DOCKER_OPERATIONS.json", "JOURNAL_ADMISSION.json", "ORIGINAL_CLEANUP_CHECKS.json",
++                 "RECONCILIATION.json", "FINAL_ABSENCE.json", "HOST_MONITOR_SAMPLES.json",
++                 "HOST_MONITOR_ERRORS.json", "FINAL.json"):
++        assert (state / name).is_file(), name
++    final = json.loads((state / "FINAL.json").read_text())
++    operations = json.loads((state / "DOCKER_OPERATIONS.json").read_text())
++    admission = json.loads((state / "JOURNAL_ADMISSION.json").read_text())
++    reconciliation = json.loads((state / "RECONCILIATION.json").read_text())
++    assert operations[0]["state"] == "unresolved" and "invalid proxy-created ID" in operations[0]["error"]
++    assert not final["admitted"] and not final["operations_settled"] and not final["journal_roster_pass"]
++    assert not admission["passed"] and list(admission["created_ids"].values()) == ["b" * 64]
++    assert cleanup_checks and reconciliation["found"] and reconciliation["errors"]
++    assert not (output / "CORRECTNESS_ONLY_RECEIPT.json").exists()
++    removals = [command for command in daemon_calls if command[:2] == ["container", "rm"]]
++    assert removals == [["container", "rm", "--force", "b" * 64]]
++    assert len(current) == 1 and next(iter(current.values()))["Id"] == "a" * 64
+ 
+ 
+ def main():
+@@ -108,10 +231,12 @@
+         denied = subprocess.run([sys.executable, str(Path(__file__).parent / "docker_proxy.py"), "create", "--name", "t3verify-fake"], env=environment, capture_output=True, timeout=5)
+         assert denied.returncode == 125 and not (directory / "fake-called").exists()
+         cases.append("cancel marker denies fake CLI new creation")
++        null_id_finalization_case(directory)
++        cases.append("null-ID journal rejects while final receipts and other journal-owned cleanup complete")
+     for name in ("cleanup.py", "docker_proxy.py", "execute_correctness.py", "prepare_host.py"):
+         ast.parse((Path(__file__).parent / name).read_text())
+     report = {"passed": True, "cases": cases, "case_count": len(cases), "real_docker_calls": 0, "network_calls": 0,
+-              "simulator_or_forecast_runs": 0, "scope": "fake command receipts / pure data / fake CLI proxy process and SIGINT / AST only; no real Docker daemon"}
++              "simulator_or_forecast_runs": 0, "scope": "fake command receipts / pure data / fake CLI proxy SIGINT / actual controller with fake host, harness and daemon / AST; no real Docker daemon"}
+     (Path(__file__).parent / "MECHANICAL_RECEIPT.json").write_text(json.dumps(report, indent=2) + "\n")
+     print(json.dumps(report, indent=2))
+ 
+--- cleanup_v2/workflow.prepared.yml
++++ cleanup_v3/workflow.prepared.yml
+@@ -1,4 +1,4 @@
+-name: Verify frozen T3 v5b correctness with checked cleanup
++name: Verify frozen T3 v5b correctness with checked cleanup v3
+ on:
+   workflow_dispatch:
+     inputs:
+@@ -13,7 +13,7 @@
+ permissions:
+   contents: read
+ concurrency:
+-  group: frozen-t3-v5b-linux-correctness-cleanup-v2
++  group: frozen-t3-v5b-linux-correctness-cleanup-v3
+   cancel-in-progress: false
+ jobs:
+   verify:
+@@ -64,9 +64,9 @@
+           import hashlib,os,pathlib,re,urllib.request
+           revision=os.environ['T3_HELPER_REVISION']
+           if not re.fullmatch('[0-9a-f]{40}',revision):raise ValueError('immutable reviewed helper commit required')
+-          hashes={'prepare_host.py': 'd1fca8a3c4e45234997228d53cf3f0632af4fb48b956161ed82e9aa00fc34e46', 'execute_correctness.py': '8b8c45f31ca50a1c4c1687b860091a23281b60f8b67f9de2b67e6d90d6bbe0fd', 'cleanup.py': 'e6d0da98806d87b268f1b3d30625b61ac19fa65603ebd064f65229999c8836be', 'docker_proxy.py': 'ed3780d02d793cb8403cccfe96f6d210c232a168f206c25dc014db116d4f3ba8'}
++          hashes={'prepare_host.py': 'd1fca8a3c4e45234997228d53cf3f0632af4fb48b956161ed82e9aa00fc34e46', 'execute_correctness.py': '30136b42185233698f74d4cc23ebec002a865c7bac48fdd9dfacb426a2d6efc8', 'cleanup.py': 'e6d0da98806d87b268f1b3d30625b61ac19fa65603ebd064f65229999c8836be', 'docker_proxy.py': 'ed3780d02d793cb8403cccfe96f6d210c232a168f206c25dc014db116d4f3ba8'}
+           for name,expected in hashes.items():
+-              url='https://raw.githubusercontent.com/'+os.environ['GITHUB_REPOSITORY']+'/'+revision+'/verification/correctness_cleanup_v2/'+name
++              url='https://raw.githubusercontent.com/'+os.environ['GITHUB_REPOSITORY']+'/'+revision+'/verification/correctness_cleanup_v3/'+name
+               with urllib.request.urlopen(url,timeout=120) as response:data=response.read()
+               if hashlib.sha256(data).hexdigest()!=expected:raise ValueError('reviewed helper hash mismatch:'+name)
+               path=pathlib.Path('evidence/reviewed_helpers')/name;path.parent.mkdir(parents=True,exist_ok=True)
+@@ -106,7 +106,7 @@
+         if: always()
+         uses: actions/upload-artifact@v4
+         with:
+-          name: t3-v5b-linux-correctness-cleanup-v2-evidence
++          name: t3-v5b-linux-correctness-cleanup-v3-evidence
+           path: evidence
+           retention-days: 14
+           if-no-files-found: error
+--- cleanup_v2/PROTOCOL.json
++++ cleanup_v3/PROTOCOL.json
+@@ -1,6 +1,6 @@
+ {
+-  "phase": "SEPARATE_PREEXECUTION_CORRECTNESS_CLEANUP_AMENDMENT",
+-  "authorization": "Root authorized external controller amendment only, not mutation of frozen export/source/bundle or publication/run.",
++  "phase": "SEPARATE_PREEXECUTION_CORRECTNESS_CLEANUP_V3_DEFECT_REPAIR",
++  "authorization": "Root authorized a separate sibling repair for the concrete v2 null-ID finalization defect; frozen export/source/bundle/v2 preserved. Root reviews before publication/dispatch.",
+   "predecessor": {
+     "prepare_host_sha256": "d1fca8a3c4e45234997228d53cf3f0632af4fb48b956161ed82e9aa00fc34e46",
+     "execute_correctness_sha256": "f394d8f72c60fefd87f2a238dc5f3a7f9b50cc140c16849ba70f1a7104439562",
+@@ -22,11 +22,26 @@
+     "Write monitor/journal/cleanup/reconciliation/absence receipts before FINAL/admission. Failed/reconciled/partialcohort cannot becomeadmitted; no scenario rerun. SecondSIGINT/TERM deferredduringfinally; SIGKILL/VMdeath remainexternal limits."
+   ],
+   "limits": "Dockerproxycreate timeout90seconds or unsettleddaemonrequest is explicit unresolvedfailure; no promise futureabsence after unknowndaemoncompletion. Allcleanup commands bounded20seconds and preserved. Wrapper journals Dockercommands only, never contestant financial/simulationoutputs. No originalsampler/inference/source/dependency/CPUquota/RAM/networkguards changed. Incidental correctnessrates/ratios remainrawdiagnostics only.",
+-  "publication_plan": "Root may separately publish these fourhelpers under verification/correctness_cleanup_v2 and the prepared manualworkflow in T3repo. Workflowfetches exact40charactercommit and verifies allhelperhashes. No mutation of existingverifiedexportmanifest/archive; amendmentreceipt is separate.",
++  "publication_plan": "Root may separately publish four v3 helpers under verification/correctness_cleanup_v3 and the prepared manual v3 workflow. Workflow fetches exact 40-character commit and verifies all helper hashes. Root reviews static/mechanical gate before one correctness-only dispatch.",
+   "currently_run": false,
+   "root_review_before_dispatch": true,
+   "network_calls": 0,
+   "live_docker_calls": 0,
+   "timing_execution": false,
+-  "performance_admission": false
++  "performance_admission": false,
++  "v2_predecessor": {
++    "freeze_sha256": "7360b8661fc7f44ec525a249d3ae9b8751f82357a260b99c572a566c9b2f1e2e",
++    "execute_correctness_sha256": "8b8c45f31ca50a1c4c1687b860091a23281b60f8b67f9de2b67e6d90d6bbe0fd",
++    "workflow_sha256": "a7607da72a79c44ebb13dd77eeba5ab508d1786c04b886b194d394105e55e4f6",
++    "mechanical16_receipt_sha256": "42e5712955244eb73af80bbdb7e518fbc93be45b054e39cf8b3f76811919d5a1",
++    "independent_static_review_sha256": "c7734cd300664939ff05790844b1c09a2ebbe5ee4549024867394532e2429796",
++    "final_gate_receipt_sha256": "09aa4806af4810df139593bb9a137cb07cd7f3392ca08ddba3d44dfb42c9babd",
++    "null_id_reproduction_receipt_sha256": "ed61e29e031cda91e9a57878a5a675a86152e9ac1b081442d637c6117ca5a284"
++  },
++  "v3_changes": [
++    "Explicit present created_id must be a string matching 64 lowercase hexadecimal characters; every settled successful create requires it. Missing/null/non-string IDs become unresolved failure receipts before admission. Returncodes are typed integers or permitted null for unsettled/error states; Boolean is not integer admission.",
++    "Extract typed journal_admission counting: no len(optionalID), robust unresolved rows, retain valid journal IDs for other exact owned reconciliation. Save JOURNAL_ADMISSION receipt before original cleanup/reconciliation/final absence.",
++    "Use fresh cleanup_v3 evaluator evidence directory and separately named/published v3 manual workflow. All four predecessor container/runtime/source/data/control semantics remain fixed.",
++    "Add one meaningful fake actual-controller regression: null-ID journal fails; another correctly journaled exact container is safely removed; malformed ID object remains untouched; all reconciliation/final absence/final failure receipts exist. Existing 16 controls retained."
++  ]
+ }
+--- cleanup_v2/README.md
++++ cleanup_v3/README.md
+@@ -1,11 +1,11 @@
+-# Separate correctness cleanup amendment
++# Separate correctness cleanup v3 defect repair
+ 
+-This folder preserves the reviewed export and original bundle. It adds evaluator controller safeguards for the two final-review findings: interruption before frozen `docker create` enters cleanup, and unchecked nonzero `docker rm` returns. Root must review this amendment before publishing or dispatching it.
++V3 preserves v2, the frozen original harness/bundle, exported source and consumed evidence. It repairs the final saved-source review finding that a settled successful create journal with `created_id: null` passed v2 parsing and then raised `TypeError` before reconciliation. V2's HOLD gate and pure reproduction remain in `../t3_correctness_dispatch_gate`.
+ 
+-`docker_proxy.py` intercepts only the original harness's `create` and one runtime-version `run`, journals them outside its process group, and preserves stdout/command semantics. `cleanup.py` derives the exact 142 named simulator containers plus one named version probe, validates full identity and original receipts, and removes only an exact journaled ID. `execute_correctness.py` reserves fresh paths, refuses preexisting names, counts exact creation journals and the unchanged roster, propagates host monitor failures, and saves cleanup/absence evidence before admission. Original failure remains failure after safe reconciliation.
++`execute_correctness.py` now validates ID and returncode types and requires an exact 64-character lowercase hexadecimal ID for every successful create. Malformed rows become unresolved receipts. Typed `journal_admission` counts records without assuming optional field types, retains valid IDs for other exact owned cleanup, and saves a separate admission receipt before reconciliation. V3 writes fresh `cleanup_v3` evidence. The Docker proxy, ownership/absence/cleanup logic, host preparation and unchanged 142 simulator calls plus one version probe are otherwise retained from reviewed v2. The workflow fetches separately published v3 helpers at an exact commit with fixed hashes.
+ 
+-The version probe adds only an evaluator name/cidfile. The prior workflow's actual Python 3.11 control container remains its unchanged `--rm` route; this amendment does not claim reconciliation coverage for an earlier workflow step interrupted before the controller. The 142 simulator processes, source/data mounts, image, pinned versions, 566 controls, output/gates and timing exclusion remain fixed. No image/source/manifest/archive bytes are changed.
++The 17 finite mechanical cases include the original 16 plus one regression through the actual controller with a fake host, harness process and Docker command function. The regression rejects a null-ID journal, preserves its unowned exact-name object, safely reconciles a different correctly journaled container, writes all cleanup/final absence/final failure receipts and rejects final admission. These checks make no real Docker, simulator, forecast, network or timing calls. They do not validate real Linux daemon cancellation behavior.
+ 
+-Unknown/timeout creation, unavailable daemon, ownership conflict, failed logs/removal, missing original state/log/cgroup/evaluator/cleanup receipt, nonzero original cleanup, incomplete journal/roster or remaining own container rejects admission. A Docker creation response that cannot be settled is explicitly unresolved; present absence cannot guarantee a delayed daemon will never create an object later. SIGKILL, host death and filesystem failure are outside the graceful cleanup guarantee.
++The scope remains 142 frozen simulator containers plus one original version probe. The earlier workflow actual Python 3.11 control container remains outside this controller's cleanup scope. Unknown daemon creation, malformed journals, unavailable daemon, ownership conflicts, missing process evidence or nonzero original removal fail admission; present absence cannot certify a delayed unresolved daemon request. SIGKILL, host death and filesystem failure remain outside graceful cleanup. The original per-container sampler remains unchanged; valid nonempty samples are required, but full telemetry coverage is not certified.
+ 
+-`test_mechanical.py` runs finite pure-data/fake-command checks plus a fake CLI proxy process interrupted with SIGINT and a cancellation refusal. Its receipt records 16 passing cases with zero live Docker, network, simulator, forecast or timing calls. These controls exercise proxy settlement against a fake executable and do not certify Docker daemon cancellation semantics. AST parsing is static. No actual Linux route has executed. `FREEZE.json` pins this amendment's helpers/protocol/workflow/tests, and the independent peer review records the concrete admitted scope and limits.
++Root must review the independent v3 gate before separate publication or one correctness-only Linux dispatch. No performance admission, timing retry, forecast, image push or official submission is performed here.

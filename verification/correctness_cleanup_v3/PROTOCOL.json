@@ -1,0 +1,47 @@
+{
+  "phase": "SEPARATE_PREEXECUTION_CORRECTNESS_CLEANUP_V3_DEFECT_REPAIR",
+  "authorization": "Root authorized a separate sibling repair for the concrete v2 null-ID finalization defect; frozen export/source/bundle/v2 preserved. Root reviews before publication/dispatch.",
+  "predecessor": {
+    "prepare_host_sha256": "d1fca8a3c4e45234997228d53cf3f0632af4fb48b956161ed82e9aa00fc34e46",
+    "execute_correctness_sha256": "f394d8f72c60fefd87f2a238dc5f3a7f9b50cc140c16849ba70f1a7104439562",
+    "workflow_sha256": "a2f1b3b965438f41ec63fbe544e01b9d124563dcf2b65297a500c25dd96bc267",
+    "export_manifest_sha256": "a0535feec2351047ed359de0fbd9a3fc207e745c0267db74efe9d1cb1ca8b2c6",
+    "final_review_receipt_sha256": "9cd89c909d7ea5067713b23c17c8c89978cd083068815f10662f04af6439c7d0"
+  },
+  "immutable_bundle_sha256": "5b34abb947d3e01fd86d2e0ade7590e467e15e762546c77302097b71433cc387",
+  "immutable_harness_protocol_sha256": "9f27cdbc0fb901f59471e487d263828361ea749ace9f82388b1d339c80f2e55c",
+  "immutable_paths": 657,
+  "scope": "One unchanged142process71unit correctnesscohort plus original one --rm runtimeversionprobe. Exact566controls on actual311/313 unchanged. No timingmode, performanceadmission, forecasts, OCIpush or submission.",
+  "changes": [
+    "Separate evaluator-only Dockerproxy journals exact named create operations synchronously before original harness stdout receives ID; realCLI runs in own session and ignoredSIGINT/TERM allows accepteddaemoncreate to settle before reconciliation.",
+    "One original unnamed runtimeversionprobe receives deterministic ownname+evaluator cidfile only, preserving image/entrypoint/arguments/runtimeenv; its exactID may be reconciled. Earlier workflowactual311control --rm container remains unchanged/outside amendmentcleanupscope.",
+    "CANCEL marker denies subsequent create/run; controller signals only own harnessprocessgroup and waits bounded100seconds for settled creationjournals before escalating originalcleanup. Unresolvedtimeout/journal means no cleanupcertification/admission, even if exactnames currentlyabsent.",
+    "Before launch require all143 exactplan names demonstrablyabsent; no broadprefixsearch/removal. Plan derives exactabsolutefreshoutputpaths, frozen71roster/variants/pair0 and probe. Fixedprotocolhash checked before constructing/removal scope.",
+    "After every controllerexit check journals and all142 originalcleanup/state/log/cgroup/evaluatorreceipts. Nonzerooriginalrm/cleanup error remainsrejection even if externalcleanup succeeds.",
+    "Reconcile only inspect object matching exactjournalcreatedID,name,image,command,user,readonlyroot,networknone and fullsource/input/outputbindmounts+RW. Use immutableID forlogs/rm, reject foreignsame-name/daemonfailure. Verifyexactnameabsenceafterremoval and allplanabsencefinally.",
+    "Write monitor/journal/cleanup/reconciliation/absence receipts before FINAL/admission. Failed/reconciled/partialcohort cannot becomeadmitted; no scenario rerun. SecondSIGINT/TERM deferredduringfinally; SIGKILL/VMdeath remainexternal limits."
+  ],
+  "limits": "Dockerproxycreate timeout90seconds or unsettleddaemonrequest is explicit unresolvedfailure; no promise futureabsence after unknowndaemoncompletion. Allcleanup commands bounded20seconds and preserved. Wrapper journals Dockercommands only, never contestant financial/simulationoutputs. No originalsampler/inference/source/dependency/CPUquota/RAM/networkguards changed. Incidental correctnessrates/ratios remainrawdiagnostics only.",
+  "publication_plan": "Root may separately publish four v3 helpers under verification/correctness_cleanup_v3 and the prepared manual v3 workflow. Workflow fetches exact 40-character commit and verifies all helper hashes. Root reviews static/mechanical gate before one correctness-only dispatch.",
+  "currently_run": false,
+  "root_review_before_dispatch": true,
+  "network_calls": 0,
+  "live_docker_calls": 0,
+  "timing_execution": false,
+  "performance_admission": false,
+  "v2_predecessor": {
+    "freeze_sha256": "7360b8661fc7f44ec525a249d3ae9b8751f82357a260b99c572a566c9b2f1e2e",
+    "execute_correctness_sha256": "8b8c45f31ca50a1c4c1687b860091a23281b60f8b67f9de2b67e6d90d6bbe0fd",
+    "workflow_sha256": "a7607da72a79c44ebb13dd77eeba5ab508d1786c04b886b194d394105e55e4f6",
+    "mechanical16_receipt_sha256": "42e5712955244eb73af80bbdb7e518fbc93be45b054e39cf8b3f76811919d5a1",
+    "independent_static_review_sha256": "c7734cd300664939ff05790844b1c09a2ebbe5ee4549024867394532e2429796",
+    "final_gate_receipt_sha256": "09aa4806af4810df139593bb9a137cb07cd7f3392ca08ddba3d44dfb42c9babd",
+    "null_id_reproduction_receipt_sha256": "ed61e29e031cda91e9a57878a5a675a86152e9ac1b081442d637c6117ca5a284"
+  },
+  "v3_changes": [
+    "Explicit present created_id must be a string matching 64 lowercase hexadecimal characters; every settled successful create requires it. Missing/null/non-string IDs become unresolved failure receipts before admission. Returncodes are typed integers or permitted null for unsettled/error states; Boolean is not integer admission.",
+    "Extract typed journal_admission counting: no len(optionalID), robust unresolved rows, retain valid journal IDs for other exact owned reconciliation. Save JOURNAL_ADMISSION receipt before original cleanup/reconciliation/final absence.",
+    "Use fresh cleanup_v3 evaluator evidence directory and separately named/published v3 manual workflow. All four predecessor container/runtime/source/data/control semantics remain fixed.",
+    "Add one meaningful fake actual-controller regression: null-ID journal fails; another correctly journaled exact container is safely removed; malformed ID object remains untouched; all reconciliation/final absence/final failure receipts exist. Existing 16 controls retained."
+  ]
+}

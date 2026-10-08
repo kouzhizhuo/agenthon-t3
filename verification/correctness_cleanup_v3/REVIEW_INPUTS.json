@@ -1,0 +1,31 @@
+{
+  "phase": "V3_CHANGED_GATE_READY_FOR_INDEPENDENT_REVIEW",
+  "root_review_required": true,
+  "helper_and_gate_hashes": {
+    "prepare_host.py": "d1fca8a3c4e45234997228d53cf3f0632af4fb48b956161ed82e9aa00fc34e46",
+    "execute_correctness.py": "30136b42185233698f74d4cc23ebec002a865c7bac48fdd9dfacb426a2d6efc8",
+    "cleanup.py": "e6d0da98806d87b268f1b3d30625b61ac19fa65603ebd064f65229999c8836be",
+    "docker_proxy.py": "ed3780d02d793cb8403cccfe96f6d210c232a168f206c25dc014db116d4f3ba8",
+    "workflow.prepared.yml": "88e6cd35818363586271cb39d6e1c473143fddcd41b27cae0c9f3379029c601e",
+    "test_mechanical.py": "e11f9c5c77ac3945fdea7a0cf31cf8979985768dcc22a28160025dda68d1d1d2",
+    "MECHANICAL_RECEIPT.json": "c8ac9b43aebbf2e7eb71c7f13611b8434c380d7b674b6ccac017ef55ad5ebba2",
+    "PROTOCOL.json": "9e6b067895af24766d170e410febfe39f43a8ab38c663bf3d377969e150c10d3",
+    "README.md": "754d672b5584a0482b6e6756729aba8593500a18cb20665ae847b54a1ca31c53",
+    "PREDECESSOR_PRESERVATION.json": "6103655e3feb3303a34ff29e4a8712730c42795edf9c82a74ee31fd931781f6a",
+    "source_changes.diff": "7b155b20753a44175d96b3eebdfe69f492b7205f57d3218718f8d25ea1ab3779",
+    "TYPED_JOURNAL_REVIEW.json": "27bf286e015b727284bd957e24d20919d97c4a7a41feec354142cec018da3432",
+    "PARENT_STATIC_REVIEW.json": "d3a57fdf738c7cb7cc5b7ffae9127651a2f45d5fb2e64bb32f3ef6603f054973"
+  },
+  "unchanged_v2_helpers": {
+    "prepare_host.py": true,
+    "cleanup.py": true,
+    "docker_proxy.py": true
+  },
+  "mechanical17pass": true,
+  "predecessor_hash_errors": [],
+  "v2_frozen_hash_errors": [],
+  "v2_gate_retained": true,
+  "root_or_peer_review_not_yet_complete": true,
+  "publication_or_run": false,
+  "network_liveDocker_simulator_forecast_timing_calls": 0
+}

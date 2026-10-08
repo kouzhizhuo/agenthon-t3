@@ -1,0 +1,35 @@
+{
+  "hashes": {
+    "repos/agenthon-t3/EXPORT_MANIFEST.json": "a0535feec2351047ed359de0fbd9a3fc207e745c0267db74efe9d1cb1ca8b2c6",
+    "repos/agenthon-t3/verification/correctness_only/prepare_host.py": "d1fca8a3c4e45234997228d53cf3f0632af4fb48b956161ed82e9aa00fc34e46",
+    "repos/agenthon-t3/verification/correctness_only/execute_correctness.py": "f394d8f72c60fefd87f2a238dc5f3a7f9b50cc140c16849ba70f1a7104439562",
+    "repos/agenthon-t3/.github/workflows/t3-v5b-linux-correctness.yml": "a2f1b3b965438f41ec63fbe544e01b9d124563dcf2b65297a500c25dd96bc267",
+    "repos/agenthon-t3/.github/workflows/t3-v5b-linux-timing.yml": "b67a07d9eb8e0f3e646db249be519190da2fdb119434baf41af2edbc050784b7",
+    "experiments/repo_split1008/agenthon-t3-source.tar.gz": "e1038b2d5749f15af935343a86e987cd618d1fa2b9c9d22e26e5079d49d687cd",
+    "t3/research1008v5b/github_linux/bundle.tar.gz": "5b34abb947d3e01fd86d2e0ade7590e467e15e762546c77302097b71433cc387",
+    "t3/research1008v5b/linux_verification/run.py": "cead0327bd182e20a870e15f70b4f6528bad85485d0820e4f17c230267a669ba",
+    "t3/research1008v5b/linux_verification/FREEZE.json": "3576327803f4e221a6ea739c760db1025fe55251c754d47df8d94c6a030e8af2"
+  },
+  "export98hash_errors": [],
+  "original657hash_errors": [],
+  "no_edits_to_predecessors": true,
+  "v2_frozen_hashes": {
+    "FREEZE.json": "7360b8661fc7f44ec525a249d3ae9b8751f82357a260b99c572a566c9b2f1e2e",
+    "READY_RECEIPT.json": "912d9d06b3da3cdf5e8b9660e1453869ea3250617996e44be03848678d94ed05",
+    "INDEPENDENT_STATIC_REVIEW.json": "c7734cd300664939ff05790844b1c09a2ebbe5ee4549024867394532e2429796",
+    "MECHANICAL_RECEIPT.json": "42e5712955244eb73af80bbdb7e518fbc93be45b054e39cf8b3f76811919d5a1",
+    "PROTOCOL.json": "422ac122795da6b46643fb6a37728e0b904616580a030d6582d905eaf6f39c4d",
+    "README.md": "737035d7796bbc033d55d8de942953efcb7ac4f640b166dac43ee90191ed37b1",
+    "prepare_host.py": "d1fca8a3c4e45234997228d53cf3f0632af4fb48b956161ed82e9aa00fc34e46",
+    "execute_correctness.py": "8b8c45f31ca50a1c4c1687b860091a23281b60f8b67f9de2b67e6d90d6bbe0fd",
+    "cleanup.py": "e6d0da98806d87b268f1b3d30625b61ac19fa65603ebd064f65229999c8836be",
+    "docker_proxy.py": "ed3780d02d793cb8403cccfe96f6d210c232a168f206c25dc014db116d4f3ba8",
+    "test_mechanical.py": "b028a1e64bf22a1497f3a1add7253de4bd806c6b1357003b863508e777991a70",
+    "workflow.prepared.yml": "a7607da72a79c44ebb13dd77eeba5ab508d1786c04b886b194d394105e55e4f6",
+    "source_changes.diff": "e5674b73306c493162a0636fdb2ce98ca4b8c99003de8f41c5c5dc76f8c8e676",
+    "PREDECESSOR_PRESERVATION.json": "be5c1b28bfc04b31231cb6031ed5bf1507c1d7591ba4aa3a97748e70d7833871"
+  },
+  "v2_frozen_paths": 12,
+  "v2_preserved": true,
+  "repair_scope": "Separate v3 null-ID finalization repair only; v2 and original export/bundle/source untouched."
+}

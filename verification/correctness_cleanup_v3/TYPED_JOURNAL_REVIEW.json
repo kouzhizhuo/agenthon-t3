@@ -1,0 +1,79 @@
+{
+  "scope": "Additional pure temporary JSON saved-source audit; separate from 17-case mechanics",
+  "controller_sha256": "30136b42185233698f74d4cc23ebec002a865c7bac48fdd9dfacb426a2d6efc8",
+  "count": 14,
+  "checks": [
+    {
+      "input": "null ID",
+      "unresolved": true,
+      "roster_admitted": false
+    },
+    {
+      "input": "missing ID",
+      "unresolved": true,
+      "roster_admitted": false
+    },
+    {
+      "input": "integer ID",
+      "unresolved": true,
+      "roster_admitted": false
+    },
+    {
+      "input": "list ID",
+      "unresolved": true,
+      "roster_admitted": false
+    },
+    {
+      "input": "invalid string ID",
+      "unresolved": true,
+      "roster_admitted": false
+    },
+    {
+      "input": "boolean returncode",
+      "unresolved": true,
+      "roster_admitted": false
+    },
+    {
+      "input": "float returncode",
+      "unresolved": true,
+      "roster_admitted": false
+    },
+    {
+      "input": "null settled returncode",
+      "unresolved": true,
+      "roster_admitted": false
+    },
+    {
+      "input": "empty arguments",
+      "unresolved": true,
+      "roster_admitted": false
+    },
+    {
+      "input": "nonstring argument",
+      "unresolved": true,
+      "roster_admitted": false
+    },
+    {
+      "input": "empty name",
+      "unresolved": true,
+      "roster_admitted": false
+    },
+    {
+      "input": "nonobject journal",
+      "unresolved": true,
+      "roster_admitted": false
+    },
+    {
+      "input": "truncated JSON",
+      "unresolved": true,
+      "roster_admitted": false
+    },
+    {
+      "input": "invalid JSON",
+      "unresolved": true,
+      "roster_admitted": false
+    }
+  ],
+  "valid_create_parse": true,
+  "network_liveDocker_simulator_forecast_timing_calls": 0
+}
