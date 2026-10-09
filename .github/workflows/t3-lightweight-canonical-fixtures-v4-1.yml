@@ -1,0 +1,40 @@
+name: T3 lightweight canonical pinned Linux build and fixture-only v4.1
+on:
+  workflow_dispatch:
+    inputs:
+      payload_sha256:
+        description: Exact reviewed FIXTURE_PAYLOAD_v1.tar.xz SHA256
+        required: true
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: t3-serial-linux-screen-v2
+  cancel-in-progress: false
+jobs:
+  fixture:
+    if: github.repository == 'kouzhizhuo/agenthon-t3'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONHASHSEED: '0'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Materialize exact reviewed fixture source bytes
+        env:
+          EXPECTED_PAYLOAD: ${{ inputs.payload_sha256 }}
+        run: python3 completion1009/server_lightweight_canonical_fixtures_v4_1/materialize.py --archive completion1009/server_lightweight_canonical_fixtures_v4_1/FIXTURE_PAYLOAD_v1.tar.xz --expected-sha256 "$EXPECTED_PAYLOAD" --out lightweight-canonical-fixtures-v4-1-payload
+      - name: Actual pinned schema build and one fixture container
+        run: python3 lightweight-canonical-fixtures-v4-1-payload/control/controller.py run --evidence "$PWD/lightweight-canonical-fixtures-v4-1-evidence"
+      - name: Retain actual build, nine Parquets and failure logs
+        if: always()
+        run: python3 lightweight-canonical-fixtures-v4-1-payload/control/controller.py artifact --evidence "$PWD/lightweight-canonical-fixtures-v4-1-evidence" --artifact "$PWD/lightweight-canonical-fixtures-v4-1-artifact"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: t3-lightweight-canonical-fixture-only-v4-1-evidence
+          path: lightweight-canonical-fixtures-v4-1-artifact
+          retention-days: 30
+          if-no-files-found: error
+          compression-level: 6

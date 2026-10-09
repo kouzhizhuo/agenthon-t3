@@ -1,0 +1,44 @@
+name: T3 authoritative chain one real JSON controls
+on:
+  workflow_dispatch:
+    inputs:
+      payload_sha256:
+        description: Exact root-reviewed source CONTROL_PAYLOAD_v3.tar.xz SHA256
+        required: true
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: t3-serial-linux-screen-v2
+  cancel-in-progress: false
+jobs:
+  controls:
+    if: github.repository == 'kouzhizhuo/agenthon-t3'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+      NUMEXPR_NUM_THREADS: '1'
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONHASHSEED: '0'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Materialize exact reviewed authoritative chain source
+        env:
+          EXPECTED_PAYLOAD: ${{ inputs.payload_sha256 }}
+        run: python3 completion1009/server_native_authoritative_chain_controls_v3/materialize.py --archive completion1009/server_native_authoritative_chain_controls_v3/CONTROL_PAYLOAD_v3.tar.xz --expected-sha256 "$EXPECTED_PAYLOAD" --out authoritative-chain-payload
+      - name: Build once and run one actual JSON in original native native arms
+        run: python3 authoritative-chain-payload/control/controller.py run --evidence "$PWD/authoritative-chain-evidence"
+      - name: Preserve source build ELF logs all outputs and failure snapshots
+        if: always()
+        run: python3 authoritative-chain-payload/control/controller.py artifact --evidence "$PWD/authoritative-chain-evidence" --artifact "$PWD/authoritative-chain-artifact"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: t3-authoritative-chain-v3-one-json-evidence
+          path: authoritative-chain-artifact
+          retention-days: 30
+          if-no-files-found: error
+          compression-level: 6
