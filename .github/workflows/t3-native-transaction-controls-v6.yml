@@ -1,0 +1,45 @@
+name: T3 native transaction V6 build and all controls before timing
+on:
+  workflow_dispatch:
+    inputs:
+      payload_sha256:
+        description: Exact reviewed CONTROL_PAYLOAD_v1.tar.xz SHA256
+        required: true
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: t3-serial-linux-screen-v2
+  cancel-in-progress: false
+jobs:
+  controls:
+    if: github.repository == 'kouzhizhuo/agenthon-t3'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 150
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONHASHSEED: '0'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11.17'
+      - name: Pin the host-only output decoder
+        run: python -m pip install numpy==1.26.4 pandas==1.5.3 pyarrow==15.0.2
+      - name: Materialize reviewed exact V6 control source
+        env:
+          EXPECTED_PAYLOAD: ${{ inputs.payload_sha256 }}
+        run: python3 completion1009/server_native_transaction_controls_v6/materialize.py --archive completion1009/server_native_transaction_controls_v6/CONTROL_PAYLOAD_v1.tar.xz --expected-sha256 "$EXPECTED_PAYLOAD" --out native-transaction-controls-v6-payload
+      - name: Actual pinned build, proofs, boundaries, full markets and production CLI
+        run: python3 native-transaction-controls-v6-payload/control/controller.py run --evidence "$PWD/native-transaction-controls-v6-evidence"
+      - name: Retain complete controls, source ELF proofs and failures
+        if: always()
+        run: python3 native-transaction-controls-v6-payload/control/controller.py artifact --evidence "$PWD/native-transaction-controls-v6-evidence" --artifact "$PWD/native-transaction-controls-v6-artifact"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: t3-native-transaction-v6-complete-controls-evidence
+          path: native-transaction-controls-v6-artifact
+          retention-days: 30
+          if-no-files-found: error
+          compression-level: 6
