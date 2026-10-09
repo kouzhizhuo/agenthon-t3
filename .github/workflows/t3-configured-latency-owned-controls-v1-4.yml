@@ -1,0 +1,44 @@
+name: T3 configured latency owned finite Linux controls v1.4
+on:
+  workflow_dispatch:
+    inputs:
+      payload_sha256:
+        description: Exact reviewed CONTROL_PAYLOAD_v1_4.tar.xz SHA256
+        required: true
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: t3-serial-linux-screen-v2
+  cancel-in-progress: false
+jobs:
+  controls:
+    if: github.repository == 'kouzhizhuo/agenthon-t3'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+      NUMEXPR_NUM_THREADS: '1'
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONHASHSEED: '0'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Materialize exact independently reviewed latency source and original runtime
+        env:
+          EXPECTED_PAYLOAD: ${{ inputs.payload_sha256 }}
+        run: python3 completion1009/server_configured_latency_owned_controls_v1_4/materialize.py --archive completion1009/server_configured_latency_owned_controls_v1_4/CONTROL_PAYLOAD_v1_4.tar.xz --expected-sha256 "$EXPECTED_PAYLOAD" --out configured-latency-owned-payload
+      - name: Build once then test original new and repeat latency methods with full state
+        run: python3 configured-latency-owned-payload/control/controller.py run --evidence "$PWD/configured-latency-owned-evidence"
+      - name: Preserve full state partial results source ELF build and failure logs
+        if: always()
+        run: python3 configured-latency-owned-payload/control/controller.py artifact --evidence "$PWD/configured-latency-owned-evidence" --artifact "$PWD/configured-latency-owned-artifact"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: t3-configured-latency-owned-v1-4-evidence
+          path: configured-latency-owned-artifact
+          retention-days: 30
+          if-no-files-found: error
+          compression-level: 6
