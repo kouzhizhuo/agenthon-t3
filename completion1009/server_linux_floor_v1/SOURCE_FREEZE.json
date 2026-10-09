@@ -1,0 +1,54 @@
+{
+  "schema": "t3-floor-source-freeze-v4",
+  "source_only": true,
+  "files": {
+    "controller.py": {
+      "bytes": 14775,
+      "sha256": "71b5db52e80bb999e5b1fb9a6febb4f70e34573e5623db3607ea8954141975ef"
+    },
+    "prepare.py": {
+      "bytes": 8054,
+      "sha256": "577e63bef8eddd45f93b6992e889a8ab169d2b4fbbcb10ae523c663cad6fa541"
+    },
+    "prepare_phases_v3.py": {
+      "bytes": 8461,
+      "sha256": "a1cfca241d2617e4221063ae573a672b7d9a04cbbf90b3cf856e5311fb23deee"
+    },
+    "verify_source.py": {
+      "bytes": 1123,
+      "sha256": "66afd7948896705fe0f0a632e64807d24dce40674395ee789db44b8760aaa970"
+    },
+    "source_driver_controls_v3.py": {
+      "bytes": 5543,
+      "sha256": "f69fa7335688d7e6cf3907308dc198a232b569b48f4ce167fc63ae68a4d1b668"
+    },
+    "SOURCE_DRIVER_CONTROLS_v3.json": {
+      "bytes": 425,
+      "sha256": "f6029f861cd35ba25c7e388d4ea7ff17b8b23a423fd4253738ded4d564d08e88"
+    },
+    "PHASE_SOURCE_REVIEW_v3.md": {
+      "bytes": 3008,
+      "sha256": "db39ebab0761c0175b1ba7b0893f97f9db966f0ea41ed1c1814c6f102fb2c1cd"
+    },
+    "PHASE_PROTOCOL_v2.md": {
+      "bytes": 5131,
+      "sha256": "1d904088779bda4c749211bc2c685a3dc02dd52d5a1bbe2a1f64b500d3f2e625"
+    },
+    "README.md": {
+      "bytes": 5751,
+      "sha256": "e2579003340514374ff4aecf3c5856bd43a6d016a3c561577118b7523d69b275"
+    },
+    "workflow-source.yml": {
+      "bytes": 3400,
+      "sha256": "7468a47d3509f58a891625c85bc09bea32364fb986c7300991dd78f175ebf48e"
+    }
+  },
+  "observer_startup_payload": {
+    "bytes": 148592,
+    "sha256": "1559a5842f24458f4c77e8c6f427af8c504446c7aadc2407002e0d15e6ab710b"
+  },
+  "default_units": 5,
+  "default_diagnostic_containers": 10,
+  "no_target_or_unavoidable_floor_claim": true,
+  "workflow_uploaded_or_dispatched": false
+}

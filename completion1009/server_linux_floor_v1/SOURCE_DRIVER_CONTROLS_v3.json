@@ -1,0 +1,17 @@
+{
+  "schema": "t3-floor-pure-source-controls-v3",
+  "driver": {
+    "driver_constructed": true,
+    "metadata_preserved": true,
+    "non_marker_AST_equal": true,
+    "simulator_imported": false,
+    "simulate_called": false
+  },
+  "parser": {
+    "valid_batch_roster_passed": true,
+    "invalid_controls_rejected": 3
+  },
+  "native_or_simulator_loaded": false,
+  "simulate_executed": false,
+  "compilation_executed": false
+}
