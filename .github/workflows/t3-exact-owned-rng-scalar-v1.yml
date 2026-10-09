@@ -1,0 +1,44 @@
+name: T3 exact owned RNG scalar full-state Linux controls v1
+on:
+  workflow_dispatch:
+    inputs:
+      payload_sha256:
+        description: Exact reviewed CONTROL_PAYLOAD_v1.tar.xz SHA256
+        required: true
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: t3-serial-linux-screen-v2
+  cancel-in-progress: false
+jobs:
+  controls:
+    if: github.repository == 'kouzhizhuo/agenthon-t3'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+      NUMEXPR_NUM_THREADS: '1'
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONHASHSEED: '0'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Materialize exact independently reviewed scalar experiment source
+        env:
+          EXPECTED_PAYLOAD: ${{ inputs.payload_sha256 }}
+        run: python3 completion1009/server_exact_owned_rng_controls_v1/materialize.py --archive completion1009/server_exact_owned_rng_controls_v1/CONTROL_PAYLOAD_v1.tar.xz --expected-sha256 "$EXPECTED_PAYLOAD" --out exact-owned-rng-payload
+      - name: Build once then test both whole scalar RNG arms with full state
+        run: python3 exact-owned-rng-payload/control/controller.py run --evidence "$PWD/exact-owned-rng-evidence"
+      - name: Preserve full state partial results source ELF build and failure logs
+        if: always()
+        run: python3 exact-owned-rng-payload/control/controller.py artifact --evidence "$PWD/exact-owned-rng-evidence" --artifact "$PWD/exact-owned-rng-artifact"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: t3-exact-owned-rng-scalar-v1-evidence
+          path: exact-owned-rng-artifact
+          retention-days: 30
+          if-no-files-found: error
+          compression-level: 6
