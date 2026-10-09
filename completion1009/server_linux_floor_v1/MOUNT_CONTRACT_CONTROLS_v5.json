@@ -1,0 +1,278 @@
+{
+  "compiler_execution": false,
+  "controller_sha256": "3b0104cc49ef41f4e2881494808931e5d79e0ab27ef7f474bbd969b92c7efcc5",
+  "docker_execution": false,
+  "fixture_count": 53,
+  "fixtures": [
+    {
+      "expected": "accept",
+      "name": "created_no_top_level_tmpfs",
+      "passed": true
+    },
+    {
+      "expected": "accept",
+      "name": "exited_no_top_level_tmpfs_reversed_binds_oom_false",
+      "passed": true
+    },
+    {
+      "expected": "equal",
+      "name": "created_settled_full_configuration_normalization",
+      "passed": true
+    },
+    {
+      "expected": "accept",
+      "name": "exited_optional_top_level_tmpfs",
+      "passed": true
+    },
+    {
+      "expected": "accept",
+      "name": "explicit_profile_mode",
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "name": "host_Tmpfs_5",
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "name": "host_Tmpfs_6",
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "name": "host_Tmpfs_7",
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "name": "host_OomKillDisable_8",
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "name": "host_OomKillDisable_9",
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "name": "host_NanoCpus_10",
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "name": "host_Memory_11",
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "name": "host_MemorySwap_12",
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "name": "host_PidsLimit_13",
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "name": "host_ReadonlyRootfs_14",
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "name": "host_NetworkMode_15",
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "name": "host_Runtime_16",
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "name": "host_Privileged_17",
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "name": "host_CapAdd_18",
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "name": "host_CapDrop_19",
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "name": "host_SecurityOpt_20",
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "name": "host_Ulimits_21",
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "name": "/input_foreign_source",
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "name": "/input_wrong_rw",
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "name": "/input_integer_rw",
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "name": "/input_wrong_type",
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "name": "/output_foreign_source",
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "name": "/output_wrong_rw",
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "name": "/output_integer_rw",
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "name": "/output_wrong_type",
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "name": "/diagnostic_foreign_source",
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "name": "/diagnostic_wrong_rw",
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "name": "/diagnostic_integer_rw",
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "name": "/diagnostic_wrong_type",
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "name": "extra_bind",
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "name": "duplicate_bind",
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "name": "tmp_bind",
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "name": "duplicate_optional_tmp",
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "name": "entrypoint_changed",
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "name": "full_command_changed",
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "name": "profile_enabled_in_phases",
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "name": "wrong_user",
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "name": "wrong_workdir",
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "name": "wrong_image",
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "name": "raw_create_tmpfs_changed",
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "name": "raw_create_extra_mount",
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "name": "raw_create_diagnostic_writable",
+      "passed": true
+    },
+    {
+      "expected": "accept",
+      "name": "actual_commands_prestart_then_settled_compatible",
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "name": "settled_other_host_field",
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "name": "settled_full_config_extra",
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "name": "settled_bind_propagation",
+      "passed": true
+    },
+    {
+      "expected": "accept",
+      "name": "cleanup_contract_skips_preserve_owned_cleanup",
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "name": "duplicate_successful_raw_create",
+      "passed": true
+    }
+  ],
+  "market_execution": false,
+  "participant_or_native_import": false,
+  "passed": true,
+  "schema": "t3-floor-mount-contract-controls-v5",
+  "source_only": true
+}

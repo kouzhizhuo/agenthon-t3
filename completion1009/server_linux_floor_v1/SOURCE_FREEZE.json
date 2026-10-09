@@ -1,10 +1,10 @@
 {
-  "schema": "t3-floor-source-freeze-v4",
+  "schema": "t3-floor-source-freeze-v5",
   "source_only": true,
   "files": {
     "controller.py": {
-      "bytes": 14775,
-      "sha256": "71b5db52e80bb999e5b1fb9a6febb4f70e34573e5623db3607ea8954141975ef"
+      "bytes": 18015,
+      "sha256": "3b0104cc49ef41f4e2881494808931e5d79e0ab27ef7f474bbd969b92c7efcc5"
     },
     "prepare.py": {
       "bytes": 8054,
@@ -31,16 +31,28 @@
       "sha256": "db39ebab0761c0175b1ba7b0893f97f9db966f0ea41ed1c1814c6f102fb2c1cd"
     },
     "PHASE_PROTOCOL_v2.md": {
-      "bytes": 5131,
-      "sha256": "1d904088779bda4c749211bc2c685a3dc02dd52d5a1bbe2a1f64b500d3f2e625"
+      "bytes": 5655,
+      "sha256": "94ec66969a028f6cebdc9ee89101c3c71394a356b49f06da016e2382296444ea"
     },
     "README.md": {
-      "bytes": 5751,
-      "sha256": "e2579003340514374ff4aecf3c5856bd43a6d016a3c561577118b7523d69b275"
+      "bytes": 6637,
+      "sha256": "bb4f89ec9269cdc553b08f99480400981e6231edf60c0be3ca91b40a17fffa91"
     },
     "workflow-source.yml": {
-      "bytes": 3400,
-      "sha256": "7468a47d3509f58a891625c85bc09bea32364fb986c7300991dd78f175ebf48e"
+      "bytes": 3579,
+      "sha256": "13a2541bbcbdce16a0d0c1149920ab98d6cc0ddc38a2d56f382d46cb91778d86"
+    },
+    "mount_contract_controls_v5.py": {
+      "bytes": 9453,
+      "sha256": "8deca91be42ca68df79229187dc75aa71b411659f7b187a5f01d61293721931e"
+    },
+    "MOUNT_CONTRACT_CONTROLS_v5.json": {
+      "bytes": 5712,
+      "sha256": "2fe6f5c4c1d28eeeb830610cedd5a8f131748197b5acb5c81afc26601c229bd0"
+    },
+    "MOUNT_CONTRACT_REPAIR_v5.md": {
+      "bytes": 4044,
+      "sha256": "d8af0bb39794c95f66a76636f7e491564f35cdadeb07bf76f4283145a29f460e"
     }
   },
   "observer_startup_payload": {
@@ -50,5 +62,11 @@
   "default_units": 5,
   "default_diagnostic_containers": 10,
   "no_target_or_unavoidable_floor_claim": true,
-  "workflow_uploaded_or_dispatched": false
+  "workflow_uploaded_or_dispatched": false,
+  "previous_v4_source_preserved": "completion1009/research/linux_floor_mount_contract_v5/v4_preserved",
+  "repair_scope": "Docker inspect mount representation and exact raw-create/settled configuration binding",
+  "mount_source_fixture_count": 53,
+  "no_kernel_mountinfo_claim": true,
+  "previous_run_id": "37935712174",
+  "previous_failed_before_simulator_start": true
 }

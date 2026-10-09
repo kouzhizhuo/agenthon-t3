@@ -1,5 +1,6 @@
 """Two fresh real-market import diagnostics; explicit execution, no score claim."""
 import argparse
+import copy
 import importlib.util
 import json
 import math
@@ -99,6 +100,68 @@ def parse_phases(path, item):
     value["actual_input_scenario_roster"] = roster
     return value
 
+def diagnostic_contract(info, create_argv, diagnostic, importtime):
+    """Bind inspect to raw create; Docker may omit --tmpfs from Mounts."""
+    def options(flag):
+        return [create_argv[i + 1] for i, value in enumerate(create_argv[:-1]) if value == flag]
+    images = [i for i, value in enumerate(create_argv) if value.startswith("sha256:")]
+    if (len(images) != 1 or info.get("Image") != create_argv[images[0]]
+            or options("--entrypoint") != ["/usr/local/bin/python"]
+            or options("--tmpfs") != ["/tmp:rw,noexec,nosuid,nodev,size=64m"]):
+        raise ValueError("raw diagnostic create image/entrypoint/tmpfs differs")
+    expected = {}
+    for specification in options("--mount"):
+        fields = specification.split(",")
+        values = dict(part.split("=", 1) for part in fields if "=" in part)
+        if (len(values) != 3 or set(values) != {"type", "src", "dst"}
+                or values["type"] != "bind" or values["dst"] in expected
+                or any(part != "readonly" for part in fields if "=" not in part)
+                or len(fields) != 3 + fields.count("readonly") or fields.count("readonly") > 1):
+            raise ValueError("raw diagnostic exact bind declaration differs")
+        expected[values["dst"]] = (str(Path(values["src"]).resolve()), "readonly" not in fields)
+    if (set(expected) != {"/input", "/output", "/diagnostic"}
+            or expected["/input"][1] is not False or expected["/output"][1] is not True
+            or expected["/diagnostic"] != (str(diagnostic), False)):
+        raise ValueError("raw diagnostic exact source/permissions differ")
+    mounts = info.get("Mounts", [])
+    binds = [row for row in mounts if row.get("Destination") != "/tmp"]
+    temporary = [row for row in mounts if row.get("Destination") == "/tmp"]
+    if (len(binds) != 3 or {row.get("Destination") for row in binds} != set(expected)
+            or any(row.get("Type") != "bind" or not isinstance(row.get("Source"), str)
+                   or (str(Path(row["Source"]).resolve()), row.get("RW")) != expected[row["Destination"]]
+                   or type(row.get("RW")) is not bool for row in binds)
+            or len(temporary) > 1 or any(row.get("Type") != "tmpfs" for row in temporary)):
+        raise ValueError("diagnostic exact three bind mounts or optional tmpfs enumeration differ")
+    host, config = info["HostConfig"], info["Config"]
+    if host.get("Tmpfs") != {"/tmp": "rw,noexec,nosuid,nodev,size=64m"}:
+        raise ValueError("exact isolated tmp64MiB mount/options required")
+    limits = host.get("Ulimits", [])
+    expected_limits = {"nofile": (1024, 1024), "nproc": (256, 256), "fsize": (268435456, 268435456)}
+    if (len(limits) != 3 or {row.get("Name") for row in limits} != set(expected_limits)
+            or any((row.get("Soft"), row.get("Hard")) != expected_limits[row["Name"]] for row in limits)):
+        raise ValueError("actual diagnostic ulimits differ")
+    if (host.get("NanoCpus") != 4 * 10 ** 9 or host.get("Memory") != 16 * 1024 ** 3
+            or host.get("MemorySwap") != 16 * 1024 ** 3 or host.get("PidsLimit") != 256
+            or host.get("ReadonlyRootfs") is not True or host.get("NetworkMode") != "none"
+            or host.get("Runtime") != "runc" or host.get("Privileged") is not False
+            or host.get("CapDrop") != ["ALL"] or host.get("CapAdd") not in (None, [])
+            or host.get("SecurityOpt") != ["no-new-privileges"]
+            or (host.get("OomKillDisable") is not None and host.get("OomKillDisable") is not False)
+            or config.get("User") != "65534:65534" or config.get("WorkingDir") != "/output"):
+        raise ValueError("actual diagnostic resource/security configuration differs")
+    if (config.get("Entrypoint") != ["/usr/local/bin/python"]
+            or config.get("Cmd") != create_argv[images[0] + 1:]
+            or config.get("Cmd", [])[:2] != ["-B", "/diagnostic/entry_probe.py"]
+            or (importtime and "PYTHONPROFILEIMPORTTIME=1" not in config.get("Env", []))
+            or (not importtime and any(e.startswith("PYTHONPROFILEIMPORTTIME=") for e in config.get("Env", [])))):
+        raise ValueError("actual diagnostic profile environment/argv differs")
+    normalized_host = copy.deepcopy(host)
+    # Docker's created null may settle to false; both keep the OOM killer enabled.
+    normalized_host["OomKillDisable"] = False
+    return {"HostConfig": normalized_host, "Config": copy.deepcopy(config),
+            "binds": sorted((copy.deepcopy(row) for row in binds), key=lambda row: row["Destination"])}
+
+
 def command_class(screen, diagnostic, importtime=True):
     original = screen.StrictCommands
     raw = original.__mro__[1]
@@ -120,28 +183,14 @@ def command_class(screen, diagnostic, importtime=True):
         def inspect(self, name, cleanup=False, seconds=30):
             info, command = raw.inspect(self, name, cleanup, seconds)
             if info is not None and not cleanup:
-                limits = {r["Name"]: (r["Soft"], r["Hard"]) for r in info["HostConfig"].get("Ulimits", [])}
-                if any(limits.get(k) != v for k, v in {"nofile": (1024, 1024), "nproc": (256, 256), "fsize": (268435456, 268435456)}.items()):
-                    raise ValueError("actual diagnostic ulimits differ")
-                mounts = info.get("Mounts", [])
-                binds = [r for r in mounts if r.get("Destination") != "/tmp"]
-                if (len(binds) != 3 or {r.get("Destination") for r in binds} != {"/input", "/output", "/diagnostic"}
-                        or any(r.get("Type") != "bind" for r in binds)
-                        or len([r for r in mounts if r.get("Destination") == "/tmp"]) != 1
-                        or any(r.get("Type") != "tmpfs" for r in mounts if r.get("Destination") == "/tmp")):
-                    raise ValueError("diagnostic exact three bind mounts required")
-                host = info["HostConfig"]
-                if (not all(flag in host.get("Tmpfs", {}).get("/tmp", "") for flag in ("noexec", "nosuid", "nodev", "size=64m"))
-                        or set(host.get("Tmpfs", {})) != {"/tmp"}):
-                    raise ValueError("exact isolated tmp64MiB mount/options required")
-                mounted = next(r for r in binds if r["Destination"] == "/diagnostic")
-                config = info["Config"]
-                if (mounted.get("RW") is not False or Path(mounted["Source"]).resolve() != diagnostic
-                        or config.get("Entrypoint") != ["/usr/local/bin/python"]
-                        or config.get("Cmd", [])[:2] != ["-B", "/diagnostic/entry_probe.py"]
-                        or (importtime and "PYTHONPROFILEIMPORTTIME=1" not in config.get("Env", []))
-                        or (not importtime and any(e.startswith("PYTHONPROFILEIMPORTTIME=") for e in config.get("Env", [])))):
-                    raise ValueError("actual diagnostic source/profile environment/argv differs")
+                creates = [row for row in self.rows if row.get("succeeded") is True
+                           and row.get("argv", [])[1:2] == ["create"]]
+                if len(creates) != 1:
+                    raise ValueError("one successful raw diagnostic create required")
+                current = diagnostic_contract(info, creates[0]["argv"], diagnostic, importtime)
+                if hasattr(self, "_floor_created_contract") and current != self._floor_created_contract:
+                    raise ValueError("diagnostic settled configuration differs from prestart contract")
+                self._floor_created_contract = current
             return info, command
     linux.DockerCommands = FloorCommands
     return FloorCommands
