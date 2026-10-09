@@ -1,0 +1,24 @@
+name: T3 finite cold dependency launch diagnostic v3.1
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: t3-serial-linux-screen-v2
+  cancel-in-progress: false
+jobs:
+  diagnostic:
+    if: github.repository == 'kouzhizhuo/agenthon-t3'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Thirty-five serial cold launches of one immutable image
+        run: python3 completion1009/server_cold_dependency_probe_v3_1/controller.py --evidence "$PWD/cold-dependency-evidence"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: t3-cold-dependency-probe-v3-1-evidence
+          path: cold-dependency-evidence
+          retention-days: 30
+          if-no-files-found: error
