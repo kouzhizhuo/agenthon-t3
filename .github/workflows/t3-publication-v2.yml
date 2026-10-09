@@ -1,0 +1,160 @@
+name: T3 reusable exact-image verification and publication v2
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Probe package scope only, verify new frozen payload, or publish a saved artifact
+        required: true
+        type: choice
+        options: [preflight-only, verify, publish-only]
+        default: verify
+      payload_sha256:
+        description: Reviewed completion/WORKFLOW_PAYLOAD.tar.xz SHA256 for verify mode
+        required: false
+        type: string
+      verification_run_id:
+        description: This repository's successful verify run containing the image bundle
+        required: false
+        type: string
+      bundle_sha256:
+        description: Exact BUNDLE.json SHA256 for publish-only mode
+        required: false
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: t3-reusable-publication-v2
+  cancel-in-progress: false
+jobs:
+  preflight:
+    if: github.repository == 'kouzhizhuo/agenthon-t3'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: completion1009/publication_v2
+          sparse-checkout-cone-mode: false
+      - name: Prove package upload scope before any payload or verification
+        env:
+          T3_REGISTRY_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 completion1009/publication_v2/controller.py preflight --out "$PWD/preflight-evidence" --execute
+      - name: Save scope success or denial and exact upload cleanup receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: t3-scope-preflight-v2
+          path: preflight-evidence
+          retention-days: 30
+          if-no-files-found: warn
+  verify:
+    needs: preflight
+    if: github.repository == 'kouzhizhuo/agenthon-t3' && inputs.mode == 'verify'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 100
+    permissions:
+      contents: read
+    outputs:
+      bundle_sha256: ${{ steps.archive.outputs.bundle_sha256 }}
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+      NUMEXPR_NUM_THREADS: '1'
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONHASHSEED: '0'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Materialize reviewed completion payload
+        env:
+          EXPECTED_PAYLOAD: ${{ inputs.payload_sha256 }}
+        run: python3 completion1009/publication_v2/materialize.py --archive completion1009/WORKFLOW_PAYLOAD.tar.xz --expected-sha256 "$EXPECTED_PAYLOAD" --out completion
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.13.7'
+      - name: Fetch official toolkit and public references
+        run: |
+          mkdir -p evidence
+          python completion/fetch_evaluation.py --out "$PWD/evaluation" > evidence/fetch-process.log 2>&1
+      - name: Install pinned evaluator
+        run: |
+          set -euo pipefail
+          python -m pip install numpy==2.2.6 pandas==2.3.3 scipy==1.18.1 pyarrow==21.0.0 jsonschema==4.23.0 jsonschema-specifications==2025.9.1 attrs==26.1.0 referencing==0.37.0 rpds-py==2026.9.1 python-dateutil==2.9.0.post0 pytz==2026.5 six==1.17.0 tzdata==2026.5
+          python -m pip install --no-deps ./evaluation/toolkit/common ./evaluation/track3
+          python -m pip freeze > evidence/EVALUATOR_FREEZE.txt
+      - name: Build and run complete verification, controls, pilot and selection
+        run: |
+          set -euo pipefail
+          python completion/run_linux_workflow.py build --evidence "$PWD/evidence" --evaluation "$PWD/evaluation"
+          python completion/run_linux_workflow.py controls --evidence "$PWD/evidence" --evaluation "$PWD/evaluation"
+          python completion/run_linux_workflow.py full --evidence "$PWD/evidence" --evaluation "$PWD/evaluation"
+          python completion/run_linux_workflow.py pilot --evidence "$PWD/evidence" --evaluation "$PWD/evaluation"
+          python completion/run_linux_workflow.py select --evidence "$PWD/evidence" --evaluation "$PWD/evaluation"
+      - name: Save exact tested image and content-addressed receipts
+        id: archive
+        run: |
+          set -euo pipefail
+          python completion1009/publication_v2/controller.py archive --completion "$PWD/completion" --evidence "$PWD/evidence" --bundle "$PWD/image-bundle" --execute
+          python - <<'PY'
+          import hashlib,os,pathlib
+          value=hashlib.sha256(pathlib.Path('image-bundle/BUNDLE.json').read_bytes()).hexdigest()
+          with open(os.environ['GITHUB_OUTPUT'],'a') as stream:stream.write('bundle_sha256='+value+'\n')
+          PY
+      - name: Save reusable image bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: t3-verified-image-bundle-v2
+          path: image-bundle
+          retention-days: 30
+          if-no-files-found: error
+          compression-level: 0
+      - name: Save complete verification receipts and failures
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: t3-verification-evidence-v2
+          path: evidence
+          retention-days: 30
+          if-no-files-found: error
+  publish:
+    needs: [preflight, verify]
+    if: always() && github.repository == 'kouzhizhuo/agenthon-t3' && needs.preflight.result == 'success' && inputs.mode != 'preflight-only' && (needs.verify.result == 'success' || inputs.mode == 'publish-only')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    permissions:
+      contents: read
+      actions: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download this run's exact verified image
+        if: inputs.mode == 'verify'
+        uses: actions/download-artifact@v4
+        with:
+          name: t3-verified-image-bundle-v2
+          path: image-bundle
+      - name: Download earlier successful verification image
+        if: inputs.mode == 'publish-only'
+        uses: actions/download-artifact@v4
+        with:
+          name: t3-verified-image-bundle-v2
+          path: image-bundle
+          repository: kouzhizhuo/agenthon-t3
+          run-id: ${{ inputs.verification_run_id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Scope preflight, restore exact image, publish and verify anonymous bytes
+        env:
+          T3_REGISTRY_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          EXPECTED_BUNDLE: ${{ inputs.mode == 'verify' && needs.verify.outputs.bundle_sha256 || inputs.bundle_sha256 }}
+        run: python3 completion1009/publication_v2/controller.py publish --bundle "$PWD/image-bundle" --expected-bundle-sha256 "$EXPECTED_BUNDLE" --out "$PWD/publication-evidence" --execute
+      - name: Save publication receipts and failures
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: t3-publication-evidence-v2
+          path: publication-evidence
+          retention-days: 30
+          if-no-files-found: warn
