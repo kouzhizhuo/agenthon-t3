@@ -1,0 +1,60 @@
+name: T3 serial source and genuine-native Linux screen v1
+on:
+  workflow_dispatch:
+    inputs:
+      payload_sha256:
+        description: Reviewed SCREEN_PAYLOAD.tar.xz SHA256; required exact source archive
+        required: true
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: t3-serial-linux-screen-v1
+  cancel-in-progress: false
+jobs:
+  screen:
+    if: github.repository == 'kouzhizhuo/agenthon-t3'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 100
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+      NUMEXPR_NUM_THREADS: '1'
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONHASHSEED: '0'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Materialize exact reviewed screening source
+        env:
+          EXPECTED_PAYLOAD: ${{ inputs.payload_sha256 }}
+        run: python3 completion1009/server_screen_v1/materialize.py --archive completion1009/server_screen_v1/SCREEN_PAYLOAD.tar.xz --expected-sha256 "$EXPECTED_PAYLOAD" --out screen-payload
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.13.7'
+      - name: Fetch official public toolkit and original reference inputs
+        run: |
+          mkdir -p screen-evidence
+          python screen-payload/host/fetch_evaluation.py --out "$PWD/screen-evaluation" > screen-evidence/fetch-process.log 2>&1
+      - name: Install pinned host evaluator
+        run: |
+          set -euo pipefail
+          python -m pip install numpy==2.2.6 pandas==2.3.3 scipy==1.18.1 pyarrow==21.0.0 jsonschema==4.23.0 jsonschema-specifications==2025.9.1 attrs==26.1.0 referencing==0.37.0 rpds-py==2026.9.1 python-dateutil==2.9.0.post0 pytz==2026.5 six==1.17.0 tzdata==2026.5
+          python -m pip install --no-deps ./screen-evaluation/toolkit/common ./screen-evaluation/track3
+          python -m pip freeze > screen-evidence/EVALUATOR_FREEZE.txt
+      - name: Build each source arm and genuine native extension once
+        run: python screen-payload/control/controller.py build --evidence "$PWD/screen-evidence"
+      - name: Smoke, stress, default-latency, five-unit screen and batch isolation
+        run: python screen-payload/control/controller.py screen --evidence "$PWD/screen-evidence" --reference-root "$PWD/screen-evaluation/references" --gate-kit "$PWD/screen-evaluation/track3"
+      - name: Assemble compact evidence while retaining outputs on runner
+        if: always()
+        run: python screen-payload/control/controller.py compact --evidence "$PWD/screen-evidence" --archive completion1009/server_screen_v1/SCREEN_PAYLOAD.tar.xz --artifact "$PWD/screen-artifact"
+      - name: Save compact screening evidence, exact source and every failed output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: t3-serial-linux-screen-v1-evidence
+          path: screen-artifact
+          retention-days: 30
+          if-no-files-found: error
+          compression-level: 6
