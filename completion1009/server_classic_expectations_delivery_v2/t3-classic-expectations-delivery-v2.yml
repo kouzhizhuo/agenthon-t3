@@ -1,0 +1,70 @@
+name: T3 exact expectation final delivery full71 isolated v2
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+  packages: write
+concurrency:
+  group: t3-serial-linux-screen-v2
+  cancel-in-progress: false
+jobs:
+  delivery:
+    if: github.repository == 'kouzhizhuo/agenthon-t3'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 360
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+      NUMEXPR_NUM_THREADS: '1'
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONHASHSEED: '0'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify independent frozen delivery source
+        run: python3 completion1009/server_classic_expectations_delivery_v2/verify_source.py
+      - name: Materialize reviewed expectation and exact original host control oracle
+        run: python3 completion1009/server_classic_expectations_delivery_v2/materialize.py --archive completion1009/server_classic_expectations_delivery_v2/DELIVERY_PAYLOAD_v3.tar.xz --expected-sha256 1af7ba6d1b79f1934599ad7c385ee3d4f1d0d46138fb0e5137a9eec06e49bf73 --out expectations-delivery-payload
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.13.7'
+      - name: Fetch pinned official evaluator and complete original reference roster
+        run: |
+          mkdir -p expectations-delivery-evidence
+          python expectations-delivery-payload/host/fetch_evaluation.py --out "$PWD/expectations-delivery-evaluation" > expectations-delivery-evidence/fetch-process.log 2>&1
+      - name: Install pinned host evaluator only
+        run: |
+          set -euo pipefail
+          python -m pip install numpy==2.2.6 pandas==2.3.3 scipy==1.18.1 pyarrow==21.0.0 jsonschema==4.23.0 jsonschema-specifications==2025.9.1 attrs==26.1.0 referencing==0.37.0 rpds-py==2026.9.1 python-dateutil==2.9.0.post0 pytz==2026.5 six==1.17.0 tzdata==2026.5
+          python -m pip install --no-deps ./expectations-delivery-evaluation/toolkit/common ./expectations-delivery-evaluation/track3
+          python -m pip freeze > expectations-delivery-evidence/EVALUATOR_FREEZE.txt
+      - name: One expectation build and actual source generated C object ELF public entry license inspection
+        run: python completion1009/server_classic_expectations_delivery_v2/driver.py build --payload expectations-delivery-payload --evidence expectations-delivery-evidence --reference-root expectations-delivery-evaluation/references --gate-kit expectations-delivery-evaluation/track3
+      - name: Separate complete controls STATE graphs then final default entry full71 and repeats
+        run: python completion1009/server_classic_expectations_delivery_v2/driver.py screen --payload expectations-delivery-payload --evidence expectations-delivery-evidence --reference-root expectations-delivery-evaluation/references --gate-kit expectations-delivery-evaluation/track3
+      - name: Publish only the passing immutable final image
+        env:
+          GHCR_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          image=$(python -c 'import json; print(json.load(open("expectations-delivery-evidence/BUILD_READY.json"))["image_id"])')
+          tag="ghcr.io/kouzhizhuo/agenthon-t3-classic:delivery-expectations-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          mkdir -p expectations-delivery-evidence/registry-config
+          printf '%s' "$GHCR_TOKEN" | docker --config expectations-delivery-evidence/registry-config login ghcr.io -u "$GITHUB_ACTOR" --password-stdin > expectations-delivery-evidence/registry-login.log 2>&1
+          docker --config expectations-delivery-evidence/registry-config tag "$image" "$tag"
+          docker --config expectations-delivery-evidence/registry-config push "$tag" > expectations-delivery-evidence/registry-push.log 2>&1
+          docker --config expectations-delivery-evidence/registry-config logout ghcr.io > expectations-delivery-evidence/registry-logout.log 2>&1
+          rm -rf expectations-delivery-evidence/registry-config
+          python completion1009/server_classic_expectations_delivery_v2/driver.py publication --payload expectations-delivery-payload --evidence expectations-delivery-evidence --reference-root expectations-delivery-evaluation/references --gate-kit expectations-delivery-evaluation/track3 --tag "$tag"
+      - name: Preserve complete actual outputs construction sources and cleanup evidence
+        if: always()
+        run: python completion1009/server_classic_expectations_delivery_v2/driver.py artifact --payload expectations-delivery-payload --evidence expectations-delivery-evidence --reference-root expectations-delivery-evaluation/references --gate-kit expectations-delivery-evaluation/track3 --artifact expectations-delivery-artifact
+      - name: Upload complete independent final delivery evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: t3-classic-expectations-delivery-v2-evidence
+          path: expectations-delivery-artifact
+          retention-days: 30
+          if-no-files-found: error
+          compression-level: 6
