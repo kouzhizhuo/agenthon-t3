@@ -1,0 +1,66 @@
+name: T3 exact classical functions versus clone parent v1
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: t3-serial-linux-screen-v2
+  cancel-in-progress: false
+jobs:
+  screen:
+    if: github.repository == 'kouzhizhuo/agenthon-t3'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+      NUMEXPR_NUM_THREADS: '1'
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONHASHSEED: '0'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify reviewed direct wrapper bytes
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib
+          root=Path('completion1009/server_classic_native_kernels_v1/comparison')
+          pins={'driver.py': '858099a947e1a8c84aa54a19e6f9435c711a1e905b6a32c4e91c43324a462a1b', 'worker.py': 'be9ff110815f29cad60298a2b5c984f6a56ae6cc7db14b188d6633a9a49717d7', 'README.md': '42d92d428ad9de9c702f4877c587b8727a69d37abc047648ac7ab2174695f699', 'SOURCE_REVIEW.json': 'cbc6cd58a9d31a559176c36648cda6f8d44473cb5b5a14dfa3534c87efd9f1ed'}
+          pins.update({"../materialize.py": '1becd43b5fa775327326616358a8e2d92f52dc3c3cfa996618e06ead8bd1e739', "../common.py": '347fa0624727018cd49f698916be2c559be17db27ae24930b1cef4a5d2286476'})
+          for name,digest in pins.items():
+              assert hashlib.sha256((root/name).read_bytes()).hexdigest()==digest, name
+          PY
+      - name: Materialize both unchanged frozen archives
+        run: |
+          python3 completion1009/server_direct_order_clone_controls_v3/materialize.py --archive completion1009/server_direct_order_clone_controls_v3/SCREEN_PAYLOAD_v1.tar.xz --expected-sha256 41c2a2f4bb7af0f086067ca3ba3cb7859a84217cd625d7a445b9b86f65c6d77d --out classic-direct-v1-incumbent-payload
+          python3 completion1009/server_classic_native_kernels_v1/materialize.py --archive completion1009/server_classic_native_kernels_v1/SCREEN_PAYLOAD_v1.tar.xz --expected-sha256 e2c0d6167ce24854d164345a14a8bef31311b6c7d28708a4e0196e8fe0002f71 --out classic-direct-v1-scalar-payload
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.13.7'
+      - name: Fetch the pinned official host evaluator and original references
+        run: |
+          mkdir -p classic-direct-v1-evidence
+          python classic-direct-v1-scalar-payload/host/fetch_evaluation.py --out "$PWD/classic-direct-v1-evaluation" > classic-direct-v1-evidence/fetch-process.log 2>&1
+      - name: Install the pinned host evaluator
+        run: |
+          set -euo pipefail
+          python -m pip install numpy==2.2.6 pandas==2.3.3 scipy==1.18.1 pyarrow==21.0.0 jsonschema==4.23.0 jsonschema-specifications==2025.9.1 attrs==26.1.0 referencing==0.37.0 rpds-py==2026.9.1 python-dateutil==2.9.0.post0 pytz==2026.5 six==1.17.0 tzdata==2026.5
+          python -m pip install --no-deps ./classic-direct-v1-evaluation/toolkit/common ./classic-direct-v1-evaluation/track3
+          python -m pip freeze > classic-direct-v1-evidence/EVALUATOR_FREEZE.txt
+      - name: Build both original native images and inspect all sources
+        run: python completion1009/server_classic_native_kernels_v1/comparison/driver.py build --incumbent-payload classic-direct-v1-incumbent-payload --scalar-payload classic-direct-v1-scalar-payload --evidence classic-direct-v1-evidence --reference-root classic-direct-v1-evaluation/references --gate-kit classic-direct-v1-evaluation/track3
+      - name: Original complete controls then50alternating exact market runs
+        run: python completion1009/server_classic_native_kernels_v1/comparison/driver.py screen --incumbent-payload classic-direct-v1-incumbent-payload --scalar-payload classic-direct-v1-scalar-payload --evidence classic-direct-v1-evidence --reference-root classic-direct-v1-evaluation/references --gate-kit classic-direct-v1-evaluation/track3
+      - name: Preserve both frozen sources all outputs and actual logs
+        if: always()
+        run: python completion1009/server_classic_native_kernels_v1/comparison/driver.py artifact --incumbent-payload classic-direct-v1-incumbent-payload --scalar-payload classic-direct-v1-scalar-payload --evidence classic-direct-v1-evidence --reference-root classic-direct-v1-evaluation/references --gate-kit classic-direct-v1-evaluation/track3 --artifact classic-direct-v1-artifact
+      - name: Retain direct comparison evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: t3-classic-native-kernels-v1-evidence
+          path: classic-direct-v1-artifact
+          retention-days: 30
+          if-no-files-found: error
+          compression-level: 6
