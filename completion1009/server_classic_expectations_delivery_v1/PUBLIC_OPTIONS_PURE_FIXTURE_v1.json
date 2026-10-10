@@ -1,0 +1,207 @@
+{
+  "all_passed": true,
+  "cases": [
+    {
+      "arguments": [
+        "simulate",
+        "--config",
+        "/input/scenario.json",
+        "--out",
+        "/output/trace.parquet"
+      ],
+      "canonical": [
+        "simulate",
+        "--config",
+        "/input/scenario.json",
+        "--out",
+        "/output/trace.parquet"
+      ],
+      "passed": true
+    },
+    {
+      "arguments": [
+        "simulate",
+        "--config=/input/scenario.json",
+        "--out=/output/trace.parquet"
+      ],
+      "canonical": [
+        "simulate",
+        "--config",
+        "/input/scenario.json",
+        "--out",
+        "/output/trace.parquet"
+      ],
+      "passed": true
+    },
+    {
+      "arguments": [
+        "simulate-batch",
+        "--batch-dir",
+        "/input/scenarios",
+        "--out-dir",
+        "/output"
+      ],
+      "canonical": [
+        "simulate-batch",
+        "--batch-dir",
+        "/input/scenarios",
+        "--out-dir",
+        "/output"
+      ],
+      "passed": true
+    },
+    {
+      "arguments": [
+        "simulate-batch",
+        "--batch-dir=/input/scenarios",
+        "--out-dir=/output"
+      ],
+      "canonical": [
+        "simulate-batch",
+        "--batch-dir",
+        "/input/scenarios",
+        "--out-dir",
+        "/output"
+      ],
+      "passed": true
+    },
+    {
+      "arguments": [
+        "simulate",
+        "--config",
+        "/input/scenario.json",
+        "--out",
+        "/output/trace.parquet",
+        "--runti",
+        "/tmp/bypass"
+      ],
+      "passed": true,
+      "rejected": true
+    },
+    {
+      "arguments": [
+        "simulate",
+        "--config",
+        "/input/scenario.json",
+        "--out",
+        "/output/trace.parquet",
+        "--runtime",
+        "/tmp/bypass"
+      ],
+      "passed": true,
+      "rejected": true
+    },
+    {
+      "arguments": [
+        "simulate",
+        "--config",
+        "/input/scenario.json",
+        "--out",
+        "/output/trace.parquet",
+        "--buil",
+        "/tmp/bypass"
+      ],
+      "passed": true,
+      "rejected": true
+    },
+    {
+      "arguments": [
+        "simulate",
+        "--config",
+        "/input/scenario.json",
+        "--out",
+        "/output/trace.parquet",
+        "--build",
+        "/tmp/bypass"
+      ],
+      "passed": true,
+      "rejected": true
+    },
+    {
+      "arguments": [
+        "simulate",
+        "--config",
+        "/input/scenario.json",
+        "--out",
+        "/output/trace.parquet",
+        "--output-wit",
+        "/tmp/bypass"
+      ],
+      "passed": true,
+      "rejected": true
+    },
+    {
+      "arguments": [
+        "simulate",
+        "--config",
+        "/input/scenario.json",
+        "--out",
+        "/output/trace.parquet",
+        "--output-witness",
+        "/tmp/bypass"
+      ],
+      "passed": true,
+      "rejected": true
+    },
+    {
+      "arguments": [
+        "simulate",
+        "--config",
+        "/input/scenario.json",
+        "--out",
+        "/output/trace.parquet",
+        "--arm",
+        "/tmp/bypass"
+      ],
+      "passed": true,
+      "rejected": true
+    },
+    {
+      "arguments": [
+        "simulate",
+        "--config",
+        "/input/scenario.json",
+        "--out",
+        "/output/trace.parquet",
+        "--mode",
+        "/tmp/bypass"
+      ],
+      "passed": true,
+      "rejected": true
+    },
+    {
+      "arguments": [
+        "simulate",
+        "--config",
+        "/input/scenario.json",
+        "--out",
+        "/output/trace.parquet",
+        "--conf",
+        "/tmp/bypass"
+      ],
+      "passed": true,
+      "rejected": true
+    },
+    {
+      "arguments": [
+        "simulate",
+        "--config",
+        "/input/scenario.json",
+        "--out",
+        "/output/trace.parquet",
+        "--ou",
+        "/tmp/bypass"
+      ],
+      "passed": true,
+      "rejected": true
+    }
+  ],
+  "invalid_internal_or_abbreviation_cases": 10,
+  "market_executed": false,
+  "native_compiled": false,
+  "only_AST_extracted_public_parser_executed": true,
+  "participant_imported": false,
+  "schema": "t3-exact-public-options-pure-fixture-v1",
+  "source_sha256": "a59c492b7776e094335fd7a6effc85ab07041553c9671390117f2684ff274dad",
+  "valid_exact_cases": 4
+}

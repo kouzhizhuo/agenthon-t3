@@ -1,0 +1,167 @@
+{
+  "actual_provenance": {
+    "before_after_harness_inventory": true,
+    "before_after_image_metadata": true,
+    "before_after_license_inventory": true,
+    "before_after_source_C_object_ELF_inventory": true,
+    "noOOM_exit0_owned_cleanup_removal_absence": true,
+    "serial_actual_intervals_required": true,
+    "unchanged_baseline_runtime_and_pins_files": 65,
+    "unchanged_original_host_control_oracle_files": 10
+  },
+  "base_image": "ghcr.io/kouzhizhuo/agenthon-t3-classic@sha256:c1b3c9f2aec8d5a761b4814cfddf7b79b76eb6afd09ca6bd4558661e2ce046ba",
+  "cancellation": {
+    "SIGINT_SIGTERM_driver_and_worker_handlers": "original linux.cancellation",
+    "forced_external_SIGKILL_cleanup_guaranteed": false,
+    "owned_worker_SIGKILL_only_after_grace": true,
+    "owned_worker_SIGTERM_grace_sec": 90,
+    "whole_screen_budget_sec": 7200,
+    "workflow_timeout_min": 360
+  },
+  "candidate": "classic_build_expectations_v1",
+  "candidate_frozen_source_files": 107,
+  "candidate_source_receipt_sha256": "e3f4bb09be2fa809e443f78c38ed72cb30f1ff9a597fed8d932d6861aaa8ba34",
+  "counted_changes_from_v7": [
+    "Keep expectations only; remove price candidate build and controls.",
+    "Final official entry runs expectations without internal mode; both actual public verbs.",
+    "Separate91ordinary364gates262Parquet from12diagnostics48gates20STATE and2controls.",
+    "source_copy exact third permitted root /licenses; existing64MiB source-file and16MiB log caps unchanged.",
+    "Actual source/harness/licenses read back both before and after; all copy containers owned and never started.",
+    "Ordinary process timeout restored to300seconds, actual256MiB output-directory bound checked.",
+    "Public wrapper has exact allow_abbrev=False official option schema, canonical forwarding; no internal option abbreviations.",
+    "Reuse existing anonymously pullable classic repository with unique delivery-expectations run/attempt tag; preserve all incumbent tags/digest.",
+    "Register original cancellation handlers in driver/worker; bounded owned worker SIGTERM cleanup grace;7200sec screen budget and360min workflow."
+  ],
+  "execution_envelope": {
+    "bytecode_off": true,
+    "cap_drop": "ALL",
+    "cpus": 4,
+    "fsize": [
+      268435456,
+      268435456
+    ],
+    "input_readonly": true,
+    "memory_bytes": 17179869184,
+    "memory_swap_total_bytes": 17179869184,
+    "network": "none",
+    "no_new_privileges": true,
+    "noexec_tmp": true,
+    "nofile": [
+      1024,
+      1024
+    ],
+    "nproc": [
+      256,
+      256
+    ],
+    "output_writable": true,
+    "pids_limit": 256,
+    "python_hash_seed": "0",
+    "readonly_root": true,
+    "runtime": "runc",
+    "scientific_threads": 1,
+    "tmp_bytes": 67108864,
+    "user": "65534:65534",
+    "workdir": "/output"
+  },
+  "linux_verified": false,
+  "native_build": {
+    "ABI": "CPython3.11.17 Linux x86_64 little64",
+    "candidate_extension_builds": 1,
+    "candidate_translations": 1,
+    "expectation_artifact_count": 45,
+    "expectation_source_count": 22,
+    "flags": [
+      "-O2",
+      "-fPIC",
+      "-fno-fast-math",
+      "-ffp-contract=off"
+    ],
+    "images_built": 1,
+    "market_executed": false,
+    "participant_imported": false,
+    "runtime_compilation": false
+  },
+  "official_score_changed": false,
+  "official_submission_eligible_until_Linux_and_independent_saved_audit_pass": false,
+  "ordinary": {
+    "actual_Parquet_copies": 262,
+    "default_entry": [
+      "/usr/local/bin/python",
+      "-B",
+      "/opt/classic-native-kernels-v1/delivery_entry.py"
+    ],
+    "expected_public_verbs": [
+      "simulate",
+      "simulate-batch"
+    ],
+    "full_units": 71,
+    "gates": 364,
+    "max_output_directory_bytes": 268435456,
+    "measured_per_repeat_unit": 4,
+    "performance_scope": "ordinary daemon StartedAt to FinishedAt only; no diagnostic/control/construction elapsed",
+    "public_internal_modes": false,
+    "reference_Parquet_frames": 190,
+    "repeat_units": [
+      "t3-s001-price-time-priority",
+      "t3-as06-throughput-fast",
+      "t3-mp01-stp-newest-baseline",
+      "t3-ra01-fundamental-shock-mid",
+      "t3-gbatch-hetero-mix"
+    ],
+    "repeats_per_selected_unit": 5,
+    "runs": 91,
+    "timeout_sec": 300,
+    "warmups_discarded_per_repeat_unit": 1
+  },
+  "parent_unchanged_full_source_C_object_ELF_files": 115,
+  "previous_submitted_digest_and_tags_preserved": true,
+  "public_repository": "ghcr.io/kouzhizhuo/agenthon-t3-classic",
+  "pure_public_option_fixtures": {
+    "invalid_internal_or_abbreviation": 10,
+    "market_executed": false,
+    "participant_imported": false,
+    "valid_exact": 4
+  },
+  "schema": "t3-classic-expectations-delivery-counted-plan-v1",
+  "source_copy": {
+    "containers_never_started": true,
+    "copies_per_phase": 3,
+    "exact_allowed_roots": [
+      "/opt/classic-native-kernels-v1",
+      "/opt/t3-classic-structural-v2",
+      "/licenses"
+    ],
+    "per_log_hard_bytes": 16777216,
+    "per_source_file_hard_bytes": 67108864,
+    "phases": [
+      "before",
+      "after"
+    ]
+  },
+  "target_EPS": 232000,
+  "target_achieved": false,
+  "unique_tag": "delivery-expectations-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}",
+  "untimed": {
+    "admission_markets_per_arm": 10,
+    "clone_cases_per_arm": 35,
+    "control_arms": [
+      "parent",
+      "expectations"
+    ],
+    "control_containers": 2,
+    "control_gates_per_arm": 8,
+    "control_timeout_sec": 4800,
+    "diagnostic_containers": 12,
+    "diagnostic_gates": 48,
+    "diagnostic_timeout_sec": 3600,
+    "diagnostic_units_per_arm": 6,
+    "expectation_negative_cases": 30,
+    "full_actual_market_STATE_graphs": 20,
+    "full_control_children_per_arm": 6,
+    "latency_cases_per_arm": 142,
+    "rankable": false,
+    "serializer_Parquet_files_per_arm": 14,
+    "source_cases_per_arm": 8
+  }
+}
