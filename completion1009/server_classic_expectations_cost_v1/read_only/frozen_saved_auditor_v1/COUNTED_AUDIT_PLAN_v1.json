@@ -1,0 +1,288 @@
+{
+  "STATE_root_keys": [
+    "agents",
+    "oracle",
+    "kernel_rng",
+    "latency",
+    "global_rng",
+    "ttl_messages",
+    "deliver_seq",
+    "deliver_seq_by_key",
+    "current_time",
+    "current_causal_uid",
+    "agent_current_times",
+    "agent_computation_delays",
+    "current_agent_additional_delay",
+    "ledger",
+    "queue",
+    "observer",
+    "summary_log",
+    "mean_result_by_agent_type",
+    "agent_count_by_type",
+    "custom_state",
+    "message_counter",
+    "order_counter"
+  ],
+  "all_passed": false,
+  "audit_stages": [
+    {
+      "checks": [
+        "Exact outer ZIP bytes/SHA bound to downloaded receipt",
+        "Every unique safe ordinary member CRC/SHA/size and extracted bytes",
+        "No absolute, traversal, backslash or symlink members",
+        "ARTIFACT complete manifest and no missing/unmanifested ordinary files"
+      ],
+      "name": "archive"
+    },
+    {
+      "checks": [
+        "Final local freeze, carried source and root remote head/path readback correspondence",
+        "107 candidate source members and unchanged115parent generated artifacts",
+        "Unchanged10host/control plus65baseline source roster",
+        "One translation/build with raw logs, strict flags/ABI and actual generated C/object/ELF",
+        "22source45artifact expectation manifest: no participant imports, market execution or permanent admission caching",
+        "Before/after installed source/harness/licenses bytes and image inspection identical"
+      ],
+      "name": "source_build"
+    },
+    {
+      "checks": [
+        "Exactly six actual owned copy containers, correct final image",
+        "One cp command each using exact one of three permitted roots",
+        "No start/exec commands, zero StartedAt/FinishedAt and not running",
+        "Creator reaped, complete logs, settled exact cleanup/removal/final absence"
+      ],
+      "name": "copy_lifecycle"
+    },
+    {
+      "checks": [
+        "Two actual control containers and ten fresh source/native admissions each",
+        "35clone142latency8source and30expectation negatives complete cases",
+        "14serializer files per arm decoded against explicit cells and original bytes",
+        "Six complete child trace/ledger/STATE graphs byte equal per arm and native cross-arm equal",
+        "Eight original control gates, actual selection, forced fallback without market rerun, owner lifecycle, restored bindings"
+      ],
+      "name": "controls"
+    },
+    {
+      "checks": [
+        "12unique six-unit two-arm diagnostics,48official gates,20complete market graphs",
+        "Raw witness/meta/block streams exactly correspond to saved receipts and actual input/trace/arm/source",
+        "Ordered bounded base64/zlib blocks complete EOF and no trailing/unclaimed stream",
+        "Every saved graph decoded structurally, scalar types and aliases validated",
+        "Every expectations STATE byte equals corresponding parent graph"
+      ],
+      "name": "diagnostics"
+    },
+    {
+      "checks": [
+        "Exact91cell schedule:71first-pass units and four extra repeats for five units",
+        "Actual default public ENTRY and exact official options for both verbs; no internal overrides",
+        "364bound official gate verdicts and262actual output Parquets",
+        "All actual Parquet columns/rowgroups fully decoded and byte pins equal original reference",
+        "Every staged input, sidecar/event count, batch accounting and stable repeat output checked",
+        "Complete runtime envelope, timeout300, output256MiB and lifecycle verified from actual raw Docker records"
+      ],
+      "name": "ordinary"
+    },
+    {
+      "checks": [
+        "Exact22original root keys",
+        "All backward ref IDs resolve, all definition serials ordered unique and original aliases preserved",
+        "Every scalar/container/object encoding arity and original type validated",
+        "Every RandomState and globalMT19937 has624uint32 words plus index, Gaussian-cache flag/value",
+        "Original counters, ledger9fields, queue, observer, clocks, summary, agent/oracle/latency bindings present",
+        "Saved readonly graph/output and restored binding witness tied to actual source and episode"
+      ],
+      "name": "STATE_semantics"
+    },
+    {
+      "checks": [
+        "All105actual market container daemon intervals positive, unique and serial",
+        "Only ordinary StartedAt to FinishedAt and complete actual event counts used for EPS",
+        "Five unit medians each from four measured runs with first warmup excluded",
+        "Summary recomputed from raw data; no diagnostics/control/build/copy/publication time in metrics",
+        "No claim that sampled Linux EPS is an official score or verifies first place"
+      ],
+      "name": "timing"
+    },
+    {
+      "checks": [
+        "Exact existing classic repository, unique delivery-expectations run/attempt tag and immutable digest",
+        "Successful anonymous pull and tested image ID correspondence",
+        "Anonymous manifest/config/layer byte readback with complete digest/size/config/layer equivalence",
+        "Actual publication raw receipts and saved bytes bound; no incumbent tag mutation"
+      ],
+      "name": "publication"
+    },
+    {
+      "checks": [
+        "Independent completed stages and exact counts recorded",
+        "Any missing/corrupt/mismatched authority fails closed",
+        "Execution pass and publication pass separately reported",
+        "all_passed/eligible false while artifact/final pins/public byte readback are pending",
+        "Official scoring and target232000 evidence remain separate fields"
+      ],
+      "name": "final_report"
+    }
+  ],
+  "diagnostic_units": [
+    "t3-s001-price-time-priority",
+    "t3-as06-throughput-fast",
+    "t3-mp01-stp-newest-baseline",
+    "t3-ra01-fundamental-shock-mid",
+    "t3-mr-deep-book-state-size",
+    "t3-gbatch-hetero-mix"
+  ],
+  "eligible_for_official_submission": false,
+  "envelope": {
+    "ABI": {
+      "byteorder": "little",
+      "extension_suffix": ".cpython-311-x86_64-linux-gnu.so",
+      "implementation": "cpython",
+      "machine": "x86_64",
+      "platform": "linux",
+      "pointer_bits": 64,
+      "python": [
+        3,
+        11,
+        17
+      ]
+    },
+    "bind_mounts": {
+      "/input": false,
+      "/output": true
+    },
+    "bytecode_off": true,
+    "cap_drop": "ALL",
+    "compile_flags": [
+      "-O2",
+      "-fPIC",
+      "-fno-fast-math",
+      "-ffp-contract=off"
+    ],
+    "complete_STATE_stream_max_bytes": 4294967296,
+    "compressed_STATE_block_max_bytes": 1048576,
+    "cpus": 4,
+    "memory_bytes": 17179869184,
+    "memory_swap_total_bytes": 17179869184,
+    "network": "none",
+    "no_new_privileges": true,
+    "ordinary_output_directory_max_bytes": 268435456,
+    "ordinary_timeout_sec": 300,
+    "pids_limit": 256,
+    "python_hash_seed": "0",
+    "raw_log_hard_bytes": 16777216,
+    "readonly_root": true,
+    "runtime": "runc",
+    "scientific_threads": 1,
+    "source_file_hard_bytes": 67108864,
+    "tmpfs_bytes": 67108864,
+    "tmpfs_options": [
+      "noexec",
+      "nosuid",
+      "nodev"
+    ],
+    "ulimits": {
+      "fsize": [
+        268435456,
+        268435456
+      ],
+      "nofile": [
+        1024,
+        1024
+      ],
+      "nproc": [
+        256,
+        256
+      ]
+    },
+    "user": "65534:65534",
+    "workdir": "/output"
+  },
+  "expected_counts": {
+    "actual_market_containers_total": 105,
+    "candidate_native_extension_builds": 1,
+    "candidate_translations": 1,
+    "copy_containers_started": 0,
+    "expectation_artifact_files": 45,
+    "expectation_source_entries": 22,
+    "measured_runs_per_selected_unit": 4,
+    "official_units": 71,
+    "one_time_image_builds": 1,
+    "ordinary_actual_output_Parquet_files": 262,
+    "ordinary_first_pass_runs_excluded_from_repeat_metric": 71,
+    "ordinary_gates": 364,
+    "ordinary_measured_runs": 20,
+    "ordinary_runs": 91,
+    "original_reference_Parquet_frames": 190,
+    "runs_per_selected_unit": 5,
+    "selected_repeat_units": 5,
+    "source_harness_license_copy_containers": 6,
+    "untimed_admission_markets_per_arm": 10,
+    "untimed_clone_cases_per_arm": 35,
+    "untimed_control_containers": 2,
+    "untimed_control_gates_per_arm": 8,
+    "untimed_diagnostic_actual_output_Parquet_files": 40,
+    "untimed_diagnostic_complete_STATE_graphs": 20,
+    "untimed_diagnostic_containers": 12,
+    "untimed_diagnostic_gates": 48,
+    "untimed_expectation_negative_cases": 30,
+    "untimed_full_control_children_per_arm": 6,
+    "untimed_latency_cases_per_arm": 142,
+    "untimed_serializer_fixture_Parquet_files_per_arm": 14,
+    "untimed_source_cases_per_arm": 8,
+    "warmups_discarded_per_selected_unit": 1
+  },
+  "market_executed": false,
+  "native_compiled": false,
+  "official_score": null,
+  "participant_imported": false,
+  "pending": [
+    "Actual complete delivery ZIP plus exact downloaded byte receipt",
+    "Actual anonymous public image byte readback"
+  ],
+  "performance_usable": false,
+  "public_default_entry": [
+    "/usr/local/bin/python",
+    "-B",
+    "/opt/classic-native-kernels-v1/delivery_entry.py"
+  ],
+  "public_verbs": [
+    "simulate",
+    "simulate-batch"
+  ],
+  "repeat_units": [
+    "t3-s001-price-time-priority",
+    "t3-as06-throughput-fast",
+    "t3-mp01-stp-newest-baseline",
+    "t3-ra01-fundamental-shock-mid",
+    "t3-gbatch-hetero-mix"
+  ],
+  "schema": "t3-independent-saved-expectations-delivery-counted-audit-v1",
+  "source_authority": {
+    "candidate": "classic_build_expectations_v1",
+    "candidate_source_files": 107,
+    "candidate_source_receipt_sha256": "e3f4bb09be2fa809e443f78c38ed72cb30f1ff9a597fed8d932d6861aaa8ba34",
+    "final_harness_pins_status": "final_local_freeze_and_root_remote_readback_passed",
+    "final_harness_source_pins_sha256": "be23f8dd407cc4624ef41a02720243b00cd51503925813d085bab414dda2f5ce",
+    "harness_directory": "server_classic_expectations_delivery_v1",
+    "parent_image": "ghcr.io/kouzhizhuo/agenthon-t3-classic@sha256:c1b3c9f2aec8d5a761b4814cfddf7b79b76eb6afd09ca6bd4558661e2ce046ba",
+    "parent_unchanged_source_generated_C_object_ELF_files": 115,
+    "previous_auditor_sha256": "8d308ada5b1c80a7653e3e3646edf48e36de89c53d485d0457a9e1bc6bb7c79a",
+    "previous_auditor_source": "research/classic_structural_v7/audit_saved_artifact_v7.py",
+    "previous_delivery_reference": "server_classic_delivery_v1/attempt2/ROOT_DELIVERY_EVIDENCE_AUDIT_v1.json",
+    "remote_head": "6a59542ad3ca5841a63522d4bfe3d146ccd0c1dc",
+    "root_remote_readback_sha256": "f8711e0c10bb2c5ee39b94cc65bd982933915ab46f1a0a92af2718b4e70fa984",
+    "unchanged_original_host_control_and_baseline_files": 75
+  },
+  "source_copy_allowed_roots": [
+    "/opt/classic-native-kernels-v1",
+    "/opt/t3-classic-structural-v2",
+    "/licenses"
+  ],
+  "status": "artifact_pending",
+  "target_EPS": 232000,
+  "threshold_232000_verified": false,
+  "work_scope": "Static source review and saved ZIP/JSON/log/STATE/Parquet/registry-byte decoding only. Never import or execute participant, native extension, worker, harness main, or saved code/marshal artifacts."
+}

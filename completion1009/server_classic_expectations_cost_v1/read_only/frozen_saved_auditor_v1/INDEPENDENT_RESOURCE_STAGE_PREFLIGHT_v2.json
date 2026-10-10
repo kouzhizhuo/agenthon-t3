@@ -1,0 +1,101 @@
+{
+  "complete_saved_raw_resource_compatibility_counts": {
+    "actual_failed_v1": 105,
+    "saved_v7": 345
+  },
+  "full_delivery_artifact_audit": false,
+  "harness_changed": false,
+  "market_executed": false,
+  "native_compiled": false,
+  "negatives": [
+    {
+      "case": "privileged_true",
+      "reason": "actual official resources",
+      "rejected": true
+    },
+    {
+      "case": "cap_add_SYS_ADMIN",
+      "reason": "actual official resources",
+      "rejected": true
+    },
+    {
+      "case": "persistent_volume_mount",
+      "reason": "no additional persistent or unsupported mount types",
+      "rejected": true
+    },
+    {
+      "case": "diagnostic_gate_cap_reduced_to16MiB",
+      "reason": "actual frozen official gate route/options/stage bounds",
+      "rejected": true
+    },
+    {
+      "case": "ordinary_gate_cap_increased_to256MiB",
+      "reason": "actual frozen official gate route/options/stage bounds",
+      "rejected": true
+    },
+    {
+      "case": "diagnostic_row_with_ordinary_route",
+      "reason": "actual frozen official gate route/options/stage bounds",
+      "rejected": true
+    },
+    {
+      "case": "ordinary_row_with_diagnostic_route",
+      "reason": "explicit exact diagnostic output route",
+      "rejected": true
+    }
+  ],
+  "official_submission_eligible": false,
+  "partial_failed_v1_samples_checked": true,
+  "participant_imported": false,
+  "positive_actual_failed_v1_saved_cases": [
+    "ordinary_resources",
+    "diagnostic_resources",
+    "ordinary_gate16MiB",
+    "diagnostic_gate256MiB"
+  ],
+  "schema": "t3-independent-resource-stage-saved-preflight-v2",
+  "source_files": {
+    "audit_saved_delivery_v1.py": {
+      "bytes": 51680,
+      "sha256": "4df3066d3e5c5940466d12357bc667e338f4db67578483bbe8b652e1e30a1c23"
+    },
+    "graph_saved_v1.py": {
+      "bytes": 14085,
+      "sha256": "35d289bd9f521fc3bfb8a65d7d49a49787420fc10e4c7cd138b8e1d63c675f63"
+    },
+    "independent_resource_stage_preflight_v2.py": {
+      "bytes": 7848,
+      "sha256": "d2841f008f5a7950a3d25800593efde318e0363fe94768b2d0c5f0cf14c16892"
+    },
+    "saved_base_v1.py": {
+      "bytes": 34148,
+      "sha256": "c8d6dcd4c09b0b2dce8e53f8a3f9f89947d7eef0df71b768fa258a4befed3b3f"
+    }
+  },
+  "sourcecopy_exact_argv_expression_checks": [
+    {
+      "case": "saved_v7_exact_copy",
+      "exact_argv_matched": true,
+      "full_lifecycle_certified": false,
+      "source": "server_classic_structural_v3/screen_result_v7/extracted/evidence/installed-source-copy.json",
+      "source_pin": {
+        "bytes": 8862,
+        "sha256": "2612e28257828d3d38ac7a0d24d3fba5b2524f06f5747db2ad76cc25d207f7da"
+      }
+    },
+    {
+      "case": "actual_v1_rejected_aftercopy_with_worker_flags",
+      "exact_argv_matched": false,
+      "full_lifecycle_certified": false,
+      "source": "server_classic_expectations_delivery_v1/result_v1/extracted/evidence/installed-after-copy.json",
+      "source_pin": {
+        "bytes": 7561,
+        "sha256": "71f9d896bd6d19a22cb5d827df9df54be86c20af8a7303a0066298fcda447963"
+      }
+    }
+  ],
+  "sourcecopy_file_cap_bytes": 67108864,
+  "sourcecopy_log_cap_bytes": 16777216,
+  "status": "PASS_SOURCE_AND_SAVED_CONTRACT_ONLY",
+  "target_achieved": false
+}
