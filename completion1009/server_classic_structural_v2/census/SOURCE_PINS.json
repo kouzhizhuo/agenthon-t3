@@ -1,0 +1,30 @@
+{
+  "files": {
+    "Dockerfile": {
+      "bytes": 391,
+      "sha256": "c52bd1bdbea302b9b99313b231cf3d2658137c0a7113b186d102b571137e03da"
+    },
+    "PARENT_SOURCE_LOCK.json": {
+      "bytes": 19695,
+      "sha256": "53bb1b301dd0117b141658d9ebb6c0f64610ee2ef0f90bc3094ffc84a411d913"
+    },
+    "README.md": {
+      "bytes": 3991,
+      "sha256": "270021bafb4f15dd98c33f18872a6bf37959b08204d7e640f6ca31b2d223484b"
+    },
+    "driver.py": {
+      "bytes": 17630,
+      "sha256": "bd8422a43eda7424bdce3876847a67c02070e7e47bc7519dca450d0a91a80028"
+    },
+    "entry.py": {
+      "bytes": 6081,
+      "sha256": "f58f72e085a36b97c37b874fe55eac5ee071ea638737da905d9ee06a5172b488"
+    },
+    "verify_source.py": {
+      "bytes": 1098,
+      "sha256": "ae4f5ac23e4674f57327cfb7ffad491577df02dd5569d90d541b2bb6c9f44396"
+    }
+  },
+  "schema": "t3-structural-census-source-pins-v1",
+  "validation": "source/AST/compile syntax only; no participant import or native compile"
+}

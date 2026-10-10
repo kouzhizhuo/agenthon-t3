@@ -1,0 +1,11 @@
+{
+  "source_pins_passed": true,
+  "AST_compile_passed": true,
+  "parent_installed_files_exact": 115,
+  "participant_imported": false,
+  "native_compiled": false,
+  "simulation_executed": false,
+  "production_changed": false,
+  "independent_root_review": "actual return-hook record correspondence, original profile slot, batch sorted path order, same production CLI, all exact source+ELF lock, untimed output-only gates reviewed",
+  "limitations": "callback profile and witness IO are intentionally diagnostic; no EPS inference; internal decline details unobserved"
+}
