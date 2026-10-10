@@ -1,0 +1,1 @@
+This screen compares the retained exact classical-function parent with exact scalar latency inside its native scheduler. All150 latency,14 direct-send,8 source and prior clone/full-state/output controls precede serial same-run timings. Five public units remain diagnostic; no full competition score is established.
