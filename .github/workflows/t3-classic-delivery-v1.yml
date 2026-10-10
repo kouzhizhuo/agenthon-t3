@@ -29,7 +29,7 @@ jobs:
           from pathlib import Path
           import hashlib
           root=Path('completion1009/server_classic_delivery_v1')
-          pins={'driver.py': 'd1aa05d8fe81bbb06711abbdbdcdd8592a30d83c55a7d04833cb7f11458bbdad', 'worker.py': 'be9ff110815f29cad60298a2b5c984f6a56ae6cc7db14b188d6633a9a49717d7', 'delivery_entry.py': 'f0f697185a65fcc5c77fec23adbd20c57859cc26e2ba6259e2bb6e2167a472f1', 'Dockerfile': '0a091846f3be7ef8bb18078eb171f4b8c25292c286cc1e56ae9508ac40eab00d', 'README.md': '2f562500b8cec440ec9f120e6d178cbe487385d0c6d340632e103db70dda63d6', 'LICENSE-SUBMISSION': 'ba5946c568afd98a8a77437ae44f65cd65643453d07b8bf4428da1bc1471bf65', 'SOURCE_REVIEW.json': 'bf0f0cc48341afc859bc04be52037074181760a00fa3625a7cd7e68eca464ce2'}
+          pins={'Dockerfile': '684d82c2631a78eeac1e37e6bc467c682e3e7c77d19e14d8d6b9dee9fd384f9e', 'LICENSE-SUBMISSION': 'ba5946c568afd98a8a77437ae44f65cd65643453d07b8bf4428da1bc1471bf65', 'README.md': '2f562500b8cec440ec9f120e6d178cbe487385d0c6d340632e103db70dda63d6', 'delivery_entry.py': 'f0f697185a65fcc5c77fec23adbd20c57859cc26e2ba6259e2bb6e2167a472f1', 'driver.py': '8cc41ec9140d648eaca65f19c50a72d5b20a3a5ddb3f23f8dded37bf2fcfa173', 'worker.py': 'be9ff110815f29cad60298a2b5c984f6a56ae6cc7db14b188d6633a9a49717d7', 'SOURCE_REVIEW.json': 'aa8935406b4708ebd504d7a335aa6a2fbc5567da76efa32883d587c22046a2f7'}
           for name,digest in pins.items():
               assert hashlib.sha256((root/name).read_bytes()).hexdigest()==digest,name
           PY
@@ -67,10 +67,13 @@ jobs:
           mkdir -p "$RUNNER_TEMP/t3-delivery-registry-config"
           export DOCKER_CONFIG="$RUNNER_TEMP/t3-delivery-registry-config"
           printf '%s' "$T3_REGISTRY_TOKEN" | docker login ghcr.io -u "$GITHUB_ACTOR" --password-stdin
-          T3_PUBLISH_TAG="ghcr.io/kouzhizhuo/agenthon-t3:t3-classic-delivery-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          T3_PUBLISH_TAG="ghcr.io/kouzhizhuo/agenthon-t3-classic:t3-classic-delivery-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
           docker tag "$(cat classic-delivery-v1-evidence/IMAGE_ID.txt)" "$T3_PUBLISH_TAG"
-          docker push "$T3_PUBLISH_TAG" > classic-delivery-v1-evidence/image-push.log 2>&1
+          T3_PUSH_STATUS=0
+          docker push "$T3_PUBLISH_TAG" > classic-delivery-v1-evidence/image-push.log 2>&1 || T3_PUSH_STATUS=$?
+          cat classic-delivery-v1-evidence/image-push.log
           docker logout ghcr.io
+          test "$T3_PUSH_STATUS" -eq 0
           unset DOCKER_CONFIG
           python completion1009/server_classic_delivery_v1/driver.py publication --payload classic-delivery-v1-scalar-payload --evidence classic-delivery-v1-evidence --reference-root classic-delivery-v1-evaluation/references --gate-kit classic-delivery-v1-evaluation/track3 --tag "$T3_PUBLISH_TAG"
       - name: Preserve final delivery evidence
