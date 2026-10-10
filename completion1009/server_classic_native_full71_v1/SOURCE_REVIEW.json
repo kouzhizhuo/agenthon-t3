@@ -1,0 +1,29 @@
+{
+  "candidate_archive_sha256": "e2c0d6167ce24854d164345a14a8bef31311b6c7d28708a4e0196e8fe0002f71",
+  "checks": [
+    "collect_plan(None) requires71units/190referenceParquets",
+    "71single-pass ordinary containers and1original control container",
+    "284unchanged developer gates",
+    "same300second/unit deadline",
+    "same4CPU16Goffline/ROroot/nonroot lifecycle",
+    "all outputs and complete frozen candidate sources retained",
+    "no Final repeat or official score claim"
+  ],
+  "files": {
+    "README.md": {
+      "bytes": 348,
+      "sha256": "2bdbe0392b53536a74c825dae7608cfe02aad237baf88fdfe521dcde6a22ca9e"
+    },
+    "driver.py": {
+      "bytes": 8418,
+      "sha256": "162699c635023eed0638da062a0dd38b8e4d2d1fb875dbb58ee7bdfa49680b1c"
+    },
+    "worker.py": {
+      "bytes": 3586,
+      "sha256": "be9ff110815f29cad60298a2b5c984f6a56ae6cc7db14b188d6633a9a49717d7"
+    }
+  },
+  "market_executed": false,
+  "participant_imported": false,
+  "status": "PASS_SOURCE_ONLY"
+}

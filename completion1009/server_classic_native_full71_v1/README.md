@@ -1,0 +1,1 @@
+This workflow validates the unchanged exact classical-function candidate across all71public units/95markets. One ordinary run per unit plus all original controls measures coverage and diagnostic daemon throughput. It does not establish Final repeated timing or official rank. Every source, output, gate, strict lifecycle and error log is retained.
