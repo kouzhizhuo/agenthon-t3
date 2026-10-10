@@ -1,0 +1,80 @@
+{
+  "Linux_runtime_passed": false,
+  "active_harness_payload_bytes_equal": true,
+  "archive_bytes": 207908,
+  "archive_sha256": "cf731ac50bc2edeb171a6b3ad7f14bfc40666ed61e79448ed868bdac77e7af2f",
+  "candidate_lock_sha256": "249a8ed98ae59541cef7dedd6467713ba335da0c2dc73240b13a4ed88caf1d43",
+  "diagnostic_log_hardcap_bytes": 268435456,
+  "expected_full_STATE_RNG_alias_graphs": 30,
+  "host_raw_state_cap_bytes": 4294967296,
+  "market_executed": false,
+  "native_compiled": false,
+  "ordinary_log_hardcap_bytes": 16777216,
+  "participant_imported": false,
+  "price_candidate": "classic_price_index_v2",
+  "pure_transport_4468926_bytes_two_blocks_roundtrip_verified": true,
+  "root_final_harness_review_pending": true,
+  "schema": "t3-classic-structural-final-source-ready-v5",
+  "source_archive_materialization_roundtrip_equal": true,
+  "source_manifest_members": 303,
+  "source_pin_files": {
+    "CANDIDATE_SOURCE_LOCK.json": {
+      "bytes": 39828,
+      "sha256": "249a8ed98ae59541cef7dedd6467713ba335da0c2dc73240b13a4ed88caf1d43"
+    },
+    "Dockerfile": {
+      "bytes": 2178,
+      "sha256": "4bd5b39b5364b43debe61ba8d3176f54291d065513af289f041f5c6b854e4d25"
+    },
+    "README.md": {
+      "bytes": 8452,
+      "sha256": "c7eb43cbe0020bba73c28893fccd7fdcc4790b14d2ae67bb671789802205c0e9"
+    },
+    "construction.py": {
+      "bytes": 3740,
+      "sha256": "635318907d378d8239f18916f7b9d45aa6f31d8d045eb90d1d4a8b2f0bbe0b09"
+    },
+    "controls_entry.py": {
+      "bytes": 4562,
+      "sha256": "1f6a00727a6c9ff93b66d7ca399707e1f4c0a6d52d2b10ed5b3c9fb2cb55e083"
+    },
+    "diagnostic_entry.py": {
+      "bytes": 8666,
+      "sha256": "76263040d560b70301fff6d8667ac517281ff559501b660ddf4847b466d569ad"
+    },
+    "driver.py": {
+      "bytes": 30793,
+      "sha256": "a1d0854122c957aeeee5b17415da26d623c29c3bd3779f9526528c152be3c7bd"
+    },
+    "materialize.py": {
+      "bytes": 2270,
+      "sha256": "363801689d1a6e940d1f290a36ca5efff1fde7b740918d9ee7513a11435b6d04"
+    },
+    "prepare.py": {
+      "bytes": 7098,
+      "sha256": "9ac3aeedbba6dd4257d2b177dc38681bcfa802b5423c8b7d1a8f99c43743ed9f"
+    },
+    "production_entry.py": {
+      "bytes": 1345,
+      "sha256": "e4132efaf17f458492a38c051c39853f701ab0587f6d4ac32f1443f75fa4bac4"
+    },
+    "t3-classic-parent-census-v1.yml": {
+      "bytes": 3516,
+      "sha256": "07e3e809b4aa7b013232c2889a3fbd20bcf70e0024ec0192e1e2347d9ece4770"
+    },
+    "t3-classic-structural-v2.yml": {
+      "bytes": 3651,
+      "sha256": "a1881243cd6338a53f6bc506f850f346973c2b72d899618b973c7e08c9554eb8"
+    },
+    "verify_source.py": {
+      "bytes": 821,
+      "sha256": "49985808c342784633f31ac5e71a82e207570bfd7c470fd52ea1a592042cb30b"
+    },
+    "worker.py": {
+      "bytes": 16362,
+      "sha256": "e69d40d29addff7a54210c490da4e97646d811dbc4a95464fb2c08936f2f872d"
+    }
+  },
+  "state_stream_block_compressed_limit": 1048576,
+  "threshold_232000_verified": false
+}

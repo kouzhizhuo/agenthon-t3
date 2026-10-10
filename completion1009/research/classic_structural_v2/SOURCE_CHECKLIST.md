@@ -1,0 +1,27 @@
+The next experiment changes two structural mechanisms while preserving the full original market. This checklist is the source handoff for root review. Linux construction, controls and performance remain unproved until the corresponding run evidence is inspected.
+
+# Census ready for dispatch
+
+- `server_classic_structural_v2/census`: seven files including source pins, wrapper entry, driver, Dockerfile and parent source lock.
+- Workflow: `server_classic_structural_v2/t3-classic-parent-census-v1.yml`, copied to `.github/workflows` by root through the authorized browser.
+- Exact public digest, no participant or native source change, installed-parent 115-file equality with attempt2 successful delivery evidence.
+- Existing production output-witness plus actual build_config/abides.run return observations; every market observed once, output-only official mounts, no witness in output tree.
+- Full71, all95, complete trace+ledger, 284 original gates and exact container removal/absence.
+- Refusals identify the observed source-authentication or arena-admission boundary. No invented internal cause. All diagnostic timing is excluded.
+
+# Structural screen ready for root source review
+
+Prepared sources: `driver.py`, `worker.py`, `production_entry.py`, `controls_entry.py`, `diagnostic_entry.py`, `construction.py`, `Dockerfile`, `prepare.py`, `materialize.py`, `verify_source.py`, `README.md`. Candidate lock binds root's independent reviews and all 107/108 frozen source members. Source payload contains 301 reviewed members plus its manifest, reuses unchanged original host/control oracle and original64 baseline.
+
+- Parent runtime/native source inherited unchanged from exact public digest; same measurement dispatch cost for all three arms.
+- Construction invokes one translation and one native build per candidate; separate expectation build is metadata, not market execution. Actual source, receipt, ABI, flags, ELF64 header, generated C, object and complete build inventories are audited.
+- Existing native fixtures validate full primitive/null/alias/clone/source/142-latency controls with original host verifier. Six independent full-state output controls validate original, canonical, dynamic, repeat and two forced projection refusals.
+- Expectation extra controls must actually report all30 cases; price-index must actually report all cases. A source comment or intended count is insufficient.
+- Separate ten-market admission/price-index diagnostics run each arm and never count as throughput; index witness before snapshot protects the exposed-list diagnostic boundary. All 30 actual-market complete STATE/RNG/alias JSON graphs are snapshotted before output and again after output with the retained observer. Each candidate's actual complete graph must match that market's parent byte for byte. Full graph JSON iterencode streams incrementally to zlib, SHA/count and at most 1 MiB compressed base64 blocks. Host decoding streams lines/chunks directly to files with 4 GiB raw cap, exact EOF, order and SHA/count; diagnostic stdout 256 MiB hard cap, ordinary stdout 16 MiB. These limits are outside official output 256 MiB/tmp64MiB, neither of which changes. No giant extra JSON strings or host read_bytes are needed. Complete graph pre/post equality still uses memory and can fail the unchanged 16 GiB actual Linux envelope. Ordinary timed runs never import this graph.
+- Six public units cover S001, AS06, MP01, RA01, deep book and independent heterogeneous batch. 18rounds/2warmups/16measurement, balanced forward/reverse ordering; 324 ordinary production runs, 18 diagnostic runs, 1368 original gates.
+- All trace/ledger bytes and stable sidecars match same-round parent and same-arm first repeat. Complete run configuration, actual daemon clocks, staged source hash, logs and settle/remove/absence are retained. Serial actual intervals checked.
+- Saved analysis resamples two-round blocks across both candidates/parent/all6units, retains equal-weight median means, order groups, drift and uncertainty. No global23万 or leaderboard claim from six units.
+
+# Pending before execution
+
+Root must inspect these final harness bytes and bind `SOURCE_PINS.json` after final review. The archive `SCREEN_PAYLOAD_v2.tar.xz`, SHA256 `b212d52fd5433ca9c2720b549beb07d6a6b536cbeb094f43ff8ec43de15b3dce`, is a historical v1-index carrier and must not be dispatched. Mixed Python int/NumPy int64 comparisons outside the exact key range invalidate the v1 binary order. The active harness now selects classic_price_index_v2, root review SHA256 `958c50d726665bcaad90267aeebf61a74b509f0f777e8e4d2d9aa023f7bf67d1`, candidate receipt `21226a548056ea273ad031414f716c606854355883e08ffc8d1ffced58135606`. V2 restricts only the optimization domain to ±2**53, preserves unbounded parent prices outside it with sticky scanning, and includes 240 mixed 2**53±1 /2**63±1 checks in source. V3 and v4 are superseded to close complete-state coverage and large-state transport for all ten pilot markets. Fresh active source archive is `SCREEN_PAYLOAD_v5.tar.xz`, SHA256 `cf731ac50bc2edeb171a6b3ad7f14bfc40666ed61e79448ed868bdac77e7af2f`, 303 members plus manifest. Any change to the payload harness or candidate needs a fresh archive and its actual SHA in workflow. Root alone uploads GitHub through browser. Do not publish a candidate or consume an official submission before actual controls and clear paired gains, followed by full71/resource/default-entry verification.

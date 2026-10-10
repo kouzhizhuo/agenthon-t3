@@ -1,0 +1,13 @@
+{
+  "Linux_memory_pass": false,
+  "all_bytes_sha_count_roundtrip_equal": true,
+  "blocks": 2,
+  "compressed_bytes": 1714735,
+  "fixture_json_bytes": 4468926,
+  "market_executed": false,
+  "native_compiled": false,
+  "participant_imported": false,
+  "reordered_block_rejected": true,
+  "schema": "t3-structural-pure-state-transport-preflight-v5",
+  "worker_transport_function_from_AST_only": true
+}
