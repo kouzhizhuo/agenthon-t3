@@ -1,0 +1,1 @@
+The exact typed scheduler state candidate is compared against the unchanged classic parent. Thirty-eight state ownership, Python/native boundary, alias and error controls join the complete original checks before fifty alternating real market runs. This diagnostic covers five units and cannot prove the full71 target.
