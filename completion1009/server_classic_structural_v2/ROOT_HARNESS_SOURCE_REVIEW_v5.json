@@ -1,0 +1,48 @@
+{
+  "schema": "t3-root-structural-harness-source-review-v5",
+  "archive_sha256": "cf731ac50bc2edeb171a6b3ad7f14bfc40666ed61e79448ed868bdac77e7af2f",
+  "archive_bytes": 207908,
+  "source_manifest_files": 303,
+  "python_source_AST_compile_only": 232,
+  "source_pins_matched": [
+    "CANDIDATE_SOURCE_LOCK.json",
+    "Dockerfile",
+    "README.md",
+    "construction.py",
+    "controls_entry.py",
+    "diagnostic_entry.py",
+    "driver.py",
+    "materialize.py",
+    "prepare.py",
+    "production_entry.py",
+    "t3-classic-parent-census-v1.yml",
+    "t3-classic-structural-v2.yml",
+    "verify_source.py",
+    "worker.py"
+  ],
+  "candidate_review_receipts_matched": true,
+  "participant_imported": false,
+  "market_executed": false,
+  "native_compiled": false,
+  "Linux_runtime_verified": false,
+  "target232000_proven": false,
+  "reviewed_scope": [
+    "same exact published digest parent source and ELF",
+    "two independent build once candidates",
+    "same uninstrumented ordinary leading verb mode route",
+    "30 complete diagnostic graphs across ten actual markets, snapshot after index witness",
+    "original six child finite controls and all RNG fields",
+    "full trace ledger pair reference and original 1368 gate roster",
+    "18 alternating rounds two warmups sixteen measured eight AB eight BA",
+    "four CPU sixteen GiB offline readonly nonroot input-output-only official mounts",
+    "streamed full state JSON with hash size ordered compressed blocks and bounded host decoding",
+    "separate diagnostic 256MiB host log cap and 4GiB state raw cap; production limits unchanged",
+    "retained all source C object ELF logs outputs cleanup and daemon intervals"
+  ],
+  "limitations": [
+    "source review cannot establish Linux compilation, native admission, semantics or performance",
+    "full graph diagnostic may exceed official memory; such failure is not candidate performance evidence",
+    "six public workloads do not establish full71 or official Final rank",
+    "graph compares original declared business mapping, with canonical object and explicit kernel roots; original wallclock telemetry exclusion retained"
+  ]
+}

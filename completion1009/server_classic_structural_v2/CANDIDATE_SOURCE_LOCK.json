@@ -1,0 +1,889 @@
+{
+  "arms": {
+    "expectations": {
+      "candidate": "classic_build_expectations_v1",
+      "review_path": "research/classic_build_expectations_v1/ROOT_INDEPENDENT_SOURCE_REVIEW_v1.json",
+      "review_sha256": "35d655e2ff075336d829ad340a1989b582789d89a900eacf2c43efc1b42a0f77",
+      "source_files": {
+        "BUILD_EXPECTATIONS_SOURCE_AUDIT_v1.json": {
+          "bytes": 29935,
+          "sha256": "26f395c1a5b676a9da13e53b4abd9fa2b407151d493a581f02b60343afa29471"
+        },
+        "PARENT_CLASSIC_SOURCE_RECEIPT_v1.json": {
+          "bytes": 19624,
+          "sha256": "ccf25e4e2c46f14a369f3c3e17b9e0e61a33b5a63684a62e26eb722a12f91859"
+        },
+        "PARENT_GLOBAL_NAME_SOURCE_AUDIT_v1.json": {
+          "bytes": 62073,
+          "sha256": "638c8c3501c45b11aa0feedb64776673a1bc015266c2e23b5b1da740ccda0a16"
+        },
+        "PARENT_PYTHON_SOURCE_AUDIT_v1.json": {
+          "bytes": 106182,
+          "sha256": "a443df4c0fd0eeb330135d32be0635d1529c53f127f3e6f615029a485583c0e7"
+        },
+        "PARENT_SOURCE_RECEIPT.json": {
+          "bytes": 19260,
+          "sha256": "bf46e249489d6f6057c76538f38a3d2e4759c9e745b11e7a7f890a7b81b883a7"
+        },
+        "PYTHON_SOURCE_AUDIT_v1.json": {
+          "bytes": 107831,
+          "sha256": "a7adb1f862753630145c3d331287ff996edf920183c4548ebedddb3f1fdc3f2e"
+        },
+        "README.md": {
+          "bytes": 735,
+          "sha256": "f251fa543e385885ee5ad953b126c3cd1aab85f521e358fc823daecfaf73e996"
+        },
+        "RULE_SOURCE_PINS_v1.json": {
+          "bytes": 1675,
+          "sha256": "8a2c5989e627e4db65be9b4040eb8ec717d7e2bf4dde77199f73036647fafd1e"
+        },
+        "RUNTIME_PINS.json": {
+          "bytes": 12413,
+          "sha256": "4ff1451228edbcc9c25501e64476f437ce4bd384365ebf7281a5a7cff92ae1bd"
+        },
+        "arena_admission.py": {
+          "bytes": 6715,
+          "sha256": "f2a13826191593940d4ad1560b21a8be6e58e342cb309df893d55684d3f34770"
+        },
+        "build_expectation_loader.py": {
+          "bytes": 7277,
+          "sha256": "a6ffb2bc14bc29bd520a5339b7b6d96a5ffa138399295cfe6a4a47eadd5c166f"
+        },
+        "build_expectations.py": {
+          "bytes": 7239,
+          "sha256": "37235d1b69c285d199e2d5e3332daa39751dae815de4d9c66a1fb58c69f8100f"
+        },
+        "build_native.py": {
+          "bytes": 4537,
+          "sha256": "5052b3ce14a38d75b0922156634ebe5b68aeb9edb98aa61e1085e862907364c7"
+        },
+        "check_global_names_source.py": {
+          "bytes": 5160,
+          "sha256": "6a6b3520222bc17aa9d2b728bee69e62a451d72563a2b9a2a8a7899e9112f74e"
+        },
+        "check_python_sources.py": {
+          "bytes": 4998,
+          "sha256": "fbfc0510418b2242bd871038595f1aa86633847bac79a9e955e2208fea80267c"
+        },
+        "check_source_normalize.py": {
+          "bytes": 2205,
+          "sha256": "e0132c2956964172ba6078566231db1e6d75964fc51408eb071339a6cada02ac"
+        },
+        "cold_numpy_scalars.h": {
+          "bytes": 985,
+          "sha256": "e7d92f5d55b8c097da50be646f6395dbb73bcea5c6a9352e816b8284944b8db8"
+        },
+        "cold_output_buffers.pxi": {
+          "bytes": 17917,
+          "sha256": "bede463adccf38b6e5a862ab23aa400b115d7ec31beaf3c03e0153cd9fb5ff0d"
+        },
+        "compile_spec.json": {
+          "bytes": 1037,
+          "sha256": "903db94ea281208d957b9669d3a936e6c6065866ef81a1ef47a63d492215e7c6"
+        },
+        "control_graph.py": {
+          "bytes": 6755,
+          "sha256": "ad0d7cebbb935da4067ca12f518ed54049a24744fd00c57ad6c0614f082856ca"
+        },
+        "controls/README.md": {
+          "bytes": 2891,
+          "sha256": "44e3cb58822d0e80c4731e9bd1eb5935a39f30c9f4e3dcc347a12eaaaa7afa9c"
+        },
+        "controls/build_expectation_controls_v1.py": {
+          "bytes": 12223,
+          "sha256": "8b54a75cd0774d51a14e0718f0727f66afbb397e6c27571f1149d201e03980ed"
+        },
+        "controls/control_child.py": {
+          "bytes": 7773,
+          "sha256": "7c15343f76cc19f16ca1c41534a27e9d260ea459d611b695817989f403b872b1"
+        },
+        "controls/controls.py": {
+          "bytes": 5519,
+          "sha256": "229fb8f13db8a113d5e630af6b0c3f4d01febf3e26c149641e0b0c70f6f103b2"
+        },
+        "controls/latency_controls.py": {
+          "bytes": 8050,
+          "sha256": "727d13771a4495fbd05245ce4fd5d91918a9c15e92cbc555ed3b4a38b45df745"
+        },
+        "controls/native_output_fixture_worker_v1.py": {
+          "bytes": 21217,
+          "sha256": "fc566397e896f918df26ac3edd2dbab36cf975c2f8e799714a4d174f276e2359"
+        },
+        "controls/native_output_fixtures_v1.py": {
+          "bytes": 2932,
+          "sha256": "a22530b95eae6b54c499ecc0893896090b3da8b451a3b000f4fedd647339a7bd"
+        },
+        "dynamic_arena_chain.pxd": {
+          "bytes": 14140,
+          "sha256": "a9ebc6ef95042fea40c79b4debe78936aa46bfb1b75150a1e272d1339560e1db"
+        },
+        "dynamic_arena_chain.pyx": {
+          "bytes": 208186,
+          "sha256": "4b463a8f2365ddc1d4e4062b6343fd17564abe4beac1a61fca30207985c383bd"
+        },
+        "exact_latency.py": {
+          "bytes": 3001,
+          "sha256": "a3e083f21424978d780c270cc18aeee730f837f9184300bbbf2a70e8c8ab3f41"
+        },
+        "ledger_writer.py": {
+          "bytes": 1287,
+          "sha256": "064b896a3cabb59c6a9da8be08707e2e4ff14252d91a1ba96ed02052f8824b3e"
+        },
+        "native_loader.py": {
+          "bytes": 2340,
+          "sha256": "f00927becd7ed61de90add81c8fe5aa9b7bc5d080da5a8e97a1a2cc01c19ac9d"
+        },
+        "native_owner_kernel.py": {
+          "bytes": 1116,
+          "sha256": "1018494c653a41e1db8f820283f94e9b105ad86da24eb58e5b1d8b5929428297"
+        },
+        "production_cli.py": {
+          "bytes": 9161,
+          "sha256": "7218ecf981fa7002865e862df9047e71a5915020962bff945329da79bb81c75c"
+        },
+        "runtime/README.md": {
+          "bytes": 3837,
+          "sha256": "730cf07457794c8aff780d05227e814b05425159a58c1660f07020609e4e4df2"
+        },
+        "runtime/abides_fork/ORGANIZER-LICENSE": {
+          "bytes": 1036,
+          "sha256": "508a77d2e7b51d98adeed32648ad124b7b30241a8e70b2e72c99f92d8e5874d1"
+        },
+        "runtime/abides_fork/ORGANIZER-NOTICES.md": {
+          "bytes": 2220,
+          "sha256": "9ef70d9c2d374f678c9bad3badaa614e5886210203e0ffccb5b80f3fa9ce208f"
+        },
+        "runtime/abides_fork/__init__.py": {
+          "bytes": 821,
+          "sha256": "96d421f1362c88d0ef084bd028c82192c05be383dfc4e33d2cae36348471004f"
+        },
+        "runtime/abides_fork/agents.py": {
+          "bytes": 9763,
+          "sha256": "f4521ce1e9d0093761df7b92e996e63a879ce909b42d158a03458eef552c636a"
+        },
+        "runtime/abides_fork/config.py": {
+          "bytes": 13026,
+          "sha256": "5e72af5a9a576927d4a5d21199eb9ef5ea821813dfefc3b02306e2a8cf952384"
+        },
+        "runtime/abides_fork/scenario_io.py": {
+          "bytes": 2603,
+          "sha256": "74d053bddb4ba95f45621b3b6d6277296b0dcce80e4960b59bbceec3fefc22fe"
+        },
+        "runtime/abides_fork/simulate.py": {
+          "bytes": 4899,
+          "sha256": "cd9239a12abb438b7f271b1c84a8ed480e661527937e4ea834e9da5617e67cf7"
+        },
+        "runtime/abides_fork/simulate_batch.py": {
+          "bytes": 4686,
+          "sha256": "2fdab1b7aa622c69328fe76ada06935d77629f161b8df4f1534fcbae7b274f83"
+        },
+        "runtime/abides_fork/trace.py": {
+          "bytes": 19537,
+          "sha256": "1e32d9612c23564343070a413360132e4561cc6b57e01244b2c27e80997ef2e0"
+        },
+        "runtime/agent.py": {
+          "bytes": 6944,
+          "sha256": "d7b91037a315c92dd4aee1fd32d778dfd70f2dd399c8555f72c535e5517fa2b7"
+        },
+        "runtime/bootstrap.py": {
+          "bytes": 524,
+          "sha256": "6420598dbc41a2337a788f37a0d3a9ea60dbb31b81736b29f6c32c2253bb7cc8"
+        },
+        "runtime/canonical_buffers.py": {
+          "bytes": 23020,
+          "sha256": "c01ff523f066191965d9a98dae7c70f437be04f9931428e1ad8d7c2f098d2600"
+        },
+        "runtime/canonical_time.py": {
+          "bytes": 1583,
+          "sha256": "5b3fa379835804d199cb9f859468e10a1ba9937da73eb6a4c75b778a36a090e1"
+        },
+        "runtime/column_trace.py": {
+          "bytes": 2891,
+          "sha256": "1efce7b58412aa3b39daa266c3994915728d871dc76e4faa4212d1a00a1d0964"
+        },
+        "runtime/composite_boundary.py": {
+          "bytes": 1458,
+          "sha256": "7d154c674a2e660dc13cb33a9ceb536820849c15d1a1722602853b7316f20d59"
+        },
+        "runtime/contracts.py": {
+          "bytes": 3252,
+          "sha256": "868402dcf156d370d897ec611aed1f07a9c6512dce8f20397ca2006a08ef4a87"
+        },
+        "runtime/counters.py": {
+          "bytes": 279,
+          "sha256": "9f8edbc09d54da34c8e96ae6ba7cfd7e27837fc35b12913f90d922895caff907"
+        },
+        "runtime/observer.py": {
+          "bytes": 10439,
+          "sha256": "98ebe546b9a7d3c3a5066b15512e6b763d16de89fd795632b04efa5a2ccf9556"
+        },
+        "runtime/observer_domain.py": {
+          "bytes": 25032,
+          "sha256": "0af11c0f0ed4e304c1fc9ec13d012de9421924157d10dafece86e71a73576f93"
+        },
+        "runtime/optimizations.py": {
+          "bytes": 3327,
+          "sha256": "fa90d2189f4651fc5c15ef72c417278df785abce2b354cb4c09bbcd831936a2c"
+        },
+        "runtime/requirements.txt": {
+          "bytes": 149,
+          "sha256": "dd483fe3af7d5eebfc9ef9d2a1333c5e99c4e03cbd8f4b63516d4f8481e50cc4"
+        },
+        "runtime/simulate": {
+          "bytes": 80,
+          "sha256": "5ec35f8abb9c23c93d811bd4a4cbd785dc129f71f01061784b40f9d27753f87a"
+        },
+        "runtime/simulate-batch": {
+          "bytes": 86,
+          "sha256": "9e6af3e88dec2cc510ba3b4550127d16f243f87d012b2166418e578bf6a48190"
+        },
+        "runtime/t3_canonical_engine.py": {
+          "bytes": 11708,
+          "sha256": "a9613ba000df353a3023d14591434856cfa8c292762557a01cb0d80f2bbb02aa"
+        },
+        "runtime/vendor/abides/LICENSE": {
+          "bytes": 1525,
+          "sha256": "eb7436304f90842b81820fe1bff61e4cfba74584021797bd2273680b8c15e8f9"
+        },
+        "runtime/vendor/abides/abides-core/abides_core/__init__.py": {
+          "bytes": 206,
+          "sha256": "9206dbc76e3da5b445a141b93cfccac6a038026a79de7965695f15add8fbc4ab"
+        },
+        "runtime/vendor/abides/abides-core/abides_core/abides.py": {
+          "bytes": 1573,
+          "sha256": "2ec926e5c46327c5f04c05db6f0f6890eacf273d66b3cbbd3b655251852be8d3"
+        },
+        "runtime/vendor/abides/abides-core/abides_core/agent.py": {
+          "bytes": 12087,
+          "sha256": "47c6310965a85cec48b691408a5fb89d24fbd382aaef78e311afd6e42e383db7"
+        },
+        "runtime/vendor/abides/abides-core/abides_core/generators.py": {
+          "bytes": 2838,
+          "sha256": "01230cbdb95ff596e11a6d2284ae7df41f86d007b4e4972bb9ced96a742803c1"
+        },
+        "runtime/vendor/abides/abides-core/abides_core/kernel.py": {
+          "bytes": 25527,
+          "sha256": "0a9ff4b2c24c7eebab09c8eedf08cc224b4adc50c5c90a44dbe903c506ba01cd"
+        },
+        "runtime/vendor/abides/abides-core/abides_core/latency_model.py": {
+          "bytes": 8166,
+          "sha256": "bdc67c0f5d53829d442d8a53980a5e4242cb302bc4c84c98605a944b0d6a2a61"
+        },
+        "runtime/vendor/abides/abides-core/abides_core/message.py": {
+          "bytes": 1828,
+          "sha256": "c1ddc0f0962d68e8d6750fb00210a2676d7bbdd2dd7f3b021e9fa94287901e48"
+        },
+        "runtime/vendor/abides/abides-core/abides_core/utils.py": {
+          "bytes": 5948,
+          "sha256": "92e12f8102a07aaf067bfa26c93764a7c55ea505b417d9569f270845c6c05f9c"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/__init__.py": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/agents/__init__.py": {
+          "bytes": 961,
+          "sha256": "18a6900db7554d39950602b99f8323a305a8621c5e9f56f30862106460fb1939"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/agents/background_v2/__init__.py": {
+          "bytes": 55,
+          "sha256": "1e4da1a53fa5c3c8ad72d07bcbd4d64439ffe74eb73219ccfdc23f2df23a0434"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/agents/background_v2/core_background_agent.py": {
+          "bytes": 13819,
+          "sha256": "f45104b75a47213241ddc43d511905fa1e7bf65e08a5f6cc0a40c043356bdb7a"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/agents/examples/__init__.py": {
+          "bytes": 42,
+          "sha256": "7f0ce2a47f9305b2d359844616009deb29c3d581bddab2bc720b9f0911821e2a"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/agents/examples/momentum_agent.py": {
+          "bytes": 5795,
+          "sha256": "ff2a32749d601b50721aeae92b7a38ab3a10b4f9cab53a40c1a743e21cf82008"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/agents/exchange_agent.py": {
+          "bytes": 27002,
+          "sha256": "701e84305ef18d596aedb2f72a9109b11148a4d7ec8742b0f394d683df2106e6"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/agents/financial_agent.py": {
+          "bytes": 1129,
+          "sha256": "4333c43a78ceaae40cc33c076b04de7a6ecc927826b49526ae8426f4ebc6ebe6"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/agents/market_makers/__init__.py": {
+          "bytes": 66,
+          "sha256": "a53968350d5e240f538d34f92a61aaaca3cd3440e74fe48c4e49ecd98bb73249"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/agents/market_makers/adaptive_market_maker_agent.py": {
+          "bytes": 15139,
+          "sha256": "41cfd293d14ef6ab80342aff85c021ee383f43d0829dba097b80f5c65327010e"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/agents/noise_agent.py": {
+          "bytes": 4455,
+          "sha256": "453b8c8b72297228e2d9aa5fd03d103336b0eeb0e36b4c757a0d697ef1ec5b3e"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/agents/trading_agent.py": {
+          "bytes": 34842,
+          "sha256": "0293867728c4f033e7bed62a1d90d2ceea1543bb86544be257cac4b3f5102d2d"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/agents/utils.py": {
+          "bytes": 6370,
+          "sha256": "2cf56551df8ae393ddbc628409ea5e0e01a398d55abe01163d3838e3c1802b29"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/agents/value_agent.py": {
+          "bytes": 6279,
+          "sha256": "6a672bef3f3b175779a2b56d70c56615c39472634034963a0a7684004999967e"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/configs/__init__.py": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/configs/rmsc03.py": {
+          "bytes": 9311,
+          "sha256": "d7ee646154588f07398ca0f3a3d8e6991df094e800a31925215993407deb89fa"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/configs/rmsc04.py": {
+          "bytes": 9653,
+          "sha256": "06b49e3466a536447435ef3b2613442042cf814690e30172908496c8c18962c4"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/generators.py": {
+          "bytes": 2100,
+          "sha256": "6d6c3515ef8da970435583b92cc619ca2c1b47e3dfb058fd451eb1977aec202b"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/messages/__init__.py": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/messages/market.py": {
+          "bytes": 1752,
+          "sha256": "80ab336bf859d14cd402e54139d431b6fd6eb417ddc88c0cf59e522859aac8b9"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/messages/marketdata.py": {
+          "bytes": 10549,
+          "sha256": "35db32bc4c8507fdd59ecdd46494cb217b1d8f19cef9e227eae71e24ea5ae0ce"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/messages/order.py": {
+          "bytes": 755,
+          "sha256": "72a688d5fe824ca8a4853d675336e0d31d1258e0f380970442b6111b2ce2af71"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/messages/orderbook.py": {
+          "bytes": 663,
+          "sha256": "136238cf9b1c4de5df060b2c4bd672f32adcdb5f79f94e87130ee0b74d6c8a9c"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/messages/query.py": {
+          "bytes": 1461,
+          "sha256": "08748ab8a15933aad64f8ec0069125a8bec2fc7e0e8d5540c05a0e85903591ba"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/models/__init__.py": {
+          "bytes": 45,
+          "sha256": "fa77ac1dddda0d29c3ef71fdbbb48ff13d9003c67fbefe112ac821167792b4c7"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/models/order_size_model.py": {
+          "bytes": 3878,
+          "sha256": "a6320b0737d6632f56c28ba98afa23bf7906bfdfc74089dfeb24cad26c3bfa71"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/oracles/__init__.py": {
+          "bytes": 243,
+          "sha256": "eb093c38b67d8ce9bb68cf58e8deeea80630cb5441eb40f2b16f36a926d611ed"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/oracles/mean_reverting_oracle.py": {
+          "bytes": 5704,
+          "sha256": "8ce6bee238329196c63454c0d14dc10e6c7847bfd689b9328cbc74e8f1a5d3bd"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/oracles/oracle.py": {
+          "bytes": 205,
+          "sha256": "5c68ecd5a600a43d0304e4f3c083d0b2ec1b81a00ba837c312b1f1e2758df256"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/oracles/sparse_mean_reverting_oracle.py": {
+          "bytes": 7941,
+          "sha256": "279de4bac77d626ad62a9dda7c22507c0f24932474526444ced1ffd04c679402"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/order_book.py": {
+          "bytes": 31809,
+          "sha256": "4b2dc88b08bbb2501f430e4f60644f8f71cef2816c933ccbfa20deaaa58a4822"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/orders.py": {
+          "bytes": 7331,
+          "sha256": "50a3c460ca4acd2d98bd08d0637971c9d4652bc9591655fb3634ffc05eb0be0e"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/price_level.py": {
+          "bytes": 9655,
+          "sha256": "d448ccf12f49c8078994c6d1d2ca150bfed169dbfa393fcfd4d8bc7e4eb9c1b1"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/utils/__init__.py": {
+          "bytes": 6010,
+          "sha256": "16cddfcff15e5e36644d180a0fed5ad5e84cfda79a8c2cd4c753a08d5f18771c"
+        },
+        "simulate": {
+          "bytes": 89,
+          "sha256": "30e59267ec9bba2b4d9b34e187fd7f5f0ad49992ac1c1f8e571a0b507e9414a5"
+        },
+        "simulate-batch": {
+          "bytes": 95,
+          "sha256": "6266a1c71970e296b6922b7ef1db1e1ca14c29984d0a2313de85d25bde5b0615"
+        },
+        "source_provenance.py": {
+          "bytes": 2980,
+          "sha256": "56cf3fa87305dbc41217ed5e7a0bd691515b8e09c5b334a74ccf8b433fe64d7c"
+        },
+        "state_mapper.py": {
+          "bytes": 8403,
+          "sha256": "f1392e7148cf419d8d85cd5cea13c80ab1b223599d72f5bdca8c51ee9fbd2a92"
+        },
+        "translate_native_preflight.py": {
+          "bytes": 3836,
+          "sha256": "45741e04f77a07761b1b1155ed116539a44f3f4ac114cfedf1ba0de79e8535a7"
+        }
+      },
+      "source_receipt_sha256": "e3f4bb09be2fa809e443f78c38ed72cb30f1ff9a597fed8d932d6861aaa8ba34"
+    },
+    "price_index": {
+      "candidate": "classic_price_index_v2",
+      "review_path": "research/classic_price_index_v2/ROOT_INDEPENDENT_SOURCE_REVIEW_v2.json",
+      "review_sha256": "958c50d726665bcaad90267aeebf61a74b509f0f777e8e4d2d9aa023f7bf67d1",
+      "source_files": {
+        "GLOBAL_NAME_SOURCE_AUDIT_v1.json": {
+          "bytes": 73704,
+          "sha256": "8eefbb4469393dfc00b0bb3413b620e180a09bcfe21f99c01c0b4d20ec433a81"
+        },
+        "NATIVE_IMPORT_DELTA_v1.json": {
+          "bytes": 1594,
+          "sha256": "5b41304744e8c24a2ccd6d0625df8ff558edd5b7f71890373890c73bce4c3b96"
+        },
+        "PARENT_CLASSIC_SOURCE_RECEIPT_v1.json": {
+          "bytes": 19624,
+          "sha256": "ccf25e4e2c46f14a369f3c3e17b9e0e61a33b5a63684a62e26eb722a12f91859"
+        },
+        "PARENT_GLOBAL_NAME_SOURCE_AUDIT_v1.json": {
+          "bytes": 62073,
+          "sha256": "638c8c3501c45b11aa0feedb64776673a1bc015266c2e23b5b1da740ccda0a16"
+        },
+        "PARENT_PRICE_V1_SOURCE_RECEIPT_v1.json": {
+          "bytes": 20030,
+          "sha256": "86f16cba2d3cd36db1fc01fd9b5d8e6ae3bfa175250a41988d1cf1b62548fa05"
+        },
+        "PARENT_PYTHON_SOURCE_AUDIT_v1.json": {
+          "bytes": 106182,
+          "sha256": "a443df4c0fd0eeb330135d32be0635d1529c53f127f3e6f615029a485583c0e7"
+        },
+        "PARENT_SOURCE_RECEIPT.json": {
+          "bytes": 19260,
+          "sha256": "bf46e249489d6f6057c76538f38a3d2e4759c9e745b11e7a7f890a7b81b883a7"
+        },
+        "PARENT_UNFROZEN_PROGRESS_v1.json": {
+          "bytes": 1254,
+          "sha256": "ebfda3646ba4677dd6ad45f82125235a822d789095593e0aba614b7fc4cfe40b"
+        },
+        "PYTHON_SOURCE_AUDIT_v1.json": {
+          "bytes": 106832,
+          "sha256": "6a501e20007356b86f6cc86f5001e62d80b96d6c8d551c79b38b30d94f7e2eb8"
+        },
+        "README.md": {
+          "bytes": 4609,
+          "sha256": "d7caf2cdaa4ec8c06a03d808e8ee092b9b380cc2deab6e0a453f8d5a2a397965"
+        },
+        "RULE_SOURCE_PINS_v1.json": {
+          "bytes": 1675,
+          "sha256": "8a2c5989e627e4db65be9b4040eb8ec717d7e2bf4dde77199f73036647fafd1e"
+        },
+        "RUNTIME_PINS.json": {
+          "bytes": 12413,
+          "sha256": "fe419285d57287c1da3eb5969f07bcacb88fc13e6d11d028e44e1b7f9b22540f"
+        },
+        "SOURCE_CHANGE_MAP_v1.json": {
+          "bytes": 3544,
+          "sha256": "4ebb31067f855844370d7fc854fd49ac8b073fe8d09fa4fdfef125b804d45a56"
+        },
+        "SOURCE_CHANGE_MAP_v2.json": {
+          "bytes": 1717,
+          "sha256": "6326025b717534cd41d2ada0e88a86264b6836a182c0c43c0647f7e35a4c42fe"
+        },
+        "arena_admission.py": {
+          "bytes": 6715,
+          "sha256": "f2a13826191593940d4ad1560b21a8be6e58e342cb309df893d55684d3f34770"
+        },
+        "build_native.py": {
+          "bytes": 4350,
+          "sha256": "436b10244eaa727ed512156cdeba0c4fcf50530b41259d073952b23df18b257c"
+        },
+        "check_global_names_source.py": {
+          "bytes": 5341,
+          "sha256": "6a54218386c642a10026dc3eeb2a60f6c71f7ed776bac054a8ee23e61006b5e3"
+        },
+        "check_python_sources.py": {
+          "bytes": 4998,
+          "sha256": "fbfc0510418b2242bd871038595f1aa86633847bac79a9e955e2208fea80267c"
+        },
+        "check_source_normalize.py": {
+          "bytes": 2205,
+          "sha256": "e0132c2956964172ba6078566231db1e6d75964fc51408eb071339a6cada02ac"
+        },
+        "cold_numpy_scalars.h": {
+          "bytes": 985,
+          "sha256": "e7d92f5d55b8c097da50be646f6395dbb73bcea5c6a9352e816b8284944b8db8"
+        },
+        "cold_output_buffers.pxi": {
+          "bytes": 17917,
+          "sha256": "bede463adccf38b6e5a862ab23aa400b115d7ec31beaf3c03e0153cd9fb5ff0d"
+        },
+        "compile_spec.json": {
+          "bytes": 1037,
+          "sha256": "903db94ea281208d957b9669d3a936e6c6065866ef81a1ef47a63d492215e7c6"
+        },
+        "control_graph.py": {
+          "bytes": 6755,
+          "sha256": "ad0d7cebbb935da4067ca12f518ed54049a24744fd00c57ad6c0614f082856ca"
+        },
+        "controls/README.md": {
+          "bytes": 2891,
+          "sha256": "44e3cb58822d0e80c4731e9bd1eb5935a39f30c9f4e3dcc347a12eaaaa7afa9c"
+        },
+        "controls/control_child.py": {
+          "bytes": 7773,
+          "sha256": "7c15343f76cc19f16ca1c41534a27e9d260ea459d611b695817989f403b872b1"
+        },
+        "controls/controls.py": {
+          "bytes": 5519,
+          "sha256": "229fb8f13db8a113d5e630af6b0c3f4d01febf3e26c149641e0b0c70f6f103b2"
+        },
+        "controls/latency_controls.py": {
+          "bytes": 7344,
+          "sha256": "44d767f5760088094c7940edc07b71f0ff966e0db739325ce5ccb29626bd62ac"
+        },
+        "controls/native_output_fixture_worker_v1.py": {
+          "bytes": 21513,
+          "sha256": "5b675bd01a7a937047b63c6ff15e9ccc71b6cc886296283bfbd428fc9b99f818"
+        },
+        "controls/native_output_fixtures_v1.py": {
+          "bytes": 2932,
+          "sha256": "a22530b95eae6b54c499ecc0893896090b3da8b451a3b000f4fedd647339a7bd"
+        },
+        "dynamic_arena_chain.pxd": {
+          "bytes": 14761,
+          "sha256": "59075d70722e4b5c7259af83808f66d5055f2d1e6d1359b3493430e22d20de23"
+        },
+        "dynamic_arena_chain.pyx": {
+          "bytes": 215332,
+          "sha256": "f276736c1a7218a920a78a8aaaf859d28cc00898d91822b3cf4cf19c4a25c9ca"
+        },
+        "exact_latency.py": {
+          "bytes": 3001,
+          "sha256": "a3e083f21424978d780c270cc18aeee730f837f9184300bbbf2a70e8c8ab3f41"
+        },
+        "ledger_writer.py": {
+          "bytes": 1287,
+          "sha256": "064b896a3cabb59c6a9da8be08707e2e4ff14252d91a1ba96ed02052f8824b3e"
+        },
+        "native_loader.py": {
+          "bytes": 2243,
+          "sha256": "297bd6952fa898ee2f3b064b60064dd8077427eaed630a1941db1ead16f5324e"
+        },
+        "native_owner_kernel.py": {
+          "bytes": 1116,
+          "sha256": "1018494c653a41e1db8f820283f94e9b105ad86da24eb58e5b1d8b5929428297"
+        },
+        "price_index_controls.pxi": {
+          "bytes": 24385,
+          "sha256": "1b32c5406689f49d8e6c0a50fa08954305e8541a136cbff6856a230564c6a410"
+        },
+        "production_cli.py": {
+          "bytes": 9090,
+          "sha256": "88050802ab13e44cf5d193bb127a3cd98d4c89929b494491338e42f387fa9c17"
+        },
+        "runtime/README.md": {
+          "bytes": 3837,
+          "sha256": "730cf07457794c8aff780d05227e814b05425159a58c1660f07020609e4e4df2"
+        },
+        "runtime/abides_fork/ORGANIZER-LICENSE": {
+          "bytes": 1036,
+          "sha256": "508a77d2e7b51d98adeed32648ad124b7b30241a8e70b2e72c99f92d8e5874d1"
+        },
+        "runtime/abides_fork/ORGANIZER-NOTICES.md": {
+          "bytes": 2220,
+          "sha256": "9ef70d9c2d374f678c9bad3badaa614e5886210203e0ffccb5b80f3fa9ce208f"
+        },
+        "runtime/abides_fork/__init__.py": {
+          "bytes": 821,
+          "sha256": "96d421f1362c88d0ef084bd028c82192c05be383dfc4e33d2cae36348471004f"
+        },
+        "runtime/abides_fork/agents.py": {
+          "bytes": 9763,
+          "sha256": "f4521ce1e9d0093761df7b92e996e63a879ce909b42d158a03458eef552c636a"
+        },
+        "runtime/abides_fork/config.py": {
+          "bytes": 13026,
+          "sha256": "5e72af5a9a576927d4a5d21199eb9ef5ea821813dfefc3b02306e2a8cf952384"
+        },
+        "runtime/abides_fork/scenario_io.py": {
+          "bytes": 2603,
+          "sha256": "74d053bddb4ba95f45621b3b6d6277296b0dcce80e4960b59bbceec3fefc22fe"
+        },
+        "runtime/abides_fork/simulate.py": {
+          "bytes": 4899,
+          "sha256": "cd9239a12abb438b7f271b1c84a8ed480e661527937e4ea834e9da5617e67cf7"
+        },
+        "runtime/abides_fork/simulate_batch.py": {
+          "bytes": 4686,
+          "sha256": "2fdab1b7aa622c69328fe76ada06935d77629f161b8df4f1534fcbae7b274f83"
+        },
+        "runtime/abides_fork/trace.py": {
+          "bytes": 19537,
+          "sha256": "1e32d9612c23564343070a413360132e4561cc6b57e01244b2c27e80997ef2e0"
+        },
+        "runtime/agent.py": {
+          "bytes": 6944,
+          "sha256": "d7b91037a315c92dd4aee1fd32d778dfd70f2dd399c8555f72c535e5517fa2b7"
+        },
+        "runtime/bootstrap.py": {
+          "bytes": 524,
+          "sha256": "6420598dbc41a2337a788f37a0d3a9ea60dbb31b81736b29f6c32c2253bb7cc8"
+        },
+        "runtime/canonical_buffers.py": {
+          "bytes": 23020,
+          "sha256": "c01ff523f066191965d9a98dae7c70f437be04f9931428e1ad8d7c2f098d2600"
+        },
+        "runtime/canonical_time.py": {
+          "bytes": 1583,
+          "sha256": "5b3fa379835804d199cb9f859468e10a1ba9937da73eb6a4c75b778a36a090e1"
+        },
+        "runtime/column_trace.py": {
+          "bytes": 2891,
+          "sha256": "1efce7b58412aa3b39daa266c3994915728d871dc76e4faa4212d1a00a1d0964"
+        },
+        "runtime/composite_boundary.py": {
+          "bytes": 1458,
+          "sha256": "7d154c674a2e660dc13cb33a9ceb536820849c15d1a1722602853b7316f20d59"
+        },
+        "runtime/contracts.py": {
+          "bytes": 3252,
+          "sha256": "868402dcf156d370d897ec611aed1f07a9c6512dce8f20397ca2006a08ef4a87"
+        },
+        "runtime/counters.py": {
+          "bytes": 279,
+          "sha256": "9f8edbc09d54da34c8e96ae6ba7cfd7e27837fc35b12913f90d922895caff907"
+        },
+        "runtime/observer.py": {
+          "bytes": 10439,
+          "sha256": "98ebe546b9a7d3c3a5066b15512e6b763d16de89fd795632b04efa5a2ccf9556"
+        },
+        "runtime/observer_domain.py": {
+          "bytes": 21011,
+          "sha256": "a75afa963a12397a7b7c96b52b8ee14ea40cefce71935b638e50b20babb810ba"
+        },
+        "runtime/optimizations.py": {
+          "bytes": 3327,
+          "sha256": "fa90d2189f4651fc5c15ef72c417278df785abce2b354cb4c09bbcd831936a2c"
+        },
+        "runtime/requirements.txt": {
+          "bytes": 149,
+          "sha256": "dd483fe3af7d5eebfc9ef9d2a1333c5e99c4e03cbd8f4b63516d4f8481e50cc4"
+        },
+        "runtime/simulate": {
+          "bytes": 80,
+          "sha256": "5ec35f8abb9c23c93d811bd4a4cbd785dc129f71f01061784b40f9d27753f87a"
+        },
+        "runtime/simulate-batch": {
+          "bytes": 86,
+          "sha256": "9e6af3e88dec2cc510ba3b4550127d16f243f87d012b2166418e578bf6a48190"
+        },
+        "runtime/t3_canonical_engine.py": {
+          "bytes": 11708,
+          "sha256": "a9613ba000df353a3023d14591434856cfa8c292762557a01cb0d80f2bbb02aa"
+        },
+        "runtime/vendor/abides/LICENSE": {
+          "bytes": 1525,
+          "sha256": "eb7436304f90842b81820fe1bff61e4cfba74584021797bd2273680b8c15e8f9"
+        },
+        "runtime/vendor/abides/abides-core/abides_core/__init__.py": {
+          "bytes": 206,
+          "sha256": "9206dbc76e3da5b445a141b93cfccac6a038026a79de7965695f15add8fbc4ab"
+        },
+        "runtime/vendor/abides/abides-core/abides_core/abides.py": {
+          "bytes": 1573,
+          "sha256": "2ec926e5c46327c5f04c05db6f0f6890eacf273d66b3cbbd3b655251852be8d3"
+        },
+        "runtime/vendor/abides/abides-core/abides_core/agent.py": {
+          "bytes": 12087,
+          "sha256": "47c6310965a85cec48b691408a5fb89d24fbd382aaef78e311afd6e42e383db7"
+        },
+        "runtime/vendor/abides/abides-core/abides_core/generators.py": {
+          "bytes": 2838,
+          "sha256": "01230cbdb95ff596e11a6d2284ae7df41f86d007b4e4972bb9ced96a742803c1"
+        },
+        "runtime/vendor/abides/abides-core/abides_core/kernel.py": {
+          "bytes": 25527,
+          "sha256": "0a9ff4b2c24c7eebab09c8eedf08cc224b4adc50c5c90a44dbe903c506ba01cd"
+        },
+        "runtime/vendor/abides/abides-core/abides_core/latency_model.py": {
+          "bytes": 8166,
+          "sha256": "bdc67c0f5d53829d442d8a53980a5e4242cb302bc4c84c98605a944b0d6a2a61"
+        },
+        "runtime/vendor/abides/abides-core/abides_core/message.py": {
+          "bytes": 1828,
+          "sha256": "c1ddc0f0962d68e8d6750fb00210a2676d7bbdd2dd7f3b021e9fa94287901e48"
+        },
+        "runtime/vendor/abides/abides-core/abides_core/utils.py": {
+          "bytes": 5948,
+          "sha256": "92e12f8102a07aaf067bfa26c93764a7c55ea505b417d9569f270845c6c05f9c"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/__init__.py": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/agents/__init__.py": {
+          "bytes": 961,
+          "sha256": "18a6900db7554d39950602b99f8323a305a8621c5e9f56f30862106460fb1939"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/agents/background_v2/__init__.py": {
+          "bytes": 55,
+          "sha256": "1e4da1a53fa5c3c8ad72d07bcbd4d64439ffe74eb73219ccfdc23f2df23a0434"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/agents/background_v2/core_background_agent.py": {
+          "bytes": 13819,
+          "sha256": "f45104b75a47213241ddc43d511905fa1e7bf65e08a5f6cc0a40c043356bdb7a"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/agents/examples/__init__.py": {
+          "bytes": 42,
+          "sha256": "7f0ce2a47f9305b2d359844616009deb29c3d581bddab2bc720b9f0911821e2a"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/agents/examples/momentum_agent.py": {
+          "bytes": 5795,
+          "sha256": "ff2a32749d601b50721aeae92b7a38ab3a10b4f9cab53a40c1a743e21cf82008"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/agents/exchange_agent.py": {
+          "bytes": 27002,
+          "sha256": "701e84305ef18d596aedb2f72a9109b11148a4d7ec8742b0f394d683df2106e6"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/agents/financial_agent.py": {
+          "bytes": 1129,
+          "sha256": "4333c43a78ceaae40cc33c076b04de7a6ecc927826b49526ae8426f4ebc6ebe6"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/agents/market_makers/__init__.py": {
+          "bytes": 66,
+          "sha256": "a53968350d5e240f538d34f92a61aaaca3cd3440e74fe48c4e49ecd98bb73249"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/agents/market_makers/adaptive_market_maker_agent.py": {
+          "bytes": 15139,
+          "sha256": "41cfd293d14ef6ab80342aff85c021ee383f43d0829dba097b80f5c65327010e"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/agents/noise_agent.py": {
+          "bytes": 4455,
+          "sha256": "453b8c8b72297228e2d9aa5fd03d103336b0eeb0e36b4c757a0d697ef1ec5b3e"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/agents/trading_agent.py": {
+          "bytes": 34842,
+          "sha256": "0293867728c4f033e7bed62a1d90d2ceea1543bb86544be257cac4b3f5102d2d"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/agents/utils.py": {
+          "bytes": 6370,
+          "sha256": "2cf56551df8ae393ddbc628409ea5e0e01a398d55abe01163d3838e3c1802b29"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/agents/value_agent.py": {
+          "bytes": 6279,
+          "sha256": "6a672bef3f3b175779a2b56d70c56615c39472634034963a0a7684004999967e"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/configs/__init__.py": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/configs/rmsc03.py": {
+          "bytes": 9311,
+          "sha256": "d7ee646154588f07398ca0f3a3d8e6991df094e800a31925215993407deb89fa"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/configs/rmsc04.py": {
+          "bytes": 9653,
+          "sha256": "06b49e3466a536447435ef3b2613442042cf814690e30172908496c8c18962c4"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/generators.py": {
+          "bytes": 2100,
+          "sha256": "6d6c3515ef8da970435583b92cc619ca2c1b47e3dfb058fd451eb1977aec202b"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/messages/__init__.py": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/messages/market.py": {
+          "bytes": 1752,
+          "sha256": "80ab336bf859d14cd402e54139d431b6fd6eb417ddc88c0cf59e522859aac8b9"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/messages/marketdata.py": {
+          "bytes": 10549,
+          "sha256": "35db32bc4c8507fdd59ecdd46494cb217b1d8f19cef9e227eae71e24ea5ae0ce"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/messages/order.py": {
+          "bytes": 755,
+          "sha256": "72a688d5fe824ca8a4853d675336e0d31d1258e0f380970442b6111b2ce2af71"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/messages/orderbook.py": {
+          "bytes": 663,
+          "sha256": "136238cf9b1c4de5df060b2c4bd672f32adcdb5f79f94e87130ee0b74d6c8a9c"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/messages/query.py": {
+          "bytes": 1461,
+          "sha256": "08748ab8a15933aad64f8ec0069125a8bec2fc7e0e8d5540c05a0e85903591ba"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/models/__init__.py": {
+          "bytes": 45,
+          "sha256": "fa77ac1dddda0d29c3ef71fdbbb48ff13d9003c67fbefe112ac821167792b4c7"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/models/order_size_model.py": {
+          "bytes": 3878,
+          "sha256": "a6320b0737d6632f56c28ba98afa23bf7906bfdfc74089dfeb24cad26c3bfa71"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/oracles/__init__.py": {
+          "bytes": 243,
+          "sha256": "eb093c38b67d8ce9bb68cf58e8deeea80630cb5441eb40f2b16f36a926d611ed"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/oracles/mean_reverting_oracle.py": {
+          "bytes": 5704,
+          "sha256": "8ce6bee238329196c63454c0d14dc10e6c7847bfd689b9328cbc74e8f1a5d3bd"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/oracles/oracle.py": {
+          "bytes": 205,
+          "sha256": "5c68ecd5a600a43d0304e4f3c083d0b2ec1b81a00ba837c312b1f1e2758df256"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/oracles/sparse_mean_reverting_oracle.py": {
+          "bytes": 7941,
+          "sha256": "279de4bac77d626ad62a9dda7c22507c0f24932474526444ced1ffd04c679402"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/order_book.py": {
+          "bytes": 31809,
+          "sha256": "4b2dc88b08bbb2501f430e4f60644f8f71cef2816c933ccbfa20deaaa58a4822"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/orders.py": {
+          "bytes": 7331,
+          "sha256": "50a3c460ca4acd2d98bd08d0637971c9d4652bc9591655fb3634ffc05eb0be0e"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/price_level.py": {
+          "bytes": 9655,
+          "sha256": "d448ccf12f49c8078994c6d1d2ca150bfed169dbfa393fcfd4d8bc7e4eb9c1b1"
+        },
+        "runtime/vendor/abides/abides-markets/abides_markets/utils/__init__.py": {
+          "bytes": 6010,
+          "sha256": "16cddfcff15e5e36644d180a0fed5ad5e84cfda79a8c2cd4c753a08d5f18771c"
+        },
+        "simulate": {
+          "bytes": 89,
+          "sha256": "30e59267ec9bba2b4d9b34e187fd7f5f0ad49992ac1c1f8e571a0b507e9414a5"
+        },
+        "simulate-batch": {
+          "bytes": 95,
+          "sha256": "6266a1c71970e296b6922b7ef1db1e1ca14c29984d0a2313de85d25bde5b0615"
+        },
+        "source_provenance.py": {
+          "bytes": 2980,
+          "sha256": "56cf3fa87305dbc41217ed5e7a0bd691515b8e09c5b334a74ccf8b433fe64d7c"
+        },
+        "state_mapper.py": {
+          "bytes": 8600,
+          "sha256": "922a04258bf333a1451e0863aa8aa770ebf694fa574ec5e3be6ef32a19acf5c2"
+        },
+        "translate_native_preflight.py": {
+          "bytes": 3836,
+          "sha256": "45741e04f77a07761b1b1155ed116539a44f3f4ac114cfedf1ba0de79e8535a7"
+        }
+      },
+      "source_receipt_sha256": "21226a548056ea273ad031414f716c606854355883e08ffc8d1ffced58135606"
+    }
+  },
+  "schema": "t3-classic-structural-candidate-source-lock-v2"
+}
