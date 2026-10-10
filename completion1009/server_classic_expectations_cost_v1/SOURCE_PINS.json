@@ -323,8 +323,8 @@
       "sha256": "8df7ef0bd0a1761bea708a5c8ab8dbdc97fa71d2448daaeee040956eceb15243"
     },
     "workflow_source_v1/HYDRATION_SOURCE_FREEZE.json": {
-      "bytes": 4839,
-      "sha256": "21cb07e39ace93c8361877e0af70c6ee3ea71791bd28856ea5fef623fa0bf6bd"
+      "bytes": 5117,
+      "sha256": "eeb2d14defb3a9aa984cb63715d0fa5c87877029013a58dec78f45f46c2ab17c"
     },
     "workflow_source_v1/INDEPENDENT_FINAL_COST_VERIFIER_CASES_v1.json": {
       "bytes": 13951,
@@ -353,6 +353,10 @@
     "workflow_source_v1/PROCESS_COPY_RECEIPT_v1.json": {
       "bytes": 462,
       "sha256": "d688ad8efbe4af1677c11975bd60de67bcc1d03e6032f159161f1682a9fc970e"
+    },
+    "workflow_source_v1/REPAIR_SOURCE_DISPOSITION_v1.json": {
+      "bytes": 2073,
+      "sha256": "2aa017c93396d89206fc164c0ec77e460dd36b0527fbae78f08e2cb241bed366"
     },
     "workflow_source_v1/SOURCE_PREFLIGHT_HYDRATION_v1.json": {
       "bytes": 5573,
@@ -411,24 +415,25 @@
       "sha256": "46c14dd6782511b05ca535e5af8d87b95858bbde1fe771fa7490676e1ae8aa2e"
     },
     "workflow_source_v1/t3-cost-diagnostic-hydration-draft-v1.yml": {
-      "bytes": 7533,
-      "sha256": "0f7bbaf5ca04b9eeb0ba7506a327efcdacab4dc1bd3096a91c1248121d93e525"
+      "bytes": 7644,
+      "sha256": "49218f45cb4d38f8ff88370930acda0dac7afa0edb57a0fcd3e63628b2d325fe"
     },
     "workflow_source_v1/validate_evaluator_hydration_v1.py": {
       "bytes": 5208,
       "sha256": "29e037fb0a691f51de9d49de942266c682b2db087ae60e05c7f1ddc9e3755772"
     },
     "workflow_source_v1/validate_reference_hydration_draft_v1.py": {
-      "bytes": 3804,
-      "sha256": "33399b411019765373e0c15fd67d59f98b88e4abf9d6d5eabf11c3d1587caf21"
+      "bytes": 5473,
+      "sha256": "15af8e89e45c79acd3cbf550a9645c31055c160762620cfc4be1bd7cf4da8f15"
     }
   },
   "ready_for_linux": true,
   "remote_prefix": "completion1009/server_classic_expectations_cost_v1/",
+  "repair_source_review": "workflow_source_v1/REPAIR_SOURCE_DISPOSITION_v1.json",
   "reviewed": true,
   "runtime_changed": false,
   "schema": "t3-cost-host-source-pins-v1",
-  "scope": "reviewed whole source only; Linux dispatch requires all paths at a real single head; performance unproven",
+  "scope": "Cumulative original source reviews plus realfailedrun repair source checks; requires fresh sameheadreadback; no repairedLinux result",
   "source_review_complete": true,
   "workflow_source": "workflow_source_v1/t3-cost-diagnostic-hydration-draft-v1.yml"
 }
