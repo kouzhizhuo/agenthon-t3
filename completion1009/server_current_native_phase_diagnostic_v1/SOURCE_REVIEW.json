@@ -1,0 +1,23 @@
+{
+  "status": "PASS_SOURCE_ONLY",
+  "source_method": "root AST and original wrapper API read; no external certification",
+  "files": {
+    "entry.py": "1975f10361a83ab32e594263e635ffe682323d75016b41ceda39ad0c84ddb689",
+    "phase_entry.py": "b0a9da92f273d84bddc112fd077f465f98aeaa01aad6c6ebb66f8e06fa15f2c3",
+    "host.py": "db80880931ba6b1147c59e85df8545b7ad4740c47a793985402dbc5e8b323a0a",
+    "Dockerfile": "608f9c8fe5d3fe2d265dc7acb531b14d54b1d3a5d4cf0a2d409aa24b35954b9a",
+    "README.md": "b68f1b48bbdf2195895f47ac3027de2e7ac23ebfc15b6a86d9cd8eca082a9cab"
+  },
+  "frozen_payload_sha256": "41c2a2f4bb7af0f086067ca3ba3cb7859a84217cd625d7a445b9b86f65c6d77d",
+  "phase_transform_source_receipt": "/Volumes/Alan/Nips_com/t3/completion1009/research/current_native_phase_diagnostic_v1/ROOT_SOURCE_TRANSFORM_REVIEW.json",
+  "new_marker_business_AST_equals_original": true,
+  "diagnostic_units": [
+    "t3-s001-price-time-priority",
+    "t3-as06-throughput-fast",
+    "t3-gbatch-hetero-mix"
+  ],
+  "ordinary_containers": 12,
+  "control_containers": 1,
+  "phase_times_known": false,
+  "participant_executed_locally": false
+}
