@@ -1,0 +1,214 @@
+{
+  "Docker_executed": false,
+  "all_passed": true,
+  "case_count": 39,
+  "cases": [
+    {
+      "case": "typed_actual_base_schema_positive_only",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "base_ready_for_linux",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "base_schema",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "base_run_id",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "base_run_attempt",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "base_head",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "base_sourcepins_sha256",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "base_run_attempt",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "base_workflow",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "binding_ready_for_linux_1",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "binding_runtime_changed_0",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "binding_base_publication_authority_False",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "binding_publication_authority_True",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "binding_rankable_True",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "binding_actual_final_image_id_None",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "binding_actual_final_image_id_sha256:44444",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "binding_actual_final_public_digest_ghcr.io/kouz",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "binding_actual_final_public_digest_ghcr.io/kouz",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "binding_schema_forged-ready",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "additive_config_same_one_layer",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "overlay_sameid",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "overlay_user",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "overlay_entry",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "overlay_native_extra_layers",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "overlay_missing_rootprefix",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "overlay_wrong_platform",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "base_onbuild_rejected",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "two_exact_additive_files",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "inventory_native",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "inventory_license",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "inventory_harness",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "inventory_unknownoverlay",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "dockerfile_exact_onecopy",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "positive_serial_intervals",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "serial_overlap",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "serial_duplicate_name",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "lifecycle_unremoved",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "no_participant_controller_worker_imports",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "worker_leader_unreaped_pipe_anchor",
+      "expected_reject": false,
+      "passed": true
+    }
+  ],
+  "independent_review": false,
+  "market_executed": false,
+  "native_compiled": false,
+  "participant_function_called": false,
+  "participant_imported": false,
+  "process_launched": false,
+  "ready_for_linux": false,
+  "schema": "t3-cost-host-inert-source-preflight-v1",
+  "source": {
+    "bytes": 46282,
+    "sha256": "c9fb7fa76ac017715c386b2f3d452e9df22acdcf75d7853637a7824d538208cf"
+  }
+}

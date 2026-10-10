@@ -1,0 +1,216 @@
+{
+  "all_cases_passed": true,
+  "case_count": 40,
+  "cases": [
+    {
+      "case": "valid_exact_synthetic_state",
+      "passed": true
+    },
+    {
+      "case": "valid_exact_synthetic_cost",
+      "passed": true
+    },
+    {
+      "case": "reject_wrong_arm",
+      "failure_type": "ValueError",
+      "passed": true
+    },
+    {
+      "case": "reject_wrong_mode",
+      "failure_type": "ValueError",
+      "passed": true
+    },
+    {
+      "case": "reject_wrong_sub",
+      "failure_type": "ValueError",
+      "passed": true
+    },
+    {
+      "case": "reject_wrong_input_sha",
+      "failure_type": "ValueError",
+      "passed": true
+    },
+    {
+      "case": "reject_duplicate_state_block",
+      "failure_type": "ValueError",
+      "passed": true
+    },
+    {
+      "case": "reject_missing_state_block",
+      "failure_type": "ValueError",
+      "passed": true
+    },
+    {
+      "case": "reject_wrong_block_index",
+      "failure_type": "ValueError",
+      "passed": true
+    },
+    {
+      "case": "reject_wrong_graph_sha",
+      "failure_type": "ValueError",
+      "passed": true
+    },
+    {
+      "case": "reject_wrong_output_map",
+      "failure_type": "ValueError",
+      "passed": true
+    },
+    {
+      "case": "reject_not_restored",
+      "failure_type": "ValueError",
+      "passed": true
+    },
+    {
+      "case": "reject_terminal_observation",
+      "failure_type": "ValueError",
+      "passed": true
+    },
+    {
+      "case": "reject_duplicate_observation",
+      "failure_type": "ValueError",
+      "passed": true
+    },
+    {
+      "case": "reject_incomplete_observation",
+      "failure_type": "ValueError",
+      "passed": true
+    },
+    {
+      "case": "reject_nonzero_container",
+      "failure_type": "ValueError",
+      "passed": true
+    },
+    {
+      "case": "reject_wrong_witness",
+      "failure_type": "ValueError",
+      "passed": true
+    },
+    {
+      "case": "reject_wrong_metadata_seed",
+      "failure_type": "ValueError",
+      "passed": true
+    },
+    {
+      "case": "reject_trailing_zlib",
+      "failure_type": "ValueError",
+      "passed": true
+    },
+    {
+      "case": "reject_truncated_zlib",
+      "failure_type": "ValueError",
+      "passed": true
+    },
+    {
+      "case": "reject_duplicate_json_key",
+      "failure_type": "ValueError",
+      "passed": true
+    },
+    {
+      "case": "reject_wrong_ast_digest",
+      "failure_type": "ValueError",
+      "passed": true
+    },
+    {
+      "case": "reject_wrong_source_anchors",
+      "failure_type": "ValueError",
+      "passed": true
+    },
+    {
+      "case": "reject_bool_source_anchor",
+      "failure_type": "ValueError",
+      "passed": true
+    },
+    {
+      "case": "reject_wrong_static_labels",
+      "failure_type": "ValueError",
+      "passed": true
+    },
+    {
+      "case": "reject_wrong_tick_order",
+      "failure_type": "ValueError",
+      "passed": true
+    },
+    {
+      "case": "reject_wrong_tick_clock",
+      "failure_type": "ValueError",
+      "passed": true
+    },
+    {
+      "case": "reject_wrong_driver_started",
+      "failure_type": "ValueError",
+      "passed": true
+    },
+    {
+      "case": "reject_missing_tick",
+      "failure_type": "ValueError",
+      "passed": true
+    },
+    {
+      "case": "reject_wrong_config_path",
+      "failure_type": "ValueError",
+      "passed": true
+    },
+    {
+      "case": "reject_missing_milestone",
+      "failure_type": "ValueError",
+      "passed": true
+    },
+    {
+      "case": "reject_wrong_milestone_clock",
+      "failure_type": "ValueError",
+      "passed": true
+    },
+    {
+      "case": "reject_wrong_stderr_pin",
+      "failure_type": "ValueError",
+      "passed": true
+    },
+    {
+      "case": "reject_stderr_limit_reached",
+      "failure_type": "ValueError",
+      "passed": true
+    },
+    {
+      "case": "reject_profile_before_states",
+      "failure_type": "ValueError",
+      "passed": true
+    },
+    {
+      "case": "reject_state_after_profile",
+      "failure_type": "ValueError",
+      "passed": true
+    },
+    {
+      "case": "reject_block_after_meta",
+      "failure_type": "ValueError",
+      "passed": true
+    },
+    {
+      "case": "reject_profile_bool_count",
+      "passed": true
+    },
+    {
+      "case": "reject_profile_excessive_count",
+      "passed": true
+    },
+    {
+      "case": "reject_profile_nonfinite_time",
+      "passed": true
+    }
+  ],
+  "graph_validation_real_runtime_proven": false,
+  "market_executed": false,
+  "native_compiled": false,
+  "parser": {
+    "bytes": 29793,
+    "sha256": "18e8b63b5c80dc95331d64b8564be573777baeae1c10449a86cd2c5c06508db8"
+  },
+  "participant_imported": false,
+  "ready_for_linux": false,
+  "schema": "t3-cost-host-parser-source-preflight-v1",
+  "source": {
+    "bytes": 14156,
+    "sha256": "ffb04a8a4c3f4e3760ee2015ade0132f4f28fd383b015d8aa2ed6e435dffa878"
+  },
+  "synthetic_only": true
+}

@@ -1,0 +1,506 @@
+{
+  "actual_base_image_bound": false,
+  "actual_cost_run_passed": false,
+  "all_passed": false,
+  "conclusion": "Exact final driver/worker/parser drafts pass independent source-scope review. Linux readiness remains false until genuine completed v2 artifact/public-byte authority, final cost saved auditor and same-head source freeze are complete.",
+  "created_at_utc": "2026-10-10T18:11:04.312285+00:00",
+  "driver_authority_route_review": {
+    "actual_bound_complete_saved_audit_and_fresh_frozen_full_audit_replay_before_Docker": true,
+    "all_inherited_Config_exact_base_entry_User_unchanged": true,
+    "binding_preconditions_receipt": {
+      "bytes": 19678,
+      "path": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/INDEPENDENT_IMAGE_OVERLAY_PRECONDITIONS_v1.json",
+      "sha256": "f54b555f4ae0d5082d53be7e60e4c96abf6eae423598e36f44600834a9529737"
+    },
+    "both_parent_and_expectations_source_C_object_ELF_licenses_from_same_audited_actual_image": true,
+    "current_Dockerfile_has_unresolved_digest_and_intentionally_not_dispatchable": true,
+    "current_frozen_entry_source_gate_remains_insufficient_alone": true,
+    "derived_RootFS_exact_base_prefix_plus_oneCOPY": true,
+    "fixed_actual_v2_run_head_sourcepins_workflow": {
+      "head": "2164738b7508d9554cb6bd0a37ec46375cee8199",
+      "run_id": 38072276259,
+      "sourcepins_sha256": "b5cf9f49879ad5fe90b760831914e6e3e19f92186df2503c5b5ca2ff0bc34279",
+      "workflow": "t3-classic-expectations-delivery-v2.yml"
+    },
+    "full_anonymous_registry_manifest_config_layers_diffIDs_checked_by_frozen_replay": true,
+    "no_native_rebuild_RUN_dependencies_source_runtime_mutations": true,
+    "only_two_reviewed_additive_harness_files_all_original_inventories_unchanged_before_after": true,
+    "source_freeze_reviewed_true_same_head_all_execution_and17helpers_required": true,
+    "strict_baseID_publicdigest_separate_from_derived_diagnosticID": true
+  },
+  "eligible_for_official_submission": false,
+  "host_dispatch_allowed": false,
+  "independent_checks": {
+    "inert_AST_compile_all_five_scripts": true,
+    "inert_run_process_lifecycle_mocks": {
+      "all_passed": true,
+      "cases": [
+        "success and hashafterclose",
+        "exactcap rejected",
+        "primarycap error preserved through failedflush",
+        "primarycap error preserved through failedclose",
+        "held inheritedpipe deadline SIGTERM then ownedgroupKILL/reap"
+      ],
+      "count": 5,
+      "real_process_signal_or_OS_call": false
+    },
+    "inert_sourcecopy_lifecycle_mocks": {
+      "all_passed": true,
+      "cases": [
+        "success",
+        "primarycopy error preserved through settle failure",
+        "primarycopy error preserved through receipt failure",
+        "secondarysettle alone fails",
+        "expired budget beforecreate sends no command"
+      ],
+      "count": 5,
+      "real_command_called": false
+    },
+    "pure_driver_binding_overlay_inventory_cases": {
+      "all_passed": true,
+      "cases": [
+        "synthetic typed base schema",
+        "source-only wrongschema",
+        "stale failedv1run",
+        "oldpublic",
+        "wrongimage",
+        "wrongdigest",
+        "tag instead digest",
+        "overlay publication requested",
+        "ready int1",
+        "runtime changed int0",
+        "baseunready",
+        "sameConfig/RootFSprefix/oneCOPY/distinctID",
+        "ENTRY mutation",
+        "User mutation",
+        "baseRootFSprefix deletion",
+        "extra layer",
+        "original source/C/ELF/licenses exactadditive inventory",
+        "nativeELF mutation",
+        "license mutation",
+        "unknownoverlay"
+      ],
+      "count": 20
+    },
+    "pure_original_source_contracts": {
+      "arms": [
+        "parent",
+        "expectations"
+      ],
+      "both_prepared_anchor_counts_static_labels_AST_sha_equal_current_actual_transformer": true,
+      "expectations_success_tick_count": 28,
+      "parent_success_tick_count": 26,
+      "source_compiled": false,
+      "source_executed": false
+    },
+    "pure_parser_and_Strict_call_cases": {
+      "all_passed": true,
+      "cases": [
+        "synthetic state",
+        "synthetic cost",
+        "later terminal failure",
+        "zero native activity",
+        "bool seed",
+        "bool nested anchor",
+        "PROFILE reordered",
+        "single originalverb exactoverride",
+        "single extra mode rejected",
+        "batch originalverb exactoverride",
+        "batch extra mode rejected"
+      ],
+      "count": 11
+    },
+    "pure_worker_authority_cases": {
+      "all_passed": true,
+      "cases": [
+        "synthetic bound worker authority (not genuine baseexecution)",
+        "wrong requested derivedimageID",
+        "wrong sourcepin",
+        "wrong production path",
+        "diagnosticpublication true",
+        "missing required check",
+        "wrong host pin",
+        "wrong graph helper pin"
+      ],
+      "count": 8
+    },
+    "saved_actual_graph_parser_compatibility": {
+      "RandomState_full624_count": 8,
+      "aliases": 620,
+      "cost_wire_and_clocks_and_activity_fields_are_synthetic_fixture": true,
+      "definitions": 4361,
+      "fixture_is_performance_evidence": false,
+      "frozen_GraphAudit_used": true,
+      "full_retained_graph_sha_equal": true,
+      "global_MT19937_full624_state": true,
+      "ledger_rows": 664,
+      "passed": true,
+      "real_new_cost_execution_proven": false,
+      "saved_events": {
+        "bytes": 316,
+        "path": "/Volumes/Alan/Nips_com/t3/completion1009/server_classic_expectations_delivery_v1/result_v1/extracted/evidence/diagnostic/parent/t3-s001-price-time-priority/output/events.json",
+        "sha256": "c32a4c01858f5ed3a184a763933ae07e6c7298c2783a7cec9b2204ffa5294616"
+      },
+      "saved_graph": {
+        "bytes": 3715485,
+        "path": "/Volumes/Alan/Nips_com/t3/completion1009/server_classic_expectations_delivery_v1/result_v1/extracted/evidence/diagnostic/parent/t3-s001-price-time-priority/diagnostic-state/market-00/STATE.json",
+        "sha256": "4e746caf26a1194b66ce048ecd2dd8bc809bec0df00e0e48903f5bb5d2923d91"
+      },
+      "saved_ledger": {
+        "bytes": 26925,
+        "path": "/Volumes/Alan/Nips_com/t3/completion1009/server_classic_expectations_delivery_v1/result_v1/extracted/evidence/diagnostic/parent/t3-s001-price-time-priority/output/message_trace.parquet",
+        "sha256": "ee1a9e4f1951c5b5af6576436235383dc66dd8c5ee11063b990afe87e432942c"
+      },
+      "saved_original_source": {
+        "bytes": 9090,
+        "path": "/Volumes/Alan/Nips_com/t3/completion1009/server_classic_expectations_delivery_v1/result_v1/extracted/evidence/installed/completion1009/candidates/classic_native_kernels_v1/production_cli.py",
+        "sha256": "88050802ab13e44cf5d193bb127a3cd98d4c89929b494491338e42f387fa9c17"
+      },
+      "saved_scenario": {
+        "bytes": 2016,
+        "path": "/Volumes/Alan/Nips_com/t3/completion1009/server_classic_expectations_delivery_v1/result_v1/extracted/evidence/diagnostic/parent/t3-s001-price-time-priority/input/scenario.json",
+        "sha256": "66033b26ba7b90df6d08d23733497d6d2d77230ab52761d917822faf0bcb874b"
+      },
+      "saved_trace": {
+        "bytes": 10242,
+        "path": "/Volumes/Alan/Nips_com/t3/completion1009/server_classic_expectations_delivery_v1/result_v1/extracted/evidence/diagnostic/parent/t3-s001-price-time-priority/output/trace.parquet",
+        "sha256": "09a87aa12b27f0dee85322812e7fa85810e5a09f369aaa297c2a58a9a3ef3c53"
+      },
+      "saved_witness": {
+        "bytes": 1931,
+        "path": "/Volumes/Alan/Nips_com/t3/completion1009/server_classic_expectations_delivery_v1/result_v1/extracted/evidence/diagnostic/parent/t3-s001-price-time-priority/ADMISSION_WITNESSES.json",
+        "sha256": "6bcacf12de030b9b22b754c590a99e45f32609c0c7619eb028392e8da64d9edc"
+      }
+    }
+  },
+  "independent_saved_cost_artifact_auditor_complete": false,
+  "interpretation_limits": [
+    "All inert mock/synthetic source successes are review checks, not actual Linux process/runtime/native admission or delivery success.",
+    "The saved realgraph compatibility fixture used existing failedv1 retained valid outputs/graph with synthetic cost metadata/clocks/activity and does not imply v1delivery passed or costtiming exists.",
+    "Missing profile=False native cdef rows are unavailable, and runner/cumulative envelopes overlap. Source/marker/AST/state overhead and paused stack perturb timings; no ordinary EPS/232000/firstplace inference.",
+    "The source route relies on genuine full frozen base replay and final independent saved audit; worker selfasserted authority booleans alone are not independent proof.",
+    "A failed helperraw command/cleanup/cap/finalization rejects complete run even if earlier observation line sayscomplete; fullterminalrecords and exit0 must be rechecked."
+  ],
+  "operations": {
+    "Docker_executed": false,
+    "GitHub_mutated": false,
+    "dispatch_performed": false,
+    "frozen_entry_or_auditor_mutated": false,
+    "isolated_source_helpers_and_saved_data_only": true,
+    "native_compiled": false,
+    "network_called": false,
+    "participant_function_called": false,
+    "participant_imported": false,
+    "process_launched": false,
+    "real_signals_sent": false,
+    "simulation_executed": false
+  },
+  "performance_promotion_allowed": false,
+  "planned_execution_contract_only": {
+    "cleanup_grace_sec": 90,
+    "container_sec": 3600,
+    "counts_are_actual_passes": false,
+    "cpus": 4,
+    "diagnostic_containers": 24,
+    "full_STATE_graphs": 40,
+    "memory_bytes": 17179869184,
+    "network": "none",
+    "newcontrols": 0,
+    "nonroot": "65534:65534",
+    "official_gates": 96,
+    "ordinary": 0,
+    "pid_limit": 256,
+    "six_never_started_sourcecopy_containers": 6,
+    "tmpfs": "rw,noexec,nosuid,nodev,size=64m",
+    "trace_ledger_Parquet_copies": 80,
+    "warmup": 0,
+    "wholebudget_sec": 7200,
+    "worker_sec": 3900
+  },
+  "publication_authority": false,
+  "rankable": false,
+  "read_only_sources_all17_checked": {
+    "read_only/frozen_saved_auditor_v1/AUDITOR_FREEZE_v1.json": {
+      "bytes": 2399,
+      "path": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/host_draft_v1/read_only/frozen_saved_auditor_v1/AUDITOR_FREEZE_v1.json",
+      "sha256": "be949e80178c57c0dc0fb261244fb0927231d13dceeb68d426b2380040fda807"
+    },
+    "read_only/frozen_saved_auditor_v1/AUDIT_REPORT_SCHEMA_v1.json": {
+      "bytes": 3508,
+      "path": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/host_draft_v1/read_only/frozen_saved_auditor_v1/AUDIT_REPORT_SCHEMA_v1.json",
+      "sha256": "2bfbda36ac8c617fdcb227eba593d9b7285e69384405ba3a156478f6d7565767"
+    },
+    "read_only/frozen_saved_auditor_v1/CONTROL_CASE_ROSTERS_v1.json": {
+      "bytes": 9108,
+      "path": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/host_draft_v1/read_only/frozen_saved_auditor_v1/CONTROL_CASE_ROSTERS_v1.json",
+      "sha256": "31b2d5e250746948c16e6577788528e227b1ceee4521ac5f94db0cdb7c660d9c"
+    },
+    "read_only/frozen_saved_auditor_v1/COUNTED_AUDIT_PLAN_v1.json": {
+      "bytes": 11103,
+      "path": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/host_draft_v1/read_only/frozen_saved_auditor_v1/COUNTED_AUDIT_PLAN_v1.json",
+      "sha256": "af590f872777c8b49a47af59e43a169e5be1dc0ef975388d148b3895bf6c57b6"
+    },
+    "read_only/frozen_saved_auditor_v1/INDEPENDENT_FINAL_AUDITOR_REVIEW_v2.json": {
+      "bytes": 5763,
+      "path": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/host_draft_v1/read_only/frozen_saved_auditor_v1/INDEPENDENT_FINAL_AUDITOR_REVIEW_v2.json",
+      "sha256": "c51d9cc2b36845e50566babe7f26d120326056a6758990669ca158513d29d651"
+    },
+    "read_only/frozen_saved_auditor_v1/INDEPENDENT_REGISTRY_READER_SOURCE_REVIEW_v1.json": {
+      "bytes": 1785,
+      "path": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/host_draft_v1/read_only/frozen_saved_auditor_v1/INDEPENDENT_REGISTRY_READER_SOURCE_REVIEW_v1.json",
+      "sha256": "5bf39ba2ef911cf0ac593fdc0c373be51ab0a69aea0b0f98d1eb1d3d308644f4"
+    },
+    "read_only/frozen_saved_auditor_v1/INDEPENDENT_RESOURCE_STAGE_PREFLIGHT_v2.json": {
+      "bytes": 3215,
+      "path": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/host_draft_v1/read_only/frozen_saved_auditor_v1/INDEPENDENT_RESOURCE_STAGE_PREFLIGHT_v2.json",
+      "sha256": "006f9c1ff7f35f895a7bf03533c20863efde52041e3fc381e5fb95129c05f2d6"
+    },
+    "read_only/frozen_saved_auditor_v1/INDEPENDENT_SAVED_PREFLIGHT_v10.json": {
+      "bytes": 40056,
+      "path": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/host_draft_v1/read_only/frozen_saved_auditor_v1/INDEPENDENT_SAVED_PREFLIGHT_v10.json",
+      "sha256": "18c6d68d8a19716a84a1992f31269059af5d9db8488c6d4eb313aa93d8b81d75"
+    },
+    "read_only/frozen_saved_auditor_v1/audit_saved_delivery_v1.py": {
+      "bytes": 51680,
+      "path": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/host_draft_v1/read_only/frozen_saved_auditor_v1/audit_saved_delivery_v1.py",
+      "sha256": "4df3066d3e5c5940466d12357bc667e338f4db67578483bbe8b652e1e30a1c23"
+    },
+    "read_only/frozen_saved_auditor_v1/graph_saved_v1.py": {
+      "bytes": 14085,
+      "path": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/host_draft_v1/read_only/frozen_saved_auditor_v1/graph_saved_v1.py",
+      "sha256": "35d289bd9f521fc3bfb8a65d7d49a49787420fc10e4c7cd138b8e1d63c675f63"
+    },
+    "read_only/frozen_saved_auditor_v1/independent_resource_stage_preflight_v2.py": {
+      "bytes": 7848,
+      "path": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/host_draft_v1/read_only/frozen_saved_auditor_v1/independent_resource_stage_preflight_v2.py",
+      "sha256": "d2841f008f5a7950a3d25800593efde318e0363fe94768b2d0c5f0cf14c16892"
+    },
+    "read_only/frozen_saved_auditor_v1/preflight_saved_auditor_v1.py": {
+      "bytes": 8252,
+      "path": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/host_draft_v1/read_only/frozen_saved_auditor_v1/preflight_saved_auditor_v1.py",
+      "sha256": "c01033dcbf97429535328c306d9c7beb918df77b03b1992ea83d5395730851c8"
+    },
+    "read_only/frozen_saved_auditor_v1/read_public_registry_bytes_v1.py": {
+      "bytes": 10916,
+      "path": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/host_draft_v1/read_only/frozen_saved_auditor_v1/read_public_registry_bytes_v1.py",
+      "sha256": "1bbce2cb72fc2dcd0feee6e1221038a83e918e2812f50e217ca33c3f5cdf2dc5"
+    },
+    "read_only/frozen_saved_auditor_v1/saved_base_v1.py": {
+      "bytes": 34148,
+      "path": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/host_draft_v1/read_only/frozen_saved_auditor_v1/saved_base_v1.py",
+      "sha256": "c8d6dcd4c09b0b2dce8e53f8a3f9f89947d7eef0df71b768fa258a4befed3b3f"
+    },
+    "read_only/host/verify_linux.py": {
+      "bytes": 31566,
+      "path": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/host_draft_v1/read_only/host/verify_linux.py",
+      "sha256": "601f91afb69fbb1fe95df041712a5fbb78edc5390812649d90fc5f50671d6b01"
+    },
+    "read_only/host/verify_public.py": {
+      "bytes": 23491,
+      "path": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/host_draft_v1/read_only/host/verify_public.py",
+      "sha256": "a6814bb273da528b0c478b760cd4af6a9a116a046bb9e82b751ab4717bf082dc"
+    },
+    "read_only/source_copy.py": {
+      "bytes": 12435,
+      "path": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/host_draft_v1/read_only/source_copy.py",
+      "sha256": "710a3a7d06a641c25f03619df719069a773de91f9b1cf309705102031421dbc1"
+    }
+  },
+  "ready_for_linux": false,
+  "remaining_before_Linux_freeze_or_dispatch": [
+    "Actual v2 Success is parent-observed, but complete artifact has not yet been independently accepted here. Download complete ZIP, run frozen complete auditor including raw source/C/object/ELF/licenses/resources/controls/full71 and full anonymous registry bytes.",
+    "Create real pinned baseauthority/binding and exact FROMdigest/overlay twofile copy from accepted actual v2 image; unresolved drafts, guessed paths, fake readiness do not authorize.",
+    "Final independent cost saved-artifact auditor is still absent. It must revalidate complete external parentZIP+registry layerbytes, carried exact source/readback/authority, all owned raw commands and serial resource lifecycle,40fullstates/96gates/80Parquet copies and actual state-vs-cost/crossarm/output equality.",
+    "Freeze final complete executing source/files/workflow on one head and independent remote readback; current source review receipt does not set ready_for_linux.",
+    "Only actual diagnostic native sourceauthentication/admission/nonzero owner activity/fullstates/output equality gives runtime proof. No forcing flags or stale witness reuse.",
+    "Any later source change requires new sourcepins/review; current receipt pins exact reviewed drafts."
+  ],
+  "repaired_review_findings": [
+    {
+      "function": "run_process",
+      "line": 268,
+      "repair": "Leader remains unreaped while inherited pipes open; signal-blocked launch/child unblock; finite pipe/reap deadline, leader SIGTERM cleanup grace then ownedgroupKILL; full stream flush/close before pin; exactcap fails; secondary cleanup/receipt errors preserve original.",
+      "source": "driver.py"
+    },
+    {
+      "function": "extract",
+      "line": 458,
+      "repair": "Original source-copy commandclass and caps unchanged; no freshcreate after budgetexpires; independently protected settle/receipt and original error retained; afterthree roots independently attempted.",
+      "source": "driver.py"
+    },
+    {
+      "function": "main",
+      "line": 605,
+      "repair": "Actual baseauthority/binding/sourcefreeze/readback copied to evidence with full frozen sourceharness; explicit external complete parentZIP/registry layers required for saved audit; basepubtrue/diagnosticpubfalse schema consistent.",
+      "source": "driver.py"
+    },
+    {
+      "function": "source_contract",
+      "line": 32,
+      "repair": "Independent actualsource AST computes entire exact original digest/anchors/staticlabels and successful native branch marker sequence; no production compilation/execution.",
+      "source": "parser.py"
+    },
+    {
+      "function": "validate_observation",
+      "line": 249,
+      "repair": "Recursive typedprepared equality, exact scenario/configpath tick order, import/main/coldstate milestone roster and unified nondecreasing clock chronology; wrapper/profile limitations retained.",
+      "source": "parser.py"
+    },
+    {
+      "function": "parse_cost_stdout",
+      "line": 306,
+      "repair": "Full stdout+stderr byte pins andcaps; ordered blocks then all STATE then onePROFILE, laterterminalfailure rejected; finite complete zlib/typedgraph/RNG/aliases/output/witness/nativeactivity; original parseerror retained through streamcleanup.",
+      "source": "parser.py"
+    },
+    {
+      "function": "main",
+      "line": 107,
+      "repair": "Exact original frozen BaseAudit raw commands/resources/ownership/metadata + allfour gates; original graphhelper sourcepins; private subclass restores inworker only; actualnative/sources/output prove activity, no forged forcedadmission.",
+      "source": "worker.py"
+    }
+  ],
+  "reviewer": "/root/delivery_saved_review",
+  "schema": "t3-cost-host-independent-source-review-v1",
+  "scope": "Complete draft driver/worker/parser source and exact copied saved/host helpers; isolated finite helpers and saved-only/synthetic lifecycle controls. No participant/native/market/Docker execution.",
+  "source_blockers": [],
+  "source_files": {
+    "Dockerfile": {
+      "bytes": 143,
+      "path": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/host_draft_v1/Dockerfile",
+      "sha256": "7367380d264ef6ebe9dc1ad75371dbd321718afe4e9164b59826a8febbc3d67b"
+    },
+    "HANDOFF_HOST_DRAFT_v1.md": {
+      "bytes": 4878,
+      "path": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/host_draft_v1/HANDOFF_HOST_DRAFT_v1.md",
+      "sha256": "58e290264c3e266d88e60e887ec051940acf2dc1113d533fd86a2581fdefb6ed"
+    },
+    "HOST_PLAN_DRAFT_v1.json": {
+      "bytes": 6432,
+      "path": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/host_draft_v1/HOST_PLAN_DRAFT_v1.json",
+      "sha256": "9b7add32d8c7dfe9c2deb3bae95ec3d4401a6dec1bb05fbd29e9b5fbd14774ac"
+    },
+    "PARSER_SOURCE_PREFLIGHT_v1.json": {
+      "bytes": 4861,
+      "path": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/host_draft_v1/PARSER_SOURCE_PREFLIGHT_v1.json",
+      "sha256": "60caa67104b516f0c9cbe7f5ea9c66a314f75376b2be4db523e053cfe0e449cd"
+    },
+    "READ_ONLY_SOURCE_PINS_v1.json": {
+      "bytes": 3218,
+      "path": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/host_draft_v1/READ_ONLY_SOURCE_PINS_v1.json",
+      "sha256": "f05b92a93c2cbb5d88fcbb62611228c9bf0b13ad52ae1546edbbcad262d6b304"
+    },
+    "SOURCE_COMPONENT_REVIEW_v1.json": {
+      "bytes": 7668,
+      "path": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/host_draft_v1/SOURCE_COMPONENT_REVIEW_v1.json",
+      "sha256": "bdd2a3d790797089484ae89d52f522c05aa86b389586d817c6ea93e528ca636d"
+    },
+    "SOURCE_PREFLIGHT_HOST_v1.json": {
+      "bytes": 4663,
+      "path": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/host_draft_v1/SOURCE_PREFLIGHT_HOST_v1.json",
+      "sha256": "e03c2b2f8c68392d1cebf8f2a2bfba86e20f593f2ed0c9ae3d6090d4190bf983"
+    },
+    "driver.py": {
+      "bytes": 46282,
+      "path": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/host_draft_v1/driver.py",
+      "sha256": "c9fb7fa76ac017715c386b2f3d452e9df22acdcf75d7853637a7824d538208cf"
+    },
+    "parser.py": {
+      "bytes": 29793,
+      "path": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/host_draft_v1/parser.py",
+      "sha256": "18e8b63b5c80dc95331d64b8564be573777baeae1c10449a86cd2c5c06508db8"
+    },
+    "parser_preflight.py": {
+      "bytes": 14156,
+      "path": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/host_draft_v1/parser_preflight.py",
+      "sha256": "ffb04a8a4c3f4e3760ee2015ade0132f4f28fd383b015d8aa2ed6e435dffa878"
+    },
+    "source_preflight_host_v1.py": {
+      "bytes": 8761,
+      "path": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/host_draft_v1/source_preflight_host_v1.py",
+      "sha256": "ea79ba34346d837bf4f0a43c7231bab9c9a254774c0d4fc316f3f9b20fc3b672"
+    },
+    "worker.py": {
+      "bytes": 16673,
+      "path": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/host_draft_v1/worker.py",
+      "sha256": "afc32edf02d2c0a61f72fbc6de9edc3f43665becdf4ade78d910a7f7e934842e"
+    }
+  },
+  "source_function_lines": {
+    "driver.py": {
+      "absolute": 86,
+      "bound_file": 93,
+      "build_overlay": 508,
+      "check_overlay_inventory": 495,
+      "child_signal_restore": 307,
+      "compare_cell": 585,
+      "drain": 283,
+      "extract": 458,
+      "frozen_dockerfile": 504,
+      "full_equal": 116,
+      "inventory": 100,
+      "load_frozen_host": 219,
+      "main": 605,
+      "normalize_unit": 159,
+      "object_pairs": 56,
+      "pair": 147,
+      "pin": 76,
+      "plain_output_inventory": 128,
+      "read": 64,
+      "replay_base": 412,
+      "require": 51,
+      "roster": 532,
+      "run_process": 268,
+      "saved_path": 578,
+      "serial_intervals": 562,
+      "source_freeze": 237,
+      "strip_volatile": 139,
+      "timestamp_ns": 554,
+      "validate_base_document": 185,
+      "validate_overlay_metadata": 203,
+      "write": 69
+    },
+    "parser.py": {
+      "clock": 270,
+      "count": 174,
+      "exact_fields": 150,
+      "exact_pin": 143,
+      "exact_value": 155,
+      "file_pin": 133,
+      "file_pin_bytes_witness": 455,
+      "identity": 169,
+      "marker": 49,
+      "pairs": 123,
+      "parse_cost_stdout": 306,
+      "profile_rows": 165,
+      "read_json_bytes": 122,
+      "require": 117,
+      "roster_from_execution": 203,
+      "seconds": 176,
+      "sequence": 81,
+      "source_contract": 32,
+      "stream_key": 239,
+      "validate_observation": 249
+    },
+    "worker.py": {
+      "call": 145,
+      "filepin": 181,
+      "inspect": 155,
+      "inventory": 38,
+      "main": 107,
+      "path": 177,
+      "raw_metadata_match": 94,
+      "read": 27,
+      "validate_authority": 50,
+      "write": 31
+    }
+  },
+  "source_preflights_bound": {
+    "all_source_receipt_pins_checked": true,
+    "author_preflights_reexecuted_in_full": false,
+    "driver_cases": 39,
+    "parser_cases": 40
+  },
+  "source_ready_for_root_freeze_preparation": true,
+  "source_review_completed": true,
+  "source_scope_passed": true
+}

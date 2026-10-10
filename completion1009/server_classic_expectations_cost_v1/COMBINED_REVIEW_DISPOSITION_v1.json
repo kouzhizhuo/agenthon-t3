@@ -1,0 +1,138 @@
+{
+  "actual_cost_containers": 0,
+  "dispositions": [
+    {
+      "decision": "retained_trusted_review_fixed_SHA_driver_worker_parser_unchanged;review_present_in_actual_roster;requiredreviewaddedtoinertverifier",
+      "id": "Opus_B1"
+    },
+    {
+      "decision": "fixed_separate_raw_runbinding_manifest_all_four_real_roots_including_evaluator;main_binding_crosscheck;fallback_partialupload",
+      "id": "Opus_B2_B3"
+    },
+    {
+      "decision": "nochange_documentedSOURCE_PINS.jsonmandatorybasename;inertfull107pathdrivercheckpassed",
+      "id": "Opus_B4"
+    },
+    {
+      "decision": "nestedfreezealreadybinds8originaldataexactbytesincludingV2_SOURCE_PINS_b5cf;driverandfrozenauditorrecheck",
+      "id": "Opus_W1"
+    },
+    {
+      "decision": "oldmainwrapperimmutable;independentsavedstagechecksrunhead;newrawwrappermainheadattemptcrosscheckandexclusivewrite",
+      "id": "Opus_W2"
+    },
+    {
+      "decision": "workflowexplicitrepository_event_workflowdispatch_runattempt1condition;human_no_duplicate_dispatch",
+      "id": "Opus_W3"
+    },
+    {
+      "decision": "rejected_factual_error;lenactualSHA64andactual5931helperSHAequal;10inerttestscompleted",
+      "id": "Sonnet_hash_length"
+    },
+    {
+      "decision": "rejected_unfoundedschemaassumption;actualfreeze_relativeHEREbarearchive_rawkeycorrect",
+      "id": "Sonnet_sourcekey"
+    },
+    {
+      "decision": "nochange_Pathnormalizesdot;absolute_nonsymlink_ancestors_required;workflowexactpath",
+      "id": "Sonnet_pathresolve"
+    },
+    {
+      "decision": "fixed_mutuallyexclusivefallbackuploadincludesmovedandunmoveddata;RAW_PACK_FAILUREreceiptnotacceptance",
+      "id": "Opus_raw_failure_inputs"
+    },
+    {
+      "decision": "costreadbackcopiedtologs;hydrationsavedprocesslogsretained;GitHubjobrawlogsdownloadoncompletion;noinventedalllogsclaim",
+      "id": "Opus_raw_missing_logs_readback"
+    },
+    {
+      "decision": "140mindriverstepwith360minjobreservesuploadtime;finite7200sdriver2400replayunchanged",
+      "id": "Opus_raw_timeout"
+    }
+  ],
+  "final_delta": {
+    "changed": [
+      "archive_raw_v1.py new",
+      "verify_source.py requiredraw+hostreview",
+      "workflow_source_v1/t3-cost-diagnostic-hydration-draft-v1.yml activation/rawfallback/readback/stepdeadline",
+      "nestedworkflowpin_refreeze"
+    ],
+    "unchanged_actual_pins": {
+      "Dockerfile": {
+        "bytes": 205,
+        "sha256": "7039670a994d31ce895210ff06d9d83c718d48306dc6350ead486bec3e819473"
+      },
+      "driver.py": {
+        "bytes": 46282,
+        "sha256": "c9fb7fa76ac017715c386b2f3d452e9df22acdcf75d7853637a7824d538208cf"
+      },
+      "overlay/IMAGE_BINDING.json": {
+        "bytes": 129624,
+        "sha256": "d749ddcae1dd53d934f0cdbf526e1a569b4ae297bdb024a8191585773936fa7d"
+      },
+      "overlay/cost_entry_draft_v1.py": {
+        "bytes": 29930,
+        "sha256": "b43209c991fcb6d7652f6d560b873f3a4fb9e76d92277f0586ada036f2e95af2"
+      },
+      "parser.py": {
+        "bytes": 29793,
+        "sha256": "18e8b63b5c80dc95331d64b8564be573777baeae1c10449a86cd2c5c06508db8"
+      },
+      "read_only/cost_saved_auditor_v1/archive_wrapper_draft_v1.py": {
+        "bytes": 5931,
+        "sha256": "27fe5bb234cd5991e1a0c6c006779f987e72e48f7927d4b728514c62a1ebab63"
+      },
+      "read_only/cost_saved_auditor_v1/audit_cost_saved_v1.py": {
+        "bytes": 54790,
+        "sha256": "3ddeb37f19525f67bab35a3d486db98d8e5f96b8a10e51810c735f363c6c6ddc"
+      },
+      "worker.py": {
+        "bytes": 16673,
+        "sha256": "afc32edf02d2c0a61f72fbc6de9edc3f43665becdf4ade78d910a7f7e934842e"
+      }
+    }
+  },
+  "ordinary_runs": 0,
+  "rankable": false,
+  "remaining": [
+    "Final activation whole sourcefreeze check",
+    "Exact allHERE+distinctactiveworkflow onehead remote readback",
+    "Single Linux run; complete bothartifacts and fullsaved independentaudit"
+  ],
+  "review_completed": true,
+  "reviews": {
+    "ACTUAL_COMBINED_SOURCE_REVIEW_v2.json": {
+      "bytes": 3511,
+      "sha256": "78839a5e025c84a591e4894ad45c0fe28c914c35889fe03fce5cbe3a73f89d8b"
+    },
+    "OPUS_RAW_RECEIPT_v1.json": {
+      "bytes": 857,
+      "sha256": "dcf3666e618e0f96ea1e58c0a4ac261a132d1299daadc93a30a6d95dcad24215"
+    },
+    "OPUS_RAW_REVIEW_v1.md": {
+      "bytes": 3945,
+      "sha256": "9f337a9afdafb8535440f74605f6d56101cb8a943b5879b6ad271e7151febe06"
+    },
+    "OPUS_RECEIPT_v2.json": {
+      "bytes": 861,
+      "sha256": "f1437859b92c22939bf38a5a4b4255340c64a57bbff48d8433a8d48ae628a04f"
+    },
+    "OPUS_REVIEW_v2.md": {
+      "bytes": 5692,
+      "sha256": "ef0026ae3465bc91a7d31f5c04de536227a60ae65433f2a0f5a964e08aa072cb"
+    },
+    "RAW_ARCHIVE_INERT_CASES_v1.json": {
+      "bytes": 1332,
+      "sha256": "af232cbe55968e20f7bc7420a09528074ad7b544509597a6f300fcdb1fc7a24b"
+    },
+    "SONNET_REVIEW_v1.md": {
+      "bytes": 4735,
+      "sha256": "99675f9f74955651d869a21fa5a35c08e000f9b6a95c14cf916dfd139893b614"
+    }
+  },
+  "runtime_changed": false,
+  "schema": "t3-combined-source-review-disposition-v1",
+  "scope": "independent external executing-chain excerpt review plus primary complete105 integration review; not full independent105file or Linux review",
+  "source_blockers": [],
+  "source_scope_passed": true
+}

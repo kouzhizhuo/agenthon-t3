@@ -1,0 +1,429 @@
+{
+  "schema": "t3-cost-distinct-final-namespace-stage-v1",
+  "created_at": "2026-10-10T18:41:00.212333+00:00",
+  "source_count": 69,
+  "files": [
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/bound_host_v2/ACTUAL_BASE_AUTHORITY_v2.json",
+      "path": "ACTUAL_BASE_AUTHORITY_v2.json",
+      "bytes": 2386,
+      "sha256": "b386ab8ecf5e6570c0c1a899ecfe494881b89cd14f514041d675ad016f8a7230"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/bound_host_v2/COPIED_REVIEWED_HOST_SOURCE_v1.json",
+      "path": "COPIED_REVIEWED_HOST_SOURCE_v1.json",
+      "bytes": 5321,
+      "sha256": "9b50230de6a2f7348a03f9c50695dbdd07d6657a3831904301e99779103094d1"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/bound_host_v2/Dockerfile",
+      "path": "Dockerfile",
+      "bytes": 205,
+      "sha256": "7039670a994d31ce895210ff06d9d83c718d48306dc6350ead486bec3e819473"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/bound_host_v2/FINAL_SOURCE_DELTA_v2.json",
+      "path": "FINAL_SOURCE_DELTA_v2.json",
+      "bytes": 8991,
+      "sha256": "8b4d383eb0558efd20e5a5308ff2adf2cbb570b21724ddd378e14d6bcf5fa777"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/bound_host_v2/HANDOFF_BOUND_HOST_v2.md",
+      "path": "HANDOFF_BOUND_HOST_v2.md",
+      "bytes": 4515,
+      "sha256": "0a1cc40484b2ca830dbfe15c18941ae56c7ad131e56ea13790b59828b8d8f120"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/bound_host_v2/HANDOFF_HOST_DRAFT_v1.md",
+      "path": "HANDOFF_HOST_DRAFT_v1.md",
+      "bytes": 4878,
+      "sha256": "58e290264c3e266d88e60e887ec051940acf2dc1113d533fd86a2581fdefb6ed"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/bound_host_v2/HANDOFF_WORKER_PARSER_v1.md",
+      "path": "HANDOFF_WORKER_PARSER_v1.md",
+      "bytes": 5026,
+      "sha256": "650d1760ff32f44e0af6d5fe2c42f4f74efbaf06b123d57af525d76aa9a04048"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/bound_host_v2/HOST_PLAN_DRAFT_v1.json",
+      "path": "HOST_PLAN_DRAFT_v1.json",
+      "bytes": 6432,
+      "sha256": "9b7add32d8c7dfe9c2deb3bae95ec3d4401a6dec1bb05fbd29e9b5fbd14774ac"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/bound_host_v2/INDEPENDENT_HOST_SOURCE_REVIEW_v1.json",
+      "path": "INDEPENDENT_HOST_SOURCE_REVIEW_v1.json",
+      "bytes": 25609,
+      "sha256": "780aa8fafaf2980a381e5dc63c0766aa6426702ba170156893d165eccab363a7"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/bound_host_v2/PARSER_SOURCE_PREFLIGHT_v1.json",
+      "path": "PARSER_SOURCE_PREFLIGHT_v1.json",
+      "bytes": 4861,
+      "sha256": "60caa67104b516f0c9cbe7f5ea9c66a314f75376b2be4db523e053cfe0e449cd"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/bound_host_v2/READ_ONLY_SOURCE_PINS_v1.json",
+      "path": "READ_ONLY_SOURCE_PINS_v1.json",
+      "bytes": 3218,
+      "sha256": "f05b92a93c2cbb5d88fcbb62611228c9bf0b13ad52ae1546edbbcad262d6b304"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/bound_host_v2/SOURCE_COMPONENT_REVIEW_v1.json",
+      "path": "SOURCE_COMPONENT_REVIEW_v1.json",
+      "bytes": 7668,
+      "sha256": "bdd2a3d790797089484ae89d52f522c05aa86b389586d817c6ea93e528ca636d"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/bound_host_v2/SOURCE_PREFLIGHT_BOUND_v2.json",
+      "path": "SOURCE_PREFLIGHT_BOUND_v2.json",
+      "bytes": 2107,
+      "sha256": "34e41080d80c70620c34093a9c7f57aaaa033daa02231d20eebc84ca72a38069"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/bound_host_v2/SOURCE_PREFLIGHT_HOST_v1.json",
+      "path": "SOURCE_PREFLIGHT_HOST_v1.json",
+      "bytes": 4663,
+      "sha256": "e03c2b2f8c68392d1cebf8f2a2bfba86e20f593f2ed0c9ae3d6090d4190bf983"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/bound_host_v2/STATUS.json",
+      "path": "STATUS.json",
+      "bytes": 1529,
+      "sha256": "d6e2cfcd6ad90c92b746cd87a5a00b87704abe3e98b1b4619a0eea1a10d25b79"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/bound_host_v2/driver.py",
+      "path": "driver.py",
+      "bytes": 46282,
+      "sha256": "c9fb7fa76ac017715c386b2f3d452e9df22acdcf75d7853637a7824d538208cf"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/bound_host_v2/overlay/IMAGE_BINDING.json",
+      "path": "overlay/IMAGE_BINDING.json",
+      "bytes": 129624,
+      "sha256": "d749ddcae1dd53d934f0cdbf526e1a569b4ae297bdb024a8191585773936fa7d"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/bound_host_v2/overlay/cost_entry_draft_v1.py",
+      "path": "overlay/cost_entry_draft_v1.py",
+      "bytes": 29930,
+      "sha256": "b43209c991fcb6d7652f6d560b873f3a4fb9e76d92277f0586ada036f2e95af2"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/bound_host_v2/parser.py",
+      "path": "parser.py",
+      "bytes": 29793,
+      "sha256": "18e8b63b5c80dc95331d64b8564be573777baeae1c10449a86cd2c5c06508db8"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/bound_host_v2/parser_preflight.py",
+      "path": "parser_preflight.py",
+      "bytes": 14156,
+      "sha256": "ffb04a8a4c3f4e3760ee2015ade0132f4f28fd383b015d8aa2ed6e435dffa878"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/bound_host_v2/read_only/frozen_saved_auditor_v1/AUDITOR_FREEZE_v1.json",
+      "path": "read_only/frozen_saved_auditor_v1/AUDITOR_FREEZE_v1.json",
+      "bytes": 2399,
+      "sha256": "be949e80178c57c0dc0fb261244fb0927231d13dceeb68d426b2380040fda807"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/bound_host_v2/read_only/frozen_saved_auditor_v1/AUDIT_REPORT_SCHEMA_v1.json",
+      "path": "read_only/frozen_saved_auditor_v1/AUDIT_REPORT_SCHEMA_v1.json",
+      "bytes": 3508,
+      "sha256": "2bfbda36ac8c617fdcb227eba593d9b7285e69384405ba3a156478f6d7565767"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/bound_host_v2/read_only/frozen_saved_auditor_v1/CONTROL_CASE_ROSTERS_v1.json",
+      "path": "read_only/frozen_saved_auditor_v1/CONTROL_CASE_ROSTERS_v1.json",
+      "bytes": 9108,
+      "sha256": "31b2d5e250746948c16e6577788528e227b1ceee4521ac5f94db0cdb7c660d9c"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/bound_host_v2/read_only/frozen_saved_auditor_v1/COUNTED_AUDIT_PLAN_v1.json",
+      "path": "read_only/frozen_saved_auditor_v1/COUNTED_AUDIT_PLAN_v1.json",
+      "bytes": 11103,
+      "sha256": "af590f872777c8b49a47af59e43a169e5be1dc0ef975388d148b3895bf6c57b6"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/bound_host_v2/read_only/frozen_saved_auditor_v1/INDEPENDENT_FINAL_AUDITOR_REVIEW_v2.json",
+      "path": "read_only/frozen_saved_auditor_v1/INDEPENDENT_FINAL_AUDITOR_REVIEW_v2.json",
+      "bytes": 5763,
+      "sha256": "c51d9cc2b36845e50566babe7f26d120326056a6758990669ca158513d29d651"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/bound_host_v2/read_only/frozen_saved_auditor_v1/INDEPENDENT_REGISTRY_READER_SOURCE_REVIEW_v1.json",
+      "path": "read_only/frozen_saved_auditor_v1/INDEPENDENT_REGISTRY_READER_SOURCE_REVIEW_v1.json",
+      "bytes": 1785,
+      "sha256": "5bf39ba2ef911cf0ac593fdc0c373be51ab0a69aea0b0f98d1eb1d3d308644f4"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/bound_host_v2/read_only/frozen_saved_auditor_v1/INDEPENDENT_RESOURCE_STAGE_PREFLIGHT_v2.json",
+      "path": "read_only/frozen_saved_auditor_v1/INDEPENDENT_RESOURCE_STAGE_PREFLIGHT_v2.json",
+      "bytes": 3215,
+      "sha256": "006f9c1ff7f35f895a7bf03533c20863efde52041e3fc381e5fb95129c05f2d6"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/bound_host_v2/read_only/frozen_saved_auditor_v1/INDEPENDENT_SAVED_PREFLIGHT_v10.json",
+      "path": "read_only/frozen_saved_auditor_v1/INDEPENDENT_SAVED_PREFLIGHT_v10.json",
+      "bytes": 40056,
+      "sha256": "18c6d68d8a19716a84a1992f31269059af5d9db8488c6d4eb313aa93d8b81d75"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/bound_host_v2/read_only/frozen_saved_auditor_v1/audit_saved_delivery_v1.py",
+      "path": "read_only/frozen_saved_auditor_v1/audit_saved_delivery_v1.py",
+      "bytes": 51680,
+      "sha256": "4df3066d3e5c5940466d12357bc667e338f4db67578483bbe8b652e1e30a1c23"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/bound_host_v2/read_only/frozen_saved_auditor_v1/graph_saved_v1.py",
+      "path": "read_only/frozen_saved_auditor_v1/graph_saved_v1.py",
+      "bytes": 14085,
+      "sha256": "35d289bd9f521fc3bfb8a65d7d49a49787420fc10e4c7cd138b8e1d63c675f63"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/bound_host_v2/read_only/frozen_saved_auditor_v1/independent_resource_stage_preflight_v2.py",
+      "path": "read_only/frozen_saved_auditor_v1/independent_resource_stage_preflight_v2.py",
+      "bytes": 7848,
+      "sha256": "d2841f008f5a7950a3d25800593efde318e0363fe94768b2d0c5f0cf14c16892"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/bound_host_v2/read_only/frozen_saved_auditor_v1/preflight_saved_auditor_v1.py",
+      "path": "read_only/frozen_saved_auditor_v1/preflight_saved_auditor_v1.py",
+      "bytes": 8252,
+      "sha256": "c01033dcbf97429535328c306d9c7beb918df77b03b1992ea83d5395730851c8"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/bound_host_v2/read_only/frozen_saved_auditor_v1/read_public_registry_bytes_v1.py",
+      "path": "read_only/frozen_saved_auditor_v1/read_public_registry_bytes_v1.py",
+      "bytes": 10916,
+      "sha256": "1bbce2cb72fc2dcd0feee6e1221038a83e918e2812f50e217ca33c3f5cdf2dc5"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/bound_host_v2/read_only/frozen_saved_auditor_v1/saved_base_v1.py",
+      "path": "read_only/frozen_saved_auditor_v1/saved_base_v1.py",
+      "bytes": 34148,
+      "sha256": "c8d6dcd4c09b0b2dce8e53f8a3f9f89947d7eef0df71b768fa258a4befed3b3f"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/bound_host_v2/read_only/host/verify_linux.py",
+      "path": "read_only/host/verify_linux.py",
+      "bytes": 31566,
+      "sha256": "601f91afb69fbb1fe95df041712a5fbb78edc5390812649d90fc5f50671d6b01"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/bound_host_v2/read_only/host/verify_public.py",
+      "path": "read_only/host/verify_public.py",
+      "bytes": 23491,
+      "sha256": "a6814bb273da528b0c478b760cd4af6a9a116a046bb9e82b751ab4717bf082dc"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/bound_host_v2/read_only/source_copy.py",
+      "path": "read_only/source_copy.py",
+      "bytes": 12435,
+      "sha256": "710a3a7d06a641c25f03619df719069a773de91f9b1cf309705102031421dbc1"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/bound_host_v2/source_preflight_bound_v2.py",
+      "path": "source_preflight_bound_v2.py",
+      "bytes": 4319,
+      "sha256": "8d4598fa716e83fa6deeeb10f8c6066a871b03f8fb5f8022a8c954cab1610aeb"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/bound_host_v2/source_preflight_host_v1.py",
+      "path": "source_preflight_host_v1.py",
+      "bytes": 8761,
+      "sha256": "ea79ba34346d837bf4f0a43c7231bab9c9a254774c0d4fc316f3f9b20fc3b672"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/bound_host_v2/worker.py",
+      "path": "worker.py",
+      "bytes": 16673,
+      "sha256": "afc32edf02d2c0a61f72fbc6de9edc3f43665becdf4ade78d910a7f7e934842e"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/bound_host_v2/FINAL_BOUND_SOURCE_INVENTORY_v2.json",
+      "path": "FINAL_BOUND_SOURCE_INVENTORY_v2.json",
+      "bytes": 7014,
+      "sha256": "baa1f6e6656f12ec9bd2720125f93cfa397f96a03c3eabe87928d731bbd5fdec"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/bound_host_v2/INDEPENDENT_BOUND_HOST_SOURCE_REVIEW_v2.json",
+      "path": "INDEPENDENT_BOUND_HOST_SOURCE_REVIEW_v2.json",
+      "bytes": 9995,
+      "sha256": "f4081ec0a05dacf9e8139241ed95fdd06c73d0387dfd186e8216ceb1c52ba351"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/bound_host_v2/ROOT_ACTUAL_BASE_BINDING_REVIEW_v1.json",
+      "path": "ROOT_ACTUAL_BASE_BINDING_REVIEW_v1.json",
+      "bytes": 814,
+      "sha256": "c4e6acede0320a66c9081fb16f02c91a52fa03d485641adbd8d97f35b11b910e"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/saved_auditor_draft_v1/HANDOFF_SAVED_AUDITOR_v1.md",
+      "path": "read_only/cost_saved_auditor_v1/HANDOFF_SAVED_AUDITOR_v1.md",
+      "bytes": 4399,
+      "sha256": "4c219fbc08d497d9655796ee1d018c3704be6578de3c7d5b08e2906b15c5865b"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/saved_auditor_draft_v1/INDEPENDENT_SAVED_AUDITOR_SOURCE_REVIEW_v1.json",
+      "path": "read_only/cost_saved_auditor_v1/INDEPENDENT_SAVED_AUDITOR_SOURCE_REVIEW_v1.json",
+      "bytes": 7150,
+      "sha256": "ab8fefb1609a17428962a2c0b0810649e45d6ffa4196a7bc340e8374bc084038"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/saved_auditor_draft_v1/INDEPENDENT_SAVED_COST_CASES_DRAFT_v1.json",
+      "path": "read_only/cost_saved_auditor_v1/INDEPENDENT_SAVED_COST_CASES_DRAFT_v1.json",
+      "bytes": 15343,
+      "sha256": "3e6c97764e541306b08679cdb3fbc69fa96c2bbd5412d2e411bba018afbddd91"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/saved_auditor_draft_v1/INDEPENDENT_SAVED_COST_INCREMENTAL_CASES_v1.json",
+      "path": "read_only/cost_saved_auditor_v1/INDEPENDENT_SAVED_COST_INCREMENTAL_CASES_v1.json",
+      "bytes": 3053,
+      "sha256": "c15fa477661c83d2320c5ccb90c0ae0b3245b9fe90bb02818c5d120dd28a452d"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/saved_auditor_draft_v1/INDEPENDENT_SAVED_COST_SOURCE_STAGE_CASES_v1.json",
+      "path": "read_only/cost_saved_auditor_v1/INDEPENDENT_SAVED_COST_SOURCE_STAGE_CASES_v1.json",
+      "bytes": 1588,
+      "sha256": "18d8a530200e430dd362756cabbef2106ba2d14e87f9843e1b722e20c4972cae"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/saved_auditor_draft_v1/REFERENCE_PINS_v1.json",
+      "path": "read_only/cost_saved_auditor_v1/REFERENCE_PINS_v1.json",
+      "bytes": 2780,
+      "sha256": "c7a6b9d3c07e61dd8fc4354d38dbf92aa904705e5afe29af2cc3e722647eba20"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/saved_auditor_draft_v1/SAVED_AUDIT_PLAN_DRAFT_v1.json",
+      "path": "read_only/cost_saved_auditor_v1/SAVED_AUDIT_PLAN_DRAFT_v1.json",
+      "bytes": 4110,
+      "sha256": "65f117ca4c7171709c616d59aefca231f518db99f640038db9402ccbf85ca9ec"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/saved_auditor_draft_v1/SOURCE_PREFLIGHT_SAVED_COST_v1.json",
+      "path": "read_only/cost_saved_auditor_v1/SOURCE_PREFLIGHT_SAVED_COST_v1.json",
+      "bytes": 6076,
+      "sha256": "7fd67826eaade15207a6fe78ddb11410073d11a60620cc687b763d41b82c1053"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/saved_auditor_draft_v1/archive_wrapper_draft_v1.py",
+      "path": "read_only/cost_saved_auditor_v1/archive_wrapper_draft_v1.py",
+      "bytes": 5931,
+      "sha256": "27fe5bb234cd5991e1a0c6c006779f987e72e48f7927d4b728514c62a1ebab63"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/saved_auditor_draft_v1/audit_cost_saved_v1.py",
+      "path": "read_only/cost_saved_auditor_v1/audit_cost_saved_v1.py",
+      "bytes": 54790,
+      "sha256": "3ddeb37f19525f67bab35a3d486db98d8e5f96b8a10e51810c735f363c6c6ddc"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/saved_auditor_draft_v1/preflight_saved_cost_v1.py",
+      "path": "read_only/cost_saved_auditor_v1/preflight_saved_cost_v1.py",
+      "bytes": 8288,
+      "sha256": "668afb4ce9bc9491db5f2af99051c802777d50c881d9ffdf19785737f96568a9"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/saved_auditor_draft_v1/references/cost_parser_v1.py",
+      "path": "read_only/cost_saved_auditor_v1/references/cost_parser_v1.py",
+      "bytes": 29793,
+      "sha256": "18e8b63b5c80dc95331d64b8564be573777baeae1c10449a86cd2c5c06508db8"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/saved_auditor_draft_v1/references/delivery_saved_v1/AUDITOR_FREEZE_v1.json",
+      "path": "read_only/cost_saved_auditor_v1/references/delivery_saved_v1/AUDITOR_FREEZE_v1.json",
+      "bytes": 2399,
+      "sha256": "be949e80178c57c0dc0fb261244fb0927231d13dceeb68d426b2380040fda807"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/saved_auditor_draft_v1/references/delivery_saved_v1/AUDIT_REPORT_SCHEMA_v1.json",
+      "path": "read_only/cost_saved_auditor_v1/references/delivery_saved_v1/AUDIT_REPORT_SCHEMA_v1.json",
+      "bytes": 3508,
+      "sha256": "2bfbda36ac8c617fdcb227eba593d9b7285e69384405ba3a156478f6d7565767"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/saved_auditor_draft_v1/references/delivery_saved_v1/CONTROL_CASE_ROSTERS_v1.json",
+      "path": "read_only/cost_saved_auditor_v1/references/delivery_saved_v1/CONTROL_CASE_ROSTERS_v1.json",
+      "bytes": 9108,
+      "sha256": "31b2d5e250746948c16e6577788528e227b1ceee4521ac5f94db0cdb7c660d9c"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/saved_auditor_draft_v1/references/delivery_saved_v1/COUNTED_AUDIT_PLAN_v1.json",
+      "path": "read_only/cost_saved_auditor_v1/references/delivery_saved_v1/COUNTED_AUDIT_PLAN_v1.json",
+      "bytes": 11103,
+      "sha256": "af590f872777c8b49a47af59e43a169e5be1dc0ef975388d148b3895bf6c57b6"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/saved_auditor_draft_v1/references/delivery_saved_v1/INDEPENDENT_FINAL_AUDITOR_REVIEW_v2.json",
+      "path": "read_only/cost_saved_auditor_v1/references/delivery_saved_v1/INDEPENDENT_FINAL_AUDITOR_REVIEW_v2.json",
+      "bytes": 5763,
+      "sha256": "c51d9cc2b36845e50566babe7f26d120326056a6758990669ca158513d29d651"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/saved_auditor_draft_v1/references/delivery_saved_v1/INDEPENDENT_REGISTRY_READER_SOURCE_REVIEW_v1.json",
+      "path": "read_only/cost_saved_auditor_v1/references/delivery_saved_v1/INDEPENDENT_REGISTRY_READER_SOURCE_REVIEW_v1.json",
+      "bytes": 1785,
+      "sha256": "5bf39ba2ef911cf0ac593fdc0c373be51ab0a69aea0b0f98d1eb1d3d308644f4"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/saved_auditor_draft_v1/references/delivery_saved_v1/INDEPENDENT_RESOURCE_STAGE_PREFLIGHT_v2.json",
+      "path": "read_only/cost_saved_auditor_v1/references/delivery_saved_v1/INDEPENDENT_RESOURCE_STAGE_PREFLIGHT_v2.json",
+      "bytes": 3215,
+      "sha256": "006f9c1ff7f35f895a7bf03533c20863efde52041e3fc381e5fb95129c05f2d6"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/saved_auditor_draft_v1/references/delivery_saved_v1/INDEPENDENT_SAVED_PREFLIGHT_v10.json",
+      "path": "read_only/cost_saved_auditor_v1/references/delivery_saved_v1/INDEPENDENT_SAVED_PREFLIGHT_v10.json",
+      "bytes": 40056,
+      "sha256": "18c6d68d8a19716a84a1992f31269059af5d9db8488c6d4eb313aa93d8b81d75"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/saved_auditor_draft_v1/references/delivery_saved_v1/audit_saved_delivery_v1.py",
+      "path": "read_only/cost_saved_auditor_v1/references/delivery_saved_v1/audit_saved_delivery_v1.py",
+      "bytes": 51680,
+      "sha256": "4df3066d3e5c5940466d12357bc667e338f4db67578483bbe8b652e1e30a1c23"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/saved_auditor_draft_v1/references/delivery_saved_v1/graph_saved_v1.py",
+      "path": "read_only/cost_saved_auditor_v1/references/delivery_saved_v1/graph_saved_v1.py",
+      "bytes": 14085,
+      "sha256": "35d289bd9f521fc3bfb8a65d7d49a49787420fc10e4c7cd138b8e1d63c675f63"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/saved_auditor_draft_v1/references/delivery_saved_v1/independent_resource_stage_preflight_v2.py",
+      "path": "read_only/cost_saved_auditor_v1/references/delivery_saved_v1/independent_resource_stage_preflight_v2.py",
+      "bytes": 7848,
+      "sha256": "d2841f008f5a7950a3d25800593efde318e0363fe94768b2d0c5f0cf14c16892"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/saved_auditor_draft_v1/references/delivery_saved_v1/preflight_saved_auditor_v1.py",
+      "path": "read_only/cost_saved_auditor_v1/references/delivery_saved_v1/preflight_saved_auditor_v1.py",
+      "bytes": 8252,
+      "sha256": "c01033dcbf97429535328c306d9c7beb918df77b03b1992ea83d5395730851c8"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/saved_auditor_draft_v1/references/delivery_saved_v1/read_public_registry_bytes_v1.py",
+      "path": "read_only/cost_saved_auditor_v1/references/delivery_saved_v1/read_public_registry_bytes_v1.py",
+      "bytes": 10916,
+      "sha256": "1bbce2cb72fc2dcd0feee6e1221038a83e918e2812f50e217ca33c3f5cdf2dc5"
+    },
+    {
+      "source": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/saved_auditor_draft_v1/references/delivery_saved_v1/saved_base_v1.py",
+      "path": "read_only/cost_saved_auditor_v1/references/delivery_saved_v1/saved_base_v1.py",
+      "bytes": 34148,
+      "sha256": "c8d6dcd4c09b0b2dce8e53f8a3f9f89947d7eef0df71b768fa258a4befed3b3f"
+    }
+  ],
+  "old_author_trees_unchanged": true,
+  "workflow_source_not_yet_copied": true,
+  "source_frozen": false,
+  "ready_for_linux": false,
+  "dispatch_allowed": false,
+  "participant_imported": false,
+  "native_compiled": false,
+  "market_executed": false
+}

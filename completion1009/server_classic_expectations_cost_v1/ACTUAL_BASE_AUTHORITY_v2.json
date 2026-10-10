@@ -1,0 +1,40 @@
+{
+  "anonymous_registry": {
+    "bytes": 23997,
+    "path": "/Volumes/Alan/Nips_com/t3/completion1009/server_classic_expectations_delivery_v2/result_v1/anonymous_registry_v1/REGISTRY_BYTE_READBACK_v1.json",
+    "sha256": "98beaa7fff94aa566fd49108e8c1d6d7986a46877a1be8ec32a5908da87e28fe"
+  },
+  "artifact_root": "/Volumes/Alan/Nips_com/t3/completion1009/server_classic_expectations_delivery_v2/result_v1/extracted",
+  "artifact_zip": {
+    "bytes": 460347550,
+    "path": "/Volumes/Alan/Nips_com/t3/completion1009/server_classic_expectations_delivery_v2/result_v1/ACTUAL_ARTIFACT_v1.zip",
+    "sha256": "0a508bd785f6e369cef32a96fb5c138976b3ef63cebfc1ca93fbabb7f60f96f3"
+  },
+  "base_image_id": "sha256:4deb411785eb962b62d1f1cf644f9349bc20cdb69d3f31832151721f0e3584b1",
+  "baseline_payload": "/Volumes/Alan/Nips_com/t3/completion1009/server_classic_structural_v3/screen_result_v7/extracted/source-payload",
+  "baseline_reference_plan": {
+    "bytes": 103740,
+    "path": "/Volumes/Alan/Nips_com/t3/completion1009/server_classic_delivery_v1/attempt2/downloaded_v1/evidence/REFERENCE_PLAN.json",
+    "sha256": "4ed54fc6ef706b614f221a7af6b3f09a7d21c490d54260e2d75fe2a31607ca68"
+  },
+  "frozen_payload": "/Volumes/Alan/Nips_com/t3/completion1009/server_classic_expectations_delivery_v1/materialized_check_v3",
+  "head": "2164738b7508d9554cb6bd0a37ec46375cee8199",
+  "public_digest": "ghcr.io/kouzhizhuo/agenthon-t3-classic@sha256:4a4c10b274a54312d5e17d69a45d30052787f523813bd5e2c27a5f1a9ba34ec9",
+  "ready_for_linux": true,
+  "remote_source_readback": {
+    "bytes": 9713,
+    "path": "/Volumes/Alan/Nips_com/t3/completion1009/server_classic_expectations_delivery_v2/REMOTE_SOURCE_READBACK_v1.json",
+    "sha256": "6c64fefa67920eb93a85522dd467eaa818d0da3777c133f3b4971189670f388b"
+  },
+  "run_attempt": 1,
+  "run_id": 38072276259,
+  "saved_audit": {
+    "bytes": 66679,
+    "path": "/Volumes/Alan/Nips_com/t3/completion1009/server_classic_expectations_delivery_v2/result_v1/INDEPENDENT_FULL_AUDIT_v1.json",
+    "sha256": "3d528d5b713ac719c491832dc2ac8b88531ef0c1b3cbbd95fd474a7fd91c9bfa"
+  },
+  "schema": "t3-cost-actual-base-authority-v1",
+  "source_root": "/Volumes/Alan/Nips_com/t3/completion1009/server_classic_expectations_delivery_v2",
+  "sourcepins_sha256": "b5cf9f49879ad5fe90b760831914e6e3e19f92186df2503c5b5ca2ff0bc34279",
+  "workflow": "t3-classic-expectations-delivery-v2.yml"
+}

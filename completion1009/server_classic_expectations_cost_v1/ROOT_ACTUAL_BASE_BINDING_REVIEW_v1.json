@@ -1,0 +1,26 @@
+{
+  "schema": "t3-root-bound-host-v2-inert-actual-input-review-v1",
+  "observed_at": "2026-10-10T18:33:03.062619+00:00",
+  "actual_base_authority_source_paths_passed": true,
+  "original_driver_worker_parser_byte_equal": true,
+  "source_inventory_beforeafter_complete": {
+    "native": 345,
+    "harness": 7,
+    "licenses": 1
+  },
+  "actualFROMoneCOPY": true,
+  "actual_cost_compiled_or_run": false,
+  "ready_for_linux": false,
+  "remaining": [
+    "complete remote hydration schema independentlyreviewed",
+    "newsource workflow freeze andsameheadreadback"
+  ],
+  "base_authority": {
+    "bytes": 2386,
+    "sha256": "b386ab8ecf5e6570c0c1a899ecfe494881b89cd14f514041d675ad016f8a7230"
+  },
+  "binding": {
+    "bytes": 129624,
+    "sha256": "d749ddcae1dd53d934f0cdbf526e1a569b4ae297bdb024a8191585773936fa7d"
+  }
+}

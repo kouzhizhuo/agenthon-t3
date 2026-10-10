@@ -1,0 +1,95 @@
+{
+  "Docker_executed": false,
+  "actual_base_binding_complete": true,
+  "all_passed": false,
+  "all_source_checks_passed": true,
+  "case_count": 16,
+  "cases": [
+    {
+      "case": "all31originalcopiedfiles_exceptnewDockerfile",
+      "passed": true
+    },
+    {
+      "case": "oldrevieweddriver_unchanged",
+      "passed": true
+    },
+    {
+      "case": "actualbound_artifact_zip",
+      "passed": true
+    },
+    {
+      "case": "actualbound_saved_audit",
+      "passed": true
+    },
+    {
+      "case": "actualbound_anonymous_registry",
+      "passed": true
+    },
+    {
+      "case": "actualbound_remote_source_readback",
+      "passed": true
+    },
+    {
+      "case": "actualbound_baseline_reference_plan",
+      "passed": true
+    },
+    {
+      "case": "actualindependentfullv2passing",
+      "passed": true
+    },
+    {
+      "case": "exactbase_publicdigest",
+      "passed": true
+    },
+    {
+      "case": "actualbaseimageid",
+      "passed": true
+    },
+    {
+      "case": "fullbase_beforeafterinventories",
+      "passed": true
+    },
+    {
+      "case": "botharms_fullactualsource",
+      "passed": true
+    },
+    {
+      "case": "exactentry_frozenunmodified",
+      "passed": true
+    },
+    {
+      "case": "oneFROM_oneCOPYonly",
+      "passed": true
+    },
+    {
+      "case": "exacttwo_overlayfiles",
+      "passed": true
+    },
+    {
+      "case": "noLinux_dispatch_freeze",
+      "passed": true
+    }
+  ],
+  "driver_executed": false,
+  "market_executed": false,
+  "native_compiled": false,
+  "participant_imported": false,
+  "ready_for_linux": false,
+  "remote_binding_generated": false,
+  "schema": "t3-cost-bound-source-inert-preflight-v2",
+  "source": {
+    "Dockerfile": {
+      "bytes": 205,
+      "sha256": "7039670a994d31ce895210ff06d9d83c718d48306dc6350ead486bec3e819473"
+    },
+    "base_authority": {
+      "bytes": 2386,
+      "sha256": "b386ab8ecf5e6570c0c1a899ecfe494881b89cd14f514041d675ad016f8a7230"
+    },
+    "binding": {
+      "bytes": 129624,
+      "sha256": "d749ddcae1dd53d934f0cdbf526e1a569b4ae297bdb024a8191585773936fa7d"
+    }
+  },
+  "source_frozen": false
+}

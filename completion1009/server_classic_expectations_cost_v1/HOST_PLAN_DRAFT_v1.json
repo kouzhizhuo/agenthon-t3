@@ -1,0 +1,167 @@
+{
+  "actual_base_authority_schema": {
+    "anonymous_registry": null,
+    "artifact_root": null,
+    "artifact_zip": null,
+    "base_image_id": null,
+    "baseline_payload": null,
+    "baseline_reference_plan": null,
+    "frozen_payload": null,
+    "head": "2164738b7508d9554cb6bd0a37ec46375cee8199",
+    "public_digest": null,
+    "ready_for_linux": false,
+    "remote_source_readback": null,
+    "run_attempt": 1,
+    "run_id": 38072276259,
+    "saved_audit": null,
+    "schema": "t3-cost-actual-base-authority-v1",
+    "source_root": null,
+    "sourcepins_sha256": "b5cf9f49879ad5fe90b760831914e6e3e19f92186df2503c5b5ca2ff0bc34279",
+    "workflow": "t3-classic-expectations-delivery-v2.yml"
+  },
+  "actual_base_image_id": null,
+  "actual_base_public_digest": null,
+  "actual_saved_paths_authority": null,
+  "base_authority_requirements": [
+    "bound-file triple path/bytes/SHA for complete ZIP, genuine full saved audit, anonymous registry receipt, original remote readback and baseline plan",
+    "all audit publication/execution stages pass with no failures/pending then repeat complete frozen auditor before Docker",
+    "source/C/object/ELF/licences inventories original before/after; bothcandidate inventories from same actualsaved v2",
+    "basepublishedmetadata exact successful before/after core; manifest/config/layers/diffIDs revalidated by frozen auditor",
+    "diagnostic bindingbase ID/public digest, full candidate files+rootinventories, base_publication_authority true but diagnosticpublication false",
+    "finalsourcefreeze reviewed+ready, actualoverlayfiles, fixed Dockerfile actualdigest, all read-only helpers exact; independent samehead remote readback"
+  ],
+  "base_head": "2164738b7508d9554cb6bd0a37ec46375cee8199",
+  "base_run": 38072276259,
+  "base_source_pins_sha256": "b5cf9f49879ad5fe90b760831914e6e3e19f92186df2503c5b5ca2ff0bc34279",
+  "base_workflow": "t3-classic-expectations-delivery-v2.yml",
+  "budgets": {
+    "cleanup_grace_sec": 90,
+    "container_sec": 3600,
+    "diagnostic_log_bytes": 268435456,
+    "freshworker_sec": 3900,
+    "host_log_bytes": 16777216,
+    "sourcefile_bytes": 67108864,
+    "whole_stage1_sec": 7200
+  },
+  "comparisons": [
+    "exacttyped71unit95market190frames input/reference hashes and organizer sub/source mapping equal successfulv2 and originalplan",
+    "allfour official gates per24diagnostic",
+    "new complete outputs versus successfulv2 ordinary and originalreference",
+    "new completeSTATE versus correspondingbaseparent/expectations diagnostic plus state/cost/crossarm byteequality",
+    "rawresource/lifecycle24unique positive daemonintervals strictlyserial",
+    "before/after6neverstarted ownedsourcecopies exactthree roots, originalcommandclass preserved"
+  ],
+  "counts": {
+    "Parquet_copies": 80,
+    "auxiliary_neverstarted_sourcecopy": 6,
+    "complete_STATE_graphs": 40,
+    "controls": 0,
+    "diagnostic_containers": 24,
+    "official_gates": 96,
+    "ordinary": 0,
+    "warmup": 0
+  },
+  "derived_diagnostic_image_id": null,
+  "dispatch_allowed": false,
+  "dockerfile_template": "one FROM actual freshly audited public immutable v2 digest; one COPY --chown=0:0 --chmod=0444 overlay/ into allowedroot; no RUN/env/defaultentry/native rebuild",
+  "entry_source_reference": {
+    "bytes": 29930,
+    "sha256": "b43209c991fcb6d7652f6d560b873f3a4fb9e76d92277f0586ada036f2e95af2"
+  },
+  "guessed_paths_forbidden": true,
+  "immutable_entry_unmodified": true,
+  "limitations": [
+    "sourcepreflight is not actualbase authority or runtimepass",
+    "complete parentZIP/registry layerbytes are explicit external finalsaved-auditor inputs; copied receipts alone cannot authorize",
+    "no ordinaryEPS or232000 inference from perturbeddiagnostic timings"
+  ],
+  "operations": {
+    "Docker_executed": false,
+    "GitHub_writes": false,
+    "dispatch_performed": false,
+    "market_executed": false,
+    "native_compiled": false,
+    "participant_function_called": false,
+    "participant_imported": false
+  },
+  "overlay_files": [
+    "cost_entry_draft_v1.py",
+    "IMAGE_BINDING.json"
+  ],
+  "overlay_root": "/opt/t3-classic-structural-v2/cost-diagnostic-v1",
+  "publication_authority": false,
+  "rankable": false,
+  "ready_for_linux": false,
+  "required_before_freeze": [
+    "actual successfulv2 allpassed fullaudit/publicbytes and concretebinding",
+    "worker/parser independent source controls andreview",
+    "rootreview freshprocess cleanup/caps/typedmappings/wholebudget",
+    "finalsaved costartifact independentauditor",
+    "samehead readback every executing source and independentworkflow"
+  ],
+  "resources": {
+    "cancel_in_progress": false,
+    "concurrency_group": "t3-serial-linux-screen-v2",
+    "cpus": 4,
+    "fsize": [
+      268435456,
+      268435456
+    ],
+    "memory_bytes": 17179869184,
+    "memory_swap_bytes": 17179869184,
+    "network": "none",
+    "nofile": [
+      1024,
+      1024
+    ],
+    "nproc": [
+      256,
+      256
+    ],
+    "parallel_market_containers": 1,
+    "pids_limit": 256,
+    "read_only_root": true,
+    "runtime": "runc",
+    "tmpfs": "rw,noexec,nosuid,nodev,size=64m",
+    "user": "65534:65534"
+  },
+  "runtime_host_authority": {
+    "base_publication_authority": true,
+    "created_only_after_actualbase_replay_overlayinspect_and_before3rootcopies": true,
+    "derivedID_separate_from_embeddedbasebinding": true,
+    "publication_authority": false,
+    "rankable": false,
+    "runtime_changed": false,
+    "schema": "t3-cost-host-authority-v1"
+  },
+  "schema": "t3-cost-stage1-host-plan-draft-v1",
+  "source_controls": {
+    "all_passed": true,
+    "cases": 39,
+    "independent_review": false,
+    "runtime_execution": false
+  },
+  "source_only": true,
+  "source_review_files": {
+    "Dockerfile": {
+      "bytes": 143,
+      "sha256": "7367380d264ef6ebe9dc1ad75371dbd321718afe4e9164b59826a8febbc3d67b"
+    },
+    "READ_ONLY_SOURCE_PINS_v1.json": {
+      "bytes": 3218,
+      "sha256": "f05b92a93c2cbb5d88fcbb62611228c9bf0b13ad52ae1546edbbcad262d6b304"
+    },
+    "SOURCE_PREFLIGHT_HOST_v1.json": {
+      "bytes": 4663,
+      "sha256": "e03c2b2f8c68392d1cebf8f2a2bfba86e20f593f2ed0c9ae3d6090d4190bf983"
+    },
+    "driver.py": {
+      "bytes": 46282,
+      "sha256": "c9fb7fa76ac017715c386b2f3d452e9df22acdcf75d7853637a7824d538208cf"
+    },
+    "source_preflight_host_v1.py": {
+      "bytes": 8761,
+      "sha256": "ea79ba34346d837bf4f0a43c7231bab9c9a254774c0d4fc316f3f9b20fc3b672"
+    }
+  }
+}
