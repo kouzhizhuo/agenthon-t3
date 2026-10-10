@@ -1,0 +1,65 @@
+name: T3 exact scalar direct incumbent comparison v1
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: t3-serial-linux-screen-v2
+  cancel-in-progress: false
+jobs:
+  screen:
+    if: github.repository == 'kouzhizhuo/agenthon-t3'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+      NUMEXPR_NUM_THREADS: '1'
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONHASHSEED: '0'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify reviewed direct wrapper bytes
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib
+          root=Path('completion1009/server_scalar_direct_incumbent_v1')
+          pins={'driver.py': 'acace11df5efe9d942b40eb719f9d1c344e2126b432dfbf32ecb4383f1694f78', 'worker.py': 'be9ff110815f29cad60298a2b5c984f6a56ae6cc7db14b188d6633a9a49717d7', 'README.md': 'aeedcf978e7758487b03ff6a4d20dc4615ececa680941c8a212ed917a02e6cd8', 'SOURCE_REVIEW.json': 'd09522cc17698d2d72b38f4fdaa48add575e7b1cc80f0d3c4e49695a9b55e148'}
+          for name,digest in pins.items():
+              assert hashlib.sha256((root/name).read_bytes()).hexdigest()==digest, name
+          PY
+      - name: Materialize both unchanged frozen archives
+        run: |
+          python3 completion1009/server_cold_native_projection_buffers_controls_v1_1/materialize.py --archive completion1009/server_cold_native_projection_buffers_controls_v1_1/SCREEN_PAYLOAD_v1.tar.xz --expected-sha256 61ab21c83d756c3f6b10e55a569772f65f2cbca74c222efb7b31b03b0c615358 --out scalar-direct-v1-incumbent-payload
+          python3 completion1009/server_cold_native_projection_scalar_reads_controls_v2_1/materialize.py --archive completion1009/server_cold_native_projection_scalar_reads_controls_v2_1/SCREEN_PAYLOAD_v1.tar.xz --expected-sha256 b073a6bbf405e8d97545aa9edd7ae2431b3ad731834cc9c86862647d570a187c --out scalar-direct-v1-scalar-payload
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.13.7'
+      - name: Fetch the pinned official host evaluator and original references
+        run: |
+          mkdir -p scalar-direct-v1-evidence
+          python scalar-direct-v1-scalar-payload/host/fetch_evaluation.py --out "$PWD/scalar-direct-v1-evaluation" > scalar-direct-v1-evidence/fetch-process.log 2>&1
+      - name: Install the pinned host evaluator
+        run: |
+          set -euo pipefail
+          python -m pip install numpy==2.2.6 pandas==2.3.3 scipy==1.18.1 pyarrow==21.0.0 jsonschema==4.23.0 jsonschema-specifications==2025.9.1 attrs==26.1.0 referencing==0.37.0 rpds-py==2026.9.1 python-dateutil==2.9.0.post0 pytz==2026.5 six==1.17.0 tzdata==2026.5
+          python -m pip install --no-deps ./scalar-direct-v1-evaluation/toolkit/common ./scalar-direct-v1-evaluation/track3
+          python -m pip freeze > scalar-direct-v1-evidence/EVALUATOR_FREEZE.txt
+      - name: Build both original native images and inspect all sources
+        run: python completion1009/server_scalar_direct_incumbent_v1/driver.py build --incumbent-payload scalar-direct-v1-incumbent-payload --scalar-payload scalar-direct-v1-scalar-payload --evidence scalar-direct-v1-evidence --reference-root scalar-direct-v1-evaluation/references --gate-kit scalar-direct-v1-evaluation/track3
+      - name: Original complete controls then50alternating exact market runs
+        run: python completion1009/server_scalar_direct_incumbent_v1/driver.py screen --incumbent-payload scalar-direct-v1-incumbent-payload --scalar-payload scalar-direct-v1-scalar-payload --evidence scalar-direct-v1-evidence --reference-root scalar-direct-v1-evaluation/references --gate-kit scalar-direct-v1-evaluation/track3
+      - name: Preserve both frozen sources all outputs and actual logs
+        if: always()
+        run: python completion1009/server_scalar_direct_incumbent_v1/driver.py artifact --incumbent-payload scalar-direct-v1-incumbent-payload --scalar-payload scalar-direct-v1-scalar-payload --evidence scalar-direct-v1-evidence --reference-root scalar-direct-v1-evaluation/references --gate-kit scalar-direct-v1-evaluation/track3 --artifact scalar-direct-v1-artifact
+      - name: Retain direct comparison evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: t3-scalar-direct-incumbent-v1-evidence
+          path: scalar-direct-v1-artifact
+          retention-days: 30
+          if-no-files-found: error
+          compression-level: 6
