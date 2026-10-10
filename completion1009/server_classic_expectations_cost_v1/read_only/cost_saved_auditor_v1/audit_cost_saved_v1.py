@@ -33,7 +33,7 @@ DROP = {'wall_clock_sec', 'events_per_sec', 'peak_memory_bytes', 'gpu_seconds'}
 LOG_CAP = 16 * 1024**2
 COST_CAP = 256 * 1024**2
 REFERENCE_SHA = {
-    'references/cost_parser_v1.py': '18e8b63b5c80dc95331d64b8564be573777baeae1c10449a86cd2c5c06508db8',
+    'references/cost_parser_v1.py': '18f1e4ef510cba1cc650d2d9b5c77b2c4cdf185bcf39449901c7eff273dd4d49',
     'references/delivery_saved_v1/audit_saved_delivery_v1.py': '4df3066d3e5c5940466d12357bc667e338f4db67578483bbe8b652e1e30a1c23',
     'references/delivery_saved_v1/saved_base_v1.py': 'c8d6dcd4c09b0b2dce8e53f8a3f9f89947d7eef0df71b768fa258a4befed3b3f',
     'references/delivery_saved_v1/graph_saved_v1.py': '35d289bd9f521fc3bfb8a65d7d49a49787420fc10e4c7cd138b8e1d63c675f63',
@@ -136,6 +136,35 @@ def load_references():
     parser = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(parser)
     return base, graph, delivered, parser
+
+
+def verify_AST_delta_r3(carried, reviewed):
+    """Bind old reviews to their bytes and permit only the frozen canonical delta."""
+    require(pin(carried / 'worker.py') == {k: reviewed['source_files']['worker.py'][k]
+        for k in ('bytes', 'sha256')}, 'old review exact unchanged worker')
+    old_parser = carried / 'read_only/parser_before_AST_repair_r2.py'
+    require(pin(old_parser) == {k: reviewed['source_files']['parser.py'][k]
+        for k in ('bytes', 'sha256')}, 'old review exact original parser')
+    require(pin(carried / 'read_only/worker_before_AST_repair_r2.py') == pin(carried / 'worker.py'),
+        'preserved original worker exact')
+    insertion_path = carried / 'canonical_AST_insertion_r3.txt'
+    require(pin(insertion_path) == {'bytes': 3098, 'sha256': '8470863b2f2c49f141061fc978f5567fba09364a335cf8d67fb2142791a8be51'}, 'frozen exact canonical helper insertion')
+    insertion = insertion_path.read_bytes()
+    expression = b'hashlib.sha256(ast.dump(original, include_attributes=False).encode()).hexdigest()'
+    replacements = (
+        ('parser.py', 'read_only/parser_before_AST_repair_r2.py', b'\ndef source_contract(',
+         {'bytes': 29793, 'sha256': '18e8b63b5c80dc95331d64b8564be573777baeae1c10449a86cd2c5c06508db8'}),
+        ('overlay/cost_entry_draft_v1.py', 'read_only/overlay_before_AST_repair_r2.py', b'\ndef instrument_simulate(',
+         {'bytes': 29930, 'sha256': 'b43209c991fcb6d7652f6d560b873f3a4fb9e76d92277f0586ada036f2e95af2'}))
+    for active, original, marker, wanted in replacements:
+        old_path = carried / original
+        require(pin(old_path) == wanted, 'complete preserved r2 diagnostic source')
+        old = old_path.read_bytes()
+        require(old.count(marker) == 1 and old.count(expression) == 1,
+            'unique insertion and hash-expression anchors')
+        expected = old.replace(marker, insertion + marker).replace(expression, b'stable_simulate_AST_sha256(original)')
+        require((carried / active).read_bytes() == expected,
+            'only canonical helper insertion and one hash expression may change')
 
 
 class Audit:
@@ -273,8 +302,7 @@ class Audit:
         require(original_bytes.count(old_predicate) == 1
             and (carried / 'driver.py').read_bytes() == original_bytes.replace(old_predicate, new_predicate),
             'exact one-predicate r2 driver delta; all other bytes immutable')
-        for name in ('worker.py','parser.py'):
-            require(pin(carried/name)=={k:reviewed['source_files'][name][k] for k in ('bytes','sha256')},'independentreview exactcarriedsource binding')
+        verify_AST_delta_r3(carried, reviewed)
         remote = read(remote_path)
         require(remote.get('all_passed') is True and remote.get('head') == self.args.expected_head
             and remote.get('participant_imported') is False, 'costsource samehead independentreadback')
