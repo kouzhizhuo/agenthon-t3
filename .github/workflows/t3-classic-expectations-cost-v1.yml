@@ -30,6 +30,7 @@ jobs:
           set -euo pipefail
           mkdir -p "$RUNNER_TEMP/t3-cost-hydration-logs"
           python3 completion1009/server_classic_expectations_cost_v1/verify_source.py
+          python3 -B completion1009/server_classic_expectations_cost_v1/source_preflight_batch_r2.py > "$RUNNER_TEMP/t3-cost-hydration-logs/ROSTER_SOURCE_CHECK_r2.json"
           python3 completion1009/server_classic_expectations_cost_v1/verify_remote_source.py --head "$GITHUB_SHA" --out "$GITHUB_WORKSPACE/completion1009/server_classic_expectations_cost_v1/REMOTE_SOURCE_READBACK.json"
       - name: Hydrate original complete GitHub artifact and exact pinned source bytes
         env:
