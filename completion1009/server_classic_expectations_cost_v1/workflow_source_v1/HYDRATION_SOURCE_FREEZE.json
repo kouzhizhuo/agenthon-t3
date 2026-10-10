@@ -103,8 +103,8 @@
       "sha256": "46c14dd6782511b05ca535e5af8d87b95858bbde1fe771fa7490676e1ae8aa2e"
     },
     "t3-cost-diagnostic-hydration-draft-v1.yml": {
-      "bytes": 7813,
-      "sha256": "e2350f1ccff557ca9ac7c3be1de0832d852a28dba2f766f934693e53c2d0780b"
+      "bytes": 8815,
+      "sha256": "1df2e5b16c3995d49503737d27079424690c754a0750a35c947156692cd9f13c"
     },
     "validate_evaluator_hydration_v1.py": {
       "bytes": 5208,
@@ -121,6 +121,7 @@
     "path": "../REPAIR_SOURCE_DISPOSITION_r2.json",
     "sha256": "714616acbcabe53b821c7ff1a19ad947cd64930a8b31162018baae28e16f6c30"
   },
+  "r3_delta_review_scope": "root cumulative exact workflow delta; original reviews historical",
   "ready_for_linux": true,
   "repair_source_review": {
     "bytes": 2073,
