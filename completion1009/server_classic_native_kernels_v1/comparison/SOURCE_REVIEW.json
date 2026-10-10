@@ -1,0 +1,16 @@
+{
+  "candidate_archive_sha256": "e2c0d6167ce24854d164345a14a8bef31311b6c7d28708a4e0196e8fe0002f71",
+  "control_runs": 2,
+  "files": {
+    "README.md": "42d92d428ad9de9c702f4877c587b8727a69d37abc047648ac7ab2174695f699",
+    "driver.py": "858099a947e1a8c84aa54a19e6f9435c711a1e905b6a32c4e91c43324a462a1b",
+    "worker.py": "be9ff110815f29cad60298a2b5c984f6a56ae6cc7db14b188d6633a9a49717d7"
+  },
+  "full71": false,
+  "market_executed": false,
+  "official_submission": false,
+  "ordinary_runs": 50,
+  "parent_archive_sha256": "41c2a2f4bb7af0f086067ca3ba3cb7859a84217cd625d7a445b9b86f65c6d77d",
+  "rankable": false,
+  "status": "PASS_SOURCE_ONLY"
+}
