@@ -1,0 +1,28 @@
+{
+  "schema": "t3-cost-official-action-tag-resolution-v1",
+  "observed_at": "2026-10-10T18:45:26.125191+00:00",
+  "rows": [
+    {
+      "repository": "actions/checkout",
+      "tag": "v4",
+      "resolved_commit": "11d5960a326750d5838078e36cf38b85af677262",
+      "url": "https://api.github.com/repos/actions/checkout/git/ref/tags/v4",
+      "http_status": 200,
+      "path": "actions-checkout-v4.json",
+      "bytes": 329,
+      "sha256": "b4be54231ed94c642aaca0da52e6aa598a58f041b39bb887da8efa6e9e9c5826"
+    },
+    {
+      "repository": "actions/upload-artifact",
+      "tag": "v4",
+      "resolved_commit": "ea165f8d65b6e75b540449e92b4886f43607fa02",
+      "url": "https://api.github.com/repos/actions/upload-artifact/git/ref/tags/v4",
+      "http_status": 200,
+      "path": "actions-upload-artifact-v4.json",
+      "bytes": 343,
+      "sha256": "11d527e9dd398225cfa3ccd343842edafe56f865982da11ac358e77eb6a472cf"
+    }
+  ],
+  "readonly_network": true,
+  "remote_writes": false
+}
