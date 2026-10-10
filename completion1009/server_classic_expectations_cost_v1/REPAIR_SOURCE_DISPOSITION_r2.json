@@ -1,0 +1,60 @@
+{
+  "Linux_passed": false,
+  "complete_external_review": true,
+  "dispatch_allowed": false,
+  "existing_host_cases": 39,
+  "external_review_conditions": [
+    {
+      "condition": "Old driver SHA and bytes not enforced against active driver in production paths",
+      "resolution": "No matches in immutable host helpers, imagebinding or hydration runtime. source_preflight_bound_v2 remains unchanged historical inert report generator, not called by workflow. New driver original bytes checked separately by current auditor."
+    },
+    {
+      "condition": "Current cost saved auditor outside immutable17 and reference pins",
+      "resolution": "Confirmed original17 and reference15 contain no activecost auditor. New wholefreeze binds active cost auditor separately."
+    },
+    {
+      "condition": "worker/parser/overlay only selected<=5 domain",
+      "resolution": "driver schedule uses only six UNITS; five singles and hetero5. roster enforces10markets and selectedbatch5. 95case check covers entire71 separately."
+    }
+  ],
+  "final_preflight": {
+    "bytes": 12532,
+    "sha256": "537a4144d1c1433a859a375f0bee24e5b7057d29b3d45ec465e5cb1528324b87"
+  },
+  "final_source_cases": 95,
+  "independent_new_whole_tree_review": false,
+  "market_executed": false,
+  "native_compiled": false,
+  "native_runtime_unchanged": true,
+  "nonexecuting_historical_reports": [
+    "source_preflight_bound_v2.py",
+    "SOURCE_PREFLIGHT_BOUND_v2.json",
+    "INDEPENDENT_HOST_SOURCE_REVIEW_v1.json",
+    "COMBINED_REVIEW_DISPOSITION_v1.json"
+  ],
+  "optional_preflight_strengthening_completed": [
+    "complete old review SHA check",
+    "unrepaired driver refusal",
+    "same length >=0 semantic mutation refusal"
+  ],
+  "original_r1_head": "2b67f4beb43ee94d10759e54bd47657a6fe4e2a1",
+  "original_r1_pins": {
+    "bytes": 19132,
+    "sha256": "a3ba519075ef5dd3355c7bc8a95cd17c50763041f9be7073def4431db5b2719e"
+  },
+  "original_r1_run": 38082649496,
+  "participant_imported": false,
+  "review_pin": {
+    "bytes": 5133,
+    "sha256": "9c72dea56eb44248fbd7c18d5dd158b4b7e3ebe627a61b51d10eb8f06e9434af"
+  },
+  "review_receipt": {
+    "bytes": 1728,
+    "sha256": "58aba19b30bf21934a494656b4a39e30a0aa755e794d3951bf56431edd9698ee"
+  },
+  "review_scope": "Cumulative unchanged original reviews, completed external partial source review, actual final delta and saved/source-only checks",
+  "schema": "t3-cost-batch-r2-source-review-disposition-v1",
+  "source_scope_passed": true,
+  "updated_at": "2026-10-10T21:07:54.912851+00:00",
+  "worker_parser_overlay_unchanged": true
+}

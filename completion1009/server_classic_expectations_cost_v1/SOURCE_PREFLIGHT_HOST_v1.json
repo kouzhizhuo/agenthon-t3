@@ -208,7 +208,7 @@
   "ready_for_linux": false,
   "schema": "t3-cost-host-inert-source-preflight-v1",
   "source": {
-    "bytes": 46282,
-    "sha256": "c9fb7fa76ac017715c386b2f3d452e9df22acdcf75d7853637a7824d538208cf"
+    "bytes": 46277,
+    "sha256": "53fce86bb993522e0e5f0c2c0d5a5501e96458a44243e68745a09c88b14d0d40"
   }
 }

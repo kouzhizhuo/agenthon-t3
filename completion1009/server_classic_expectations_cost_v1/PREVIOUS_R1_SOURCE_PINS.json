@@ -58,25 +58,13 @@
       "bytes": 4861,
       "sha256": "60caa67104b516f0c9cbe7f5ea9c66a314f75376b2be4db523e053cfe0e449cd"
     },
-    "PREVIOUS_R1_SOURCE_PINS.json": {
-      "bytes": 19132,
-      "sha256": "a3ba519075ef5dd3355c7bc8a95cd17c50763041f9be7073def4431db5b2719e"
-    },
     "READ_ONLY_SOURCE_PINS_v1.json": {
       "bytes": 3218,
       "sha256": "f05b92a93c2cbb5d88fcbb62611228c9bf0b13ad52ae1546edbbcad262d6b304"
     },
-    "REPAIR_SOURCE_DISPOSITION_r2.json": {
-      "bytes": 2559,
-      "sha256": "714616acbcabe53b821c7ff1a19ad947cd64930a8b31162018baae28e16f6c30"
-    },
     "ROOT_ACTUAL_BASE_BINDING_REVIEW_v1.json": {
       "bytes": 814,
       "sha256": "c4e6acede0320a66c9081fb16f02c91a52fa03d485641adbd8d97f35b11b910e"
-    },
-    "ROSTER_SOURCE_CHECK_r2.json": {
-      "bytes": 12532,
-      "sha256": "537a4144d1c1433a859a375f0bee24e5b7057d29b3d45ec465e5cb1528324b87"
     },
     "SOURCE_COMPONENT_REVIEW_v1.json": {
       "bytes": 7668,
@@ -88,7 +76,7 @@
     },
     "SOURCE_PREFLIGHT_HOST_v1.json": {
       "bytes": 4663,
-      "sha256": "9b5af71e96e56943f1134657321b9670ea13d7699a127619eaeee89922b2ca73"
+      "sha256": "e03c2b2f8c68392d1cebf8f2a2bfba86e20f593f2ed0c9ae3d6090d4190bf983"
     },
     "WORKFLOW_COPY_RECEIPT_v1.json": {
       "bytes": 5149,
@@ -111,8 +99,8 @@
       "sha256": "11f22c8d466fbe0169c697c8a940cf6be5711b23091dcd61629fb80cf51c5b11"
     },
     "driver.py": {
-      "bytes": 46277,
-      "sha256": "53fce86bb993522e0e5f0c2c0d5a5501e96458a44243e68745a09c88b14d0d40"
+      "bytes": 46282,
+      "sha256": "c9fb7fa76ac017715c386b2f3d452e9df22acdcf75d7853637a7824d538208cf"
     },
     "overlay/IMAGE_BINDING.json": {
       "bytes": 129624,
@@ -167,8 +155,8 @@
       "sha256": "27fe5bb234cd5991e1a0c6c006779f987e72e48f7927d4b728514c62a1ebab63"
     },
     "read_only/cost_saved_auditor_v1/audit_cost_saved_v1.py": {
-      "bytes": 55649,
-      "sha256": "e5538f9657fa53a5e8179e49de7343038c3507d1ee12f8599cc9e03db5b857f2"
+      "bytes": 54790,
+      "sha256": "3ddeb37f19525f67bab35a3d486db98d8e5f96b8a10e51810c735f363c6c6ddc"
     },
     "read_only/cost_saved_auditor_v1/preflight_saved_cost_v1.py": {
       "bytes": 8288,
@@ -234,10 +222,6 @@
       "bytes": 34148,
       "sha256": "c8d6dcd4c09b0b2dce8e53f8a3f9f89947d7eef0df71b768fa258a4befed3b3f"
     },
-    "read_only/driver_before_batch_repair_r1.py": {
-      "bytes": 46282,
-      "sha256": "c9fb7fa76ac017715c386b2f3d452e9df22acdcf75d7853637a7824d538208cf"
-    },
     "read_only/frozen_saved_auditor_v1/AUDITOR_FREEZE_v1.json": {
       "bytes": 2399,
       "sha256": "be949e80178c57c0dc0fb261244fb0927231d13dceeb68d426b2380040fda807"
@@ -302,21 +286,9 @@
       "bytes": 23491,
       "sha256": "a6814bb273da528b0c478b760cd4af6a9a116a046bb9e82b751ab4717bf082dc"
     },
-    "read_only/repair_review_r2.md": {
-      "bytes": 5133,
-      "sha256": "9c72dea56eb44248fbd7c18d5dd158b4b7e3ebe627a61b51d10eb8f06e9434af"
-    },
-    "read_only/repair_review_receipt_r2.json": {
-      "bytes": 1728,
-      "sha256": "58aba19b30bf21934a494656b4a39e30a0aa755e794d3951bf56431edd9698ee"
-    },
     "read_only/source_copy.py": {
       "bytes": 12435,
       "sha256": "710a3a7d06a641c25f03619df719069a773de91f9b1cf309705102031421dbc1"
-    },
-    "source_preflight_batch_r2.py": {
-      "bytes": 7981,
-      "sha256": "6bbcbc8988ff3c4d8a0bf0ee9090a553dc5a3af574c3ceaefd31b470bf57060a"
     },
     "source_preflight_bound_v2.py": {
       "bytes": 4319,
@@ -351,8 +323,8 @@
       "sha256": "8df7ef0bd0a1761bea708a5c8ab8dbdc97fa71d2448daaeee040956eceb15243"
     },
     "workflow_source_v1/HYDRATION_SOURCE_FREEZE.json": {
-      "bytes": 5318,
-      "sha256": "bdded7075b80e57479b8f16633fe5ac7371d26117930d9b805ee96a3f83b2427"
+      "bytes": 5117,
+      "sha256": "eeb2d14defb3a9aa984cb63715d0fa5c87877029013a58dec78f45f46c2ab17c"
     },
     "workflow_source_v1/INDEPENDENT_FINAL_COST_VERIFIER_CASES_v1.json": {
       "bytes": 13951,
@@ -443,8 +415,8 @@
       "sha256": "46c14dd6782511b05ca535e5af8d87b95858bbde1fe771fa7490676e1ae8aa2e"
     },
     "workflow_source_v1/t3-cost-diagnostic-hydration-draft-v1.yml": {
-      "bytes": 7813,
-      "sha256": "e2350f1ccff557ca9ac7c3be1de0832d852a28dba2f766f934693e53c2d0780b"
+      "bytes": 7644,
+      "sha256": "49218f45cb4d38f8ff88370930acda0dac7afa0edb57a0fcd3e63628b2d325fe"
     },
     "workflow_source_v1/validate_evaluator_hydration_v1.py": {
       "bytes": 5208,
@@ -457,11 +429,11 @@
   },
   "ready_for_linux": true,
   "remote_prefix": "completion1009/server_classic_expectations_cost_v1/",
-  "repair_source_review": "REPAIR_SOURCE_DISPOSITION_r2.json",
+  "repair_source_review": "workflow_source_v1/REPAIR_SOURCE_DISPOSITION_v1.json",
   "reviewed": true,
   "runtime_changed": false,
   "schema": "t3-cost-host-source-pins-v1",
-  "scope": "Cumulative original reviews plus completed partial external r2 review and actual95 saved/source-only tests. No new whole-tree independent review or Linux success; fresh samehead remote readback required",
+  "scope": "Cumulative original source reviews plus realfailedrun repair source checks; requires fresh sameheadreadback; no repairedLinux result",
   "source_review_complete": true,
   "workflow_source": "workflow_source_v1/t3-cost-diagnostic-hydration-draft-v1.yml"
 }

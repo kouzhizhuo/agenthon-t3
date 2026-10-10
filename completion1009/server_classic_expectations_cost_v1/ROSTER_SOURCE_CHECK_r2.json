@@ -1,0 +1,512 @@
+{
+  "Docker_executed": false,
+  "Linux_passed": false,
+  "actual_cost_artifact_accepted": false,
+  "all_source_checks_passed": true,
+  "batches": {
+    "t3-gbatch-dense-3": 3,
+    "t3-gbatch-hetero-mix": 5,
+    "t3-gbatch-homog-4": 4,
+    "t3-gbatch-homog-8": 8,
+    "t3-gbatch-many-6": 6,
+    "t3-gbatch-varsize": 4
+  },
+  "case_count": 95,
+  "cases": [
+    {
+      "case": "actual_pinned_full71_reference_plan",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "all71_95markets_190references",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "all_six_real_batch_variants",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-as01-base-mix",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-as02-scale-up-noise",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-as03-mm-liquidity-heavy",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-as04-value-heavy",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-as05-oracle-variant",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-as06-throughput-fast",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-ca-baseline-calm",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-ca-fast-mean-reversion",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-ca-fat-tail-jumps",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-ca-high-volatility",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-ca-thin-book-depth",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-cancelmodify-lifecycle",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-coarse-tick-ties",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-eq-deterministic-baseline",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-eq-lognormal-highmag",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-eq-lognormal-highsigma",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-eq-lognormal-lowsigma",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-eq-pareto-heavytail",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-eq-uniform-tight",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-eq-uniform-wide",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-eq001-pareto-latency-tail",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-fastlob-core",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-fastlob-tight-book",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-gb-base-30agent-30s",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-gb-highfreq-40hz-60s",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-gb-horizon-240s",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-gb-mega-throughput",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-gb-pop-128-agents",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-gb-pop-horizon-scale",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-gbatch-dense-3",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-gbatch-hetero-mix",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-gbatch-homog-4",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-gbatch-homog-8",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-gbatch-many-6",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-gbatch-varsize",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-momentum-mix-priority",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-mp01-stp-newest-baseline",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-mp02-stp-oldest-baseline",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-mp03-mm-heavy-newest",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-mp04-mm-heavy-oldest",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-mp05-cancel-churn-newest",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-mp06-tight-spread-selfcross",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-mp07-heavy-flow-oldest",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-mr-cancel-replace-churn",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-mr-checkpoint-cadence-fine",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-mr-deep-book-state-size",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-mr-long-horizon-replay",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-multilevel-crossing",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-partialfill-atomicity",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-ra01-fundamental-shock-mid",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-ra02-shock-early",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-ra03-large-shock",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-ra04-shock-late",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-ra05-shock-momentum-heavy",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-ra06-shock-value-heavy",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-s001-price-time-priority",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-s012-partial-fill-cancel-race",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-s019-latency-jitter-kendall",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-sf-01-baseline-regime",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-sf-02-heavy-jump-tails",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-sf-03-vol-clustering-momentum",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-sf-04-thin-book-depth",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-sf-05-deep-book-liquidity",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-sf-06-high-fundamental-vol",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-sf-07-coarse-agent-batch",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-st01-liquidity-churn-baseline",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-st02-informed-entry-burst",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-st03-volatility-burst",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-st04-thin-book-mm-strain",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-st05-latency-spike-pareto",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "accept_actual_t3-stp-cancel-newest",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "selected6_units_still10_markets_max5",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "reject_empty_batch",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "reject_missing_scenario_path",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "reject_missing_reference_frame",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "reject_duplicate_sub",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "reject_parent_sub_mapping",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "reject_input_sha_not_hex",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "reject_batch_as_single",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "exact_original_reviewed_driver_pin",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "only_driver_predicate_changes",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "old_exact_source_reproduces_false_reject_t3-gbatch-homog-8",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "old_exact_source_reproduces_false_reject_t3-gbatch-many-6",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "complete_original_review_sha",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "auditor_accepts_exact_reviewed_original_plus_one_predicate",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "auditor_rejects_mutation_driver.py",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "auditor_rejects_mutation_worker.py",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "auditor_rejects_mutation_parser.py",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "auditor_rejects_mutation_read_only/driver_before_batch_repair_r1.py",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "auditor_rejects_unrepaired_driver",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "auditor_rejects_same_length_semantic_mutation",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "auditor_accepts_after_exact_restoration",
+      "expected_reject": false,
+      "passed": true
+    }
+  ],
+  "independent_review": false,
+  "market_executed": false,
+  "native_compiled": false,
+  "participant_imported": false,
+  "process_launched": false,
+  "schema": "t3-batch-r2-actual-roster-source-preflight-v1",
+  "source_pins": {
+    "driver.py": {
+      "bytes": 46277,
+      "sha256": "53fce86bb993522e0e5f0c2c0d5a5501e96458a44243e68745a09c88b14d0d40"
+    },
+    "read_only/cost_saved_auditor_v1/audit_cost_saved_v1.py": {
+      "bytes": 55649,
+      "sha256": "e5538f9657fa53a5e8179e49de7343038c3507d1ee12f8599cc9e03db5b857f2"
+    },
+    "read_only/driver_before_batch_repair_r1.py": {
+      "bytes": 46282,
+      "sha256": "c9fb7fa76ac017715c386b2f3d452e9df22acdcf75d7853637a7824d538208cf"
+    }
+  }
+}

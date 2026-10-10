@@ -165,7 +165,7 @@ def normalize_unit(item):
     if item['shape'] == 'single':
         require(item['subs'] == [] and len(item['scenario_paths']) == 1 and len(item['reference_frames']) == 2, 'single exact roster')
     else:
-        require(type(item['subs']) is list and 1 <= len(item['subs']) <= 5 and len(item['scenario_paths']) == len(item['subs'])
+        require(type(item['subs']) is list and len(item['subs']) >= 1 and len(item['scenario_paths']) == len(item['subs'])
             and len(item['reference_frames']) == 2 * len(item['subs']), 'batch exact roster')
         names = []
         for sub in item['subs']:
