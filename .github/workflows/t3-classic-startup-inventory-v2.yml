@@ -1,0 +1,49 @@
+name: T3 fixed published classic startup inventory v2
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: t3-serial-linux-screen-v2
+  cancel-in-progress: false
+jobs:
+  startup:
+    if: github.repository == 'kouzhizhuo/agenthon-t3'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+      NUMEXPR_NUM_THREADS: '1'
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONHASHSEED: '0'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.13.7'
+      - name: Verify small frozen startup-only source package
+        run: python -B completion1009/server_classic_startup_inventory_v2/verify_source.py
+      - name: Install pinned unchanged host source import dependencies only
+        run: |
+          set -euo pipefail
+          mkdir -p startup-inventory-v2-evidence
+          python -m pip install numpy==2.2.6 pandas==2.3.3 pyarrow==21.0.0 python-dateutil==2.9.0.post0 pytz==2026.5 six==1.17.0 tzdata==2026.5
+          python -m pip freeze > startup-inventory-v2-evidence/HOST_FREEZE.txt
+      - name: Pull exact anonymous public stock digest only
+        run: python -B completion1009/server_classic_startup_inventory_v2/driver.py stock --evidence startup-inventory-v2-evidence
+      - name: One readonly bounded startup source and meta_path inventory no market
+        run: python -B completion1009/server_classic_startup_inventory_v2/driver.py startup --evidence startup-inventory-v2-evidence
+      - name: Retain every complete or partial startup source log lifecycle byte
+        if: always()
+        run: python -B completion1009/server_classic_startup_inventory_v2/collect_artifact.py --evidence startup-inventory-v2-evidence --artifact startup-inventory-v2-artifact
+      - name: Upload complete or partial startup-only evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: t3-classic-startup-inventory-v2-evidence
+          path: startup-inventory-v2-artifact
+          retention-days: 30
+          if-no-files-found: error
+          compression-level: 6
