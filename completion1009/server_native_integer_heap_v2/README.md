@@ -1,0 +1,1 @@
+Exact integer event heap is compared with the retained classic parent. The prior23heapcontrols are repeated on the current integration, with full original controls and50alternating runs. Full71 target performance remains unproven.
