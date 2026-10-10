@@ -1,0 +1,254 @@
+{
+  "all_source_cases_passed": true,
+  "case_count": 47,
+  "cases": [
+    {
+      "case": "unsafe_url_0",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "unsafe_url_1",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "unsafe_url_2",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "unsafe_url_3",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "HTTPS_expected_API",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "crosshostAuthorizationstripped",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "unknown_redirect_host",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "raw_source_redirect_refused",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "safe_zip_ordinary/file",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "safe_zip_ordinary/",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "bad_zip_10",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "bad_zip_11",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "bad_zip_12",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "bad_zip_13",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "bad_zip_14",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "bad_zip_15",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "bad_zip_16",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "bad_zip_17",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "bad_zip_18",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "bad_zip_19",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "bad_zip_20",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "nonempty_zip_directory",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "full_pin_before_materialization",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "wrong_archive_pin",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "unsafe_tar_24",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "unsafe_tar_25",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "unsafe_tar_26",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "same_closure_positive_all_source_and8data",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "empty_reviewed_freeze_reject",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "missing_freeze_member_saved_process_copy_v1.py",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "missing_freeze_member_validate_evaluator_hydration_v1.py",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "missing_freeze_member_bound_data/V2_EVALUATOR_FREEZE.txt",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "freeze_path_traversal_reject",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "manager_full_bytes_mismatch_reject",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "original15_evaluator_packages_exact",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "actual_evaluator_onlytwo_localpaths_mapped",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "evaluator_changed_version_reject",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "evaluator_extra_package_reject",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "evaluator_missing_package_reject",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "evaluator_duplicate_name_reject",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "evaluator_wrong_localpath_reject",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "evaluator_unknown_direct_reference_reject",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "evaluator_local_version_unbound_reject",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "reviewed_process_manager_ASTexact_renameonly",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "allordinarydraft_ASTparse_no_participant_import",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "allcopiedoriginaldataexactpins",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "workflow_disabled_no_futureidentity_serialreadtoken",
+      "expected_reject": false,
+      "passed": true
+    }
+  ],
+  "github_written": false,
+  "native_compiled": false,
+  "network_called": false,
+  "participant_imported": false,
+  "process_launched": false,
+  "ready_for_linux": false,
+  "schema": "t3-cost-hydration-source-preflight-v1",
+  "simulation_executed": false,
+  "source": {
+    "bytes": 27713,
+    "sha256": "570f657b2edc2fb0a1da3c5d7f71c327db4ed7fa478e36d928f3547c71397279"
+  },
+  "synthetic_data_only": true
+}

@@ -1,0 +1,71 @@
+{
+  "all_source_cases_passed": true,
+  "case_count": 9,
+  "cases": [
+    {
+      "case": "actualordinaryfinitebytes",
+      "error_type": null,
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "oversizedblocks_beforeopen",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "directoryblocks",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "relativeblocks",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "symlinkfinalblocks",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "symlinkancestorblocks",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "streamgrowthblocks_beforeaggregate",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "shortreadblocks_stablecount",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "bothfreezeandhydrationsource_useboundedreaderbeforeimport",
+      "error_type": null,
+      "expected_reject": false,
+      "passed": true
+    }
+  ],
+  "native_compiled": false,
+  "network_called": false,
+  "participant_imported": false,
+  "process_launched": false,
+  "ready_for_linux": false,
+  "schema": "t3-independent-hydration-fetch-preimport-cases-v1",
+  "simulation_executed": false,
+  "source": {
+    "bytes": 2678,
+    "sha256": "17fd489ded1d0d69fe51d9c06a185048f863da98e321108db2efe6942b6bfe95"
+  }
+}

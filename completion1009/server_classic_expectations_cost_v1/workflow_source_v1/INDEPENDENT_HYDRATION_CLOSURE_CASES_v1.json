@@ -1,0 +1,375 @@
+{
+  "actual_source_freeze_verified": false,
+  "all_source_cases_passed": true,
+  "case_count": 55,
+  "cases": [
+    {
+      "case": "closure_exact7required8copieddata",
+      "error_type": null,
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "closure_missing_hydrate_base_draft_v1.py",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "closure_missing_saved_process_copy_v1.py",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "closure_missing_run_fetch_evaluation_draft_v1.py",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "closure_missing_validate_reference_hydration_draft_v1.py",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "closure_missing_validate_evaluator_hydration_v1.py",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "closure_missing_t3-cost-diagnostic-hydration-draft-v1.yml",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "closure_missing_bound_data/COPIED_DATA_PINS_v1.json",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "closure_missing_bound_data/ORIGINAL_REFERENCE_PLAN.json",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "closure_missing_bound_data/V2_EVALUATOR_FREEZE.txt",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "closure_missing_bound_data/V2_ORIGINAL_FULL_AUDIT.json",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "closure_missing_bound_data/V2_ORIGINAL_REGISTRY_READBACK.json",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "closure_missing_bound_data/V2_REMOTE_SOURCE_READBACK.json",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "closure_missing_bound_data/V2_SOURCE_PINS.json",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "closure_missing_bound_data/V7_REMOTE_SOURCE_READBACK.json",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "closure_missing_bound_data/V7_SOURCE_PINS.json",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "closure_boolean_reviewed",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "closure_boolean_ready_for_linux",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "closure_typed_size_True",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "closure_typed_size_-1",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "closure_typed_size_67108865",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "closure_changed_saved_manager_fullsha",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "closure_badpath_'../escape'",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "closure_badpath_'a//b'",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "closure_badpath_'a/./b'",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "closure_badpath_'/escape'",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "closure_badpath_'a\\\\b'",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "closure_badpath_'a:b'",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "closure_badpath_'__MACOSX/x'",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "closure_badpath_'._x'",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "closure_badpath_'__pycache__/x'",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "closure_reject_symlink_member_before_manager_import",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "shared_closure_reject_before_manager_import",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "evaluator_original13versionplus2local",
+      "error_type": null,
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "evaluator_all15exact_mappedpaths",
+      "error_type": null,
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "evaluator_reject_extra",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "evaluator_reject_missing",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "evaluator_reject_changed",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "evaluator_reject_duplicate_normalized",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "evaluator_reject_unknown_direct",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "evaluator_reject_wrongpath",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "evaluator_reject_versioned_local",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "evaluator_reject_filequery",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "evaluator_reject_filefragment",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "evaluator_reject_badpercent",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "reference_fixture71units95inputs190headers_fullsha",
+      "error_type": null,
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "reference_reject_extra_root_directory",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "reference_reject_extra_root_file",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "reference_reject_changed_input",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "reference_reject_lfs_pointer",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "reference_known285hashes_permits_unpinned_nestedmetadata",
+      "error_type": null,
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "saved_manager_exact_AST_renameonly",
+      "error_type": null,
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "cancellation_suppressed_exception_still_bound_receipt",
+      "error_type": null,
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "workflow_immutable_action_pins",
+      "error_type": null,
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "workflow_disable_serialitytokenread_sameheadverify_dualupload",
+      "error_type": null,
+      "expected_reject": false,
+      "passed": true
+    }
+  ],
+  "native_compiled": false,
+  "network_called": false,
+  "participant_imported": false,
+  "process_launched": false,
+  "ready_for_linux": false,
+  "reference_fixture_is_not_organizer_data": true,
+  "schema": "t3-independent-hydration-closure-inert-cases-v1",
+  "simulation_executed": false,
+  "source": {
+    "hydrate_base_draft_v1.py": {
+      "bytes": 27713,
+      "sha256": "570f657b2edc2fb0a1da3c5d7f71c327db4ed7fa478e36d928f3547c71397279"
+    },
+    "run_fetch_evaluation_draft_v1.py": {
+      "bytes": 2678,
+      "sha256": "17fd489ded1d0d69fe51d9c06a185048f863da98e321108db2efe6942b6bfe95"
+    },
+    "saved_process_copy_v1.py": {
+      "bytes": 8398,
+      "sha256": "de2606f2fc7c1c702d9729c485040bc9d09ff23cfc1da8e66741701693c085fd"
+    },
+    "source_preflight_hydration_v1.py": {
+      "bytes": 10167,
+      "sha256": "46c14dd6782511b05ca535e5af8d87b95858bbde1fe771fa7490676e1ae8aa2e"
+    },
+    "t3-cost-diagnostic-hydration-draft-v1.yml": {
+      "bytes": 5852,
+      "sha256": "b2759778d85cb8160b96a3f3bd86b501b8b92fb20162f6554ee68e2bbd2c6fef"
+    },
+    "validate_evaluator_hydration_v1.py": {
+      "bytes": 5208,
+      "sha256": "29e037fb0a691f51de9d49de942266c682b2db087ae60e05c7f1ddc9e3755772"
+    },
+    "validate_reference_hydration_draft_v1.py": {
+      "bytes": 3804,
+      "sha256": "33399b411019765373e0c15fd67d59f98b88e4abf9d6d5eabf11c3d1587caf21"
+    }
+  }
+}

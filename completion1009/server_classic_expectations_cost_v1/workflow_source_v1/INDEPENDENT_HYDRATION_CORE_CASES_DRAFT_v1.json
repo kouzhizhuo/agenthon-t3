@@ -1,0 +1,167 @@
+{
+  "actual_hydration_executed": false,
+  "all_source_checks_passed": true,
+  "case_count": 30,
+  "cases": [
+    {
+      "expected_reject": false,
+      "name": "mock_complete_download_fullbytes",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "mock_download_status",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "mock_download_wrong_SHA",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "mock_download_extra_byte",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "mock_download_declared_size",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "mock_download_URL_error_suppressed",
+      "passed": true
+    },
+    {
+      "expected_reject": false,
+      "name": "mock_exact_artifact_metadata",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "metadata_head",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "metadata_expired",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "metadata_size",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "metadata_id",
+      "passed": true
+    },
+    {
+      "expected_reject": false,
+      "name": "crosshost_auth_stripped",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "redirect_unsafe_12",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "redirect_unsafe_13",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "redirect_unsafe_14",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "redirect_unsafe_15",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "cancelled_budget_InterruptedError",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "expired_budget",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "ZIPmember_duplicate_separator",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "ZIPmember_parent",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "ZIPmember_symlink",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "ZIPmember_setgid",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "ZIPmember_colon",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "ZIPmember_metadata",
+      "passed": true
+    },
+    {
+      "expected_reject": false,
+      "name": "synthetic_tar_complete_manifest",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "tar_wrong_wholepin",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "tar_symlink",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "tar_parent",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "tar_metadata",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "tar_setuid",
+      "passed": true
+    }
+  ],
+  "network_mock_only": true,
+  "no_actual_network": true,
+  "no_actual_process": true,
+  "no_native_or_participant": true,
+  "ready_for_linux": false,
+  "schema": "t3-hydration-independent-inert-core-cases-v1",
+  "source": {
+    "bytes": 26670,
+    "sha256": "d3ef7d932c1238af33ee0b9082267e238628d6619b1bffe698a997707f8ab9bd"
+  }
+}

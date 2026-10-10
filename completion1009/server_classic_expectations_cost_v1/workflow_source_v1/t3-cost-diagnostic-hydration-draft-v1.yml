@@ -1,0 +1,112 @@
+# Source-reviewed diagnostic only; final source freeze and same-head readback gate execution.
+name: T3 exact expectations cost diagnostic v1
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: t3-serial-linux-screen-v2
+  cancel-in-progress: false
+jobs:
+  cost:
+    if: ${{ github.repository == 'kouzhizhuo/agenthon-t3' && github.event_name == 'workflow_dispatch' && github.run_attempt == '1' }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 360
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+      NUMEXPR_NUM_THREADS: '1'
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONHASHSEED: '0'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.13.7'
+      - name: Verify entire local source freeze and actual same-head remote source bytes
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/t3-cost-hydration-logs"
+          python3 completion1009/server_classic_expectations_cost_v1/verify_source.py
+          python3 completion1009/server_classic_expectations_cost_v1/verify_remote_source.py --head "$GITHUB_SHA" --out "$GITHUB_WORKSPACE/completion1009/server_classic_expectations_cost_v1/REMOTE_SOURCE_READBACK.json"
+      - name: Hydrate original complete GitHub artifact and exact pinned source bytes
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          draft="$GITHUB_WORKSPACE/completion1009/server_classic_expectations_cost_v1/workflow_source_v1"
+          host="$GITHUB_WORKSPACE/completion1009/server_classic_expectations_cost_v1"
+          python -B "$draft/hydrate_base_draft_v1.py" --root "$RUNNER_TEMP/t3-cost-base" --host "$host" --phase download-sources
+      - name: Fetch original pinned official evaluator and references
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/t3-cost-hydration-logs"
+          python -B completion1009/server_classic_expectations_cost_v1/workflow_source_v1/run_fetch_evaluation_draft_v1.py --root "$RUNNER_TEMP/t3-cost-base" --out "$RUNNER_TEMP/t3-cost-evaluation"
+          python -B completion1009/server_classic_expectations_cost_v1/workflow_source_v1/validate_reference_hydration_draft_v1.py --references "$RUNNER_TEMP/t3-cost-evaluation/references" --out "$RUNNER_TEMP/t3-cost-hydration-logs/EXACT_REFERENCE_HASHES.json"
+      - name: Install original pinned host evaluator only
+        run: |
+          set -euo pipefail
+          python -m pip install numpy==2.2.6 pandas==2.3.3 scipy==1.18.1 pyarrow==21.0.0 jsonschema==4.23.0 jsonschema-specifications==2025.9.1 attrs==26.1.0 referencing==0.37.0 rpds-py==2026.9.1 python-dateutil==2.9.0.post0 pytz==2026.5 six==1.17.0 tzdata==2026.5
+          python -m pip install --no-deps "$RUNNER_TEMP/t3-cost-evaluation/toolkit/common" "$RUNNER_TEMP/t3-cost-evaluation/track3"
+          python -m pip freeze > "$RUNNER_TEMP/t3-cost-hydration-logs/EVALUATOR_FREEZE.txt"
+          python -B completion1009/server_classic_expectations_cost_v1/workflow_source_v1/validate_evaluator_hydration_v1.py --freeze "$RUNNER_TEMP/t3-cost-hydration-logs/EVALUATOR_FREEZE.txt" --evaluation "$RUNNER_TEMP/t3-cost-evaluation" --out "$RUNNER_TEMP/t3-cost-hydration-logs/EVALUATOR_VERSION_CHECK.json"
+      - name: Download complete anonymous registry layer bytes and replay original full saved audit
+        run: |
+          set -euo pipefail
+          draft="$GITHUB_WORKSPACE/completion1009/server_classic_expectations_cost_v1/workflow_source_v1"
+          host="$GITHUB_WORKSPACE/completion1009/server_classic_expectations_cost_v1"
+          python -B "$draft/hydrate_base_draft_v1.py" --root "$RUNNER_TEMP/t3-cost-base" --host "$host" --phase registry-and-authority
+      - name: Run source-bound diagnostic after complete same-head freeze
+        timeout-minutes: 140
+        run: |
+          set -euo pipefail
+          host="$GITHUB_WORKSPACE/completion1009/server_classic_expectations_cost_v1"
+          python -B "$host/driver.py" --base-authority "$RUNNER_TEMP/t3-cost-base/REMOTE_BASE_AUTHORITY.json" --binding "$host/overlay/IMAGE_BINDING.json" --source-pins "$host/SOURCE_PINS.json" --remote-readback "$host/REMOTE_SOURCE_READBACK.json" --head "$GITHUB_SHA" --reference-root "$RUNNER_TEMP/t3-cost-evaluation/references" --gate-kit "$RUNNER_TEMP/t3-cost-evaluation/track3" --evidence "$GITHUB_WORKSPACE/t3-cost-evidence"
+      - name: Preserve complete actual diagnostic evidence even on failure
+        if: ${{ always() && hashFiles('t3-cost-evidence/authority-inputs/SOURCE_PINS.json') != '' }}
+        run: |
+          set -euo pipefail
+          host="$GITHUB_WORKSPACE/completion1009/server_classic_expectations_cost_v1"
+          python -B "$host/read_only/cost_saved_auditor_v1/archive_wrapper_draft_v1.py" --evidence "$GITHUB_WORKSPACE/t3-cost-evidence" --out "$GITHUB_WORKSPACE/t3-cost-artifact" --run-id "$GITHUB_RUN_ID" --run-attempt "$GITHUB_RUN_ATTEMPT" --head "$GITHUB_SHA" --workflow .github/workflows/t3-classic-expectations-cost-v1.yml --source-pins "$host/SOURCE_PINS.json"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: ${{ always() && hashFiles('t3-cost-artifact/ARTIFACT.json') != '' }}
+        with:
+          name: t3-cost-diagnostic-hydration-v1-evidence
+          path: t3-cost-artifact
+          retention-days: 30
+          if-no-files-found: error
+          compression-level: 6
+      - name: Bind complete or partial raw hydration and evaluator bytes to this run
+        id: rawpack
+        if: always()
+        run: |
+          set -euo pipefail
+          host="$GITHUB_WORKSPACE/completion1009/server_classic_expectations_cost_v1"
+          mkdir -p "$RUNNER_TEMP/t3-cost-hydration-logs"
+          if test -f "$host/REMOTE_SOURCE_READBACK.json"; then cp "$host/REMOTE_SOURCE_READBACK.json" "$RUNNER_TEMP/t3-cost-hydration-logs/COST_REMOTE_SOURCE_READBACK.json"; fi
+          python -B "$host/archive_raw_v1.py" --base "$RUNNER_TEMP/t3-cost-base" --evaluation "$RUNNER_TEMP/t3-cost-evaluation" --logs "$RUNNER_TEMP/t3-cost-hydration-logs" --evidence "$GITHUB_WORKSPACE/t3-cost-evidence" --main-artifact "$GITHUB_WORKSPACE/t3-cost-artifact" --out "$RUNNER_TEMP/t3-cost-raw" --source-pins "$host/SOURCE_PINS.json" --run-id "$GITHUB_RUN_ID" --run-attempt "$GITHUB_RUN_ATTEMPT" --head "$GITHUB_SHA"
+      - name: Retain bound raw single-root artifact independently
+        if: ${{ always() && steps.rawpack.outcome == 'success' }}
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: t3-cost-hydration-raw-partial-v1
+          path: ${{ runner.temp }}/t3-cost-raw
+          retention-days: 30
+          if-no-files-found: warn
+          compression-level: 6
+      - name: Preserve unaccepted raw failure bytes when packing did not complete
+        if: ${{ always() && steps.rawpack.outcome != 'success' }}
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: t3-cost-hydration-raw-partial-v1
+          path: |
+            ${{ runner.temp }}/t3-cost-raw
+            ${{ runner.temp }}/t3-cost-base
+            ${{ runner.temp }}/t3-cost-evaluation
+            ${{ runner.temp }}/t3-cost-hydration-logs
+            t3-cost-evidence
+          retention-days: 30
+          if-no-files-found: warn
+          compression-level: 6

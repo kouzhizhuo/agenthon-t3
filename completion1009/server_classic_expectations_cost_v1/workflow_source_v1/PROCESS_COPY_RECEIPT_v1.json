@@ -1,0 +1,13 @@
+{
+  "function_body_exact": true,
+  "original_driver": {
+    "bytes": 46282,
+    "sha256": "c9fb7fa76ac017715c386b2f3d452e9df22acdcf75d7853637a7824d538208cf"
+  },
+  "original_function_AST": "475b3d319189a0cc97a390450b7f96e6d3fd09d9ebd4af6efd0c43905a638588",
+  "participant_imported": false,
+  "process_launched": false,
+  "rename_only": "run_process -> run_saved_process",
+  "schema": "t3-cost-workflow-process-manager-exact-AST-copy-v1",
+  "source_only": true
+}

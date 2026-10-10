@@ -1,0 +1,128 @@
+{
+  "actual_cost_artifact_verified": false,
+  "actual_source_freeze_verified": false,
+  "all_passed": false,
+  "combined_freeze_remaining": [
+    "Materialize final exact hydrationfiles8bounddata into newfinalbundle workflow_source_v1; freeze all executing host/helper/sourcefiles and separately activeworkflow at one exacthead.",
+    "Activate finalworkflow only after final combinedfreeze passes verifier and independentsourceclosure review.",
+    "Actual remote baseZIP/source/registry/alllayerbytes/fulloldauditor replay and evaluatorreference checks must pass onLinux; no local simulation or compile evidence.",
+    "Actual24diagnostics/fullstate/Parquet/gates/resource/seriality/lifecycle plus actual main and rawpartial completeZIP/run/head/attempt matching require independent savedartifact audit."
+  ],
+  "dispatch_allowed": false,
+  "final_bundle_verifiers": {
+    "verify_remote_source.py": {
+      "bytes": 6872,
+      "sha256": "8ed8f9a42702cb65e8bbd1f9577b1e54d7e31b3c1ca5e22932a9e2c45a359ff5"
+    },
+    "verify_source.py": {
+      "bytes": 5610,
+      "sha256": "90a3d17e8dc3b70666db2edf0eacdbf225004ca646b172677054b1115f4c87c7"
+    }
+  },
+  "independent_cases": {
+    "actual_existing_inert_source_manifest_compatibility": {
+      "source_readback_rosters_v2": 24,
+      "source_readback_rosters_v7": 20,
+      "v2": 193,
+      "v7": 305
+    },
+    "new_fetch_preimport": 9,
+    "new_final_verifiers": 90,
+    "new_hydration_closure_evaluator_reference_manager_cancellation": 55,
+    "prior_core_download_metadata_redirect_zip_tar": 30,
+    "total_finite_cases": 184
+  },
+  "independent_saved_case_receipts": {
+    "INDEPENDENT_FINAL_COST_VERIFIER_CASES_v1.json": {
+      "bytes": 13951,
+      "sha256": "76b7f1dbbb4b05205b086e2a23c1ac4c0cee12e2157100bb39c0a014bb1a67c9"
+    },
+    "INDEPENDENT_HYDRATION_CLOSURE_CASES_v1.json": {
+      "bytes": 9912,
+      "sha256": "98882943d48420280b4ead9639922dd1dff530a866d91cabb2b3a8a41e20ab2c"
+    },
+    "INDEPENDENT_HYDRATION_CORE_CASES_DRAFT_v1.json": {
+      "bytes": 3525,
+      "sha256": "b12c05a86d3dd4c48e29f97b43f6d6cec17dd86272b7b97d232f878515384abf"
+    },
+    "INDEPENDENT_HYDRATION_EXISTING_SOURCE_COMPATIBILITY_v1.json": {
+      "bytes": 876,
+      "sha256": "45bf0f58bdd717944632c8b066dfc9d993c4ae35e9fe21361f8479c1f257d5ee"
+    },
+    "INDEPENDENT_HYDRATION_PREIMPORT_CASES_v1.json": {
+      "bytes": 1711,
+      "sha256": "63e58b9b37f0f48fe1cc922b66986d6028e2aaae150f3ea67a21ffba0b2920da"
+    }
+  },
+  "official_submission_evidence": false,
+  "ordinary_eps_evidence": false,
+  "ranking_evidence": false,
+  "ready_for_linux": false,
+  "repairs_reviewed": [
+    "Both saved manager and fetch routes validate all required hydration executables plus all8 copied data pins before manager load.",
+    "Fetch module and freeze use finite streamed preparse/preimport ordinary source reader; host verifiers separately enforce pre-readstat, streamedcap, stability, duplicateJSON/nonfinite rejection.",
+    "Exact original evaluator13versions and2 explicit local file-source paths compared with only known path normalization; no extra or missing package accepted.",
+    "Known organizer95scenario and190Parquet complete hashes and71root unit directories checked; independent synthetic fixtures are not organizer data.",
+    "Signal cancellation remains recorded despite intentionally suppressed URL-bearing network exception type.",
+    "Distinct final workflow source path canonical and samehead remote raw source bytes bounded by finite typed hash pins/status/finalURL/ContentLength/deadline; no redirects.",
+    "Saved process manager original AST unchanged except functionrename; retains process-groupownership while inheritedpipes may remain.",
+    "Reviewed original full base auditor13pins and freeze SHA hardanchored; fresh registry/audit/readback namespaces kept distinct from stable embedded originalpublicationreceipt history.",
+    "Driver source lines628-634 already retain entire combinedsource-harness and wrapper requires exact complete freezeinventory."
+  ],
+  "schema": "t3-independent-hydration-source-review-v1",
+  "source_blockers": [],
+  "source_boundaries": {
+    "base_publication_receipts_original_history_only": true,
+    "fresh_remote_registry_report_cannot_equal_oldtimestamp_namespace": true,
+    "hydration_author_workflow_disabled": true,
+    "main_source_archive_and_fullmanifest_pins_required": true,
+    "nested_official_metadata_full_roster_verified": false,
+    "original_actual_base_zip": {
+      "bytes": 460347550,
+      "sha256": "0a508bd785f6e369cef32a96fb5c138976b3ef63cebfc1ca93fbabb7f60f96f3"
+    },
+    "original_image_binding_sha256": "d749ddcae1dd53d934f0cdbf526e1a569b4ae297bdb024a8191585773936fa7d",
+    "reference_known_file_hashes": 285
+  },
+  "source_files": {
+    "hydrate_base_draft_v1.py": {
+      "bytes": 27713,
+      "sha256": "570f657b2edc2fb0a1da3c5d7f71c327db4ed7fa478e36d928f3547c71397279"
+    },
+    "run_fetch_evaluation_draft_v1.py": {
+      "bytes": 2678,
+      "sha256": "17fd489ded1d0d69fe51d9c06a185048f863da98e321108db2efe6942b6bfe95"
+    },
+    "saved_process_copy_v1.py": {
+      "bytes": 8398,
+      "sha256": "de2606f2fc7c1c702d9729c485040bc9d09ff23cfc1da8e66741701693c085fd"
+    },
+    "source_preflight_hydration_v1.py": {
+      "bytes": 10167,
+      "sha256": "46c14dd6782511b05ca535e5af8d87b95858bbde1fe771fa7490676e1ae8aa2e"
+    },
+    "t3-cost-diagnostic-hydration-draft-v1.yml": {
+      "bytes": 5852,
+      "sha256": "b2759778d85cb8160b96a3f3bd86b501b8b92fb20162f6554ee68e2bbd2c6fef"
+    },
+    "validate_evaluator_hydration_v1.py": {
+      "bytes": 5208,
+      "sha256": "29e037fb0a691f51de9d49de942266c682b2db087ae60e05c7f1ddc9e3755772"
+    },
+    "validate_reference_hydration_draft_v1.py": {
+      "bytes": 3804,
+      "sha256": "33399b411019765373e0c15fd67d59f98b88e4abf9d6d5eabf11c3d1587caf21"
+    }
+  },
+  "source_scope_passed": true,
+  "validation_constraints": {
+    "frozen_author_host_or_participant_modified": false,
+    "native_compiled": false,
+    "network_called": false,
+    "new_final_bundle_host_verifiers_repaired_with_root_authorization": true,
+    "participant_imported": false,
+    "personal_compute_used": false,
+    "process_launched": false,
+    "simulation_executed": false
+  }
+}

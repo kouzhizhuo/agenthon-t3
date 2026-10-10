@@ -1,0 +1,564 @@
+{
+  "actual_source_freeze_verified": false,
+  "all_source_cases_passed": true,
+  "case_count": 90,
+  "cases": [
+    {
+      "case": "local_ordinary_complete_read",
+      "error_type": null,
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "local_oversized_before_open",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "local_symlink_final",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "local_symlink_ancestor",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "local_relative_file",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "local_directory_before_open",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "local_stream_grows_over_cap",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "local_duplicate_json_key",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "local_nonfinite_json",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "remote_ordinary_complete_read",
+      "error_type": null,
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "remote_oversized_before_open",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "remote_symlink_final",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "remote_symlink_ancestor",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "remote_relative_file",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "remote_directory_before_open",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "remote_stream_grows_over_cap",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "remote_duplicate_json_key",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "remote_nonfinite_json",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "local_relative_reject_'.'",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "local_relative_reject_'../a'",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "local_relative_reject_'a/../b'",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "local_relative_reject_'/a'",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "local_relative_reject_'a//b'",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "local_relative_reject_'a/./b'",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "local_relative_reject_'a\\\\b'",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "local_relative_reject_'a:b'",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "local_relative_reject_'a%2Fb'",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "local_relative_reject_'a?b'",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "local_relative_reject_'a#b'",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "local_relative_reject_'a\\nb'",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "local_relative_reject_'a\\x7fb'",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "local_relative_reject_'._a'",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "local_relative_reject_'__MACOSX/a'",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "local_relative_reject_'__pycache__/a'",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "local_relative_valid",
+      "error_type": null,
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "wholefreeze_positive_exact_required_closure",
+      "error_type": null,
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "wholefreeze_invalid_schema",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "wholefreeze_invalid_reviewed",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "wholefreeze_invalid_ready_for_linux",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "wholefreeze_invalid_runtime_changed",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "wholefreeze_invalid_remote_prefix",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "wholefreeze_invalid_active_workflow",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "wholefreeze_invalid_workflow_source",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "wholefreeze_missing_workflow_source_v1/validate_evaluator_hydration_v1.py",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "wholefreeze_missing_workflow_source_v1/HYDRATION_SOURCE_FREEZE.json",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "wholefreeze_missing_read_only/frozen_saved_auditor_v1/AUDITOR_FREEZE_v1.json",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "wholefreeze_missing_workflow_source_v1/t3-cost-diagnostic-hydration-draft-v1.yml",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "wholefreeze_typed_size_True",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "wholefreeze_typed_size_-1",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "wholefreeze_typed_size_67108865",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "wholefreeze_actual_full_hash_mismatch",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "wholefreeze_reject_self_reference",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "wholefreeze_exact17_original_helper_roster",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "raw_exact_complete200_full_hash",
+      "error_type": null,
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "raw_reject_status",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "raw_reject_redirected_final_url",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "raw_reject_declared_short",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "raw_reject_declared_nonnumeric",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "raw_reject_short_body",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "raw_reject_extra_body",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "raw_reject_wrong_hash",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "raw_reject_path_'.'",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "raw_reject_path_'../a'",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "raw_reject_path_'a//b'",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "raw_reject_path_'a/./b'",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "raw_reject_path_'/a'",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "raw_reject_path_'a?query'",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "raw_reject_path_'a#fragment'",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "raw_reject_path_'a%2Fb'",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "raw_reject_path_'a\\\\b'",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "raw_reject_path_'a:b'",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "raw_reject_path_'a\\nb'",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "raw_reject_path_'__MACOSX/a'",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "raw_reject_path_'._file'",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "raw_reject_head_'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "raw_reject_head_'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "raw_reject_head_1",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "raw_nonfinite_or_bool_deadline_True",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "raw_nonfinite_or_bool_deadline_nan",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "raw_nonfinite_or_bool_deadline_inf",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "raw_elapsed_deadline_before_open",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "raw_typed_pin_size_True",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "raw_typed_pin_size_-1",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "raw_typed_pin_size_67108865",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "raw_typed_pin_sha_'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "raw_typed_pin_sha_'000000000000000000000000000000000000000000000000000000000000000'",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "raw_typed_pin_sha_1",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "raw_deadline_expired_after_eof",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "raw_socket_timeout_bounded_by_remaining_deadline",
+      "error_type": null,
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "raw_no_redirect_handler",
+      "error_type": "ValueError",
+      "expected_reject": true,
+      "passed": true
+    }
+  ],
+  "native_compiled": false,
+  "network_called": false,
+  "participant_imported": false,
+  "process_launched": false,
+  "ready_for_linux": false,
+  "schema": "t3-independent-final-cost-verifiers-inert-cases-v1",
+  "simulation_executed": false,
+  "source": {
+    "verify_remote_source.py": {
+      "bytes": 6872,
+      "sha256": "8ed8f9a42702cb65e8bbd1f9577b1e54d7e31b3c1ca5e22932a9e2c45a359ff5"
+    },
+    "verify_source.py": {
+      "bytes": 5610,
+      "sha256": "90a3d17e8dc3b70666db2edf0eacdbf225004ca646b172677054b1115f4c87c7"
+    }
+  }
+}

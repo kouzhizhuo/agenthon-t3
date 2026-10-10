@@ -1,0 +1,166 @@
+{
+  "artifact_contract": {
+    "authority_receipts_never_mutated_for_local_paths": true,
+    "external_cli_mapping": {
+      "base-artifact": "RAW/t3-cost-base/extracted",
+      "base-remote-readback": "RAW/t3-cost-base/sources/server_classic_expectations_delivery_v2/FRESH_REMOTE_READBACK.json",
+      "base-source": "RAW/t3-cost-base/sources/server_classic_expectations_delivery_v2",
+      "base-zip": "RAW/t3-cost-base/artifact.zip",
+      "baseline-payload": "RAW/t3-cost-base/payload-v7",
+      "baseline-reference-plan": "RAW/t3-cost-base/ORIGINAL_REFERENCE_PLAN.json",
+      "frozen-payload": "RAW/t3-cost-base/payload-v2",
+      "registry-readback": "RAW/t3-cost-base/registry/REGISTRY_BYTE_READBACK_v1.json"
+    },
+    "main_name": "t3-cost-diagnostic-hydration-v1-evidence",
+    "main_wrapper_full_source_manifest_required": true,
+    "raw_external_full_base_zip_and_registry_required": true,
+    "raw_is_failure_preservation_not_pass": true,
+    "raw_name": "t3-cost-hydration-raw-partial-v1",
+    "raw_zip_entire_metadata_identity_and_extract_audit_before_use": true,
+    "separate_ids_same_actual_run_head_attempt_required": true
+  },
+  "base": {
+    "artifact_bytes": 460347550,
+    "artifact_id": 11678266765,
+    "artifact_sha256": "0a508bd785f6e369cef32a96fb5c138976b3ef63cebfc1ca93fbabb7f60f96f3",
+    "head": "2164738b7508d9554cb6bd0a37ec46375cee8199",
+    "image": "ghcr.io/kouzhizhuo/agenthon-t3-classic@sha256:4a4c10b274a54312d5e17d69a45d30052787f523813bd5e2c27a5f1a9ba34ec9",
+    "repository": "kouzhizhuo/agenthon-t3",
+    "run_id": 38072276259,
+    "tested_image_id": "sha256:4deb411785eb962b62d1f1cf644f9349bc20cdb69d3f31832151721f0e3584b1"
+  },
+  "evaluator_actual_check": {
+    "actual_receipt": "$RUNNER_TEMP/t3-cost-hydration-logs/EVALUATOR_VERSION_CHECK.json",
+    "all_versions_exact": true,
+    "extra_missing_unexpected_direct_packages_rejected": true,
+    "original_freeze_bytes": 465,
+    "original_freeze_sha256": "0740d368bb4d0107598096d052ff0677120e56ed5963e4cc387b632634cd5c38",
+    "package_count": 15,
+    "package_wheels_hash_bound": false,
+    "two_explicit_local_filepaths_normalized_only": true
+  },
+  "future_head": null,
+  "future_run_id": null,
+  "github_writes": false,
+  "immutable_actions": {
+    "checkout": "11d5960a326750d5838078e36cf38b85af677262",
+    "setup-python": "a26af69be951a213d495a4c3e4e4022e16d87065",
+    "tag_resolution_authority_saved_by_root": true,
+    "upload-artifact": "ea165f8d65b6e75b540449e92b4886f43607fa02"
+  },
+  "immutable_binding": {
+    "authority_may_change_paths_without_mutating_binding": true,
+    "fresh_registry_report_equals_original98be": false,
+    "original_receipts_are_opaque_history": true,
+    "remote_authority_requires_actual_fresh_pins": true,
+    "sha256": "d749ddcae1dd53d934f0cdbf526e1a569b4ae297bdb024a8191585773936fa7d"
+  },
+  "limits": {
+    "cost_container": {
+      "cpu": 4,
+      "fsize_bytes": 268435456,
+      "memory_bytes": 17179869184,
+      "nofile": 1024,
+      "nproc": 256,
+      "pids": 256,
+      "tmpfs_bytes": 67108864
+    },
+    "hydration_phase_sec": 5400,
+    "independent_raw_log_bytes": 16777216,
+    "process_cleanup_grace_sec": 90,
+    "saved_process_sec": 2400,
+    "source_member_bytes": 67108864,
+    "source_tar_members": 768,
+    "source_tar_total_bytes": 50331648,
+    "zip_members": 40000,
+    "zip_total_bytes": 68719476736
+  },
+  "native_compiled": false,
+  "network_called": false,
+  "outstanding": [
+    "Independent final entire source/workflow review and exact freeze",
+    "Root must save immutable action API responses before source freeze",
+    "Distinct root verify_source/verify_remote_source and all carried auditor trees need independent combined review",
+    "Future same-head readback with no guessed head/run",
+    "Final complete main/raw artifact reception contract and explicit CLI remapping audit",
+    "Actual future diagnostic result must independently pass; no local native/simulation"
+  ],
+  "participant_imported": false,
+  "ready_for_linux": false,
+  "reference": {
+    "full_original_plan": {
+      "bytes": 103740,
+      "sha256": "4ed54fc6ef706b614f221a7af6b3f09a7d21c490d54260e2d75fe2a31607ca68"
+    },
+    "markets": 95,
+    "mounted_in_participant_image": false,
+    "nested_metadata_complete_roster_claimed": false,
+    "reference_frames": 190,
+    "reference_lfs_each_complete_sha": true,
+    "toolkit_tag": "v2.5.1",
+    "track3_commit": "bffb57227f796f9fa769a23d01fc364bee14a119",
+    "units": 71
+  },
+  "registry": {
+    "all_compressed_sha_and_uncompressed_diffID": true,
+    "anonymous_pull_scope_token_only": true,
+    "compressed_descriptor_total": 176343833,
+    "config_bytes": 13062,
+    "cross_host_auth_stripped": true,
+    "descriptor_positions": 20,
+    "manifest_bytes": 4499,
+    "original_reader_sha256": "1bbce2cb72fc2dcd0feee6e1221038a83e918e2812f50e217ca33c3f5cdf2dc5",
+    "token_saved_or_printed": false,
+    "unique_blobs": 18
+  },
+  "remote_paths": {
+    "artifact_root": "extracted",
+    "artifact_zip": "artifact.zip",
+    "base_authority": "REMOTE_BASE_AUTHORITY.json",
+    "base_root": "$RUNNER_TEMP/t3-cost-base (resolved absolute at runtime)",
+    "baseline_payload": "payload-v7",
+    "fresh_audit": "FRESH_FULL_AUDIT.json",
+    "frozen_payload": "payload-v2",
+    "reference_plan": "ORIGINAL_REFERENCE_PLAN.json",
+    "registry": "registry/REGISTRY_BYTE_READBACK_v1.json",
+    "source_root": "sources/server_classic_expectations_delivery_v2"
+  },
+  "schema": "t3-cost-workflow-hydration-source-plan-v1",
+  "source_preflight": {
+    "author_only": true,
+    "linux_executed": false,
+    "synthetic_case_count": 47
+  },
+  "sources": {
+    "v2_here_files": 22,
+    "v2_payload": {
+      "bytes": 193928,
+      "sha256": "1af7ba6d1b79f1934599ad7c385ee3d4f1d0d46138fb0e5137a9eec06e49bf73"
+    },
+    "v2_payload_files": 193,
+    "v2_remote_paths": 24,
+    "v2_sourcepins": {
+      "bytes": 3323,
+      "sha256": "b5cf9f49879ad5fe90b760831914e6e3e19f92186df2503c5b5ca2ff0bc34279"
+    },
+    "v7_head": "9e2d6d27e1773c564346d2b137c7b06d3ae3fd1c",
+    "v7_large_market_zip_required": false,
+    "v7_payload": {
+      "bytes": 208456,
+      "sha256": "7ac7e33cd131536f393ba19500e210399a6499be8d8f8555a800750e1ab69d0b"
+    },
+    "v7_payload_files": 305
+  },
+  "workflow_dispatch": false,
+  "workflow_paths": {
+    "active_workflow": ".github/workflows/t3-classic-expectations-cost-v1.yml",
+    "final_bundle": "completion1009/server_classic_expectations_cost_v1",
+    "final_workflow_source": "workflow_source_v1",
+    "root_preflight": [
+      "verify_source.py",
+      "verify_remote_source.py"
+    ],
+    "saved_cost_auditor": "read_only/cost_saved_auditor_v1",
+    "source_draft": "research/classic_expectations_cost_diagnostic_v1/workflow_draft_v1"
+  }
+}

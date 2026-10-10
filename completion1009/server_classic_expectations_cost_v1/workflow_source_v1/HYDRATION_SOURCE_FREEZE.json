@@ -1,0 +1,125 @@
+{
+  "activation_delta_review": {
+    "bytes": 5214,
+    "sha256": "f0015e7211d37fb226b551652e9a457d2d8dc66632c937041a4f4a70117be3fe"
+  },
+  "cost_dispatch_allowed": false,
+  "cost_workflow_enabled": true,
+  "files": {
+    "HANDOFF_WORKFLOW_HYDRATION_v1.md": {
+      "bytes": 10033,
+      "sha256": "3628f2ca17a7eb6ccd153037f6cbf9dcdb393bbaba7318f23a80a1c11c8586cb"
+    },
+    "HYDRATION_PLAN_DRAFT_v1.json": {
+      "bytes": 6755,
+      "sha256": "8df7ef0bd0a1761bea708a5c8ab8dbdc97fa71d2448daaeee040956eceb15243"
+    },
+    "INDEPENDENT_FINAL_COST_VERIFIER_CASES_v1.json": {
+      "bytes": 13951,
+      "sha256": "76b7f1dbbb4b05205b086e2a23c1ac4c0cee12e2157100bb39c0a014bb1a67c9"
+    },
+    "INDEPENDENT_HYDRATION_CLOSURE_CASES_v1.json": {
+      "bytes": 9912,
+      "sha256": "98882943d48420280b4ead9639922dd1dff530a866d91cabb2b3a8a41e20ab2c"
+    },
+    "INDEPENDENT_HYDRATION_CORE_CASES_DRAFT_v1.json": {
+      "bytes": 3525,
+      "sha256": "b12c05a86d3dd4c48e29f97b43f6d6cec17dd86272b7b97d232f878515384abf"
+    },
+    "INDEPENDENT_HYDRATION_EXISTING_SOURCE_COMPATIBILITY_v1.json": {
+      "bytes": 876,
+      "sha256": "45bf0f58bdd717944632c8b066dfc9d993c4ae35e9fe21361f8479c1f257d5ee"
+    },
+    "INDEPENDENT_HYDRATION_PREIMPORT_CASES_v1.json": {
+      "bytes": 1711,
+      "sha256": "63e58b9b37f0f48fe1cc922b66986d6028e2aaae150f3ea67a21ffba0b2920da"
+    },
+    "INDEPENDENT_HYDRATION_SOURCE_REVIEW_v1.json": {
+      "bytes": 6253,
+      "sha256": "3fbf239940abd52dc21046100530e8395592c1ce07bf0be3e638b300fdb7ada7"
+    },
+    "PROCESS_COPY_RECEIPT_v1.json": {
+      "bytes": 462,
+      "sha256": "d688ad8efbe4af1677c11975bd60de67bcc1d03e6032f159161f1682a9fc970e"
+    },
+    "SOURCE_PREFLIGHT_HYDRATION_v1.json": {
+      "bytes": 5573,
+      "sha256": "76c866338444daaa8e6e43e4ba2a1de6e593fd324a3bf2c8d0e78e8b8925c3ae"
+    },
+    "bound_data/COPIED_DATA_PINS_v1.json": {
+      "bytes": 2555,
+      "sha256": "517338da252875cb46ee8217a050894ef256a9f859cff7b4703f66e820794ca6"
+    },
+    "bound_data/ORIGINAL_REFERENCE_PLAN.json": {
+      "bytes": 103740,
+      "sha256": "4ed54fc6ef706b614f221a7af6b3f09a7d21c490d54260e2d75fe2a31607ca68"
+    },
+    "bound_data/V2_EVALUATOR_FREEZE.txt": {
+      "bytes": 465,
+      "sha256": "0740d368bb4d0107598096d052ff0677120e56ed5963e4cc387b632634cd5c38"
+    },
+    "bound_data/V2_ORIGINAL_FULL_AUDIT.json": {
+      "bytes": 66679,
+      "sha256": "3d528d5b713ac719c491832dc2ac8b88531ef0c1b3cbbd95fd474a7fd91c9bfa"
+    },
+    "bound_data/V2_ORIGINAL_REGISTRY_READBACK.json": {
+      "bytes": 23997,
+      "sha256": "98beaa7fff94aa566fd49108e8c1d6d7986a46877a1be8ec32a5908da87e28fe"
+    },
+    "bound_data/V2_REMOTE_SOURCE_READBACK.json": {
+      "bytes": 9713,
+      "sha256": "6c64fefa67920eb93a85522dd467eaa818d0da3777c133f3b4971189670f388b"
+    },
+    "bound_data/V2_SOURCE_PINS.json": {
+      "bytes": 3323,
+      "sha256": "b5cf9f49879ad5fe90b760831914e6e3e19f92186df2503c5b5ca2ff0bc34279"
+    },
+    "bound_data/V7_REMOTE_SOURCE_READBACK.json": {
+      "bytes": 7888,
+      "sha256": "10f9b7e679530a9c48af5b78ffbc092f1559e20ae7339cc3ff8495560f88f87d"
+    },
+    "bound_data/V7_SOURCE_PINS.json": {
+      "bytes": 2755,
+      "sha256": "7701234bbae477326491070217710a65cca971880d0affee9f343259fc7ed32b"
+    },
+    "hydrate_base_draft_v1.py": {
+      "bytes": 27713,
+      "sha256": "570f657b2edc2fb0a1da3c5d7f71c327db4ed7fa478e36d928f3547c71397279"
+    },
+    "run_fetch_evaluation_draft_v1.py": {
+      "bytes": 2678,
+      "sha256": "17fd489ded1d0d69fe51d9c06a185048f863da98e321108db2efe6942b6bfe95"
+    },
+    "saved_process_copy_v1.py": {
+      "bytes": 8398,
+      "sha256": "de2606f2fc7c1c702d9729c485040bc9d09ff23cfc1da8e66741701693c085fd"
+    },
+    "source_preflight_hydration_v1.py": {
+      "bytes": 10167,
+      "sha256": "46c14dd6782511b05ca535e5af8d87b95858bbde1fe771fa7490676e1ae8aa2e"
+    },
+    "t3-cost-diagnostic-hydration-draft-v1.yml": {
+      "bytes": 7533,
+      "sha256": "0f7bbaf5ca04b9eeb0ba7506a327efcdacab4dc1bd3096a91c1248121d93e525"
+    },
+    "validate_evaluator_hydration_v1.py": {
+      "bytes": 5208,
+      "sha256": "29e037fb0a691f51de9d49de942266c682b2db087ae60e05c7f1ddc9e3755772"
+    },
+    "validate_reference_hydration_draft_v1.py": {
+      "bytes": 3804,
+      "sha256": "33399b411019765373e0c15fd67d59f98b88e4abf9d6d5eabf11c3d1587caf21"
+    }
+  },
+  "observed_at": "2026-10-10T18:52:51.265395+00:00",
+  "ready_for_linux": true,
+  "reviewed": true,
+  "runtime_changed": false,
+  "schema": "t3-cost-hydration-source-freeze-v1",
+  "scope": "saved-data hydration and activation delta reviewed; actual dispatch still requires wholefreeze and complete sameheadreadback",
+  "source_review": {
+    "bytes": 6253,
+    "path": "INDEPENDENT_HYDRATION_SOURCE_REVIEW_v1.json",
+    "sha256": "3fbf239940abd52dc21046100530e8395592c1ce07bf0be3e638b300fdb7ada7"
+  }
+}

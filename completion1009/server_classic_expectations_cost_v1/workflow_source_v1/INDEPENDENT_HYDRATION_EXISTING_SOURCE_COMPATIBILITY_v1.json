@@ -1,0 +1,26 @@
+{
+  "actual_source_tar_pins": {
+    "v2": {
+      "bytes": 193928,
+      "sha256": "1af7ba6d1b79f1934599ad7c385ee3d4f1d0d46138fb0e5137a9eec06e49bf73"
+    },
+    "v7": {
+      "bytes": 208456,
+      "sha256": "7ac7e33cd131536f393ba19500e210399a6499be8d8f8555a800750e1ab69d0b"
+    }
+  },
+  "entire_manifest_and_all_source_files_equal_existing_frozen_payload": true,
+  "is_new_hydration_run": false,
+  "materialized_v2_exact193": true,
+  "materialized_v7_exact305": true,
+  "mock_source_tree_exact24v2_and20v7_rosters": true,
+  "network_mock_only": true,
+  "no_actual_network_or_process_or_native": true,
+  "ready_for_linux": false,
+  "schema": "t3-hydration-existing-actual-source-inert-compatibility-v1",
+  "source": {
+    "bytes": 26670,
+    "sha256": "d3ef7d932c1238af33ee0b9082267e238628d6619b1bffe698a997707f8ab9bd"
+  },
+  "source_files_never_imported_or_executed": true
+}
