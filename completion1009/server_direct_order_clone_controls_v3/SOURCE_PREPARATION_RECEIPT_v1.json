@@ -1,0 +1,57 @@
+{
+  "files": [
+    {
+      "bytes": 6890,
+      "path": "common.py",
+      "sha256": "2caf2c22a8c107d2f204ef04f7cbf6adf1b11b2f754f1aa746397cda21615cc4"
+    },
+    {
+      "bytes": 43969,
+      "path": "controller.py",
+      "sha256": "1932bdb284e8edda06d5d736e36d09f6dd474742714468d4e905df98320fdc9e"
+    },
+    {
+      "bytes": 4299,
+      "path": "entry.py",
+      "sha256": "e7b1e95fe1d547787f296f5a0cd7643947de15c93fdfe133e95914f1bb4982e9"
+    },
+    {
+      "bytes": 3073,
+      "path": "construction.py",
+      "sha256": "0a8a1a5f2506f6b1fdcf7d9a1f7ba55a6eea37887b0a387022ba9bbfaa8ae344"
+    },
+    {
+      "bytes": 2301,
+      "path": "prepare_build_schema_v1.py",
+      "sha256": "b10e31efc42d93ef7afb6ab99fe2ec85b40c9a2ad6a1738050c58efb9619d3df"
+    },
+    {
+      "bytes": 1105,
+      "path": "control_scenario.json",
+      "sha256": "ab37463e4b185876c196ed00a4bba7ddab175e5e094d9e27cbe92d4e56bd3ac0"
+    },
+    {
+      "bytes": 1315,
+      "path": "Dockerfile",
+      "sha256": "b421ca9a66916041bc447eed89d94869c3960f63e270c9e7ea972cafd7f22af6"
+    },
+    {
+      "bytes": 9018,
+      "path": "prepare.py",
+      "sha256": "55d1411d9466f6a8bf2f9bb72b3bfada830c6a45b952e2b3b0d0c21ce12f6122"
+    },
+    {
+      "bytes": 2350,
+      "path": "materialize.py",
+      "sha256": "1becd43b5fa775327326616358a8e2d92f52dc3c3cfa996618e06ead8bd1e739"
+    },
+    {
+      "bytes": 842,
+      "path": "README.md",
+      "sha256": "9192f161249e6a556db1b1961ac69993acff23dc50aef7c3b3c8b88889139e8b"
+    }
+  ],
+  "participant_executed": false,
+  "schema": "t3-frozen-wrapper-source-v1",
+  "source_frozen": true
+}
