@@ -1,0 +1,34 @@
+{
+  "cold_review": {
+    "bytes": 1015,
+    "sha256": "859909864d8ee3a0d63d62dbcfc2da819e8b74230e4b707a6177e260ea7d0c44"
+  },
+  "inventory_source": {
+    "bytes": 10742,
+    "sha256": "35513e28a2c441b3e6f82358bf3aff62a44ef32e76d46d90607284acf10a3aa2"
+  },
+  "inventory_source_path": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_native_fifo_v2/startupinventory_v3.py",
+  "market_executed": false,
+  "native_compiled": false,
+  "parent_image": "ghcr.io/kouzhizhuo/agenthon-t3-classic@sha256:c1b3c9f2aec8d5a761b4814cfddf7b79b76eb6afd09ca6bd4558661e2ce046ba",
+  "participant_imported": false,
+  "rankable": false,
+  "remote_writes": false,
+  "root_review": {
+    "bytes": 1299,
+    "sha256": "8c77e35f6a9a0228307f557bc395b69339911f380975d1306e1cd3f74501eb48"
+  },
+  "schema": "t3-fixed-stock-startup-source-lock-v2",
+  "source_only": true,
+  "startup_pins_updated": false,
+  "unchanged_host_sources": {
+    "verify_linux.py": {
+      "bytes": 31566,
+      "sha256": "601f91afb69fbb1fe95df041712a5fbb78edc5390812649d90fc5f50671d6b01"
+    },
+    "verify_public.py": {
+      "bytes": 23491,
+      "sha256": "a6814bb273da528b0c478b760cd4af6a9a116a046bb9e82b751ab4717bf082dc"
+    }
+  }
+}

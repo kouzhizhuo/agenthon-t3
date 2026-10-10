@@ -1,0 +1,67 @@
+{
+  "files": {
+    "README.md": {
+      "bytes": 3019,
+      "sha256": "d2a7e446a8d616a897af5ec2887c9081794c45f8ec5ab34d1d6b9992c965248f"
+    },
+    "SOURCE_LOCK.json": {
+      "bytes": 1193,
+      "sha256": "07ce7c1f6783fbf4ac9d92e17a0dcc5b2b7c4a330d555aeb3a90cb2a2370ef42"
+    },
+    "collect_artifact.py": {
+      "bytes": 1661,
+      "sha256": "54177bf7487f4c33603511d2e866a823dff7ba930840e724be44d1a04dd49e2b"
+    },
+    "common.py": {
+      "bytes": 2180,
+      "sha256": "6095f22e23c831ff8394bf9a2db063b7f1e44900e9e3cd42cc3adb7f60273d72"
+    },
+    "driver.py": {
+      "bytes": 5282,
+      "sha256": "c9162e706d8567ce24ce8e3f21bb357e7816537ef54e05a8a853eeee5e4fcf7a"
+    },
+    "freeze_source.py": {
+      "bytes": 1215,
+      "sha256": "afe1711b35cbbe19710048984926f1dbedeb1076e1b34ada51a57217f6e0b683"
+    },
+    "host/verify_linux.py": {
+      "bytes": 31566,
+      "sha256": "601f91afb69fbb1fe95df041712a5fbb78edc5390812649d90fc5f50671d6b01"
+    },
+    "host/verify_public.py": {
+      "bytes": 23491,
+      "sha256": "a6814bb273da528b0c478b760cd4af6a9a116a046bb9e82b751ab4717bf082dc"
+    },
+    "prepare_source.py": {
+      "bytes": 2839,
+      "sha256": "a3c64b744c44a9126c537dce636bf41b3399a1f52374e293d8528e3b51f56e04"
+    },
+    "startupinventory.py": {
+      "bytes": 10742,
+      "sha256": "35513e28a2c441b3e6f82358bf3aff62a44ef32e76d46d90607284acf10a3aa2"
+    },
+    "t3-classic-startup-inventory-v2.yml": {
+      "bytes": 2230,
+      "sha256": "f75db581edc9ee2b654930d725883cadb63ed120b6955e8b63c2e1a3e792c17a"
+    },
+    "verify_remote_source.py": {
+      "bytes": 2931,
+      "sha256": "12cf444fa211369cff9455e50fdb462434446436326d5ce13920b5d3a4c11194"
+    },
+    "verify_source.py": {
+      "bytes": 544,
+      "sha256": "885cb88c91cbf5c9e3d2fdf81bf1df8e779644041551633dd00c3b61211350df"
+    },
+    "worker.py": {
+      "bytes": 7765,
+      "sha256": "0ce26436ac3a129b193c2e723b95bed80a0dec4712f77e69014f61ab441fd4c7"
+    }
+  },
+  "market_executed": false,
+  "native_compiled": false,
+  "participant_imported": false,
+  "remote_writes": false,
+  "schema": "t3-fixed-stock-startup-frozen-harness-v2",
+  "source_only": true,
+  "workflow_dispatch": false
+}
