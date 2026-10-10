@@ -1,0 +1,76 @@
+name: T3 current native cumulative profile diagnostic v1
+on:
+  workflow_dispatch:
+    inputs:
+      payload_sha256:
+        description: Exact reviewed SCREEN_PAYLOAD_v1.tar.xz SHA256
+        required: true
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: t3-serial-linux-screen-v2
+  cancel-in-progress: false
+jobs:
+  screen:
+    if: github.repository == 'kouzhizhuo/agenthon-t3'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+      NUMEXPR_NUM_THREADS: '1'
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONHASHSEED: '0'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Materialize the exact reviewed source archive
+        env:
+          EXPECTED_PAYLOAD: ${{ inputs.payload_sha256 }}
+        run: python3 completion1009/server_direct_order_clone_controls_v3/materialize.py --archive completion1009/server_direct_order_clone_controls_v3/SCREEN_PAYLOAD_v1.tar.xz --expected-sha256 "$EXPECTED_PAYLOAD" --out current-native-profile-v1-payload
+      - name: Verify the exact reviewed diagnostic sources
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib
+          root=Path('completion1009/server_current_native_profile_diagnostic_v1')
+          pins={'entry.py': '1975f10361a83ab32e594263e635ffe682323d75016b41ceda39ad0c84ddb689', 'phase_entry.py': 'b89bdb009ab92429ee30ba5a303331ef93d44693149036db8816ccdb0651b5ea', 'host.py': '0de26120d76b95897213031c7e2884a084c399a4d4d67169af0b6e486d7be672', 'Dockerfile': '608f9c8fe5d3fe2d265dc7acb531b14d54b1d3a5d4cf0a2d409aa24b35954b9a', 'README.md': '102866c57dc296c65440dcb2af3aece9f2e56a36bb8215c316492eb29cc596fd', 'SOURCE_REVIEW.json': 'cc61ebfddf8a5d220717682504f0e6637526590becd63781f31d4d8d0b182edb', 'classic_finance_tools.py': '624b25b562be6c11bc98028641ac1910994c2789a0870787847a030f8fa17cf1', 'test_classic_finance_tools.py': '648edf436023ffe40d06854913375e2989b855e5028cff267a572b9f3064a4da'}
+          for name,digest in pins.items():
+              assert hashlib.sha256((root/name).read_bytes()).hexdigest()==digest,name
+          PY
+      - name: Test bounded classical finance tools on Linux
+        run: |
+          mkdir -p current-native-profile-v1-evidence
+          python3 completion1009/server_current_native_profile_diagnostic_v1/test_classic_finance_tools.py -v > current-native-profile-v1-evidence/CLASSIC_FINANCE_TOOLS_TESTS.log 2>&1
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.13.7'
+      - name: Fetch the pinned official host evaluator and original references
+        run: |
+          mkdir -p current-native-profile-v1-evidence
+          python current-native-profile-v1-payload/host/fetch_evaluation.py --out "$PWD/current-native-profile-v1-evaluation" > current-native-profile-v1-evidence/fetch-process.log 2>&1
+      - name: Install the pinned host evaluator
+        run: |
+          set -euo pipefail
+          python -m pip install numpy==2.2.6 pandas==2.3.3 scipy==1.18.1 pyarrow==21.0.0 jsonschema==4.23.0 jsonschema-specifications==2025.9.1 attrs==26.1.0 referencing==0.37.0 rpds-py==2026.9.1 python-dateutil==2.9.0.post0 pytz==2026.5 six==1.17.0 tzdata==2026.5
+          python -m pip install --no-deps ./current-native-profile-v1-evaluation/toolkit/common ./current-native-profile-v1-evaluation/track3
+          python -m pip freeze > current-native-profile-v1-evidence/EVALUATOR_FREEZE.txt
+      - name: Construct native C/ELF and pinned schema with full partial evidence
+        run: python current-native-profile-v1-payload/control/controller.py build --evidence "$PWD/current-native-profile-v1-evidence"
+      - name: Run fresh full controls then separate normal and marker-only phases
+        run: python completion1009/server_current_native_profile_diagnostic_v1/host.py --evidence "$PWD/current-native-profile-v1-evidence" --reference-root "$PWD/current-native-profile-v1-evaluation/references" --gate-kit "$PWD/current-native-profile-v1-evaluation/track3"
+      - name: Preserve actual source/schema, all production outputs and logs
+        if: always()
+        run: python current-native-profile-v1-payload/control/controller.py artifact --evidence "$PWD/current-native-profile-v1-evidence" --artifact "$PWD/current-native-profile-v1-artifact"
+      - name: Retain the paired Linux screen evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: t3-current-native-profile-v1-evidence
+          path: |
+            current-native-profile-v1-artifact
+            completion1009/server_current_native_profile_diagnostic_v1
+          retention-days: 30
+          if-no-files-found: error
+          compression-level: 6
