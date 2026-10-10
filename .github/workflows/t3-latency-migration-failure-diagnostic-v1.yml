@@ -1,0 +1,44 @@
+name: T3 unchanged latency migration failure observation v1
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: t3-serial-linux-screen-v2
+  cancel-in-progress: false
+jobs:
+  diagnose:
+    if: github.repository == 'kouzhizhuo/agenthon-t3'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+      NUMEXPR_NUM_THREADS: '1'
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONHASHSEED: '0'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Materialize unchanged frozen latency source archive
+        run: python3 completion1009/server_light_typed_noise_latency_market_controls_v1/materialize.py --archive completion1009/server_light_typed_noise_latency_market_controls_v1/SCREEN_PAYLOAD_v1.tar.xz --expected-sha256 61faf72a435e2e623ba30985903ea0f66796e13514d8f7ef9b9b683ce3d7dc9b --out latency-migration-diagnostic-v1-payload
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.13.7'
+      - name: Install fixed host readback dependencies
+        run: python -m pip install pandas==2.3.3 pyarrow==21.0.0 numpy==2.2.6
+      - name: Build and verify unchanged candidate C ELF and schema
+        run: python latency-migration-diagnostic-v1-payload/control/controller.py build --evidence "$PWD/latency-migration-diagnostic-v1-build"
+      - name: Observe actual failure without altering participant code or gates
+        run: python completion1009/server_latency_migration_failure_diagnostic_v1/host.py
+      - name: Preserve raw failure and exact actual build sources
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: t3-latency-migration-failure-diagnostic-v1-evidence
+          path: |
+            latency-migration-diagnostic-v1-evidence
+            latency-migration-diagnostic-v1-build
+            completion1009/server_latency_migration_failure_diagnostic_v1
+          if-no-files-found: error
+          retention-days: 30
