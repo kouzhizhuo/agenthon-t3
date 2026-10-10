@@ -37,6 +37,42 @@ MAX_COUNT = 2**63 - 1
 INJECTED_NAMES = ('_t3_cost_mark', '_t3_cost_state', '_t3_cost_finish', '_t3_cost_bindings')
 
 
+
+def stable_simulate_AST_sha256(original):
+    """Canonical business AST wire independent of CPython AST dump defaults.
+
+    Only the frozen node/field schema is accepted. New nonempty fields and
+    unknown nodes fail closed; empty Python3.12+ type_params is representation.
+    The caller separately binds every source byte before using this digest.
+    """
+    schema = {'Add': [], 'And': [], 'Assign': ['targets', 'value', 'type_comment'], 'Attribute': ['value', 'attr', 'ctx'], 'BinOp': ['left', 'op', 'right'], 'BoolOp': ['op', 'values'], 'Call': ['func', 'args', 'keywords'], 'Compare': ['left', 'ops', 'comparators'], 'Constant': ['value', 'kind'], 'Dict': ['keys', 'values'], 'DictComp': ['key', 'value', 'generators'], 'Div': [], 'Eq': [], 'Expr': ['value'], 'FunctionDef': ['name', 'args', 'body', 'decorator_list', 'returns', 'type_comment'], 'If': ['test', 'body', 'orelse'], 'IfExp': ['test', 'body', 'orelse'], 'Import': ['names'], 'ImportFrom': ['module', 'names', 'level'], 'In': [], 'Is': [], 'IsNot': [], 'Lambda': ['args', 'body'], 'Load': [], 'Mult': [], 'Name': ['id', 'ctx'], 'Not': [], 'NotIn': [], 'Or': [], 'Raise': ['exc', 'cause'], 'Return': ['value'], 'Store': [], 'Sub': [], 'Subscript': ['value', 'slice', 'ctx'], 'Try': ['body', 'handlers', 'orelse', 'finalbody'], 'Tuple': ['elts', 'ctx'], 'UnaryOp': ['op', 'operand'], 'With': ['items', 'body', 'type_comment'], 'alias': ['name', 'asname'], 'arg': ['arg', 'annotation', 'type_comment'], 'arguments': ['posonlyargs', 'args', 'vararg', 'kwonlyargs', 'kw_defaults', 'kwarg', 'defaults'], 'comprehension': ['target', 'iter', 'ifs', 'is_async'], 'keyword': ['arg', 'value'], 'withitem': ['context_expr', 'optional_vars']}
+    def wire(value):
+        if isinstance(value, ast.AST):
+            name = type(value).__name__
+            if name not in schema:
+                raise ValueError('unknown source AST node')
+            known = schema[name]
+            if not set(known) <= set(value._fields) or not all(hasattr(value, field) for field in known):
+                raise ValueError('missing frozen AST field')
+            extras = set(value._fields) - set(known)
+            for field in extras:
+                if not (name == 'FunctionDef' and field == 'type_params'
+                        and getattr(value, field, None) == []):
+                    raise ValueError('unsupported noncanonical AST field')
+            return [name, [[field, wire(getattr(value, field, None))] for field in known]]
+        if type(value) is list:
+            return [wire(item) for item in value]
+        if type(value) is float:
+            if not (-float('inf') < value < float('inf')):
+                raise ValueError('nonfinite source AST scalar')
+            return ['float', value.hex()]
+        if value is None or type(value) in (str, int, bool):
+            return value
+        raise ValueError('unsupported source AST scalar')
+    encoded = json.dumps(wire(original), ensure_ascii=True, separators=(',', ':'),
+                         allow_nan=False).encode('utf-8')
+    return hashlib.sha256(encoded).hexdigest()
+
 def instrument_simulate(namespace, source_bytes, source_path, arm, source_pin):
     """Add only source-bound markers/state reads; removable business AST equal."""
     if (arm not in ARMS or source_pin != {'bytes': len(source_bytes),
@@ -143,7 +179,7 @@ def instrument_simulate(namespace, source_bytes, source_path, arm, source_pin):
     exec(compile(prepared, str(source_path), 'exec'), namespace)
     return {'non_marker_business_AST_equal': True, 'arm': arm, 'source_pin': source_pin,
         'anchor_counts': anchors, 'static_labels': labels,
-        'original_simulate_AST_sha256': hashlib.sha256(ast.dump(original, include_attributes=False).encode()).hexdigest()}
+        'original_simulate_AST_sha256': stable_simulate_AST_sha256(original)}
 
 
 def stream_state(graph, emit_block, decoded_cap=MAX_STATE_BYTES, block_cap=MAX_STATE_BLOCKS):
