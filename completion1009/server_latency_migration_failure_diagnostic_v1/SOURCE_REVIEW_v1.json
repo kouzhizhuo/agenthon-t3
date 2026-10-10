@@ -1,0 +1,23 @@
+{
+  "status": "PASS_SOURCE_ONLY",
+  "files": [
+    {
+      "path": "diagnose.py",
+      "bytes": 2827,
+      "sha256": "248ea30c910233fccce6a628d637867f7ee7942b1409847b1c94809b80b1dc43"
+    },
+    {
+      "path": "host.py",
+      "bytes": 5983,
+      "sha256": "2ab0e170772efbdd3bdde2c312cda8673a03c06f5ef89834a491a8f0f47607db"
+    },
+    {
+      "path": "workflow.yml",
+      "bytes": 2054,
+      "sha256": "32d7b590f9d3b27a86619cc295c4af99bc3790ccd730f86c031721a24f6de877"
+    }
+  ],
+  "participant_modified": false,
+  "local_participant_execution": false,
+  "rankable": false
+}
