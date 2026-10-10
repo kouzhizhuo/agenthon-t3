@@ -1,0 +1,15 @@
+attrs==26.1.0
+jsonschema==4.23.0
+jsonschema-specifications==2025.9.1
+numpy==2.2.6
+pandas==2.3.3
+pyarrow==21.0.0
+python-dateutil==2.9.0.post0
+pytz==2026.5
+qfbench2-common @ file:///home/runner/work/agenthon-t3/agenthon-t3/expectations-delivery-evaluation/toolkit/common
+qfbench2-track-simulation @ file:///home/runner/work/agenthon-t3/agenthon-t3/expectations-delivery-evaluation/track3
+referencing==0.37.0
+rpds-py==2026.9.1
+scipy==1.18.1
+six==1.17.0
+tzdata==2026.5

@@ -1,0 +1,297 @@
+{
+  "all_passed": true,
+  "checks": [
+    {
+      "actual": {
+        "bytes": 19729,
+        "sha256": "b9930033562d0ff6cbb066e25f13a399b55f3cebd25c52c61e77570b47eed1c8"
+      },
+      "expected": {
+        "bytes": 19729,
+        "sha256": "b9930033562d0ff6cbb066e25f13a399b55f3cebd25c52c61e77570b47eed1c8"
+      },
+      "passed": true,
+      "path": "completion1009/server_classic_expectations_delivery_v2/CANDIDATE_SOURCE_LOCK.json"
+    },
+    {
+      "actual": {
+        "bytes": 5804,
+        "sha256": "8a8c71823ee57257e5664d77f3446771cd9e8c5550a4bed683b8f3e27cabd61e"
+      },
+      "expected": {
+        "bytes": 5804,
+        "sha256": "8a8c71823ee57257e5664d77f3446771cd9e8c5550a4bed683b8f3e27cabd61e"
+      },
+      "passed": true,
+      "path": "completion1009/server_classic_expectations_delivery_v2/COUNTED_PLAN.json"
+    },
+    {
+      "actual": {
+        "bytes": 193928,
+        "sha256": "1af7ba6d1b79f1934599ad7c385ee3d4f1d0d46138fb0e5137a9eec06e49bf73"
+      },
+      "expected": {
+        "bytes": 193928,
+        "sha256": "1af7ba6d1b79f1934599ad7c385ee3d4f1d0d46138fb0e5137a9eec06e49bf73"
+      },
+      "passed": true,
+      "path": "completion1009/server_classic_expectations_delivery_v2/DELIVERY_PAYLOAD_v3.tar.xz"
+    },
+    {
+      "actual": {
+        "bytes": 2314,
+        "sha256": "fa77f096ce16a4ef4b6fdf128a7797da27263aa46f5a5950ea783d609852ca77"
+      },
+      "expected": {
+        "bytes": 2314,
+        "sha256": "fa77f096ce16a4ef4b6fdf128a7797da27263aa46f5a5950ea783d609852ca77"
+      },
+      "passed": true,
+      "path": "completion1009/server_classic_expectations_delivery_v2/Dockerfile"
+    },
+    {
+      "actual": {
+        "bytes": 1688,
+        "sha256": "ba5946c568afd98a8a77437ae44f65cd65643453d07b8bf4428da1bc1471bf65"
+      },
+      "expected": {
+        "bytes": 1688,
+        "sha256": "ba5946c568afd98a8a77437ae44f65cd65643453d07b8bf4428da1bc1471bf65"
+      },
+      "passed": true,
+      "path": "completion1009/server_classic_expectations_delivery_v2/LICENSE-SUBMISSION"
+    },
+    {
+      "actual": {
+        "bytes": 19695,
+        "sha256": "53bb1b301dd0117b141658d9ebb6c0f64610ee2ef0f90bc3094ffc84a411d913"
+      },
+      "expected": {
+        "bytes": 19695,
+        "sha256": "53bb1b301dd0117b141658d9ebb6c0f64610ee2ef0f90bc3094ffc84a411d913"
+      },
+      "passed": true,
+      "path": "completion1009/server_classic_expectations_delivery_v2/PARENT_SOURCE_LOCK.json"
+    },
+    {
+      "actual": {
+        "bytes": 4198,
+        "sha256": "ce22b34e5095f504a18d241e760dba6eafecfa3dc4566cee7fb0d8c96a0da79a"
+      },
+      "expected": {
+        "bytes": 4198,
+        "sha256": "ce22b34e5095f504a18d241e760dba6eafecfa3dc4566cee7fb0d8c96a0da79a"
+      },
+      "passed": true,
+      "path": "completion1009/server_classic_expectations_delivery_v2/PUBLIC_OPTIONS_PURE_FIXTURE_v1.json"
+    },
+    {
+      "actual": {
+        "bytes": 3634,
+        "sha256": "12b0b69bb9b08b857eb17c63d0dc2240ef027dfa2b826601ffcee2c1b60759fa"
+      },
+      "expected": {
+        "bytes": 3634,
+        "sha256": "12b0b69bb9b08b857eb17c63d0dc2240ef027dfa2b826601ffcee2c1b60759fa"
+      },
+      "passed": true,
+      "path": "completion1009/server_classic_expectations_delivery_v2/README.md"
+    },
+    {
+      "actual": {
+        "bytes": 3698,
+        "sha256": "6d697808f0eb889c17994db4522234f6ee02d2344354aa0a78c83ded82dc7588"
+      },
+      "expected": {
+        "bytes": 3698,
+        "sha256": "6d697808f0eb889c17994db4522234f6ee02d2344354aa0a78c83ded82dc7588"
+      },
+      "passed": true,
+      "path": "completion1009/server_classic_expectations_delivery_v2/construction.py"
+    },
+    {
+      "actual": {
+        "bytes": 4220,
+        "sha256": "81158301b15eb9edbf89e89e495ffafda4d65a5214e8a80ec1ccd22924aab17b"
+      },
+      "expected": {
+        "bytes": 4220,
+        "sha256": "81158301b15eb9edbf89e89e495ffafda4d65a5214e8a80ec1ccd22924aab17b"
+      },
+      "passed": true,
+      "path": "completion1009/server_classic_expectations_delivery_v2/controls_entry.py"
+    },
+    {
+      "actual": {
+        "bytes": 1244,
+        "sha256": "a59c492b7776e094335fd7a6effc85ab07041553c9671390117f2684ff274dad"
+      },
+      "expected": {
+        "bytes": 1244,
+        "sha256": "a59c492b7776e094335fd7a6effc85ab07041553c9671390117f2684ff274dad"
+      },
+      "passed": true,
+      "path": "completion1009/server_classic_expectations_delivery_v2/delivery_entry.py"
+    },
+    {
+      "actual": {
+        "bytes": 8617,
+        "sha256": "8be7a8c066efe5c90c23140c51380d339adbaf1ddbd51870a4ed7e45582f011a"
+      },
+      "expected": {
+        "bytes": 8617,
+        "sha256": "8be7a8c066efe5c90c23140c51380d339adbaf1ddbd51870a4ed7e45582f011a"
+      },
+      "passed": true,
+      "path": "completion1009/server_classic_expectations_delivery_v2/diagnostic_entry.py"
+    },
+    {
+      "actual": {
+        "bytes": 37278,
+        "sha256": "f889a429db322c04e4d3463b5d523ee48a2c6bd324e9c41018ca94443192114b"
+      },
+      "expected": {
+        "bytes": 37278,
+        "sha256": "f889a429db322c04e4d3463b5d523ee48a2c6bd324e9c41018ca94443192114b"
+      },
+      "passed": true,
+      "path": "completion1009/server_classic_expectations_delivery_v2/driver.py"
+    },
+    {
+      "actual": {
+        "bytes": 1824,
+        "sha256": "baebce9e7a36fbb6788013341eae3427553cebdc8cbbe2447d35a7000d3d4fe1"
+      },
+      "expected": {
+        "bytes": 1824,
+        "sha256": "baebce9e7a36fbb6788013341eae3427553cebdc8cbbe2447d35a7000d3d4fe1"
+      },
+      "passed": true,
+      "path": "completion1009/server_classic_expectations_delivery_v2/freeze_source.py"
+    },
+    {
+      "actual": {
+        "bytes": 2270,
+        "sha256": "363801689d1a6e940d1f290a36ca5efff1fde7b740918d9ee7513a11435b6d04"
+      },
+      "expected": {
+        "bytes": 2270,
+        "sha256": "363801689d1a6e940d1f290a36ca5efff1fde7b740918d9ee7513a11435b6d04"
+      },
+      "passed": true,
+      "path": "completion1009/server_classic_expectations_delivery_v2/materialize.py"
+    },
+    {
+      "actual": {
+        "bytes": 7101,
+        "sha256": "f7e7ce51c6fbb0bda3679e077c3af01c5810151bf35cd3f75fc8711fd9ae5a9b"
+      },
+      "expected": {
+        "bytes": 7101,
+        "sha256": "f7e7ce51c6fbb0bda3679e077c3af01c5810151bf35cd3f75fc8711fd9ae5a9b"
+      },
+      "passed": true,
+      "path": "completion1009/server_classic_expectations_delivery_v2/prepare.py"
+    },
+    {
+      "actual": {
+        "bytes": 1296,
+        "sha256": "9480f139deca48246eba08607a4c6bd18424564d022620befeb631b5ad61c928"
+      },
+      "expected": {
+        "bytes": 1296,
+        "sha256": "9480f139deca48246eba08607a4c6bd18424564d022620befeb631b5ad61c928"
+      },
+      "passed": true,
+      "path": "completion1009/server_classic_expectations_delivery_v2/production_entry.py"
+    },
+    {
+      "actual": {
+        "bytes": 12435,
+        "sha256": "710a3a7d06a641c25f03619df719069a773de91f9b1cf309705102031421dbc1"
+      },
+      "expected": {
+        "bytes": 12435,
+        "sha256": "710a3a7d06a641c25f03619df719069a773de91f9b1cf309705102031421dbc1"
+      },
+      "passed": true,
+      "path": "completion1009/server_classic_expectations_delivery_v2/source_copy.py"
+    },
+    {
+      "actual": {
+        "bytes": 5122,
+        "sha256": "cc5254ce192fe2b50006d3a52ad4542616e932e92a15210e43b121c13f65a57a"
+      },
+      "expected": {
+        "bytes": 5122,
+        "sha256": "cc5254ce192fe2b50006d3a52ad4542616e932e92a15210e43b121c13f65a57a"
+      },
+      "passed": true,
+      "path": "completion1009/server_classic_expectations_delivery_v2/t3-classic-expectations-delivery-v2.yml"
+    },
+    {
+      "actual": {
+        "bytes": 2939,
+        "sha256": "2ad73ec6daaf6a999928fb4f2508444fea4f9a2e971dfbb829f6be84edbdd8d5"
+      },
+      "expected": {
+        "bytes": 2939,
+        "sha256": "2ad73ec6daaf6a999928fb4f2508444fea4f9a2e971dfbb829f6be84edbdd8d5"
+      },
+      "passed": true,
+      "path": "completion1009/server_classic_expectations_delivery_v2/verify_remote_source.py"
+    },
+    {
+      "actual": {
+        "bytes": 821,
+        "sha256": "49985808c342784633f31ac5e71a82e207570bfd7c470fd52ea1a592042cb30b"
+      },
+      "expected": {
+        "bytes": 821,
+        "sha256": "49985808c342784633f31ac5e71a82e207570bfd7c470fd52ea1a592042cb30b"
+      },
+      "passed": true,
+      "path": "completion1009/server_classic_expectations_delivery_v2/verify_source.py"
+    },
+    {
+      "actual": {
+        "bytes": 16816,
+        "sha256": "2a2f5e44b5c58315c11bf26fa05198a2172ce8b292f48b52ffcce45209c7eb97"
+      },
+      "expected": {
+        "bytes": 16816,
+        "sha256": "2a2f5e44b5c58315c11bf26fa05198a2172ce8b292f48b52ffcce45209c7eb97"
+      },
+      "passed": true,
+      "path": "completion1009/server_classic_expectations_delivery_v2/worker.py"
+    },
+    {
+      "actual": {
+        "bytes": 3323,
+        "sha256": "b5cf9f49879ad5fe90b760831914e6e3e19f92186df2503c5b5ca2ff0bc34279"
+      },
+      "expected": {
+        "bytes": 3323,
+        "sha256": "b5cf9f49879ad5fe90b760831914e6e3e19f92186df2503c5b5ca2ff0bc34279"
+      },
+      "passed": true,
+      "path": "completion1009/server_classic_expectations_delivery_v2/SOURCE_PINS.json"
+    },
+    {
+      "actual": {
+        "bytes": 5122,
+        "sha256": "cc5254ce192fe2b50006d3a52ad4542616e932e92a15210e43b121c13f65a57a"
+      },
+      "expected": {
+        "bytes": 5122,
+        "sha256": "cc5254ce192fe2b50006d3a52ad4542616e932e92a15210e43b121c13f65a57a"
+      },
+      "passed": true,
+      "path": ".github/workflows/t3-classic-expectations-delivery-v2.yml"
+    }
+  ],
+  "head": "2164738b7508d9554cb6bd0a37ec46375cee8199",
+  "participant_imported": false,
+  "remote_writes": false,
+  "workflow_dispatch": false
+}

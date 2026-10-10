@@ -1,0 +1,1794 @@
+{
+  "all_roster_units": 71,
+  "isolated_process_count": 30,
+  "reference_frame_count": 190,
+  "selected_units": 71,
+  "units": [
+    {
+      "input_sha256": {
+        "card.toml": "9d9a21c72f7312aec0227715ca1e10075079de9f40e7a27c0a86b29f20a16245",
+        "scenario.json": "b81f521035e2d2937d94a06d03a4e03b8721d77d317549f00c0515e9b1aac1fb"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-as01-base-mix/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-as01-base-mix/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "af9a6f41c66c7b3a6412603968616efc5163bd3c4a55778f8b8c3966e4c5cde0",
+        "trace.parquet": "625262143747a9dfc1cafe875022f7658fdb18f3ad2de933517b873bb0405edb"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-as01-base-mix/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-as01-base-mix"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "44d4fbc0455ff287447e9d35356dd7829fb5fda5c83a3447f60eecda3b353a77",
+        "scenario.json": "939492491114a95c3adf517a1eeb6edee959b96c73c551b81dee46df9986ce1b"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-as02-scale-up-noise/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-as02-scale-up-noise/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "6e66f20bc3751bcc1505f7f119923a319bc815d345e9515ce5aa9e0643a3d8ec",
+        "trace.parquet": "f8a39099fe5ece0eced910a51f6aadbc6890aac2c4828ba8c98f8caca959c13d"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-as02-scale-up-noise/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-as02-scale-up-noise"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "bc7cff51af4432ac0d3804072974b805d0a73c1a8d5d1e6298c9db34cef55683",
+        "scenario.json": "24bd5ae8a6b122a8fdce91285ac0f62f369851ee916495d7a3e70157b16018f4"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-as03-mm-liquidity-heavy/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-as03-mm-liquidity-heavy/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "1e3b96d1fd9d13d5cbe97e0acf2c7c818860403730d1f6230319024796efd22f",
+        "trace.parquet": "cda4d421e99a0d3b459eb25e8d246a846e3aa6ac4e6beb27c5b95f52b6c11430"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-as03-mm-liquidity-heavy/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-as03-mm-liquidity-heavy"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "4aac18ace2a5cb008b10623ce06b492dd504add8a5e7d6fa26fd45319cd2b5ab",
+        "scenario.json": "f3414d5a30d62320369c210dec6284b0ff6db23b20894cdb0719f0fb7e9fb598"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-as04-value-heavy/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-as04-value-heavy/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "ba4d298a1c0e68eb4690cc00d5069689bb5e2969c5b6ad6a0c1c90c8bf5a50ca",
+        "trace.parquet": "0ae0461c1dcfd7d9ce69abefd9ea53bbd23c01b5ced921f3bfd8bb58399716e7"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-as04-value-heavy/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-as04-value-heavy"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "86fd0edd8afaa329d60aaa8d4d845d5088446dd319d2f74b43a233d3c2c79d00",
+        "scenario.json": "26e24a6331f248e3890b3ed05134fa4b75d455696b240f7f2e10a34def96d9dc"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-as05-oracle-variant/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-as05-oracle-variant/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "d235a540306098f100afa14afd5cc94230892d7f948f7a68b00c15d88ebf4e9b",
+        "trace.parquet": "ba12a06af271770c81adfa6686a41a0310abcecfc4c0beb0f146ed42f4fe2426"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-as05-oracle-variant/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-as05-oracle-variant"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "999cf9ba5405d9f74a04b56f7efd728c83320453bdc1ca44d5ee59c7c6b9c4c4",
+        "scenario.json": "15a2bc778742e778ef895cc5a905483bc967d3857f9c9219b1b87ad34e82ad5e"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-as06-throughput-fast/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-as06-throughput-fast/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "16f64ee89dd18988792dadc8c6ac3b02881e3d29fc5c80d4df19ae14fa738f77",
+        "trace.parquet": "1e7761ee74ade7e23bb4f40410f8525705601f10cc9e6e855d5df798c3e94350"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-as06-throughput-fast/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-as06-throughput-fast"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "1110cdaa3155f8503aff66978d17a8563553d349963761a901814775e6ebe25b",
+        "scenario.json": "4bd9e1c6d1fe82f697984c8a8de22d7c9f71508bb2dc46241349637755df4904"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-ca-baseline-calm/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-ca-baseline-calm/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "bccfe1c82c1e9ce8eac6569d60f8a4d1228223fd8b8bcb355d37e24049d9cea1",
+        "trace.parquet": "efba75949d4b80d5568d99c2d41c9e6e42234931a4675160e9e30348f0bca6c6"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-ca-baseline-calm/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-ca-baseline-calm"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "5d9113c167a8eaeabaca09342204ab7b7e5d07aa4e82fb9f197844a1be978e9c",
+        "scenario.json": "13f54ceb383c66b44ae8c479e6da31a9a8601f81f0d186be425c2cf0f338b783"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-ca-fast-mean-reversion/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-ca-fast-mean-reversion/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "9ba9e26a3b73f716078015ba818532da10105be501603b35d79aff11f8acb2e6",
+        "trace.parquet": "a477e7dd3e381b8297d5a2b7f06981aac343f2c34c34f33bebc96444a4ab7da4"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-ca-fast-mean-reversion/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-ca-fast-mean-reversion"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "e9a2f06914f847c18aed96a85d20109329ab6ace6e06f3d4dfa626694efb1ae2",
+        "scenario.json": "25df96f8a234fd841cee8afcaaa8bd5933f5cf55844a44f26e883804b66421f1"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-ca-fat-tail-jumps/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-ca-fat-tail-jumps/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "e14cf8d5d0a65ab3a7fd686c1a6ece8042e5a8ca7293602c29830b0d9acd62e2",
+        "trace.parquet": "424a3b612f0e10b252ff4df68054aedc2a2e5643c55dac9f8142b62525c3868d"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-ca-fat-tail-jumps/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-ca-fat-tail-jumps"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "750a5f8161cf9fe854e455ab1360175ae23aaa73624ce8ae96915ecdfbbdbfdc",
+        "scenario.json": "406444e7776969a0121b90032d89cef6ca2c9f70059d30942bdac70cd7c22f40"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-ca-high-volatility/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-ca-high-volatility/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "aaac7925fc4f8df93ba858638676845b8ce26f4ae569a25ce2603d7532b8ec54",
+        "trace.parquet": "b959dfc7640b3d4b3860970d5fc19292d2c9fec9a093417cd6cce1f628318690"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-ca-high-volatility/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-ca-high-volatility"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "8db546c160b4fd1827f69d3d9370fddf87af7fe606a8704e2b84d33b8811a244",
+        "scenario.json": "508e3c95883b14604778843726b0282b631ad4319535f7cc1328bfe2b8750e56"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-ca-thin-book-depth/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-ca-thin-book-depth/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "7d3dd49a90734655942480cb43d5259e6bbaac39766b92debfd6451303be906d",
+        "trace.parquet": "233a2c853786904f8fe65a8800ecdb963cb7bff41258e1442d4d02aa4cc9af18"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-ca-thin-book-depth/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-ca-thin-book-depth"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "1c4ea2805667fa94fcf57fc482eed1a5ee21b7e6f93a1cbb17eae73c60afb9de",
+        "scenario.json": "042347a03b5db470bf30bd43f2890170085faf73f1ab909a6b90b6b6310aceaa"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-cancelmodify-lifecycle/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-cancelmodify-lifecycle/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "929bf1b7d8765f352d503368cc302708a9f869587d8ba7d9bacb831b2ad99e26",
+        "trace.parquet": "797af9c4b00e9b2ed5e8afb79ddf323dc1088ad57966f8807bb4d32f83a4f733"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-cancelmodify-lifecycle/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-cancelmodify-lifecycle"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "40722fdece2fe34ee7f3f383e786570e9cf38186e456714e1407f2ebc62e9d74",
+        "scenario.json": "c0e1dbdc4c5da5c21d5d2cd444414db18252302990d376eb87fdd136fee51f02"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-coarse-tick-ties/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-coarse-tick-ties/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "5e938a39795f2214f929be9b73b3269a3253745f42e96170b3399106706bc63d",
+        "trace.parquet": "729dd4ec8f106796ef00b7ca4b40ccd832b8b18dad18cf0da3c2ed3a13d3fe55"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-coarse-tick-ties/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-coarse-tick-ties"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "51fc016a87fe435748bac4582b189de644bac0195337a66d819d18c020fcd5fc",
+        "scenario.json": "a7443084be120140edbaed8db5fd1363c827292ff8b765e277c9b705fb955947"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-eq-deterministic-baseline/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-eq-deterministic-baseline/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "66a613aaf21843682a06848819d097fe966169581154f25c3600c77315926e95",
+        "trace.parquet": "f642bc11b4115962d1057d5cfe5222624ac309592f06d403f61ef1cc209442b9"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-eq-deterministic-baseline/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-eq-deterministic-baseline"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "bb86a24a1be19f4305ec19b919306360be3049d6e39a143c5790043396984fdc",
+        "scenario.json": "e2ccc376b4d9ab4022871124c029714a81ced476c76142fb7dd2690ad881caa7"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-eq-lognormal-highmag/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-eq-lognormal-highmag/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "962d748088f2f436a3b483697a6a3857d960efd8c2cae67cff73115481da2dfa",
+        "trace.parquet": "136691ab3da24f620fca6494481664260221fcf60e582fc0088e4c7b9f8953df"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-eq-lognormal-highmag/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-eq-lognormal-highmag"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "06fd13f8b3dc826c7e2d0544d596c8d59cef39eb4e5cf45b1492b22c60ec8b15",
+        "scenario.json": "4c5767c24629a412b82cb4ecf26a4d8ee8cfc0e2787adb0bd66f5f8cc6bc6368"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-eq-lognormal-highsigma/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-eq-lognormal-highsigma/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "a1c5b6a21ae1222ac75f619885c321b77fc0e0e66e6ed38b5ac1f3ec9bcb5226",
+        "trace.parquet": "24cc29c311179999cd5361cc61b6f83752c8621201d3e69b3d11ebcdb9871567"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-eq-lognormal-highsigma/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-eq-lognormal-highsigma"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "fb5109ca67957285a98dd55c16bad41bed361bb89cb4135a11775259aab0de1b",
+        "scenario.json": "5bc3bff108774a5efcf9e5ee9d6a56caf884c063d4ef746aefa7b3ed5eadda41"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-eq-lognormal-lowsigma/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-eq-lognormal-lowsigma/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "1da184a586d4233eb7bb43fb57d57ea0c6c42a40852da11c501e413c905a90de",
+        "trace.parquet": "5de1bdf83ac05cf9ca7ec294e4c761f324b50cf0991df63946dcb35ce67afd3e"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-eq-lognormal-lowsigma/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-eq-lognormal-lowsigma"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "3fe5297163cc43046a9bbe3cbd76c6cc92d083628a4c3e837c6209c649e5ae35",
+        "scenario.json": "1a380211f9167f06cd9bb87469ce15e6b34e893fee354a8641073f9efe8d0101"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-eq-pareto-heavytail/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-eq-pareto-heavytail/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "2a6f3b5aa6071d102344d07da82281301995850b9a2f50fa80e04592cc9099b3",
+        "trace.parquet": "a84cce701b39b3dc8e0874887038a55b5972429a772596463c0f86f540ce3f8f"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-eq-pareto-heavytail/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-eq-pareto-heavytail"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "c89612e386b40ac14db9f21543918a8f319a811dda2525d61f4078e3c9ee0306",
+        "scenario.json": "e26ffc4966f825a70edd174f048e58ff3970d5b0dfd17558a265249d78b5a6d4"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-eq-uniform-tight/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-eq-uniform-tight/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "b24d98bf5bd258895751a0d322cf947e9d6c60f4e364e29662d7dfd6785fffa3",
+        "trace.parquet": "7fa9e44f9c2ea9e84f97c0b7914cfede404ad47f8df9541c1ed4e28b102e577c"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-eq-uniform-tight/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-eq-uniform-tight"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "be5fafefedea7379b67ac89a78dd2d851ab48014c0da19dce51d349692297b5b",
+        "scenario.json": "a48c69d18b49bbd72268119002cee25463cfb9dbb28945d3238aef700c9b0875"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-eq-uniform-wide/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-eq-uniform-wide/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "25f5f10e34b51feb4f6849b588e70a12acb3ef546888d718a2704258ba97ce8c",
+        "trace.parquet": "feeab14a3ce52854f1e21fb135b53421cdf1ab10dd67b16a5166ec9d0db5ad9f"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-eq-uniform-wide/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-eq-uniform-wide"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "5255222d05df97cb6c76f512821000f115ac6b4cba8f7350ca62dc5c1670d68a",
+        "scenario.json": "0db4f8f6062a99647434b66ed3abc1f73e08eb680b8455f6a8c95b87db16bc42"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-eq001-pareto-latency-tail/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-eq001-pareto-latency-tail/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "d0eb9464880da34f7097ed954430c721f060ba348d4afd807b6ae285db8bc859",
+        "trace.parquet": "ca4b61563ed29516dee2a31be8fffc0326e31668c30078b0103a815c4bc76bcb"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-eq001-pareto-latency-tail/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-eq001-pareto-latency-tail"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "c281e50ef4ba3c23b4c44d016d3f17a3fbed181222caa5177a731acad96d3c1a",
+        "scenario.json": "748555dade2dddc7303b2c3f1ed693a9115c7872230151f8bd8022ef97d0716f"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-fastlob-core/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-fastlob-core/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "a5a10550fc766508fbe2bf64ff84749f3f77090eb94d93b934e2a83500a374eb",
+        "trace.parquet": "1a7a4f254ebfeb6321b4119a5a2f87791ea1fb793fe83ed4e7ad6b5e47272770"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-fastlob-core/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-fastlob-core"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "8704208810a179c268515603bab85cda56ec4f9739fd74f959709ac54b148885",
+        "scenario.json": "5a1baeb2cf1f48be8ecb4c633c56d2d0fc75e08e0fb6d7d0a83fedbdf0d9763e"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-fastlob-tight-book/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-fastlob-tight-book/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "69b259915105a38cfa402a764f374e49c5d135ae4ea05a89fc12c0465e728ffd",
+        "trace.parquet": "641ea71e77a2f2b13624c3f196bb4cb037e155b88b3768d14722a8cffd9ca394"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-fastlob-tight-book/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-fastlob-tight-book"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "ecc8050e53b7fbd5e961488823f3aece20bb69dbc8add35498d25d985afbaa9e",
+        "scenario.json": "5e7783b77789c3075d6f72fa5ca65a0e661cb421aa33cf369a635455bd338ff0"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gb-base-30agent-30s/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gb-base-30agent-30s/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "7fc226b6d108dd1ad56a1100f76d22f7243806b5374517c0dd47dc1b702bd5cd",
+        "trace.parquet": "27aaee01b82d655372134a5e9c72e465ea2c2a90dabfc00722c7dddf78e3458a"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gb-base-30agent-30s/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-gb-base-30agent-30s"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "63974875104add6427245df282f5a13567472a5a5ab83f712f6fd1a3a44b9390",
+        "scenario.json": "f9efd1a6693436f29ac2940f2ddfa9148ef3316b367c38cca135ab82e8997d6c"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gb-highfreq-40hz-60s/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gb-highfreq-40hz-60s/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "c371a9f01a0a017e5a5b2673c7f93abdefcd536d3430b21646f6bddffd31bb2e",
+        "trace.parquet": "a93ccc3d90eb80937e1ba70dc6366dabef1e3d8c0ab2213d862faebbb56df89b"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gb-highfreq-40hz-60s/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-gb-highfreq-40hz-60s"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "7fe162d6263926677119dc5cf3f12e2a4c24021cc991952e501e6b6ecd9052a5",
+        "scenario.json": "650e0d29b40f3709f224a6af278b9e0cc9899294bcdfa31deb4f95bb5e84dc8b"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gb-horizon-240s/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gb-horizon-240s/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "6ed82dcbf48f278e3d6971fe1f50be011d02163bfc754f0aecfb639c711b2059",
+        "trace.parquet": "8423a8c5da94afce610421456ed56488c42cf4d398e1fa656c9d427880eb9df6"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gb-horizon-240s/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-gb-horizon-240s"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "225b9387d74818cdf03ba5c37b24d9973e572d0f335ba48a0bf66207fd04475b",
+        "scenario.json": "af565789aeb35a1c70e39dee4f067563d1bdd0e605c2a470c7ab4079d2e34fab"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gb-mega-throughput/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gb-mega-throughput/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "6b9363867695269d2849ea5c16c27d04ddf56abeb51a12c9e925437084d7097a",
+        "trace.parquet": "80e48cd5a0c28449e444960b087da5105b98f64470d4685714d6997031cfa6fc"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gb-mega-throughput/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-gb-mega-throughput"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "a3834bf461b9c4a4e9eb47407c9de6887e246195589c950429874abb168571c4",
+        "scenario.json": "a9ae51bdd8a065f81555ecc989b8a9a83d20522310c63261cd64d3e3eadf6820"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gb-pop-128-agents/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gb-pop-128-agents/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "37e8a20c08fcb0d9745b9ee933153563ccaad634c4abd169b1edf77cec511b61",
+        "trace.parquet": "c3b061b500884ef2cc93b503c6e824c95265987c39187cb56950f01519e8c576"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gb-pop-128-agents/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-gb-pop-128-agents"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "15c5de3ef8b1e01ded87c26cbda16459aa1e386129c1b41e03a1b9196aae4499",
+        "scenario.json": "a9f59935d0358a7b064251283e43d05f2dc8299e9748d4b5c67f7b98d0165c6a"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gb-pop-horizon-scale/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gb-pop-horizon-scale/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "3b8f667cf44385e09df41cb7cb97f41ad81e72b7f9ae77fa18f6189b2e658b11",
+        "trace.parquet": "5bff5aa64fc916f62063c033a687a0783ba568b39e9c80f36699ff6b98553976"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gb-pop-horizon-scale/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-gb-pop-horizon-scale"
+    },
+    {
+      "input_sha256": {
+        "batch.json": "0966f953b0c8bd48e86dbdacd792b5d4bb9ae4b01e1f6928d7535a81012ee49b",
+        "card.toml": "c94cd7e4be4e931e28f9758ba5bd5e3657834a421cf65c190a853b53693beede",
+        "scenarios/sub_00.json": "9a9d4cd9dce7c7f2bfc12850ded33f41a10f81248cdfede641f5fa5f3b7ecfe1",
+        "scenarios/sub_01.json": "1a24135722a2def77bcaa973e815fe6ecea4db4facc1893b29d8fd61eba48a11",
+        "scenarios/sub_02.json": "978f69de92025fb71735127313df5d60d2abc8c399bbc8f3524edb4bb29c5cbf"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-dense-3/checks/reference_data/sub_00/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-dense-3/checks/reference_data/sub_00/message_trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-dense-3/checks/reference_data/sub_01/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-dense-3/checks/reference_data/sub_01/message_trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-dense-3/checks/reference_data/sub_02/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-dense-3/checks/reference_data/sub_02/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "checks/reference_data/sub_00/message_trace.parquet": "ca96c9876c339f096ba3806fdcd55e617869fbd6de9943f7a54356f5a2ef0f35",
+        "checks/reference_data/sub_00/trace.parquet": "12c8ad464d61ae53671b05585f1d6ac912d249f5e00ea078c58e6f888e2a499a",
+        "checks/reference_data/sub_01/message_trace.parquet": "4377673571acdafb8c094ab7bc6b24cd5628a2ae2ef2596a829ef8f4b4562bea",
+        "checks/reference_data/sub_01/trace.parquet": "c28aa4ea7b03905a5807a50db7946e7441779d1cf33177bc40a522892cd9add4",
+        "checks/reference_data/sub_02/message_trace.parquet": "c1dca14fa5dc5759db198ff7dc46870242b73dc5b2152a219ca067cb3e6298fb",
+        "checks/reference_data/sub_02/trace.parquet": "0ecfb5b5173584e135c701bf0505c2b85bb38ec85a4ee7cc9732fb0d5167c060"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-dense-3/scenarios/sub_00.json",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-dense-3/scenarios/sub_01.json",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-dense-3/scenarios/sub_02.json"
+      ],
+      "shape": "batch",
+      "subs": [
+        {
+          "n_events": 8262,
+          "reference_message_sha256": "ca96c9876c339f096ba3806fdcd55e617869fbd6de9943f7a54356f5a2ef0f35",
+          "reference_trace_sha256": "12c8ad464d61ae53671b05585f1d6ac912d249f5e00ea078c58e6f888e2a499a",
+          "scenario_file": "scenarios/sub_00.json",
+          "sub": "sub_00"
+        },
+        {
+          "n_events": 8256,
+          "reference_message_sha256": "4377673571acdafb8c094ab7bc6b24cd5628a2ae2ef2596a829ef8f4b4562bea",
+          "reference_trace_sha256": "c28aa4ea7b03905a5807a50db7946e7441779d1cf33177bc40a522892cd9add4",
+          "scenario_file": "scenarios/sub_01.json",
+          "sub": "sub_01"
+        },
+        {
+          "n_events": 8233,
+          "reference_message_sha256": "c1dca14fa5dc5759db198ff7dc46870242b73dc5b2152a219ca067cb3e6298fb",
+          "reference_trace_sha256": "0ecfb5b5173584e135c701bf0505c2b85bb38ec85a4ee7cc9732fb0d5167c060",
+          "scenario_file": "scenarios/sub_02.json",
+          "sub": "sub_02"
+        }
+      ],
+      "unit": "t3-gbatch-dense-3"
+    },
+    {
+      "input_sha256": {
+        "batch.json": "35d67fdb4c4340c93b8b36bca36c8085dfb65e933a2fc78c72d39edbc43f71f9",
+        "card.toml": "84057349784e9d411c6e8f08334cd8dde24bed558b94f81c6ff81c422e998fea",
+        "scenarios/sub_00_noise.json": "6b08dade5cc3da793c301f6fbaa37a77c538dc092604ae45809dfe3727688177",
+        "scenarios/sub_01_value.json": "885a671c7a0d752367d2046c7cc7945c285e93d9d4c22434691c5162da0ce6e7",
+        "scenarios/sub_02_mm.json": "9e50ce27969a3d491dcfabcb676c3cd24cb8681a3f6dd29034b17be195623006",
+        "scenarios/sub_03_momentum.json": "62ea32772b8bca3834419b67a73bb3693c6b53e9bc8407f49d90d67a1aa2d39c",
+        "scenarios/sub_04_base.json": "c7d68ac77ebb9e8632276040df7e067f030d6fa1da25e7b4127f1cb40fbc1cd3"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-hetero-mix/checks/reference_data/sub_00_noise/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-hetero-mix/checks/reference_data/sub_00_noise/message_trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-hetero-mix/checks/reference_data/sub_01_value/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-hetero-mix/checks/reference_data/sub_01_value/message_trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-hetero-mix/checks/reference_data/sub_02_mm/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-hetero-mix/checks/reference_data/sub_02_mm/message_trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-hetero-mix/checks/reference_data/sub_03_momentum/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-hetero-mix/checks/reference_data/sub_03_momentum/message_trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-hetero-mix/checks/reference_data/sub_04_base/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-hetero-mix/checks/reference_data/sub_04_base/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "checks/reference_data/sub_00_noise/message_trace.parquet": "e7f96c326882e51d3e12316c563fd003e2e8a023b808fd79b826097795da8a07",
+        "checks/reference_data/sub_00_noise/trace.parquet": "53f051d40e860bc0ea940190fdbacab551b1624a8b60b2fcec7e33e76e800c95",
+        "checks/reference_data/sub_01_value/message_trace.parquet": "d1c7ccb3e5b5c081bf0420a6baf04e5fd39481e0656d530291cf692fe9761403",
+        "checks/reference_data/sub_01_value/trace.parquet": "dc756908aac1fe6615806a89493e64bdc4f37f154493666ee203ff6675c15d68",
+        "checks/reference_data/sub_02_mm/message_trace.parquet": "1ef855f2f76394f82c7bd17a8cc590c319a1391f4dd5683a40c6cf8aa9fb768b",
+        "checks/reference_data/sub_02_mm/trace.parquet": "38b4f456e15918a80869cfa7918f7d6e1a22bb45f92b9fb42dd7f60b64e70fce",
+        "checks/reference_data/sub_03_momentum/message_trace.parquet": "0c0d22306edae4a3c98bbc3c42fb32559c91117d56099a9511e8e769baeb663a",
+        "checks/reference_data/sub_03_momentum/trace.parquet": "d9d0fa28485959fb1035a15a66d1099c962a4e31022be70c182e05747fdd609a",
+        "checks/reference_data/sub_04_base/message_trace.parquet": "e868feefcd7df96559cb2bd2fdf3b2895114af7a34074d6c05406fa499141159",
+        "checks/reference_data/sub_04_base/trace.parquet": "0cb70d26605f5b2014947983b20c6298be99aac8f43b491479d7c640347d067a"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-hetero-mix/scenarios/sub_00_noise.json",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-hetero-mix/scenarios/sub_01_value.json",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-hetero-mix/scenarios/sub_02_mm.json",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-hetero-mix/scenarios/sub_03_momentum.json",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-hetero-mix/scenarios/sub_04_base.json"
+      ],
+      "shape": "batch",
+      "subs": [
+        {
+          "n_events": 8225,
+          "reference_message_sha256": "e7f96c326882e51d3e12316c563fd003e2e8a023b808fd79b826097795da8a07",
+          "reference_trace_sha256": "53f051d40e860bc0ea940190fdbacab551b1624a8b60b2fcec7e33e76e800c95",
+          "scenario_file": "scenarios/sub_00_noise.json",
+          "sub": "sub_00_noise"
+        },
+        {
+          "n_events": 8137,
+          "reference_message_sha256": "d1c7ccb3e5b5c081bf0420a6baf04e5fd39481e0656d530291cf692fe9761403",
+          "reference_trace_sha256": "dc756908aac1fe6615806a89493e64bdc4f37f154493666ee203ff6675c15d68",
+          "scenario_file": "scenarios/sub_01_value.json",
+          "sub": "sub_01_value"
+        },
+        {
+          "n_events": 24065,
+          "reference_message_sha256": "1ef855f2f76394f82c7bd17a8cc590c319a1391f4dd5683a40c6cf8aa9fb768b",
+          "reference_trace_sha256": "38b4f456e15918a80869cfa7918f7d6e1a22bb45f92b9fb42dd7f60b64e70fce",
+          "scenario_file": "scenarios/sub_02_mm.json",
+          "sub": "sub_02_mm"
+        },
+        {
+          "n_events": 8147,
+          "reference_message_sha256": "0c0d22306edae4a3c98bbc3c42fb32559c91117d56099a9511e8e769baeb663a",
+          "reference_trace_sha256": "d9d0fa28485959fb1035a15a66d1099c962a4e31022be70c182e05747fdd609a",
+          "scenario_file": "scenarios/sub_03_momentum.json",
+          "sub": "sub_03_momentum"
+        },
+        {
+          "n_events": 8138,
+          "reference_message_sha256": "e868feefcd7df96559cb2bd2fdf3b2895114af7a34074d6c05406fa499141159",
+          "reference_trace_sha256": "0cb70d26605f5b2014947983b20c6298be99aac8f43b491479d7c640347d067a",
+          "scenario_file": "scenarios/sub_04_base.json",
+          "sub": "sub_04_base"
+        }
+      ],
+      "unit": "t3-gbatch-hetero-mix"
+    },
+    {
+      "input_sha256": {
+        "batch.json": "347523d405c1139488d56fc73f12eb66611f7b970659890657ab0b5895d5eebe",
+        "card.toml": "77d3e1e311e4eb6f23e01a70ce1a2183d92d758e5c4bd61bedeb5d4758dabdf3",
+        "scenarios/sub_00.json": "113e5a65f2761a7b1a4187bf6f06573e946ff96fea16c695d7ea4920ae516da9",
+        "scenarios/sub_01.json": "3b72d65e9ed671d4395de20395e9aa93ec2dd587d2f0b5fc4e15cd4a40802014",
+        "scenarios/sub_02.json": "b3d631060cbd68d95bb60215ccbbb51da75be1a377e77e6a38f5a5c6adb49ea2",
+        "scenarios/sub_03.json": "019a9c75626f554bea3668252870cf898bb4b0d84e99a239c75d8a3fd4705335"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-homog-4/checks/reference_data/sub_00/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-homog-4/checks/reference_data/sub_00/message_trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-homog-4/checks/reference_data/sub_01/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-homog-4/checks/reference_data/sub_01/message_trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-homog-4/checks/reference_data/sub_02/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-homog-4/checks/reference_data/sub_02/message_trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-homog-4/checks/reference_data/sub_03/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-homog-4/checks/reference_data/sub_03/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "checks/reference_data/sub_00/message_trace.parquet": "1c9e6b0c20c672d211c6fd9bd9d40942a5d0d507d8948ce8656ab8f2354b093e",
+        "checks/reference_data/sub_00/trace.parquet": "f49ab9845633c755fbcc37c6dd44c197bd90e5aaf3446440863e7473c9ad7167",
+        "checks/reference_data/sub_01/message_trace.parquet": "ee03dabcc278c63cc4a6129c9d52d34fdd0d1b6928cd911a0df98a48e30400f8",
+        "checks/reference_data/sub_01/trace.parquet": "ec21b9f7e4cd8d7aca46de33e4edb5bcb19edfec642a346fd507cdc648a0983f",
+        "checks/reference_data/sub_02/message_trace.parquet": "1dc68b2602129da722c60333782ba45eba1f88d86ba269ee033733315ae53c7c",
+        "checks/reference_data/sub_02/trace.parquet": "3f727b8bedab3e3ee666f868302ffa0713198816b5d847f25761d42b3eecab77",
+        "checks/reference_data/sub_03/message_trace.parquet": "4910595fb3c90547a8c812624dc14d965a30d5a333a8c5967d41835ca51db8f0",
+        "checks/reference_data/sub_03/trace.parquet": "e7ac09671130edb82ebec821f533d3c140b86036252c898128ac59a12ac6a836"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-homog-4/scenarios/sub_00.json",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-homog-4/scenarios/sub_01.json",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-homog-4/scenarios/sub_02.json",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-homog-4/scenarios/sub_03.json"
+      ],
+      "shape": "batch",
+      "subs": [
+        {
+          "n_events": 8150,
+          "reference_message_sha256": "1c9e6b0c20c672d211c6fd9bd9d40942a5d0d507d8948ce8656ab8f2354b093e",
+          "reference_trace_sha256": "f49ab9845633c755fbcc37c6dd44c197bd90e5aaf3446440863e7473c9ad7167",
+          "scenario_file": "scenarios/sub_00.json",
+          "sub": "sub_00"
+        },
+        {
+          "n_events": 8135,
+          "reference_message_sha256": "ee03dabcc278c63cc4a6129c9d52d34fdd0d1b6928cd911a0df98a48e30400f8",
+          "reference_trace_sha256": "ec21b9f7e4cd8d7aca46de33e4edb5bcb19edfec642a346fd507cdc648a0983f",
+          "scenario_file": "scenarios/sub_01.json",
+          "sub": "sub_01"
+        },
+        {
+          "n_events": 8149,
+          "reference_message_sha256": "1dc68b2602129da722c60333782ba45eba1f88d86ba269ee033733315ae53c7c",
+          "reference_trace_sha256": "3f727b8bedab3e3ee666f868302ffa0713198816b5d847f25761d42b3eecab77",
+          "scenario_file": "scenarios/sub_02.json",
+          "sub": "sub_02"
+        },
+        {
+          "n_events": 8146,
+          "reference_message_sha256": "4910595fb3c90547a8c812624dc14d965a30d5a333a8c5967d41835ca51db8f0",
+          "reference_trace_sha256": "e7ac09671130edb82ebec821f533d3c140b86036252c898128ac59a12ac6a836",
+          "scenario_file": "scenarios/sub_03.json",
+          "sub": "sub_03"
+        }
+      ],
+      "unit": "t3-gbatch-homog-4"
+    },
+    {
+      "input_sha256": {
+        "batch.json": "0db6ee69c2edd955649e9e790074b5dda96d812835580ed93f4c9a3a61cff39c",
+        "card.toml": "c0d660bb07546dafa03ece146d3739b083e35483d5a835315867a4bcb4639063",
+        "scenarios/sub_00.json": "d196bce83349d3f3820c68a58323d0d0ef5815e4e52bb1f9398b1d8e1320ff5b",
+        "scenarios/sub_01.json": "ccb3f5edc0d836b19d041818f2fff116f169e0be8114aea3173700211e78d043",
+        "scenarios/sub_02.json": "27301c56cfe2628dbb529892fd89e44b18e5f47c89e8a34152f145859be33c97",
+        "scenarios/sub_03.json": "50fcf1bdbcb63a991fd380a3eb1b99b3140f32c371879f0ce99d83fb7ea278be",
+        "scenarios/sub_04.json": "216dcea8361c3898ce91621f51450b1a7bd551c74f32601cc8f6e409d3ef1e4b",
+        "scenarios/sub_05.json": "b9d473f308298744f01cf383289857bbc909ae754c2c872bf14e70efb2324e37",
+        "scenarios/sub_06.json": "934b1c97c87bb301f5bc0b07cd9b0138a5e1194b9472b06bb9152b37b05fe539",
+        "scenarios/sub_07.json": "cd4b88b4487b8bf07203b4cec4cc580a26a02d265daa0d369f1fca56e773542f"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-homog-8/checks/reference_data/sub_00/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-homog-8/checks/reference_data/sub_00/message_trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-homog-8/checks/reference_data/sub_01/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-homog-8/checks/reference_data/sub_01/message_trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-homog-8/checks/reference_data/sub_02/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-homog-8/checks/reference_data/sub_02/message_trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-homog-8/checks/reference_data/sub_03/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-homog-8/checks/reference_data/sub_03/message_trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-homog-8/checks/reference_data/sub_04/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-homog-8/checks/reference_data/sub_04/message_trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-homog-8/checks/reference_data/sub_05/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-homog-8/checks/reference_data/sub_05/message_trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-homog-8/checks/reference_data/sub_06/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-homog-8/checks/reference_data/sub_06/message_trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-homog-8/checks/reference_data/sub_07/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-homog-8/checks/reference_data/sub_07/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "checks/reference_data/sub_00/message_trace.parquet": "39ca264c0b8b723bc0a2771c4078da6f0f6ff6d815b779c395656056941f25d8",
+        "checks/reference_data/sub_00/trace.parquet": "697847ea5aab9f39e437f88e22e2866e5fb4bc6effe9e3f102a2348575cab3ad",
+        "checks/reference_data/sub_01/message_trace.parquet": "75af3eae0175c43637e6d3227741add7835ffe66513423b6a61bc7d7b0642cbe",
+        "checks/reference_data/sub_01/trace.parquet": "aac8c1efb90789733dc17378fd71111b5428d169ad4508ac6a8b72fb7023ebb9",
+        "checks/reference_data/sub_02/message_trace.parquet": "3c5cdee2f2e78f72d3523cf7604af0e500a31cb602007936b16ffd9723c6069c",
+        "checks/reference_data/sub_02/trace.parquet": "d0e4f6e4a6f86021a94ad1ebf4777ed890c2d76d3343aa2bbcd9c819c85374dd",
+        "checks/reference_data/sub_03/message_trace.parquet": "ddb307bb51cbb041e520c0aecc00228cc52d193d80977bf46fb47e883d8eac71",
+        "checks/reference_data/sub_03/trace.parquet": "7a5b84d05e69c3647e9cc2313c79c9dbe06512d778c47612e989daa5044ed281",
+        "checks/reference_data/sub_04/message_trace.parquet": "1fb4188b8b056867d064cedafad2de92770d7665a429cfdf6c302b482f6ee222",
+        "checks/reference_data/sub_04/trace.parquet": "2b084f323136d9aa7b4ae152a59954e79726765df83fe2c50a9fdc00b36c65c8",
+        "checks/reference_data/sub_05/message_trace.parquet": "59bdbc66781d21e25087d8242e33ddff4ad2a28ccdbdc9c08551f39a513fee6c",
+        "checks/reference_data/sub_05/trace.parquet": "045f323473217c01fb29af9e454dd9ab59a919ec2cc9e13738ffeecba2192f46",
+        "checks/reference_data/sub_06/message_trace.parquet": "883ecbae08caa0c7c09bba3303b039b3cc984d19f9f45b7aa64677ed02604752",
+        "checks/reference_data/sub_06/trace.parquet": "0cefef3d51aeae2a781075657b1a3bfe2313f158e28d83602d9d06f13568dacc",
+        "checks/reference_data/sub_07/message_trace.parquet": "4ef1f1988cf282d9545011a5f9aa325bd62058a6d6206be009390a1183198870",
+        "checks/reference_data/sub_07/trace.parquet": "30a2d755e895e2970da0940ea537626043ce9b77859f514e28ec95604cc3368f"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-homog-8/scenarios/sub_00.json",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-homog-8/scenarios/sub_01.json",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-homog-8/scenarios/sub_02.json",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-homog-8/scenarios/sub_03.json",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-homog-8/scenarios/sub_04.json",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-homog-8/scenarios/sub_05.json",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-homog-8/scenarios/sub_06.json",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-homog-8/scenarios/sub_07.json"
+      ],
+      "shape": "batch",
+      "subs": [
+        {
+          "n_events": 8151,
+          "reference_message_sha256": "39ca264c0b8b723bc0a2771c4078da6f0f6ff6d815b779c395656056941f25d8",
+          "reference_trace_sha256": "697847ea5aab9f39e437f88e22e2866e5fb4bc6effe9e3f102a2348575cab3ad",
+          "scenario_file": "scenarios/sub_00.json",
+          "sub": "sub_00"
+        },
+        {
+          "n_events": 8144,
+          "reference_message_sha256": "75af3eae0175c43637e6d3227741add7835ffe66513423b6a61bc7d7b0642cbe",
+          "reference_trace_sha256": "aac8c1efb90789733dc17378fd71111b5428d169ad4508ac6a8b72fb7023ebb9",
+          "scenario_file": "scenarios/sub_01.json",
+          "sub": "sub_01"
+        },
+        {
+          "n_events": 8145,
+          "reference_message_sha256": "3c5cdee2f2e78f72d3523cf7604af0e500a31cb602007936b16ffd9723c6069c",
+          "reference_trace_sha256": "d0e4f6e4a6f86021a94ad1ebf4777ed890c2d76d3343aa2bbcd9c819c85374dd",
+          "scenario_file": "scenarios/sub_02.json",
+          "sub": "sub_02"
+        },
+        {
+          "n_events": 8140,
+          "reference_message_sha256": "ddb307bb51cbb041e520c0aecc00228cc52d193d80977bf46fb47e883d8eac71",
+          "reference_trace_sha256": "7a5b84d05e69c3647e9cc2313c79c9dbe06512d778c47612e989daa5044ed281",
+          "scenario_file": "scenarios/sub_03.json",
+          "sub": "sub_03"
+        },
+        {
+          "n_events": 8152,
+          "reference_message_sha256": "1fb4188b8b056867d064cedafad2de92770d7665a429cfdf6c302b482f6ee222",
+          "reference_trace_sha256": "2b084f323136d9aa7b4ae152a59954e79726765df83fe2c50a9fdc00b36c65c8",
+          "scenario_file": "scenarios/sub_04.json",
+          "sub": "sub_04"
+        },
+        {
+          "n_events": 8148,
+          "reference_message_sha256": "59bdbc66781d21e25087d8242e33ddff4ad2a28ccdbdc9c08551f39a513fee6c",
+          "reference_trace_sha256": "045f323473217c01fb29af9e454dd9ab59a919ec2cc9e13738ffeecba2192f46",
+          "scenario_file": "scenarios/sub_05.json",
+          "sub": "sub_05"
+        },
+        {
+          "n_events": 8148,
+          "reference_message_sha256": "883ecbae08caa0c7c09bba3303b039b3cc984d19f9f45b7aa64677ed02604752",
+          "reference_trace_sha256": "0cefef3d51aeae2a781075657b1a3bfe2313f158e28d83602d9d06f13568dacc",
+          "scenario_file": "scenarios/sub_06.json",
+          "sub": "sub_06"
+        },
+        {
+          "n_events": 8135,
+          "reference_message_sha256": "4ef1f1988cf282d9545011a5f9aa325bd62058a6d6206be009390a1183198870",
+          "reference_trace_sha256": "30a2d755e895e2970da0940ea537626043ce9b77859f514e28ec95604cc3368f",
+          "scenario_file": "scenarios/sub_07.json",
+          "sub": "sub_07"
+        }
+      ],
+      "unit": "t3-gbatch-homog-8"
+    },
+    {
+      "input_sha256": {
+        "batch.json": "efe8177fb6d32cccc28bd4579797659e0add09a231c911a7b5dafe0e1b5cfcb5",
+        "card.toml": "253fa7591136cffd60d340876223c4add0bc51a66112dfaeb479737f351774f5",
+        "scenarios/sub_00.json": "663b742bb673cd83ec4ed060c3d1be623cf048af630d71f7d374241cd01c1f6d",
+        "scenarios/sub_01.json": "e76d4763bc0ad1a7a221605c1df877015bfeb3ce03fd4d0fbf4c3842ce7fe518",
+        "scenarios/sub_02.json": "fb64c3a78c70746562f1ac3029dfe8061ee7a0b2687e0096c1ecbf0c750c64ae",
+        "scenarios/sub_03.json": "3f098b7f013d1d743f1503b76e44d111b42bbefdb59d7d7b42b1e2d0f51bd9a9",
+        "scenarios/sub_04.json": "c3b33823062e24e7de45a9c86991aa3cfc00c9f76d546f1771c62d42501d1899",
+        "scenarios/sub_05.json": "b22c430a66d19becd529a5a65206a22a48cf2304df46781e9eaec3719a715223"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-many-6/checks/reference_data/sub_00/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-many-6/checks/reference_data/sub_00/message_trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-many-6/checks/reference_data/sub_01/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-many-6/checks/reference_data/sub_01/message_trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-many-6/checks/reference_data/sub_02/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-many-6/checks/reference_data/sub_02/message_trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-many-6/checks/reference_data/sub_03/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-many-6/checks/reference_data/sub_03/message_trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-many-6/checks/reference_data/sub_04/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-many-6/checks/reference_data/sub_04/message_trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-many-6/checks/reference_data/sub_05/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-many-6/checks/reference_data/sub_05/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "checks/reference_data/sub_00/message_trace.parquet": "9a7465fb09198641f11ddb72f79822790793a5f8b6ec76c74ee7b6368c91c502",
+        "checks/reference_data/sub_00/trace.parquet": "8e67ad0ddf2c913b2042ade64305848f55c189eeac3b1b370bd30045a22b0456",
+        "checks/reference_data/sub_01/message_trace.parquet": "cacf7fdb7280489eab1c9ac7cf85df38ce19427afb6fb13552bbc90047526a24",
+        "checks/reference_data/sub_01/trace.parquet": "2e82ce45ce376aebce9a8d78c57bceb7b4ed54be076c492246b8e7af856f53d2",
+        "checks/reference_data/sub_02/message_trace.parquet": "d2a4c2b3e58bb2fb2be990e729f13151e270c79dbf5cddc2ad318dca5c2ccc50",
+        "checks/reference_data/sub_02/trace.parquet": "ba9dc838d9d5f52475ff201d4ba9491912343a8a8823d59629c505547292a073",
+        "checks/reference_data/sub_03/message_trace.parquet": "83afec64b56e2bf63e13c66279ab4a8bf74970bcfc232d9c0f2dd44f402e454e",
+        "checks/reference_data/sub_03/trace.parquet": "aad5393686233f92bbb914a58818771715bd6cfee75fcb96f65200770ebedd5f",
+        "checks/reference_data/sub_04/message_trace.parquet": "50688d0d0b6f94a816131a397c833e1cf70354690034ec06298c6c072f7d5919",
+        "checks/reference_data/sub_04/trace.parquet": "0e2fb6a96d234f7e000925352813304ad1eb1d5866244a7ec0d46a5ab42ca01d",
+        "checks/reference_data/sub_05/message_trace.parquet": "6a43687a4da5c0b019c3c7194264fde64e903d327993393e4c43b50a3309f1ca",
+        "checks/reference_data/sub_05/trace.parquet": "ae7530f7d13e43927d72af16286596080f68ffcaad083584c73586f50eff3494"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-many-6/scenarios/sub_00.json",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-many-6/scenarios/sub_01.json",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-many-6/scenarios/sub_02.json",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-many-6/scenarios/sub_03.json",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-many-6/scenarios/sub_04.json",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-many-6/scenarios/sub_05.json"
+      ],
+      "shape": "batch",
+      "subs": [
+        {
+          "n_events": 8130,
+          "reference_message_sha256": "9a7465fb09198641f11ddb72f79822790793a5f8b6ec76c74ee7b6368c91c502",
+          "reference_trace_sha256": "8e67ad0ddf2c913b2042ade64305848f55c189eeac3b1b370bd30045a22b0456",
+          "scenario_file": "scenarios/sub_00.json",
+          "sub": "sub_00"
+        },
+        {
+          "n_events": 8152,
+          "reference_message_sha256": "cacf7fdb7280489eab1c9ac7cf85df38ce19427afb6fb13552bbc90047526a24",
+          "reference_trace_sha256": "2e82ce45ce376aebce9a8d78c57bceb7b4ed54be076c492246b8e7af856f53d2",
+          "scenario_file": "scenarios/sub_01.json",
+          "sub": "sub_01"
+        },
+        {
+          "n_events": 8146,
+          "reference_message_sha256": "d2a4c2b3e58bb2fb2be990e729f13151e270c79dbf5cddc2ad318dca5c2ccc50",
+          "reference_trace_sha256": "ba9dc838d9d5f52475ff201d4ba9491912343a8a8823d59629c505547292a073",
+          "scenario_file": "scenarios/sub_02.json",
+          "sub": "sub_02"
+        },
+        {
+          "n_events": 8150,
+          "reference_message_sha256": "83afec64b56e2bf63e13c66279ab4a8bf74970bcfc232d9c0f2dd44f402e454e",
+          "reference_trace_sha256": "aad5393686233f92bbb914a58818771715bd6cfee75fcb96f65200770ebedd5f",
+          "scenario_file": "scenarios/sub_03.json",
+          "sub": "sub_03"
+        },
+        {
+          "n_events": 8163,
+          "reference_message_sha256": "50688d0d0b6f94a816131a397c833e1cf70354690034ec06298c6c072f7d5919",
+          "reference_trace_sha256": "0e2fb6a96d234f7e000925352813304ad1eb1d5866244a7ec0d46a5ab42ca01d",
+          "scenario_file": "scenarios/sub_04.json",
+          "sub": "sub_04"
+        },
+        {
+          "n_events": 8140,
+          "reference_message_sha256": "6a43687a4da5c0b019c3c7194264fde64e903d327993393e4c43b50a3309f1ca",
+          "reference_trace_sha256": "ae7530f7d13e43927d72af16286596080f68ffcaad083584c73586f50eff3494",
+          "scenario_file": "scenarios/sub_05.json",
+          "sub": "sub_05"
+        }
+      ],
+      "unit": "t3-gbatch-many-6"
+    },
+    {
+      "input_sha256": {
+        "batch.json": "6264b574ebaf6be5f7e26674bd7a90495d6097556f26fa4bd728e7f56b3b4fb4",
+        "card.toml": "984bb916c33b1c92e1c565cff050116badb05d1750d777f70e66837b82a80d0c",
+        "scenarios/sub_00_short.json": "32f4e13e5f7cbf3fbd55595003b552f7e06cf3480109ca1576cdf8df1f0af8b5",
+        "scenarios/sub_01_med.json": "9a5e0d8ae7aeac7af0d4e3cd62674a681544a374792d245800d227fa9444d573",
+        "scenarios/sub_02_long.json": "a2b6f8d4d20feab96d1468aae97fb33c498ff97a82119a2b140785542a29a225",
+        "scenarios/sub_03_med.json": "9059919f8b6de60cd014c00f5402d58204aab915b5a4498ac4a8103774da896e"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-varsize/checks/reference_data/sub_00_short/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-varsize/checks/reference_data/sub_00_short/message_trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-varsize/checks/reference_data/sub_01_med/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-varsize/checks/reference_data/sub_01_med/message_trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-varsize/checks/reference_data/sub_02_long/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-varsize/checks/reference_data/sub_02_long/message_trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-varsize/checks/reference_data/sub_03_med/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-varsize/checks/reference_data/sub_03_med/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "checks/reference_data/sub_00_short/message_trace.parquet": "12ad23fc316f7ad3a15c3de13e6def34a690bf002388cc8a9bc0664c8620f9af",
+        "checks/reference_data/sub_00_short/trace.parquet": "2ee03dd96def2bdff28392cc4bf786b8088fa015f39103b59da5b4eccd688116",
+        "checks/reference_data/sub_01_med/message_trace.parquet": "2254b22d9eee3ff08df26b6656949bb8ce91954d8231776b62de053aa8fbc327",
+        "checks/reference_data/sub_01_med/trace.parquet": "b4ba0e12cd4bdf587598040497fe82e4153ccce4eca599093c7d18494a4c58c8",
+        "checks/reference_data/sub_02_long/message_trace.parquet": "03300b4bd9fce1b70af8818780588e97711fafb1231bc75094b99ec74a84bb4b",
+        "checks/reference_data/sub_02_long/trace.parquet": "e1cb95c4564a0ab4c4cbd8cc152e131e3d9d5c321eb65f8c5659879ef3a911d4",
+        "checks/reference_data/sub_03_med/message_trace.parquet": "8e0bb64c1f648f76d15c6f40712212fedf8ed5ffc6413aebc7daf45b8fdaa655",
+        "checks/reference_data/sub_03_med/trace.parquet": "5aaab50d57cc91ea59b65587370816fc9b4438319fccb3ae174218d1d288e50f"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-varsize/scenarios/sub_00_short.json",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-varsize/scenarios/sub_01_med.json",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-varsize/scenarios/sub_02_long.json",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-gbatch-varsize/scenarios/sub_03_med.json"
+      ],
+      "shape": "batch",
+      "subs": [
+        {
+          "n_events": 5095,
+          "reference_message_sha256": "12ad23fc316f7ad3a15c3de13e6def34a690bf002388cc8a9bc0664c8620f9af",
+          "reference_trace_sha256": "2ee03dd96def2bdff28392cc4bf786b8088fa015f39103b59da5b4eccd688116",
+          "scenario_file": "scenarios/sub_00_short.json",
+          "sub": "sub_00_short"
+        },
+        {
+          "n_events": 8146,
+          "reference_message_sha256": "2254b22d9eee3ff08df26b6656949bb8ce91954d8231776b62de053aa8fbc327",
+          "reference_trace_sha256": "b4ba0e12cd4bdf587598040497fe82e4153ccce4eca599093c7d18494a4c58c8",
+          "scenario_file": "scenarios/sub_01_med.json",
+          "sub": "sub_01_med"
+        },
+        {
+          "n_events": 12221,
+          "reference_message_sha256": "03300b4bd9fce1b70af8818780588e97711fafb1231bc75094b99ec74a84bb4b",
+          "reference_trace_sha256": "e1cb95c4564a0ab4c4cbd8cc152e131e3d9d5c321eb65f8c5659879ef3a911d4",
+          "scenario_file": "scenarios/sub_02_long.json",
+          "sub": "sub_02_long"
+        },
+        {
+          "n_events": 9177,
+          "reference_message_sha256": "8e0bb64c1f648f76d15c6f40712212fedf8ed5ffc6413aebc7daf45b8fdaa655",
+          "reference_trace_sha256": "5aaab50d57cc91ea59b65587370816fc9b4438319fccb3ae174218d1d288e50f",
+          "scenario_file": "scenarios/sub_03_med.json",
+          "sub": "sub_03_med"
+        }
+      ],
+      "unit": "t3-gbatch-varsize"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "b9faee9a4abea2625af1b9b9f0124e86c3e836ca8672b5252ed61d20f2f66d7f",
+        "scenario.json": "96009c5814c6fe6016fed5bc52530e9f4113f16ca58c29e2c72f1ae7121daf12"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-momentum-mix-priority/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-momentum-mix-priority/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "45cd04aa3f3a874d5972f219534d2895442efe1853a1186991ad7d533ed959d7",
+        "trace.parquet": "49dd9d2bb95890ce4649b7107362406c0864065c58e0dd3b9525c71534ae054e"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-momentum-mix-priority/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-momentum-mix-priority"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "7bd20b4944de308b4b2086285983f1b20647538afe2e5dfb9e5d110759061161",
+        "scenario.json": "dcc90448a4237376dfcb0feed9732450c4754b4d36e4d0934480cbe079df637b"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-mp01-stp-newest-baseline/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-mp01-stp-newest-baseline/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "58eb6ed86882fb53dcb280fe40529f9079f61de6a6aba3ce798dd1d6836cdaba",
+        "trace.parquet": "297decc00dae822def086f90b654d1037211dcaedb8dd97b3875d151fc9ca3ed"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-mp01-stp-newest-baseline/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-mp01-stp-newest-baseline"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "671a1074ebdc2eed53c7857ecfba90bab9e30b67541c97d2091aec408a82d2c5",
+        "scenario.json": "a99cbdd359bb37854687a96d2d23446b5a9e603d435f7b18c42860ad704c6837"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-mp02-stp-oldest-baseline/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-mp02-stp-oldest-baseline/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "54262822bac387730be4043fdcce330f65c6e66463e47b24c41f9cb9785f9348",
+        "trace.parquet": "d766b2eecbc4b5b67867d66bf29f7427c3bcb213f0c47f0aed4202432129d46c"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-mp02-stp-oldest-baseline/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-mp02-stp-oldest-baseline"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "185569f96b3e8a6b8732b2b05742ee8d504a2a6d33516b4517a6c245fb958985",
+        "scenario.json": "ef4e3a439281966a2dc659d444488dd2ab58df95c367c6c4b366636ee617e0e5"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-mp03-mm-heavy-newest/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-mp03-mm-heavy-newest/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "a106671433a04bb98c1171e9e9edf2c2ff3e2b02795c2f75af17ffaa2cbe478f",
+        "trace.parquet": "e5d28c82e0423c45aecc78f3b20e25ddc0855ecc4b7d4c5311dd8c674135c6dd"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-mp03-mm-heavy-newest/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-mp03-mm-heavy-newest"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "cd3f294d323c7cc4d8ab0f19273c1bf708636ded06e4f7fafd9caa498182bb5f",
+        "scenario.json": "9cb95c58a839bba4180ae285ffb7fa83d7c547541882de204b810c785293af1a"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-mp04-mm-heavy-oldest/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-mp04-mm-heavy-oldest/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "ac495fb2e4be2597fb18892cf244878587815fd27f7e483a9442ffaa2560846e",
+        "trace.parquet": "83341e5ac9ccf4872c1cf4eba65e269a13c5c7c3604553a6ea3ed48d184b88d6"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-mp04-mm-heavy-oldest/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-mp04-mm-heavy-oldest"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "d38eb4d6df9412e0835441c7cb1b6286953932b744e6e673325fa878da05e09e",
+        "scenario.json": "0af9f298f191c4a33982852cf344b5dbe81475846beb274ca56a92f8c95a9183"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-mp05-cancel-churn-newest/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-mp05-cancel-churn-newest/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "8342cfb62afbbccf6ae765d9c36493096bfaa265e2c7dfd873cc8b0c40426afb",
+        "trace.parquet": "f83b6143c66629a0e2887ca5944b3360cd3bcb7c0b46e57de763f192452f6c14"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-mp05-cancel-churn-newest/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-mp05-cancel-churn-newest"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "5d23374de602af60bd51463c818c591a14daafee780a37b0f73f1ba2f55457c7",
+        "scenario.json": "50c22f315c2e0e0fa2f43c41a8efc03308de84bb153e010445dcacb913758a5a"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-mp06-tight-spread-selfcross/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-mp06-tight-spread-selfcross/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "6ca9ec6eb3a628475f85ed41eebb6c6395a0c5b54dfe5d482d1d59f0ee836ba9",
+        "trace.parquet": "608a6ed05f12f1156cfc7ad65accba878f97aac152f235131cb424e8e72ad3e8"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-mp06-tight-spread-selfcross/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-mp06-tight-spread-selfcross"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "2293dea940345f1346803089c420e1c9110839702f9a11523e6c1a99a3dd8893",
+        "scenario.json": "5fb7dc981da38025752e66688901212c5020987eb713a7ff2fa44101a7761c0d"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-mp07-heavy-flow-oldest/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-mp07-heavy-flow-oldest/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "1520ed918427d52d4421c4ff9ff48d429c9983f474d3ea1657123a6d5c7d9ef8",
+        "trace.parquet": "8bc596549dcfb8bb761d32c7cd72dc22b6356c30f6da9fa69e39789459f7f4cf"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-mp07-heavy-flow-oldest/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-mp07-heavy-flow-oldest"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "ed5dcac1e217d8b207b2898e101c008b2fba76078581cb88594c841feb9195a0",
+        "scenario.json": "ff135c280318e26389c6ca0cb40b310f291f644e50d23be5cbabe98f152b525b"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-mr-cancel-replace-churn/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-mr-cancel-replace-churn/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "d63b019ad5092da3f236317ac4c6bdc92bf1792efc71c8cc948634840f707ffd",
+        "trace.parquet": "f7b25b798b917611e14886c103e2fd6c2697a15ee68c42cea87f71f83bd230bd"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-mr-cancel-replace-churn/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-mr-cancel-replace-churn"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "356410378c2e1aea0161a2daece9f39d1b771426904bd91f60cf8ed795fb3a84",
+        "scenario.json": "959fde96f8bd3356e502b249410e948dce7eb78d8a063a60253d216cb18b523a"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-mr-checkpoint-cadence-fine/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-mr-checkpoint-cadence-fine/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "6016414e7c36ea9c85c26dd9a0cb9faed8b0dcef892bb232e1f99635503e55c6",
+        "trace.parquet": "5838617f75fb95b149962f98705afaa2a1cd5e9b8f84bc9f96da169e95528c88"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-mr-checkpoint-cadence-fine/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-mr-checkpoint-cadence-fine"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "87520c87a50ca33dc8ef037f3e13546cb05577f014a3aef167e84f6e6a603eba",
+        "scenario.json": "ece8b904b0bca208e2736e85269934e5c799f5299119dca7490092f9db01dfb7"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-mr-deep-book-state-size/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-mr-deep-book-state-size/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "f4902d3f5e0734ea2c3fb24e4e32405ffa66e16ad859bb473a725c1e254d5cd9",
+        "trace.parquet": "6381010d829ef8f00131a4e87c6562da495ba2fa3d294b2353bf8c055fbb568b"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-mr-deep-book-state-size/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-mr-deep-book-state-size"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "fad51ea01c2ff585a488f64014c27385b3b4a73a256371d278a3a59128a69525",
+        "scenario.json": "907b7646a670f48edb52f1b0dc0ebffa45120d782e22c4510e5dfce84cdeac09"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-mr-long-horizon-replay/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-mr-long-horizon-replay/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "88c837619ac00e6ddc3eb47ba0a924c072a69195e80e97fe413ba6b37b8499e3",
+        "trace.parquet": "eabc522818ff5ae625390a97d0b0bb1fbffe60e2487ece1cb8201786d06fd226"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-mr-long-horizon-replay/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-mr-long-horizon-replay"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "9228e1cd6992f8897c94643951f487a181e6f84f6ebe7a98c464a86680af1b36",
+        "scenario.json": "99a22e9dc9e8ffe21e6c207ff4a73fd0b2a76f6d419c3ee2141107405940f863"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-multilevel-crossing/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-multilevel-crossing/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "4f0e104efae1aaa6e547a7fa5047d9da2215b149a9c7b6a3812ab3f31a803010",
+        "trace.parquet": "50ef3497408fe4c28b11a5ac64c4ba8421d4ad0d01f2b4849fa1bed656bd7bad"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-multilevel-crossing/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-multilevel-crossing"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "8a39c35a15d4506b310b761150017c5aa5747523e7a45bf5a97e3a471e2707bd",
+        "scenario.json": "551ece5f033cccbeba222215c7a82eeb526eeb06c582bfc71b4f3baba1839e3f"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-partialfill-atomicity/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-partialfill-atomicity/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "1dd9cff6524c5e0446c9188ea8f15ed60af75a94a11921745a3912f18e18ebfc",
+        "trace.parquet": "9d2a091a70b22c08e37d4a07f22c8db7465da2eee2c94669cfcba5bebef89971"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-partialfill-atomicity/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-partialfill-atomicity"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "a077272ef6ece08928512d720f675bc83ea00c1cb3976c1a5f98305825f04241",
+        "scenario.json": "e773520d16c6ec517dff04347029f6f34a95d6d01b45a8e35a60f9aeafffaff7"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-ra01-fundamental-shock-mid/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-ra01-fundamental-shock-mid/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "183734f339a031362c90350644216ca740e9f0ed1f6c42f7ede51c9c49656ac9",
+        "trace.parquet": "3c6d69af6372ae6d6bfa0eba7c7271e8231840126d1e63eb7ae2865dfaeaff57"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-ra01-fundamental-shock-mid/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-ra01-fundamental-shock-mid"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "b58c8bc2fe553b822d1d977a4058ec4323329dc834f3fe25db14b6fb1c928c77",
+        "scenario.json": "f2207fb934b91ab8681e100014c7cde7ecc31b9021f055f4de0b21ef9ea6123c"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-ra02-shock-early/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-ra02-shock-early/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "c52afadecbadb24148da2a235febdd6ffb1945c284b37f577744a992399011ed",
+        "trace.parquet": "daf1d2920f511e9a497550bac99d9cb66ff183fce854db27a931e9334dc631c3"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-ra02-shock-early/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-ra02-shock-early"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "b4ac83fd46c7096eb78cd4205562c192b4d679483bc994db59178418f41fe181",
+        "scenario.json": "fc367eadfd32129a1be605ba61b36cb55d543159e116711c97c1a1f44931200c"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-ra03-large-shock/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-ra03-large-shock/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "f0184920794791d5e3e13d9533facf33df3b7ccaec5e91f104e611d38f09b777",
+        "trace.parquet": "7f38815aa08f788e32ec8c09fd713f6a9e646797a8d6edef801c4101bd0dcfdd"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-ra03-large-shock/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-ra03-large-shock"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "64559126cdd7467676501cbc1d0b9e6486bf005a458b1fa4c8df95a8d0ec9b4d",
+        "scenario.json": "6ab0ca8a9be980582edf4494fe6162ff6554d62c4ee5f002eef3f400cb68e6d8"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-ra04-shock-late/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-ra04-shock-late/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "1ee9584c3345d87ef95c3205d6b76b2256d64a44afa1cdfcfa28d2431a5e3e36",
+        "trace.parquet": "27529b1b4a8527fe1f0b0e3b3d9b38d8541ed9b6bbb80893f899a477c6f318be"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-ra04-shock-late/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-ra04-shock-late"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "9cf826971471bce386dc0209e4112a7ac553832d9ceacefa14a0492889e530ce",
+        "scenario.json": "9af39eb3876c4ad4e441d0723dd3a3875713f7d216a0300699902553490ab78d"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-ra05-shock-momentum-heavy/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-ra05-shock-momentum-heavy/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "81d7ecd51d4ea2f163159bcae522760da41e40c3df879c83e24b4a4111083af6",
+        "trace.parquet": "c5b7305452963f582f3ef9453d3193a3bed92c31d9964c6202e6a4d0628dfcc5"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-ra05-shock-momentum-heavy/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-ra05-shock-momentum-heavy"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "907e1c69fdf15341e0884c61e6bedeec03c4aa43be6570d7464f2a0962c8be58",
+        "scenario.json": "1279f7827607621699d7d3429479272e654f024715e442ed53eb0a6554df2c34"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-ra06-shock-value-heavy/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-ra06-shock-value-heavy/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "1ba50e089dcb3b2f4b930dabd3ed8a55c0fe3ffdc6038c3e295c2e1ca0debbb7",
+        "trace.parquet": "ffcba30bef67c4fc54101f50c24782e60c28e6cdbfe5ecec5c5632fb1f8a5b08"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-ra06-shock-value-heavy/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-ra06-shock-value-heavy"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "ff49e94fcbfe7f50a7a16f09053ea855d6106b1a64bb5195c81a810536e379de",
+        "scenario.json": "66033b26ba7b90df6d08d23733497d6d2d77230ab52761d917822faf0bcb874b"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-s001-price-time-priority/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-s001-price-time-priority/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "ee1a9e4f1951c5b5af6576436235383dc66dd8c5ee11063b990afe87e432942c",
+        "trace.parquet": "09a87aa12b27f0dee85322812e7fa85810e5a09f369aaa297c2a58a9a3ef3c53"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-s001-price-time-priority/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-s001-price-time-priority"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "ef9c5adcf0d63918fdd595c770f80a00e3245102b426d14f012fc48e9fb4343d",
+        "scenario.json": "944e6bcce6db0f7693378e135ba4913fe7304e894026377dade7e18e1bd25e9c"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-s012-partial-fill-cancel-race/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-s012-partial-fill-cancel-race/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "4e1977ea5947ed2c8253dd540793eaf65e8e72269502d9a9a0023c71df0492e4",
+        "trace.parquet": "259ef9b786471156e32cbfba678f279d6ad3a7991e0d03ed20a530f71e05887e"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-s012-partial-fill-cancel-race/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-s012-partial-fill-cancel-race"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "38d1ff4611a20731221d917045109a114735df503f085fa7e354052176f014e6",
+        "scenario.json": "60d1f00d8e21d5d00328395667b69d8a6d57da4122239692431562ba357ac9c0"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-s019-latency-jitter-kendall/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-s019-latency-jitter-kendall/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "4fa88d6c796300529d6b05a4d4827bbd0bc3d7007a0115b5ae49abbe3333dd92",
+        "trace.parquet": "0889c36492167a2c7e65cc65defea256ff28b31b7abd82813b1f32b7e1b569b9"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-s019-latency-jitter-kendall/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-s019-latency-jitter-kendall"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "f4553cc19b5952da71934d9adc7382fb67c509a3ba90a5b3d6673146a6737f35",
+        "scenario.json": "c6bded086f54d986eb0c53e93ac0fb69cd3243e9376f9b32fe6758f801662001"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-sf-01-baseline-regime/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-sf-01-baseline-regime/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "9360f775aa93c89c09581af08f96522ad0014bec8103ffe499f7c463bf2a4dab",
+        "trace.parquet": "86b3dc7ae2716a475dc50db453886cd2ed764a1ace8aacd3488ea6f62445283e"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-sf-01-baseline-regime/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-sf-01-baseline-regime"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "85483090e2296301e0af665b02f41d8c7ba9008b2bc518463e281cfef0e4bbb3",
+        "scenario.json": "dc9afc102985c12f3fe6d9d5d4641e237abe0621a7f6de1d4eadfe292dcd6320"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-sf-02-heavy-jump-tails/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-sf-02-heavy-jump-tails/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "a941d7be77be80869b48d604151bf92481a8e21fc395d1c1b5bfa7472667e246",
+        "trace.parquet": "3b3caf4c5c1b0adef13ac2059a6b3ee6c83ed509bcea972d64e9277d3482a458"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-sf-02-heavy-jump-tails/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-sf-02-heavy-jump-tails"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "19b29e30454f0715197b62d6bacae379c8eeede4df4bd59fd7ad5ab07ff7a5f8",
+        "scenario.json": "80e36a08894146b348107ffeae7f9512f006cc755fc621fe212f68a040d8dce7"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-sf-03-vol-clustering-momentum/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-sf-03-vol-clustering-momentum/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "97bf637c4286c9f3be82045d4d0189983960e0bee36108d39729de77742d279c",
+        "trace.parquet": "516f1d8740d8267b8f2992138cfebf362fc648a30fa122700c8a14d4678f0afe"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-sf-03-vol-clustering-momentum/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-sf-03-vol-clustering-momentum"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "cb52bc998fd422f209b5f39894a9bf726420325703fe3daf0b4d33021daa7ec1",
+        "scenario.json": "6de5385e88bf609350122fc67e9b12cb483750ada547e1144cc681c013d19290"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-sf-04-thin-book-depth/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-sf-04-thin-book-depth/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "9c5e68982c032db7ce10ba876ef8cb9a4db2f147de7a05e15d10014abae06449",
+        "trace.parquet": "ac39ecca3a5fe4dffd39a1b644171087b7d2197042af2aca7fbc56b3e9f241d2"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-sf-04-thin-book-depth/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-sf-04-thin-book-depth"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "615d9544d4748350483511deadf40bc3b242e3b28de6a880ea5b33f9346989aa",
+        "scenario.json": "e7de45e6ee1ae4191af2c8b25ad1e6d422cf5d4497aae4221829f7400e62c6ec"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-sf-05-deep-book-liquidity/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-sf-05-deep-book-liquidity/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "a14202ff374a1db9d2a3b73f1079e3f365c09f12daf56c5596f4dfaae56dd6a9",
+        "trace.parquet": "95f278670382138d6a021e3317ed282be39df294e40c7df82084f38b9237f851"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-sf-05-deep-book-liquidity/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-sf-05-deep-book-liquidity"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "8cb003a2a9389c93947c83b6d467d4a7e0d3516b8bf75962994f57d4dfa2d343",
+        "scenario.json": "2506976f082ead35a99a99b16190da1bbbfffcae308ff7c7fdf75546d783dd50"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-sf-06-high-fundamental-vol/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-sf-06-high-fundamental-vol/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "ff7ea7d98b1c170cdcb0dc42596cf100f6ed84a1a48c780df5dd8edea8f56d52",
+        "trace.parquet": "bc528096f102c8e6d12f6dbe4a814ab63e359e8ce32f4aad07c5754ecc059d7d"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-sf-06-high-fundamental-vol/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-sf-06-high-fundamental-vol"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "666bac44b26a31e618e8687ec3f90673991b5681340d1a5445814f869d18897b",
+        "scenario.json": "bb2c25b4964a7eef49a19cd61d47a1ca749a0baba27cdc47d7edbbb63b51c050"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-sf-07-coarse-agent-batch/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-sf-07-coarse-agent-batch/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "eee64dd4f77072f66b4c26dab21155c5334efe5763f00c2e45be4b73f8cd02d9",
+        "trace.parquet": "04212af9f6c2048847d9977c617c82f496fb2523c6af5196f8c9eaa665a6416d"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-sf-07-coarse-agent-batch/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-sf-07-coarse-agent-batch"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "bdfebe882258944f0e3575fdbd3c03294d57c16925799883bc496801dcca8e4f",
+        "scenario.json": "fa3f7e85501068d1deb140242eed9407bb4f2df5a438badab4d3ce3f321bbd22"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-st01-liquidity-churn-baseline/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-st01-liquidity-churn-baseline/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "eb3bbcdafdcea36523e4ccf57c4626c4dafe68afd47de76194d1380bc50d5971",
+        "trace.parquet": "fb40d7778f6d40c084fe9cf3bfb2e2a30a784edf0e40530a619b4510638af9dc"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-st01-liquidity-churn-baseline/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-st01-liquidity-churn-baseline"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "7e7ecad9be56d331d6cb6052280be93fd9d5c8d77c2efcfd6b5b877787f7b0b2",
+        "scenario.json": "261757029b11d88358552ed2b86da9def65d2847947e1a53824923434df2115f"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-st02-informed-entry-burst/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-st02-informed-entry-burst/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "ab75087b1e25addeb1ed9429338e52a5877bde9dbd4ccbfea726053211564604",
+        "trace.parquet": "6bc3d9b0dd91d3bcb57fba25f477497239a7de9f879e8b3c3e9d8f483b684a8a"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-st02-informed-entry-burst/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-st02-informed-entry-burst"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "c836fee3f9dbcd3a82b23a334e902bfda1a4bcaa6f731a47b8731e7b402f2765",
+        "scenario.json": "196baf566854bbfcc050066443114db1436273beac6102ae9440174316420c4b"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-st03-volatility-burst/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-st03-volatility-burst/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "1a47e1c39efc6d36c695603fe26ede8a5bb692fe878d72e7b05ece61d8dd678d",
+        "trace.parquet": "fa75d8173cc8f282f864febf9eebec810da8b5b250c0a99af440316954390205"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-st03-volatility-burst/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-st03-volatility-burst"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "7ba975f419bcdde9f965868c174bac1b45e8e36d5b025bd04634ff8f8347f719",
+        "scenario.json": "0045ad4f89aab4e858846b113811a7d0e044eed687ba0a62882753c0a7683c56"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-st04-thin-book-mm-strain/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-st04-thin-book-mm-strain/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "423cd02c9b3bce5be213f06f3aacb83ef059e29dbb26611be22b617d643fc587",
+        "trace.parquet": "a57eae69b3a2217f16b1788e10930c135e4f6bd510619ec07ce944ae0df87977"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-st04-thin-book-mm-strain/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-st04-thin-book-mm-strain"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "e77f1409ce61d900d2caba034fb7cb1db13d6ce893676270c4571b774622dba3",
+        "scenario.json": "d46362a2eca8bfce1854c13d246b185d9116a241297c1df43cfb7fcbb27e0323"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-st05-latency-spike-pareto/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-st05-latency-spike-pareto/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "7342a8ca5de78e5bd3cebe80ac8771457be7a20b1ecb5e13d1955014ac70e3fc",
+        "trace.parquet": "ce474214e531d7833dc70207ce91e103fa8cacc47278dc4df1e38ae3f545f460"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-st05-latency-spike-pareto/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-st05-latency-spike-pareto"
+    },
+    {
+      "input_sha256": {
+        "card.toml": "3a02e18cbb4d58d0186cd1d8635af38eec226c5ca4c83b147c8486641f50a597",
+        "scenario.json": "42d8f6f9e6413d4bc02949d5dfec2a2ef0f181a10eb9984108859a43a6d80c1b"
+      },
+      "reference_frames": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-stp-cancel-newest/trace.parquet",
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-stp-cancel-newest/message_trace.parquet"
+      ],
+      "reference_sha256": {
+        "message_trace.parquet": "07fcbbb977151cd8cd6ce3782be5033812b9dff1f22318123417acc04f2bd442",
+        "trace.parquet": "7c5cb6651c1d02facd446c2cae21d4001b54e5f8ef3cb9c11c8e0132fb657c8b"
+      },
+      "scenario_paths": [
+        "/home/runner/work/agenthon-t3/agenthon-t3/classic-delivery-v1-evaluation/references/t3-stp-cancel-newest/scenario.json"
+      ],
+      "shape": "single",
+      "subs": [],
+      "unit": "t3-stp-cancel-newest"
+    }
+  ]
+}

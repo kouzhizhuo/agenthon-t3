@@ -1,0 +1,48 @@
+{
+  "files": {
+    "ORIGINAL_REFERENCE_PLAN.json": {
+      "bytes": 103740,
+      "original_source_path": "/Volumes/Alan/Nips_com/t3/completion1009/server_classic_delivery_v1/attempt2/downloaded_v1/evidence/REFERENCE_PLAN.json",
+      "sha256": "4ed54fc6ef706b614f221a7af6b3f09a7d21c490d54260e2d75fe2a31607ca68"
+    },
+    "V2_EVALUATOR_FREEZE.txt": {
+      "bytes": 465,
+      "original_source_path": "/Volumes/Alan/Nips_com/t3/completion1009/server_classic_expectations_delivery_v2/result_v1/extracted/evidence/EVALUATOR_FREEZE.txt",
+      "sha256": "0740d368bb4d0107598096d052ff0677120e56ed5963e4cc387b632634cd5c38"
+    },
+    "V2_ORIGINAL_FULL_AUDIT.json": {
+      "bytes": 66679,
+      "original_source_path": "/Volumes/Alan/Nips_com/t3/completion1009/server_classic_expectations_delivery_v2/result_v1/INDEPENDENT_FULL_AUDIT_v1.json",
+      "sha256": "3d528d5b713ac719c491832dc2ac8b88531ef0c1b3cbbd95fd474a7fd91c9bfa"
+    },
+    "V2_ORIGINAL_REGISTRY_READBACK.json": {
+      "bytes": 23997,
+      "original_source_path": "/Volumes/Alan/Nips_com/t3/completion1009/server_classic_expectations_delivery_v2/result_v1/anonymous_registry_v1/REGISTRY_BYTE_READBACK_v1.json",
+      "sha256": "98beaa7fff94aa566fd49108e8c1d6d7986a46877a1be8ec32a5908da87e28fe"
+    },
+    "V2_REMOTE_SOURCE_READBACK.json": {
+      "bytes": 9713,
+      "original_source_path": "/Volumes/Alan/Nips_com/t3/completion1009/server_classic_expectations_delivery_v2/REMOTE_SOURCE_READBACK_v1.json",
+      "sha256": "6c64fefa67920eb93a85522dd467eaa818d0da3777c133f3b4971189670f388b"
+    },
+    "V2_SOURCE_PINS.json": {
+      "bytes": 3323,
+      "original_source_path": "/Volumes/Alan/Nips_com/t3/completion1009/server_classic_expectations_delivery_v2/SOURCE_PINS.json",
+      "sha256": "b5cf9f49879ad5fe90b760831914e6e3e19f92186df2503c5b5ca2ff0bc34279"
+    },
+    "V7_REMOTE_SOURCE_READBACK.json": {
+      "bytes": 7888,
+      "original_source_path": "/Volumes/Alan/Nips_com/t3/completion1009/server_classic_structural_v3/REMOTE_SOURCE_READBACK_v7.json",
+      "sha256": "10f9b7e679530a9c48af5b78ffbc092f1559e20ae7339cc3ff8495560f88f87d"
+    },
+    "V7_SOURCE_PINS.json": {
+      "bytes": 2755,
+      "original_source_path": "/Volumes/Alan/Nips_com/t3/completion1009/server_classic_structural_v3/screen_result_v7/extracted/SOURCE_PINS.json",
+      "sha256": "7701234bbae477326491070217710a65cca971880d0affee9f343259fc7ed32b"
+    }
+  },
+  "native_compiled": false,
+  "network_called": false,
+  "participant_imported": false,
+  "schema": "t3-cost-workflow-inert-original-data-pins-v1"
+}

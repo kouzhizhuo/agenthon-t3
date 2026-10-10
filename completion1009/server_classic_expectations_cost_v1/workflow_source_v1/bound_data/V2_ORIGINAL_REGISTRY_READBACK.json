@@ -1,0 +1,621 @@
+{
+  "all_passed": true,
+  "anonymous": true,
+  "config": {
+    "attempts_receipt": {
+      "bytes": 381,
+      "path": "config.json.download-attempts.json",
+      "sha256": "934bf012894377781b961ecbf7758900ad3efd40388c46f8a7d2f6c5e05a85eb"
+    },
+    "bytes": 13062,
+    "path": "config.json",
+    "requests": [
+      {
+        "attempt": 1,
+        "bytes": 13062,
+        "completed": true,
+        "content_digest": null,
+        "content_length": "13062",
+        "content_type": "application/octet-stream",
+        "final_host": "pkg-containers.githubusercontent.com",
+        "sha256": "4deb411785eb962b62d1f1cf644f9349bc20cdb69d3f31832151721f0e3584b1",
+        "started_utc": "2026-10-10T18:19:41Z",
+        "status": 200
+      }
+    ],
+    "sha256": "4deb411785eb962b62d1f1cf644f9349bc20cdb69d3f31832151721f0e3584b1"
+  },
+  "image": "ghcr.io/kouzhizhuo/agenthon-t3-classic@sha256:4a4c10b274a54312d5e17d69a45d30052787f523813bd5e2c27a5f1a9ba34ec9",
+  "layers": [
+    {
+      "attempts_receipt": {
+        "bytes": 387,
+        "path": "layer-7fd1ebe418b5079d4aa36f416af9b143d127bc75b0155d71cb5fd559b5e04d39.blob.download-attempts.json",
+        "sha256": "2c93342842151b7095e47bc37fe77e7572ea4ffa1804966e15e499654e6a6523"
+      },
+      "bytes": 28249323,
+      "path": "layer-7fd1ebe418b5079d4aa36f416af9b143d127bc75b0155d71cb5fd559b5e04d39.blob",
+      "requests": [
+        {
+          "attempt": 1,
+          "bytes": 28249323,
+          "completed": true,
+          "content_digest": null,
+          "content_length": "28249323",
+          "content_type": "application/octet-stream",
+          "final_host": "pkg-containers.githubusercontent.com",
+          "sha256": "7fd1ebe418b5079d4aa36f416af9b143d127bc75b0155d71cb5fd559b5e04d39",
+          "started_utc": "2026-10-10T18:19:42Z",
+          "status": 200
+        }
+      ],
+      "sha256": "7fd1ebe418b5079d4aa36f416af9b143d127bc75b0155d71cb5fd559b5e04d39",
+      "uncompressed": {
+        "bytes": 77936640,
+        "sha256": "e58989146fcec76699871403b9897b5c014af1ccd85f5a9300a215e7975525d7"
+      }
+    },
+    {
+      "attempts_receipt": {
+        "bytes": 385,
+        "path": "layer-f8852cf3b2aa7e17f0a15968c0f38a4836ce399ddb4097cfa823ad72eff582e7.blob.download-attempts.json",
+        "sha256": "3e1fa29b680cb80b2c9fcd55be7056810c29563ef2f206026b739f330f41f0f6"
+      },
+      "bytes": 3342316,
+      "path": "layer-f8852cf3b2aa7e17f0a15968c0f38a4836ce399ddb4097cfa823ad72eff582e7.blob",
+      "requests": [
+        {
+          "attempt": 1,
+          "bytes": 3342316,
+          "completed": true,
+          "content_digest": null,
+          "content_length": "3342316",
+          "content_type": "application/octet-stream",
+          "final_host": "pkg-containers.githubusercontent.com",
+          "sha256": "f8852cf3b2aa7e17f0a15968c0f38a4836ce399ddb4097cfa823ad72eff582e7",
+          "started_utc": "2026-10-10T18:19:44Z",
+          "status": 200
+        }
+      ],
+      "sha256": "f8852cf3b2aa7e17f0a15968c0f38a4836ce399ddb4097cfa823ad72eff582e7",
+      "uncompressed": {
+        "bytes": 8852992,
+        "sha256": "b0323ff28afe21fb981d00843d08f925ac6c678a3d4e16be06f18fc89357f720"
+      }
+    },
+    {
+      "attempts_receipt": {
+        "bytes": 387,
+        "path": "layer-da3de1e6d2c4711343857750e90ad16aea8a393ecbefd5bac3af4a12135fd704.blob.download-attempts.json",
+        "sha256": "e0abe68b4c6c2131e666582541e58e26ab7c6ca4e649725ebf924d1bf8ac2410"
+      },
+      "bytes": 18315341,
+      "path": "layer-da3de1e6d2c4711343857750e90ad16aea8a393ecbefd5bac3af4a12135fd704.blob",
+      "requests": [
+        {
+          "attempt": 1,
+          "bytes": 18315341,
+          "completed": true,
+          "content_digest": null,
+          "content_length": "18315341",
+          "content_type": "application/octet-stream",
+          "final_host": "pkg-containers.githubusercontent.com",
+          "sha256": "da3de1e6d2c4711343857750e90ad16aea8a393ecbefd5bac3af4a12135fd704",
+          "started_utc": "2026-10-10T18:19:45Z",
+          "status": 200
+        }
+      ],
+      "sha256": "da3de1e6d2c4711343857750e90ad16aea8a393ecbefd5bac3af4a12135fd704",
+      "uncompressed": {
+        "bytes": 55667200,
+        "sha256": "0df1f695216dce8e8c88a822f441e7c18e4945a5e7cd24964549a30bc2ee8b6f"
+      }
+    },
+    {
+      "attempts_receipt": {
+        "bytes": 377,
+        "path": "layer-f9b274ee4fbe248a842b5b75ee2e2e2db298596c140c7febbb6e987c77d1d246.blob.download-attempts.json",
+        "sha256": "e710c046ca0bc980ec83415cf217a8646e861ad97aa3ff534c81920354db2b92"
+      },
+      "bytes": 249,
+      "path": "layer-f9b274ee4fbe248a842b5b75ee2e2e2db298596c140c7febbb6e987c77d1d246.blob",
+      "requests": [
+        {
+          "attempt": 1,
+          "bytes": 249,
+          "completed": true,
+          "content_digest": null,
+          "content_length": "249",
+          "content_type": "application/octet-stream",
+          "final_host": "pkg-containers.githubusercontent.com",
+          "sha256": "f9b274ee4fbe248a842b5b75ee2e2e2db298596c140c7febbb6e987c77d1d246",
+          "started_utc": "2026-10-10T18:19:49Z",
+          "status": 200
+        }
+      ],
+      "sha256": "f9b274ee4fbe248a842b5b75ee2e2e2db298596c140c7febbb6e987c77d1d246",
+      "uncompressed": {
+        "bytes": 5120,
+        "sha256": "e9a58519e8e3dc1326f31fbc9788c62ecff75201eb7aafee27c567d41b6fea1e"
+      }
+    },
+    {
+      "attempts_receipt": {
+        "bytes": 389,
+        "path": "layer-9d8ef3f987be082b7bdf4a63fb807a7b1f8330a2803a569e1c0f0595f5fe62ff.blob.download-attempts.json",
+        "sha256": "495f0a53128ff8dc892501e3952b5bf5097f373d8c541cd80ad950d218cab753"
+      },
+      "bytes": 102731100,
+      "path": "layer-9d8ef3f987be082b7bdf4a63fb807a7b1f8330a2803a569e1c0f0595f5fe62ff.blob",
+      "requests": [
+        {
+          "attempt": 1,
+          "bytes": 102731100,
+          "completed": true,
+          "content_digest": null,
+          "content_length": "102731100",
+          "content_type": "application/octet-stream",
+          "final_host": "pkg-containers.githubusercontent.com",
+          "sha256": "9d8ef3f987be082b7bdf4a63fb807a7b1f8330a2803a569e1c0f0595f5fe62ff",
+          "started_utc": "2026-10-10T18:19:50Z",
+          "status": 200
+        }
+      ],
+      "sha256": "9d8ef3f987be082b7bdf4a63fb807a7b1f8330a2803a569e1c0f0595f5fe62ff",
+      "uncompressed": {
+        "bytes": 352153600,
+        "sha256": "9d5c422a4bcf8470cf1652850e152e5c53fcbd24cc2459ed6323edf0054b1eaa"
+      }
+    },
+    {
+      "attempts_receipt": {
+        "bytes": 381,
+        "path": "layer-93e92a8470e9f27e902bfb319ab98316ffd7e3be07091fa1d434070663f10ebc.blob.download-attempts.json",
+        "sha256": "fb2c127f112dcfd151eb277389ac6cc54d30677e9a6c48a5445f7191fecc71ed"
+      },
+      "bytes": 80091,
+      "path": "layer-93e92a8470e9f27e902bfb319ab98316ffd7e3be07091fa1d434070663f10ebc.blob",
+      "requests": [
+        {
+          "attempt": 1,
+          "bytes": 80091,
+          "completed": true,
+          "content_digest": null,
+          "content_length": "80091",
+          "content_type": "application/octet-stream",
+          "final_host": "pkg-containers.githubusercontent.com",
+          "sha256": "93e92a8470e9f27e902bfb319ab98316ffd7e3be07091fa1d434070663f10ebc",
+          "started_utc": "2026-10-10T18:20:04Z",
+          "status": 200
+        }
+      ],
+      "sha256": "93e92a8470e9f27e902bfb319ab98316ffd7e3be07091fa1d434070663f10ebc",
+      "uncompressed": {
+        "bytes": 399360,
+        "sha256": "19d56b608d1eb0167a6bd87e94939048e745c10142345a675a0578876ccac63e"
+      }
+    },
+    {
+      "attempts_receipt": {
+        "bytes": 385,
+        "path": "layer-c18a5855f57c9668a27a9c4e466d573e982bdc2250935cfb16b15259a702ab5f.blob.download-attempts.json",
+        "sha256": "98e64546acb2386de3c492b34b29165ca915a17b4c02247e6dcedd278547dabe"
+      },
+      "bytes": 5078722,
+      "path": "layer-c18a5855f57c9668a27a9c4e466d573e982bdc2250935cfb16b15259a702ab5f.blob",
+      "requests": [
+        {
+          "attempt": 1,
+          "bytes": 5078722,
+          "completed": true,
+          "content_digest": null,
+          "content_length": "5078722",
+          "content_type": "application/octet-stream",
+          "final_host": "pkg-containers.githubusercontent.com",
+          "sha256": "c18a5855f57c9668a27a9c4e466d573e982bdc2250935cfb16b15259a702ab5f",
+          "started_utc": "2026-10-10T18:20:05Z",
+          "status": 200
+        }
+      ],
+      "sha256": "c18a5855f57c9668a27a9c4e466d573e982bdc2250935cfb16b15259a702ab5f",
+      "uncompressed": {
+        "bytes": 15422464,
+        "sha256": "848457cd68a7a9e877bc796a4fd60002c9a852aeea2c4768dc08fbfaaa35fa71"
+      }
+    },
+    {
+      "attempts_receipt": {
+        "bytes": 385,
+        "path": "layer-ca65f899d8d183ee48e7398039fecc8c70f8556beb844307f98b9cbbfa366eab.blob.download-attempts.json",
+        "sha256": "c7e897ff73398d60cba1fa682d40bc386891e72d7d2f68ffb74d43a7a21c2b6e"
+      },
+      "bytes": 7698222,
+      "path": "layer-ca65f899d8d183ee48e7398039fecc8c70f8556beb844307f98b9cbbfa366eab.blob",
+      "requests": [
+        {
+          "attempt": 1,
+          "bytes": 7698222,
+          "completed": true,
+          "content_digest": null,
+          "content_length": "7698222",
+          "content_type": "application/octet-stream",
+          "final_host": "pkg-containers.githubusercontent.com",
+          "sha256": "ca65f899d8d183ee48e7398039fecc8c70f8556beb844307f98b9cbbfa366eab",
+          "started_utc": "2026-10-10T18:20:07Z",
+          "status": 200
+        }
+      ],
+      "sha256": "ca65f899d8d183ee48e7398039fecc8c70f8556beb844307f98b9cbbfa366eab",
+      "uncompressed": {
+        "bytes": 39229440,
+        "sha256": "4bdfacb2ec7ce9afbb0cc4f99be7c34b4b11312a211992036d6a6483dd2ae75c"
+      }
+    },
+    {
+      "attempts_receipt": {
+        "bytes": 377,
+        "path": "layer-0435da27d1e572c850167727f1297ba4a1b74df312cf343cf0d42ef5a43101ad.blob.download-attempts.json",
+        "sha256": "e3327ebf3af459c9abd7d116b1993e59dcd5deee228b0e764f9b14746f24a173"
+      },
+      "bytes": 598,
+      "path": "layer-0435da27d1e572c850167727f1297ba4a1b74df312cf343cf0d42ef5a43101ad.blob",
+      "requests": [
+        {
+          "attempt": 1,
+          "bytes": 598,
+          "completed": true,
+          "content_digest": null,
+          "content_length": "598",
+          "content_type": "application/octet-stream",
+          "final_host": "pkg-containers.githubusercontent.com",
+          "sha256": "0435da27d1e572c850167727f1297ba4a1b74df312cf343cf0d42ef5a43101ad",
+          "started_utc": "2026-10-10T18:20:08Z",
+          "status": 200
+        }
+      ],
+      "sha256": "0435da27d1e572c850167727f1297ba4a1b74df312cf343cf0d42ef5a43101ad",
+      "uncompressed": {
+        "bytes": 3584,
+        "sha256": "57b3da0195429a686c1dd3781d5652669eb41f83cd6179749e6c07567c76c90f"
+      }
+    },
+    {
+      "attempts_receipt": {
+        "bytes": 379,
+        "path": "layer-f93aaa92b1b848ae745abdb52a1097808af956c0ad0d1587142d2167769e5666.blob.download-attempts.json",
+        "sha256": "5159e60e52ac0a1c85c576d43b9db56ea99c70efa1f9c29c1d12b226a3e63e40"
+      },
+      "bytes": 1057,
+      "path": "layer-f93aaa92b1b848ae745abdb52a1097808af956c0ad0d1587142d2167769e5666.blob",
+      "requests": [
+        {
+          "attempt": 1,
+          "bytes": 1057,
+          "completed": true,
+          "content_digest": null,
+          "content_length": "1057",
+          "content_type": "application/octet-stream",
+          "final_host": "pkg-containers.githubusercontent.com",
+          "sha256": "f93aaa92b1b848ae745abdb52a1097808af956c0ad0d1587142d2167769e5666",
+          "started_utc": "2026-10-10T18:20:09Z",
+          "status": 200
+        }
+      ],
+      "sha256": "f93aaa92b1b848ae745abdb52a1097808af956c0ad0d1587142d2167769e5666",
+      "uncompressed": {
+        "bytes": 4096,
+        "sha256": "e7af130f99bb058b8304dcef0f7a944be16b3eb279d6bae838f6c26b0df9bb29"
+      }
+    },
+    {
+      "attempts_receipt": {
+        "bytes": 375,
+        "path": "layer-4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1.blob.download-attempts.json",
+        "sha256": "5278f80ee6928359706127b617c8c12735661aa830850a7b7c64e8d36fdac60c"
+      },
+      "bytes": 32,
+      "path": "layer-4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1.blob",
+      "requests": [
+        {
+          "attempt": 1,
+          "bytes": 32,
+          "completed": true,
+          "content_digest": null,
+          "content_length": "32",
+          "content_type": "application/octet-stream",
+          "final_host": "pkg-containers.githubusercontent.com",
+          "sha256": "4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1",
+          "started_utc": "2026-10-10T18:20:10Z",
+          "status": 200
+        }
+      ],
+      "sha256": "4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1",
+      "uncompressed": {
+        "bytes": 1024,
+        "sha256": "5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+      }
+    },
+    {
+      "attempts_receipt": {
+        "bytes": 375,
+        "path": "layer-4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1.blob.download-attempts.json",
+        "sha256": "5278f80ee6928359706127b617c8c12735661aa830850a7b7c64e8d36fdac60c"
+      },
+      "bytes": 32,
+      "path": "layer-4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1.blob",
+      "requests": [
+        {
+          "attempt": 1,
+          "bytes": 32,
+          "completed": true,
+          "content_digest": null,
+          "content_length": "32",
+          "content_type": "application/octet-stream",
+          "final_host": "pkg-containers.githubusercontent.com",
+          "sha256": "4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1",
+          "started_utc": "2026-10-10T18:20:10Z",
+          "status": 200
+        }
+      ],
+      "sha256": "4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1",
+      "uncompressed": {
+        "bytes": 1024,
+        "sha256": "5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+      }
+    },
+    {
+      "attempts_receipt": {
+        "bytes": 385,
+        "path": "layer-a6a05b8f36892f303b76707685715cce45c27376bec7613c29829dea9e6081da.blob.download-attempts.json",
+        "sha256": "e8d36c9c30dbf4021f240ac37438331f480954a6a65904eba8c95db315ce1942"
+      },
+      "bytes": 7859423,
+      "path": "layer-a6a05b8f36892f303b76707685715cce45c27376bec7613c29829dea9e6081da.blob",
+      "requests": [
+        {
+          "attempt": 1,
+          "bytes": 7859423,
+          "completed": true,
+          "content_digest": null,
+          "content_length": "7859423",
+          "content_type": "application/octet-stream",
+          "final_host": "pkg-containers.githubusercontent.com",
+          "sha256": "a6a05b8f36892f303b76707685715cce45c27376bec7613c29829dea9e6081da",
+          "started_utc": "2026-10-10T18:20:10Z",
+          "status": 200
+        }
+      ],
+      "sha256": "a6a05b8f36892f303b76707685715cce45c27376bec7613c29829dea9e6081da",
+      "uncompressed": {
+        "bytes": 39680512,
+        "sha256": "872cf142b057006d222428b75bf04d6bc66a95f9f34e88d524e9de457f636887"
+      }
+    },
+    {
+      "attempts_receipt": {
+        "bytes": 379,
+        "path": "layer-9273aee0244db903654c473267095c02d5362cfed7cc87aab4b96ebc2582c1e6.blob.download-attempts.json",
+        "sha256": "44037437d9b5e8870bb5ab5144b9b308664ac8e9375f81aeb4866e6333265406"
+      },
+      "bytes": 3544,
+      "path": "layer-9273aee0244db903654c473267095c02d5362cfed7cc87aab4b96ebc2582c1e6.blob",
+      "requests": [
+        {
+          "attempt": 1,
+          "bytes": 3544,
+          "completed": true,
+          "content_digest": null,
+          "content_length": "3544",
+          "content_type": "application/octet-stream",
+          "final_host": "pkg-containers.githubusercontent.com",
+          "sha256": "9273aee0244db903654c473267095c02d5362cfed7cc87aab4b96ebc2582c1e6",
+          "started_utc": "2026-10-10T18:20:13Z",
+          "status": 200
+        }
+      ],
+      "sha256": "9273aee0244db903654c473267095c02d5362cfed7cc87aab4b96ebc2582c1e6",
+      "uncompressed": {
+        "bytes": 16384,
+        "sha256": "a093ec86d03fb6ab3966b5bc8efcd1a16f91f150f2901419951600f475a99d3c"
+      }
+    },
+    {
+      "attempts_receipt": {
+        "bytes": 381,
+        "path": "layer-2ed2f88ee94cb1eb79ba93435775dbb89cc177912b7ee4ce4ddd901378e84023.blob.download-attempts.json",
+        "sha256": "031debadf45ebf817021c4c0dc431defdd88f2bbd2e8329c46deed95e11b8a89"
+      },
+      "bytes": 99242,
+      "path": "layer-2ed2f88ee94cb1eb79ba93435775dbb89cc177912b7ee4ce4ddd901378e84023.blob",
+      "requests": [
+        {
+          "attempt": 1,
+          "bytes": 99242,
+          "completed": true,
+          "content_digest": null,
+          "content_length": "99242",
+          "content_type": "application/octet-stream",
+          "final_host": "pkg-containers.githubusercontent.com",
+          "sha256": "2ed2f88ee94cb1eb79ba93435775dbb89cc177912b7ee4ce4ddd901378e84023",
+          "started_utc": "2026-10-10T18:20:14Z",
+          "status": 200
+        }
+      ],
+      "sha256": "2ed2f88ee94cb1eb79ba93435775dbb89cc177912b7ee4ce4ddd901378e84023",
+      "uncompressed": {
+        "bytes": 475648,
+        "sha256": "129dcec8f8d2b3b370bc3c9ff7039ebf8da0758575aa2f10bbc5156a6aa6fa99"
+      }
+    },
+    {
+      "attempts_receipt": {
+        "bytes": 379,
+        "path": "layer-ea8c15da11b2def8d369ba3bd0f9c56b3dfea394351e2491eb2f281e43a9610a.blob.download-attempts.json",
+        "sha256": "b4e28b4e85a70ed4cc2f942f3ca0168ce0a77ce4159953a4e30d1bd2416e5b86"
+      },
+      "bytes": 7167,
+      "path": "layer-ea8c15da11b2def8d369ba3bd0f9c56b3dfea394351e2491eb2f281e43a9610a.blob",
+      "requests": [
+        {
+          "attempt": 1,
+          "bytes": 7167,
+          "completed": true,
+          "content_digest": null,
+          "content_length": "7167",
+          "content_type": "application/octet-stream",
+          "final_host": "pkg-containers.githubusercontent.com",
+          "sha256": "ea8c15da11b2def8d369ba3bd0f9c56b3dfea394351e2491eb2f281e43a9610a",
+          "started_utc": "2026-10-10T18:20:15Z",
+          "status": 200
+        }
+      ],
+      "sha256": "ea8c15da11b2def8d369ba3bd0f9c56b3dfea394351e2491eb2f281e43a9610a",
+      "uncompressed": {
+        "bytes": 30720,
+        "sha256": "12cf0a989b570d54ca9dd66b9e0a5ffefe41cb589ec703de6ebfe85c94289818"
+      }
+    },
+    {
+      "attempts_receipt": {
+        "bytes": 377,
+        "path": "layer-cf38acd5450b33878972e30b9192a685b6d561f88b6fa1548035811996026740.blob.download-attempts.json",
+        "sha256": "94811c29883418a8ba59b6072ce43733bde1051dd4939de70b1355fb7156c073"
+      },
+      "bytes": 701,
+      "path": "layer-cf38acd5450b33878972e30b9192a685b6d561f88b6fa1548035811996026740.blob",
+      "requests": [
+        {
+          "attempt": 1,
+          "bytes": 701,
+          "completed": true,
+          "content_digest": null,
+          "content_length": "701",
+          "content_type": "application/octet-stream",
+          "final_host": "pkg-containers.githubusercontent.com",
+          "sha256": "cf38acd5450b33878972e30b9192a685b6d561f88b6fa1548035811996026740",
+          "started_utc": "2026-10-10T18:20:15Z",
+          "status": 200
+        }
+      ],
+      "sha256": "cf38acd5450b33878972e30b9192a685b6d561f88b6fa1548035811996026740",
+      "uncompressed": {
+        "bytes": 4096,
+        "sha256": "2337c5a74f44a0e6e79cda3e722cfacc01229e2715c9098afdecde96d2b64846"
+      }
+    },
+    {
+      "attempts_receipt": {
+        "bytes": 379,
+        "path": "layer-822d6b37c8e63afae3911dcf8ba601e385899f0a102a1cd6578f6e2ee21ae246.blob.download-attempts.json",
+        "sha256": "5c572bd1eec46b100ffd535155f94b69468418c09fe6e2dab4068805ffeb2ebd"
+      },
+      "bytes": 1061,
+      "path": "layer-822d6b37c8e63afae3911dcf8ba601e385899f0a102a1cd6578f6e2ee21ae246.blob",
+      "requests": [
+        {
+          "attempt": 1,
+          "bytes": 1061,
+          "completed": true,
+          "content_digest": null,
+          "content_length": "1061",
+          "content_type": "application/octet-stream",
+          "final_host": "pkg-containers.githubusercontent.com",
+          "sha256": "822d6b37c8e63afae3911dcf8ba601e385899f0a102a1cd6578f6e2ee21ae246",
+          "started_utc": "2026-10-10T18:20:16Z",
+          "status": 200
+        }
+      ],
+      "sha256": "822d6b37c8e63afae3911dcf8ba601e385899f0a102a1cd6578f6e2ee21ae246",
+      "uncompressed": {
+        "bytes": 4096,
+        "sha256": "26ae089c51de25d3f01d51b38baadef4c4debe38ec735ba6f0a62668224543be"
+      }
+    },
+    {
+      "attempts_receipt": {
+        "bytes": 385,
+        "path": "layer-8cd9f89c1ee216f71e09d2509a5e915caf7ffa61ce9062ed10525b407de6f4dc.blob.download-attempts.json",
+        "sha256": "65f36c459db1ec65cdabef1215fe9dfb9343d43f07b8fc41645c4a2ae9139741"
+      },
+      "bytes": 2875580,
+      "path": "layer-8cd9f89c1ee216f71e09d2509a5e915caf7ffa61ce9062ed10525b407de6f4dc.blob",
+      "requests": [
+        {
+          "attempt": 1,
+          "bytes": 2875580,
+          "completed": true,
+          "content_digest": null,
+          "content_length": "2875580",
+          "content_type": "application/octet-stream",
+          "final_host": "pkg-containers.githubusercontent.com",
+          "sha256": "8cd9f89c1ee216f71e09d2509a5e915caf7ffa61ce9062ed10525b407de6f4dc",
+          "started_utc": "2026-10-10T18:20:17Z",
+          "status": 200
+        }
+      ],
+      "sha256": "8cd9f89c1ee216f71e09d2509a5e915caf7ffa61ce9062ed10525b407de6f4dc",
+      "uncompressed": {
+        "bytes": 7635456,
+        "sha256": "678ff848ab7954babc3b9f13a5ad68f3c356d6f3f945dbe821cc42600b9b09f5"
+      }
+    },
+    {
+      "attempts_receipt": {
+        "bytes": 375,
+        "path": "layer-4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1.blob.download-attempts.json",
+        "sha256": "5278f80ee6928359706127b617c8c12735661aa830850a7b7c64e8d36fdac60c"
+      },
+      "bytes": 32,
+      "path": "layer-4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1.blob",
+      "requests": [
+        {
+          "attempt": 1,
+          "bytes": 32,
+          "completed": true,
+          "content_digest": null,
+          "content_length": "32",
+          "content_type": "application/octet-stream",
+          "final_host": "pkg-containers.githubusercontent.com",
+          "sha256": "4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1",
+          "started_utc": "2026-10-10T18:20:10Z",
+          "status": 200
+        }
+      ],
+      "sha256": "4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1",
+      "uncompressed": {
+        "bytes": 1024,
+        "sha256": "5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+      }
+    }
+  ],
+  "manifest": {
+    "attempts_receipt": {
+      "bytes": 447,
+      "path": "manifest.json.download-attempts.json",
+      "sha256": "0f26cd62e7bd2f31c8ba5bf663368a0ed18399092b0b320a22a4224e804668af"
+    },
+    "bytes": 4499,
+    "path": "manifest.json",
+    "requests": [
+      {
+        "attempt": 1,
+        "bytes": 4499,
+        "completed": true,
+        "content_digest": "sha256:4a4c10b274a54312d5e17d69a45d30052787f523813bd5e2c27a5f1a9ba34ec9",
+        "content_length": "4499",
+        "content_type": "application/vnd.docker.distribution.manifest.v2+json",
+        "final_host": "ghcr.io",
+        "sha256": "4a4c10b274a54312d5e17d69a45d30052787f523813bd5e2c27a5f1a9ba34ec9",
+        "started_utc": "2026-10-10T18:19:40Z",
+        "status": 200
+      }
+    ],
+    "sha256": "4a4c10b274a54312d5e17d69a45d30052787f523813bd5e2c27a5f1a9ba34ec9"
+  },
+  "native_compiled": false,
+  "participant_executed": false,
+  "schema": "t3-anonymous-registry-byte-readback-v1",
+  "signed_urls_saved_or_printed": false,
+  "tested_image_id": "sha256:4deb411785eb962b62d1f1cf644f9349bc20cdb69d3f31832151721f0e3584b1",
+  "token_saved_or_printed": false
+}
