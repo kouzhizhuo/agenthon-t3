@@ -1,0 +1,24 @@
+{
+  "candidate_archive_sha256": "7eb05a16daa473b456d9e67e9bf0c70580a70322bbf25a6be778ec32522ec16c",
+  "control_runs": 2,
+  "files": {
+    "README.md": "7fbd79dd8d5c72f48262a1d5d0912915b810b07d94d78b703245d5d6a7d7d9da",
+    "driver.py": "ea46e0f8489f445a1dd17e201610085b24e45b959639e153c7737eb822176608",
+    "worker.py": "be9ff110815f29cad60298a2b5c984f6a56ae6cc7db14b188d6633a9a49717d7"
+  },
+  "full71": false,
+  "market_executed": false,
+  "official_submission": false,
+  "ordinary_runs": 50,
+  "parent_archive_sha256": "e2c0d6167ce24854d164345a14a8bef31311b6c7d28708a4e0196e8fe0002f71",
+  "rankable": false,
+  "required_new_controls": {
+    "integer_heap": 23,
+    "latency": 142,
+    "source": 8
+  },
+  "review_method": "Root reuse/diff review of serial direct comparison",
+  "same_round_and_same_arm_full_Parquet_checks": true,
+  "serial_settled_daemon_timing": true,
+  "status": "PASS_SOURCE_ONLY"
+}
