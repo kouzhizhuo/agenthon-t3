@@ -1,0 +1,62 @@
+name: T3 frozen latency startup and output phases v1
+on:
+  workflow_dispatch:
+    inputs:
+      payload_sha256:
+        description: Exact reviewed SCREEN_PAYLOAD_v1.tar.xz SHA256
+        required: true
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: t3-serial-linux-screen-v2
+  cancel-in-progress: false
+jobs:
+  screen:
+    if: github.repository == 'kouzhizhuo/agenthon-t3'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+      NUMEXPR_NUM_THREADS: '1'
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONHASHSEED: '0'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Materialize the exact reviewed source archive
+        env:
+          EXPECTED_PAYLOAD: ${{ inputs.payload_sha256 }}
+        run: python3 completion1009/server_light_typed_noise_latency_market_controls_v1_2/materialize.py --archive completion1009/server_light_typed_noise_latency_market_controls_v1_2/SCREEN_PAYLOAD_v1.tar.xz --expected-sha256 "$EXPECTED_PAYLOAD" --out latency-startup-phase-v1-payload
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.13.7'
+      - name: Fetch the pinned official host evaluator and original references
+        run: |
+          mkdir -p latency-startup-phase-v1-evidence
+          python latency-startup-phase-v1-payload/host/fetch_evaluation.py --out "$PWD/latency-startup-phase-v1-evaluation" > latency-startup-phase-v1-evidence/fetch-process.log 2>&1
+      - name: Install the pinned host evaluator
+        run: |
+          set -euo pipefail
+          python -m pip install numpy==2.2.6 pandas==2.3.3 scipy==1.18.1 pyarrow==21.0.0 jsonschema==4.23.0 jsonschema-specifications==2025.9.1 attrs==26.1.0 referencing==0.37.0 rpds-py==2026.9.1 python-dateutil==2.9.0.post0 pytz==2026.5 six==1.17.0 tzdata==2026.5
+          python -m pip install --no-deps ./latency-startup-phase-v1-evaluation/toolkit/common ./latency-startup-phase-v1-evaluation/track3
+          python -m pip freeze > latency-startup-phase-v1-evidence/EVALUATOR_FREEZE.txt
+      - name: Construct native C/ELF and pinned schema with full partial evidence
+        run: python latency-startup-phase-v1-payload/control/controller.py build --evidence "$PWD/latency-startup-phase-v1-evidence"
+      - name: Run fresh full controls then separate normal and marker-only phases
+        run: python completion1009/server_latency_startup_phase_diagnostic_v1/host.py --evidence "$PWD/latency-startup-phase-v1-evidence" --reference-root "$PWD/latency-startup-phase-v1-evaluation/references" --gate-kit "$PWD/latency-startup-phase-v1-evaluation/track3"
+      - name: Preserve actual source/schema, all production outputs and logs
+        if: always()
+        run: python latency-startup-phase-v1-payload/control/controller.py artifact --evidence "$PWD/latency-startup-phase-v1-evidence" --artifact "$PWD/light-typed-noise-latency-market-controls-v1-artifact"
+      - name: Retain the paired Linux screen evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: t3-latency-startup-phase-v1-evidence
+          path: |
+            light-typed-noise-latency-market-controls-v1-artifact
+            completion1009/server_latency_startup_phase_diagnostic_v1
+          retention-days: 30
+          if-no-files-found: error
+          compression-level: 6
