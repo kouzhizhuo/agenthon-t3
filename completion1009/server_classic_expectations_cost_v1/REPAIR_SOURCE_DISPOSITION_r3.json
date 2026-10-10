@@ -1,0 +1,115 @@
+{
+  "basis": "Unchanged original source reviews, exact r2 freeze, root reviewed canonical delta and actual source-only controls; not Linux evidence",
+  "blockers": [],
+  "changed_old_sources": {
+    "overlay/cost_entry_draft_v1.py": {
+      "after": {
+        "bytes": 32983,
+        "sha256": "64f9386d276c856a75b5343ead91efe5a10ea95c382c979d335d96d9170bf269"
+      },
+      "before": {
+        "bytes": 29930,
+        "sha256": "b43209c991fcb6d7652f6d560b873f3a4fb9e76d92277f0586ada036f2e95af2"
+      }
+    },
+    "parser.py": {
+      "after": {
+        "bytes": 32846,
+        "sha256": "18f1e4ef510cba1cc650d2d9b5c77b2c4cdf185bcf39449901c7eff273dd4d49"
+      },
+      "before": {
+        "bytes": 29793,
+        "sha256": "18e8b63b5c80dc95331d64b8564be573777baeae1c10449a86cd2c5c06508db8"
+      }
+    },
+    "read_only/cost_saved_auditor_v1/REFERENCE_PINS_v1.json": {
+      "after": {
+        "bytes": 2780,
+        "sha256": "d47d982eb376b3eba3140603f95564cd3cbc3d60591a9d829b7660f1a957e06a"
+      },
+      "before": {
+        "bytes": 2780,
+        "sha256": "c7a6b9d3c07e61dd8fc4354d38dbf92aa904705e5afe29af2cc3e722647eba20"
+      }
+    },
+    "read_only/cost_saved_auditor_v1/audit_cost_saved_v1.py": {
+      "after": {
+        "bytes": 57594,
+        "sha256": "5befa9fc5d5ad9462267c122869e4e9632ac171d4cdc2302ccb5844dcfa82a58"
+      },
+      "before": {
+        "bytes": 55649,
+        "sha256": "e5538f9657fa53a5e8179e49de7343038c3507d1ee12f8599cc9e03db5b857f2"
+      }
+    },
+    "read_only/cost_saved_auditor_v1/references/cost_parser_v1.py": {
+      "after": {
+        "bytes": 32846,
+        "sha256": "18f1e4ef510cba1cc650d2d9b5c77b2c4cdf185bcf39449901c7eff273dd4d49"
+      },
+      "before": {
+        "bytes": 29793,
+        "sha256": "18e8b63b5c80dc95331d64b8564be573777baeae1c10449a86cd2c5c06508db8"
+      }
+    },
+    "verify_source.py": {
+      "after": {
+        "bytes": 6131,
+        "sha256": "c1af3659edf7de6bc03793deb7170db3430b9e8681cd0546acdedd0d3ddc1af9"
+      },
+      "before": {
+        "bytes": 5673,
+        "sha256": "dd01f6c70adba69694b3b0e067e04956b55219c9939e535d3c33ba2fe42ec9ea"
+      }
+    },
+    "workflow_source_v1/t3-cost-diagnostic-hydration-draft-v1.yml": {
+      "after": {
+        "bytes": 8815,
+        "sha256": "1df2e5b16c3995d49503737d27079424690c754a0750a35c947156692cd9f13c"
+      },
+      "before": {
+        "bytes": 7813,
+        "sha256": "e2350f1ccff557ca9ac7c3be1de0832d852a28dba2f766f934693e53c2d0780b"
+      }
+    }
+  },
+  "checks": {
+    "AST_schema_nodes": 44,
+    "all_source_AST_parsed": 44,
+    "batch_and_actual_saved_auditor_delta": 100,
+    "host_inert": 39,
+    "original_host_helpers": 17,
+    "parser_saved_data": 40,
+    "real_source_AST_each_Python39_312": 24,
+    "reference_files": 15
+  },
+  "dispatch_allowed": false,
+  "independent_new_whole_tree_review": false,
+  "linux_passed": false,
+  "native_compiled": false,
+  "old_review": {
+    "bytes": 25609,
+    "sha256": "780aa8fafaf2980a381e5dc63c0766aa6426702ba170156893d165eccab363a7"
+  },
+  "participant_compiled": false,
+  "participant_imported": false,
+  "r2_pins": {
+    "bytes": 20259,
+    "sha256": "a2e0eff47739643406661b659a6ca5703ba825b359050485ae94980b7b5322d6"
+  },
+  "reviewed_pipeline": [
+    "actual worker imports active parser",
+    "saved auditor exact parser reference plus strict inverse old byte delta",
+    "both diagnostic helpers identical",
+    "missing/unknown AST fields reject; only empty FunctionDef.type_params representation permitted",
+    "source SHA and marker-stripped business AST and labels remain",
+    "source-only real Python311 then313 preflight before expensive hydrate",
+    "exact original diagnostic and participant resources unchanged",
+    "all three artifact uploads preserve hidden files"
+  ],
+  "runtime_changed": false,
+  "schema": "t3-root-cumulative-r3-canonical-AST-delta-source-review-v1",
+  "simulation_executed": false,
+  "source_scope_passed": true,
+  "unchanged_old_count": 106
+}

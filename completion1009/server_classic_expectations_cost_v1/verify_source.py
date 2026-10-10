@@ -87,7 +87,12 @@ def verify():
     require(type(files) is dict and 10 <= len(files) <= 512
         and document['workflow_source'] in files and 'SOURCE_PINS.json' not in files,
         'finite complete executing source roster')
-    required = {'archive_raw_v1.py', 'INDEPENDENT_HOST_SOURCE_REVIEW_v1.json', 'driver.py', 'worker.py', 'parser.py', 'Dockerfile', 'verify_source.py', 'verify_remote_source.py',
+    required = {'source_preflight_AST_r3.py', 'source_preflight_batch_r3.py', 'canonical_AST_insertion_r3.txt',
+        'ast_source_fixtures_r3/PROVENANCE_r3.json',
+        'ast_source_fixtures_r3/classic_native_kernels_v1/production_cli.py',
+        'ast_source_fixtures_r3/classic_build_expectations_v1/production_cli.py',
+        'read_only/parser_before_AST_repair_r2.py', 'read_only/worker_before_AST_repair_r2.py',
+        'read_only/overlay_before_AST_repair_r2.py', 'archive_raw_v1.py', 'INDEPENDENT_HOST_SOURCE_REVIEW_v1.json', 'driver.py', 'worker.py', 'parser.py', 'Dockerfile', 'verify_source.py', 'verify_remote_source.py',
         'overlay/cost_entry_draft_v1.py', 'overlay/IMAGE_BINDING.json', 'READ_ONLY_SOURCE_PINS_v1.json',
         'read_only/cost_saved_auditor_v1/audit_cost_saved_v1.py',
         'read_only/cost_saved_auditor_v1/archive_wrapper_draft_v1.py',

@@ -1,0 +1,25 @@
+{
+  "Linux_runtime_passed": false,
+  "dispatch_allowed": false,
+  "native_compiled": false,
+  "participant_compiled": false,
+  "participant_imported": false,
+  "python": "3.9.6 (default, Aug 25 2026, 21:26:21) \n[Clang 21.0.0 (clang-2100.3.34.2)]",
+  "rows": [
+    {
+      "arm": "classic_native_kernels_v1",
+      "canonical_AST_sha256": "09467ca686a1bc95e89c5fc330b9383485ca6f34ec1f548b91dd41d776094fe9",
+      "source_checks": 12,
+      "source_sha256": "88050802ab13e44cf5d193bb127a3cd98d4c89929b494491338e42f387fa9c17"
+    },
+    {
+      "arm": "classic_build_expectations_v1",
+      "canonical_AST_sha256": "4305beb3a8f890809daddf539eeb8d41c50339365e1cfecfb709e972658ced8b",
+      "source_checks": 12,
+      "source_sha256": "7218ecf981fa7002865e862df9047e71a5915020962bff945329da79bb81c75c"
+    }
+  ],
+  "schema": "t3-r3-canonical-AST-version-source-check-v1",
+  "simulation_executed": false,
+  "source_scope_passed": true
+}

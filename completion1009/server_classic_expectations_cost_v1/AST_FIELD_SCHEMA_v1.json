@@ -1,0 +1,158 @@
+{
+  "Add": [],
+  "And": [],
+  "Assign": [
+    "targets",
+    "value",
+    "type_comment"
+  ],
+  "Attribute": [
+    "value",
+    "attr",
+    "ctx"
+  ],
+  "BinOp": [
+    "left",
+    "op",
+    "right"
+  ],
+  "BoolOp": [
+    "op",
+    "values"
+  ],
+  "Call": [
+    "func",
+    "args",
+    "keywords"
+  ],
+  "Compare": [
+    "left",
+    "ops",
+    "comparators"
+  ],
+  "Constant": [
+    "value",
+    "kind"
+  ],
+  "Dict": [
+    "keys",
+    "values"
+  ],
+  "DictComp": [
+    "key",
+    "value",
+    "generators"
+  ],
+  "Div": [],
+  "Eq": [],
+  "Expr": [
+    "value"
+  ],
+  "FunctionDef": [
+    "name",
+    "args",
+    "body",
+    "decorator_list",
+    "returns",
+    "type_comment"
+  ],
+  "If": [
+    "test",
+    "body",
+    "orelse"
+  ],
+  "IfExp": [
+    "test",
+    "body",
+    "orelse"
+  ],
+  "Import": [
+    "names"
+  ],
+  "ImportFrom": [
+    "module",
+    "names",
+    "level"
+  ],
+  "In": [],
+  "Is": [],
+  "IsNot": [],
+  "Lambda": [
+    "args",
+    "body"
+  ],
+  "Load": [],
+  "Mult": [],
+  "Name": [
+    "id",
+    "ctx"
+  ],
+  "Not": [],
+  "NotIn": [],
+  "Or": [],
+  "Raise": [
+    "exc",
+    "cause"
+  ],
+  "Return": [
+    "value"
+  ],
+  "Store": [],
+  "Sub": [],
+  "Subscript": [
+    "value",
+    "slice",
+    "ctx"
+  ],
+  "Try": [
+    "body",
+    "handlers",
+    "orelse",
+    "finalbody"
+  ],
+  "Tuple": [
+    "elts",
+    "ctx"
+  ],
+  "UnaryOp": [
+    "op",
+    "operand"
+  ],
+  "With": [
+    "items",
+    "body",
+    "type_comment"
+  ],
+  "alias": [
+    "name",
+    "asname"
+  ],
+  "arg": [
+    "arg",
+    "annotation",
+    "type_comment"
+  ],
+  "arguments": [
+    "posonlyargs",
+    "args",
+    "vararg",
+    "kwonlyargs",
+    "kw_defaults",
+    "kwarg",
+    "defaults"
+  ],
+  "comprehension": [
+    "target",
+    "iter",
+    "ifs",
+    "is_async"
+  ],
+  "keyword": [
+    "arg",
+    "value"
+  ],
+  "withitem": [
+    "context_expr",
+    "optional_vars"
+  ]
+}
