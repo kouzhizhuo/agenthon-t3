@@ -13,6 +13,8 @@ import subprocess
 import sys
 import uuid
 
+from source_copy import source_copy_command
+
 HERE = Path(__file__).resolve().parent
 PARENT = 'ghcr.io/kouzhizhuo/agenthon-t3-classic@sha256:c1b3c9f2aec8d5a761b4814cfddf7b79b76eb6afd09ca6bd4558661e2ce046ba'
 IMAGE_ROOT = '/opt/classic-native-kernels-v1'
@@ -75,7 +77,7 @@ def extract(args, linux, image, remote, target, label):
             raise ValueError('source-copy create failed')
         info, _ = commands.inspect(name, cleanup=True)
         linux.require_owned(info, name, owner, image)
-        copied = commands.call(['cp', name + ':' + remote, str(target)], 'copy', 120)['succeeded']
+        copied = source_copy_command(commands, linux, ['cp', name + ':' + remote, str(target)], 'copy', 120)['succeeded']
     finally:
         cleanup = linux.settle_container(commands, name, owner, image, creation_uncertain=True)
         write(args.evidence / (label + '.json'), {'commands': commands.rows, 'cleanup': cleanup,
@@ -459,7 +461,7 @@ def main():
             raise ValueError('fresh full evidence artifact required')
         shutil.copytree(args.evidence, args.artifact / 'evidence', ignore=shutil.ignore_patterns('anonymous-docker-config'))
         shutil.copytree(args.payload, args.artifact / 'source-payload')
-        for name in ('driver.py', 'worker.py', 'README.md'):
+        for name in ('driver.py', 'worker.py', 'source_copy.py', 'SOURCE_PINS.json', 'verify_source.py', 'README.md'):
             shutil.copyfile(HERE / name, args.artifact / name)
         write(args.artifact / 'ARTIFACT.json', {'files': inventory(args.artifact),
             'all_actual_output_bytes_retained': True, 'full71': False, 'rankable': False})

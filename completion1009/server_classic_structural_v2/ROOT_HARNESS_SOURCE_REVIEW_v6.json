@@ -1,5 +1,11 @@
 {
-  "files": {
+  "Linux_runtime_verified": false,
+  "archive_bytes": 207908,
+  "archive_sha256": "cf731ac50bc2edeb171a6b3ad7f14bfc40666ed61e79448ed868bdac77e7af2f",
+  "candidate_review_receipts_unchanged": true,
+  "copy_helper_used_only_for_never_started_owned_container": true,
+  "copy_stdout_stderr_hard_bytes_each": 16777216,
+  "host_source_pins": {
     "CANDIDATE_SOURCE_LOCK.json": {
       "bytes": 39828,
       "sha256": "249a8ed98ae59541cef7dedd6467713ba335da0c2dc73240b13a4ed88caf1d43"
@@ -62,7 +68,19 @@
     }
   },
   "market_executed": false,
+  "native_compiled": false,
+  "official_market_caps_unchanged": true,
+  "ordinary_roster_unchanged": 324,
+  "original_gate_roster_unchanged": 1368,
+  "original_host_control_unchanged": true,
   "participant_imported": false,
-  "schema": "t3-classic-structural-harness-source-pins-v6",
-  "source_only": true
+  "payload_byte_identical_to_v5": true,
+  "prior_failure_audit": "screen_result_v5/FAILURE_ROOT_CAUSE_v5.json",
+  "pure_host_fixtures_passed": 15,
+  "python_source_AST_compile_only": 232,
+  "review_scope": "Exact helper process ownership, independent pipe log bounds, deadline/cancel, actual immutable image create/inspect source provenance, fresh non-symlink targets, original settle/remove/absence, source pins/AST/archive/candidate lock equality; full Linux Docker verification pending",
+  "schema": "t3-root-structural-harness-source-review-v6",
+  "source_file_hard_bytes": 67108864,
+  "source_manifest_files": 303,
+  "target232000_proven": false
 }
