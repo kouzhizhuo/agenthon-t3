@@ -1,0 +1,64 @@
+name: T3 exact classical functions full71 public validation v1
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: t3-serial-linux-screen-v2
+  cancel-in-progress: false
+jobs:
+  screen:
+    if: github.repository == 'kouzhizhuo/agenthon-t3'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+      NUMEXPR_NUM_THREADS: '1'
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONHASHSEED: '0'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify reviewed direct wrapper bytes
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib
+          root=Path('completion1009/server_classic_native_full71_v1')
+          pins={'driver.py': '162699c635023eed0638da062a0dd38b8e4d2d1fb875dbb58ee7bdfa49680b1c', 'worker.py': 'be9ff110815f29cad60298a2b5c984f6a56ae6cc7db14b188d6633a9a49717d7', 'README.md': '2bdbe0392b53536a74c825dae7608cfe02aad237baf88fdfe521dcde6a22ca9e', 'SOURCE_REVIEW.json': 'f23a83dd25deec3ff6ede030395da32e16df636aff56dc28d9148cf171627266'}
+          for name,digest in pins.items():
+              assert hashlib.sha256((root/name).read_bytes()).hexdigest()==digest,name
+          PY
+      - name: Materialize unchanged candidate archive
+        run: |
+          python3 completion1009/server_classic_native_kernels_v1/materialize.py --archive completion1009/server_classic_native_kernels_v1/SCREEN_PAYLOAD_v1.tar.xz --expected-sha256 e2c0d6167ce24854d164345a14a8bef31311b6c7d28708a4e0196e8fe0002f71 --out classic-full71-v1-scalar-payload
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.13.7'
+      - name: Fetch the pinned official host evaluator and original references
+        run: |
+          mkdir -p classic-full71-v1-evidence
+          python classic-full71-v1-scalar-payload/host/fetch_evaluation.py --out "$PWD/classic-full71-v1-evaluation" > classic-full71-v1-evidence/fetch-process.log 2>&1
+      - name: Install the pinned host evaluator
+        run: |
+          set -euo pipefail
+          python -m pip install numpy==2.2.6 pandas==2.3.3 scipy==1.18.1 pyarrow==21.0.0 jsonschema==4.23.0 jsonschema-specifications==2025.9.1 attrs==26.1.0 referencing==0.37.0 rpds-py==2026.9.1 python-dateutil==2.9.0.post0 pytz==2026.5 six==1.17.0 tzdata==2026.5
+          python -m pip install --no-deps ./classic-full71-v1-evaluation/toolkit/common ./classic-full71-v1-evaluation/track3
+          python -m pip freeze > classic-full71-v1-evidence/EVALUATOR_FREEZE.txt
+      - name: Build unchanged native image and inspect all sources
+        run: python completion1009/server_classic_native_full71_v1/driver.py build --scalar-payload classic-full71-v1-scalar-payload --evidence classic-full71-v1-evidence --reference-root classic-full71-v1-evaluation/references --gate-kit classic-full71-v1-evaluation/track3
+      - name: Original complete controls then71public units
+        run: python completion1009/server_classic_native_full71_v1/driver.py screen --scalar-payload classic-full71-v1-scalar-payload --evidence classic-full71-v1-evidence --reference-root classic-full71-v1-evaluation/references --gate-kit classic-full71-v1-evaluation/track3
+      - name: Preserve frozen source all71outputs and actual logs
+        if: always()
+        run: python completion1009/server_classic_native_full71_v1/driver.py artifact --scalar-payload classic-full71-v1-scalar-payload --evidence classic-full71-v1-evidence --reference-root classic-full71-v1-evaluation/references --gate-kit classic-full71-v1-evaluation/track3 --artifact classic-full71-v1-artifact
+      - name: Retain full71 public evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: t3-classic-native-full71-v1-evidence
+          path: classic-full71-v1-artifact
+          retention-days: 30
+          if-no-files-found: error
+          compression-level: 6
