@@ -1,0 +1,63 @@
+{
+  "HTTPS_cross_host_token_removed": true,
+  "all_source_checks_passed": true,
+  "anonymous_pull_scope": "repository:kouzhizhuo/agenthon-t3-classic:pull",
+  "blockers": [],
+  "cases": [
+    {
+      "case": "crosshost_bearer_removed",
+      "passed": true
+    },
+    {
+      "case": "samehost_bearer_retained",
+      "passed": true
+    },
+    {
+      "case": "HTTP_redirect_refused",
+      "passed": true
+    },
+    {
+      "case": "full_gzip_diffID_hash",
+      "passed": true
+    },
+    {
+      "case": "uncompressed_cap_refused",
+      "passed": true
+    },
+    {
+      "case": "success_attempt_receipt_pinned",
+      "passed": true
+    },
+    {
+      "case": "failed_attempt_receipt_retained",
+      "passed": true
+    },
+    {
+      "case": "failed_partial_exact_pin_retained",
+      "passed": true
+    },
+    {
+      "case": "token_and_signed_url_not_in_attempts",
+      "passed": true
+    }
+  ],
+  "complete_gzip_diffID_data_only": true,
+  "fresh_output_and_partial_attempt_receipts": true,
+  "image_executed": false,
+  "layer_executed": false,
+  "limitations": [
+    "Actual anonymous public registry responses and full image digest correspondence remain pending.",
+    "Unexpected process termination can interrupt receipt rewrite; any incomplete receipt or partial blob must fail the saved final audit."
+  ],
+  "native_compiled": false,
+  "network_executed": false,
+  "participant_executed": false,
+  "schema": "t3-independent-inert-registry-reader-source-review-v1",
+  "signed_urls_not_saved_or_printed": true,
+  "source": {
+    "bytes": 10916,
+    "path": "research/classic_expectations_delivery_saved_v1/read_public_registry_bytes_v1.py",
+    "sha256": "1bbce2cb72fc2dcd0feee6e1221038a83e918e2812f50e217ca33c3f5cdf2dc5"
+  },
+  "source_only_and_inert_helpers_only": true
+}

@@ -1,0 +1,119 @@
+{
+  "actual_full_delivery_audit_accepted": false,
+  "actual_run_id": 38066939668,
+  "actual_run_outcome": "FAILURE_after_91_ordinary_PASS_before_after_sourcecopy_and_aggregates",
+  "all_source_checks_passed": true,
+  "auditor_ready_for_complete_successful_artifact": true,
+  "blocking_findings": [],
+  "browser_used": false,
+  "checks": {
+    "AST_inert_compile_pass": true,
+    "all_execution_and_publication_separate": true,
+    "diagnostic_gate_log_cap_bytes": 268435456,
+    "exact22pins_23HERE_plus_independent_active_workflow24path_binding": true,
+    "expected_candidate_source_receipt_unchanged": "e3f4bb09be2fa809e443f78c38ed72cb30f1ff9a597fed8d932d6861aaa8ba34",
+    "explicit_expected_workflow_required": [
+      "t3-classic-expectations-delivery-v1.yml",
+      "t3-classic-expectations-delivery-v2.yml"
+    ],
+    "full_artifact_fail_closed_on_missing_aggregates_after_source_copies_or_publication": true,
+    "mount_types_bind_or_tmpfs_only": true,
+    "nested_MetricTracker_original_ExchangeAgent_scope": true,
+    "ordinary_gate_log_cap_bytes": 16777216,
+    "publication_unique_tag_convention": "delivery-expectations-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}",
+    "raw_cap_add_none_or_empty_required": true,
+    "raw_privileged_false_required": true,
+    "saved_raw_resource_compatibility450": true,
+    "sourcecopy_exact_argv_and_cleanup_required": true,
+    "sourcecopy_file_cap_bytes": 67108864,
+    "sourcecopy_independent_log_cap_bytes": 16777216,
+    "sourcecopy_roots_unchanged": [
+      "/opt/classic-native-kernels-v1",
+      "/opt/t3-classic-structural-v2",
+      "/licenses"
+    ],
+    "workflow_not_inferred_from_active_tab": true
+  },
+  "eligible_for_official_submission": false,
+  "harness_changed": false,
+  "limitations": [
+    "The current v1 artifact is a failed Linux delivery. Saved preflight passes and partial positive samples do not replace complete source-after/control/STATE/raw-results/SUMMARY/serial/publication audits.",
+    "The final full auditor stops at the first invalid stage; independent partial failure artifact audit is required to inspect later raw worker evidence. Do not create missing harness aggregates or mark them passed.",
+    "v2 retains the exact22file roster and publication tag convention; its caller must provide actual v2 source/pin/head/24path readback and --expected-workflow t3-classic-expectations-delivery-v2.yml. These v1 hashes and old preflight do not bind a future v2 artifact.",
+    "COUNTED_AUDIT_PLAN_v1 contains historical v1 authority and expected counts, not an executed audit. Runtime authority comes from explicit command arguments and frozen/source actual correspondence.",
+    "The frozen harness has raw anonymous-pull/image-inspect streams but no separate publication per-command JSON returncode; full registry manifest/config/compressed-layer/uncompressed-diffID byte readback remains required.",
+    "No official score,232000EPS,first place,or new submission is certified."
+  ],
+  "market_executed": false,
+  "native_compiled": false,
+  "official_submission": false,
+  "participant_imported": false,
+  "remote_writes": false,
+  "schema": "t3-independent-final-saved-auditor-source-review-v2",
+  "source_changes": [
+    "saved_base_v1.py resource Privileged/CapAdd/mount-type requirements only; root separately patched exact diagnostic gate cap and explicit workflow binding"
+  ],
+  "source_files": {
+    "AUDIT_REPORT_SCHEMA_v1.json": {
+      "bytes": 3508,
+      "sha256": "2bfbda36ac8c617fdcb227eba593d9b7285e69384405ba3a156478f6d7565767"
+    },
+    "CONTROL_CASE_ROSTERS_v1.json": {
+      "bytes": 9108,
+      "sha256": "31b2d5e250746948c16e6577788528e227b1ceee4521ac5f94db0cdb7c660d9c"
+    },
+    "COUNTED_AUDIT_PLAN_v1.json": {
+      "bytes": 11103,
+      "sha256": "af590f872777c8b49a47af59e43a169e5be1dc0ef975388d148b3895bf6c57b6"
+    },
+    "audit_saved_delivery_v1.py": {
+      "bytes": 51680,
+      "sha256": "4df3066d3e5c5940466d12357bc667e338f4db67578483bbe8b652e1e30a1c23"
+    },
+    "graph_saved_v1.py": {
+      "bytes": 14085,
+      "sha256": "35d289bd9f521fc3bfb8a65d7d49a49787420fc10e4c7cd138b8e1d63c675f63"
+    },
+    "independent_resource_stage_preflight_v2.py": {
+      "bytes": 7848,
+      "sha256": "d2841f008f5a7950a3d25800593efde318e0363fe94768b2d0c5f0cf14c16892"
+    },
+    "preflight_saved_auditor_v1.py": {
+      "bytes": 8252,
+      "sha256": "c01033dcbf97429535328c306d9c7beb918df77b03b1992ea83d5395730851c8"
+    },
+    "read_public_registry_bytes_v1.py": {
+      "bytes": 10916,
+      "sha256": "1bbce2cb72fc2dcd0feee6e1221038a83e918e2812f50e217ca33c3f5cdf2dc5"
+    },
+    "saved_base_v1.py": {
+      "bytes": 34148,
+      "sha256": "c8d6dcd4c09b0b2dce8e53f8a3f9f89947d7eef0df71b768fa258a4befed3b3f"
+    }
+  },
+  "status": "SOURCE_AND_SAVED_PREFLIGHT_PASS_ACTUAL_DELIVERY_FAILED",
+  "target_achieved": false,
+  "threshold_232000_verified": false,
+  "verification": {
+    "resource_stage_preflight": {
+      "actual_failed_v1_saved_positive_samples": 4,
+      "bytes": 3215,
+      "full_failed_lifecycle_certified": false,
+      "path": "INDEPENDENT_RESOURCE_STAGE_PREFLIGHT_v2.json",
+      "resource_cap_stage_negative_cases_rejected": 7,
+      "sha256": "006f9c1ff7f35f895a7bf03533c20863efde52041e3fc381e5fb95129c05f2d6",
+      "sourcecopy_exact_argv_expression_cases": 2
+    },
+    "saved_preflight": {
+      "bytes": 40056,
+      "corrupt_graph_negatives_rejected": 10,
+      "corrupt_output_coverage_negatives_rejected": 2,
+      "new_delivery_full_audit_executed": false,
+      "old_public_output_shapes": 6,
+      "old_unique_Parquet_contents_decoded": 54,
+      "old_v7_full_graphs": 20,
+      "path": "INDEPENDENT_SAVED_PREFLIGHT_v10.json",
+      "sha256": "18c6d68d8a19716a84a1992f31269059af5d9db8488c6d4eb313aa93d8b81d75"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "t3-independent-saved-expectations-delivery-report-v1",
+  "type": "object",
+  "required": ["schema", "status", "all_passed", "all_execution_checks_passed", "publication_passed", "performance_usable", "eligible_for_official_submission", "official_score", "threshold_232000_verified", "participant_imported", "native_compiled", "market_executed", "completed_stages", "failures", "pending", "counts", "authority", "performance", "STATE_graphs", "limitations"],
+  "properties": {
+    "schema": {"const": "t3-independent-saved-expectations-delivery-report-v1"},
+    "status": {"enum": ["artifact_pending", "source_pins_pending", "auditing", "failed", "execution_pass_publication_pending", "passed"]},
+    "all_passed": {"type": "boolean"},
+    "all_execution_checks_passed": {"type": "boolean"},
+    "publication_passed": {"type": "boolean"},
+    "performance_usable": {"type": "boolean"},
+    "eligible_for_official_submission": {"type": "boolean"},
+    "official_score": {"type": ["number", "null"]},
+    "threshold_232000_verified": {"type": "boolean"},
+    "participant_imported": {"const": false},
+    "native_compiled": {"const": false},
+    "market_executed": {"const": false},
+    "completed_stages": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+    "failures": {"type": "array", "items": {"type": "object", "required": ["stage", "type", "message"]}},
+    "pending": {"type": "array", "items": {"type": "string"}},
+    "counts": {"type": "object", "additionalProperties": {"type": "integer", "minimum": 0}},
+    "authority": {"type": "object", "required": ["plan", "auditor", "artifact", "harness_source_pins", "remote_head", "candidate_source_receipt", "public_image"]},
+    "performance": {"type": "object", "required": ["ordinary_daemon_time_only", "measured_runs", "unit_medians", "five_unit_mean_of_median_EPS", "official_score_is_separate"], "properties": {"ordinary_daemon_time_only": {"const": true}, "measured_runs": {"type": "integer", "minimum": 0}, "unit_medians": {"type": "array"}, "five_unit_mean_of_median_EPS": {"type": ["number", "null"]}, "official_score_is_separate": {"const": true}}},
+    "STATE_graphs": {"type": "array", "items": {"type": "object", "required": ["path", "sha256", "bytes", "definitions", "references", "root_keys", "RandomState_full624_count", "global_MT19937_full624_state", "ledger_rows", "queue_rows", "message_counter", "order_counter", "parent_equal"]}},
+    "limitations": {"type": "array", "items": {"type": "string"}}
+  },
+  "allOf": [
+    {"if": {"properties": {"all_passed": {"const": true}}}, "then": {"properties": {"status": {"const": "passed"}, "all_execution_checks_passed": {"const": true}, "publication_passed": {"const": true}, "pending": {"maxItems": 0}, "failures": {"maxItems": 0}}}},
+    {"if": {"properties": {"status": {"enum": ["artifact_pending", "source_pins_pending", "auditing", "failed"]}}}, "then": {"properties": {"all_passed": {"const": false}, "eligible_for_official_submission": {"const": false}}}},
+    {"if": {"properties": {"eligible_for_official_submission": {"const": true}}}, "then": {"properties": {"all_passed": {"const": true}}}},
+    {"if": {"properties": {"status": {"const": "execution_pass_publication_pending"}}}, "then": {"properties": {"all_execution_checks_passed": {"const": true}, "publication_passed": {"const": false}, "all_passed": {"const": false}, "eligible_for_official_submission": {"const": false}}}}
+  ]
+}
