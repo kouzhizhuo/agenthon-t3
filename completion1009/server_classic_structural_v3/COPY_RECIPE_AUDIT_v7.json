@@ -1,0 +1,64 @@
+{
+  "all_passed": true,
+  "checks": [
+    {
+      "actual_sha256": "454f56acac47ddf37ae2a5f86211923a48bf7743371b91fac64c43ec519bad8e",
+      "path": "construction.py",
+      "specified_changes_only": true
+    },
+    {
+      "actual_sha256": "2184cc07851b017338c736bc60da4fca0ce903b43cf546d5825ac83a87829474",
+      "path": "controls_entry.py",
+      "specified_changes_only": true
+    },
+    {
+      "actual_sha256": "7ac2d34dedf351715485fffa9393d1d657a751fba67ad76a3e078f89478406c1",
+      "path": "diagnostic_entry.py",
+      "specified_changes_only": true
+    },
+    {
+      "actual_sha256": "3c6c096bf969870ec96034ad9ff327a25c6f690422ba0a37a65e34dd0a008a98",
+      "path": "production_entry.py",
+      "specified_changes_only": true
+    },
+    {
+      "actual_sha256": "6148e96e832375c66d9a2160324fe91f434a7ca9202fbc69baa3c563c5b76d46",
+      "path": "driver.py",
+      "specified_changes_only": true
+    },
+    {
+      "actual_sha256": "e69d40d29addff7a54210c490da4e97646d811dbc4a95464fb2c08936f2f872d",
+      "path": "worker.py",
+      "specified_changes_only": true
+    },
+    {
+      "actual_sha256": "6307d198d0bafb84047adebfaf3cd92cbbe4a687b05069cb47ac624af508d69a",
+      "path": "source_copy.py",
+      "specified_changes_only": true
+    },
+    {
+      "actual_sha256": "a00e885ac6bcaff3948a40ea3d6c0caeedbda4ee8fa25e06b2dc469e09fa9902",
+      "path": "prepare.py",
+      "specified_changes_only": true
+    },
+    {
+      "actual_sha256": "363801689d1a6e940d1f290a36ca5efff1fde7b740918d9ee7513a11435b6d04",
+      "path": "materialize.py",
+      "specified_changes_only": true
+    },
+    {
+      "actual_sha256": "49985808c342784633f31ac5e71a82e207570bfd7c470fd52ea1a592042cb30b",
+      "path": "verify_source.py",
+      "specified_changes_only": true
+    },
+    {
+      "actual_sha256": "d1361aa15dfdd93b47f1e8796451eba35e61c26e2e6025686ff87ef7353b3b08",
+      "path": "Dockerfile",
+      "specified_changes_only": true
+    }
+  ],
+  "market_executed": false,
+  "native_compiled": false,
+  "participant_imported": false,
+  "schema": "t3-independent-structural-v7-source-copy-audit-v1"
+}

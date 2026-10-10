@@ -1,0 +1,16 @@
+The independent structural v7 source package is ready for root source review. No simulator import, native compilation, market run, remote write or workflow dispatch was performed locally.
+
+- New local package: `completion1009/server_classic_structural_v3`.
+- Immutable price-index candidate: `classic_price_index_v3`,112-file source receipt SHA256 `385f8d28ab593abb45454e8c14c117cf75a4a6d89536c0a9cc18e6cd13b84a98`.
+- Root pending-source review SHA256 `ce4736e9f3994c977f9b3c2c4734fb47794486558d3ccb428a46dc1a440591ee`; frozen-receipt review SHA256 `5e1a7d6ff2ba40a8c5351a57645c65b292c62b80a731443cbf2f934a67741f6b`.
+- `SCREEN_PAYLOAD_v7.tar.xz` SHA256 `7ac7e33cd131536f393ba19500e210399a6499be8d8f8555a800750e1ab69d0b`,305ordinary source files plus manifest,306total members. Pure-source materialization has complete byte equality.
+- `SOURCE_PINS.json` binds18HERE files. Upload those18files plus SOURCE_PINS itself, retaining this directory path in the repository. Upload the same workflow bytes independently to `.github/workflows/t3-classic-structural-v3.yml`.
+- `verify_remote_source.py --head <40-character head> --out <fresh JSON>` reads every HERE pin plus SOURCE_PINS first, then the distinct active workflow. It never writes or dispatches. Root must inspect one-head readback before dispatch.
+
+The exact observed failure was run38041893263: the existing price deletion control deletes bids/asks, which sets the original missing-field sentinel, then the untimed `price_index_witness()` calls `len(missing)`. Parent and cold-expectations control containers passed; price controls exited before ordinary/diagnostic market runs. V3 replaces only the two diagnostic count expressions with exact built-in-list guarded length elseNone. All financial/runtime68/controls/pxi bytes equalv2. The six-child negative/full-state controls are not removed or loosened.
+
+V7 uses expectations unchanged plus v3 index. The only copied harness code changes are the candidate directory string, the host image tag, and the prepare path for a local exact parent lock. Internal `/opt/t3-classic-structural-v2`, evidence schemas and the independently pinned source-copy helper remain unchanged. All18rounds/two warmups/16measurements,324ordinary containers,30complete state/RNG/alias graphs,1368official gates, balanced order, original host3/control7 and official resource/lifecycle checks remain required. No candidate is promoted from a diagnostic source fix.
+
+`COPY_RECIPE_AUDIT_v7.json` compares all11copied code/Dockerfile sources with the exact frozenv6 transformation. `SOURCE_STAGE_VALIDATION_v7.json` records complete archive/materialization, native candidate source, unchanged host/control/runtime and source-only verification. Root should add its final harness review before upload; this handoff does not substitute for that review.
+
+The FIFO preflight draft remains separate at `server_classic_fifo_preflight_v1`. It contains the same unfixed witness boundary in its frozen b763candidate and is explicitly not dispatch-ready. Its known-source blocker is recorded in `KNOWN_FIFO_V1_DIAGNOSTIC_BLOCKER_SOURCE_ONLY.json`. After v7 results and independent successor repair, the FIFO workflow still needs actual stock startup sources, generated-C semantic review and real-main complete-state proof before performance or official promotion.

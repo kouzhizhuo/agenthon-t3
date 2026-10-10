@@ -1,0 +1,23 @@
+{
+  "18rounds_2warmups_16measurements_324runs_30graphs_1368gates_unchanged": true,
+  "GitHub_write_or_dispatch": false,
+  "all_passed": true,
+  "all_price_control_sources_exact_v2": true,
+  "candidate_price_index_files": 112,
+  "candidate_runtime68_exact_v2": true,
+  "control_sources_exact_parent": 7,
+  "distinct_active_and_HERE_workflow_readback_contract": true,
+  "expectations_source_and_review_unchanged": true,
+  "host_sources_exact_parent": 3,
+  "manifest_sources": 305,
+  "market_executed": false,
+  "materialized_all_bytes_equal": true,
+  "native_compiled": false,
+  "official_execution_resource_controls_unchanged": true,
+  "ordinary_payload_members": 306,
+  "participant_imported": false,
+  "root_harness_review_pending": true,
+  "schema": "t3-structural-v7-complete-source-stage-validation-v1",
+  "source_archive_sha256": "7ac7e33cd131536f393ba19500e210399a6499be8d8f8555a800750e1ab69d0b",
+  "source_copy_helper_v6_bytes_unchanged": true
+}
