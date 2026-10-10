@@ -1,0 +1,60 @@
+name: T3 deterministic direct order clone controls v3
+on:
+  workflow_dispatch:
+    inputs:
+      payload_sha256:
+        description: Exact reviewed SCREEN_PAYLOAD_v1.tar.xz SHA256
+        required: true
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: t3-serial-linux-screen-v2
+  cancel-in-progress: false
+jobs:
+  screen:
+    if: github.repository == 'kouzhizhuo/agenthon-t3'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+      NUMEXPR_NUM_THREADS: '1'
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONHASHSEED: '0'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Materialize the exact reviewed source archive
+        env:
+          EXPECTED_PAYLOAD: ${{ inputs.payload_sha256 }}
+        run: python3 completion1009/server_direct_order_clone_controls_v3/materialize.py --archive completion1009/server_direct_order_clone_controls_v3/SCREEN_PAYLOAD_v1.tar.xz --expected-sha256 "$EXPECTED_PAYLOAD" --out direct-order-clone-controls-v3-payload
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.13.7'
+      - name: Fetch the pinned official host evaluator and original references
+        run: |
+          mkdir -p direct-order-clone-controls-v3-evidence
+          python direct-order-clone-controls-v3-payload/host/fetch_evaluation.py --out "$PWD/direct-order-clone-controls-v3-evaluation" > direct-order-clone-controls-v3-evidence/fetch-process.log 2>&1
+      - name: Install the pinned host evaluator
+        run: |
+          set -euo pipefail
+          python -m pip install numpy==2.2.6 pandas==2.3.3 scipy==1.18.1 pyarrow==21.0.0 jsonschema==4.23.0 jsonschema-specifications==2025.9.1 attrs==26.1.0 referencing==0.37.0 rpds-py==2026.9.1 python-dateutil==2.9.0.post0 pytz==2026.5 six==1.17.0 tzdata==2026.5
+          python -m pip install --no-deps ./direct-order-clone-controls-v3-evaluation/toolkit/common ./direct-order-clone-controls-v3-evaluation/track3
+          python -m pip freeze > direct-order-clone-controls-v3-evidence/EVALUATOR_FREEZE.txt
+      - name: Construct native C/ELF and pinned schema with full partial evidence
+        run: python direct-order-clone-controls-v3-payload/control/controller.py build --evidence "$PWD/direct-order-clone-controls-v3-evidence"
+      - name: Run35clone controls2serializer6owner controls then60serial runs
+        run: python direct-order-clone-controls-v3-payload/control/controller.py screen --evidence "$PWD/direct-order-clone-controls-v3-evidence" --reference-root "$PWD/direct-order-clone-controls-v3-evaluation/references" --gate-kit "$PWD/direct-order-clone-controls-v3-evaluation/track3"
+      - name: Preserve actual source/schema, all production outputs and logs
+        if: always()
+        run: python direct-order-clone-controls-v3-payload/control/controller.py artifact --evidence "$PWD/direct-order-clone-controls-v3-evidence" --artifact "$PWD/direct-order-clone-controls-v3-artifact"
+      - name: Retain the paired Linux screen evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: t3-direct-order-clone-controls-v3-evidence
+          path: direct-order-clone-controls-v3-artifact
+          retention-days: 30
+          if-no-files-found: error
+          compression-level: 6
