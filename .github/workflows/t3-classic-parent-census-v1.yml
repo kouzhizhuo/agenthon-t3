@@ -1,0 +1,55 @@
+name: T3 exact published parent full95 admission census v1
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: t3-serial-linux-screen-v2
+  cancel-in-progress: false
+jobs:
+  census:
+    if: github.repository == 'kouzhizhuo/agenthon-t3'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 75
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+      NUMEXPR_NUM_THREADS: '1'
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONHASHSEED: '0'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify exact census source pins and source-only syntax
+        run: python3 completion1009/server_classic_structural_v2/census/verify_source.py
+      - name: Materialize unchanged frozen parent host validators
+        run: python3 completion1009/server_classic_native_kernels_v1/materialize.py --archive completion1009/server_classic_native_kernels_v1/SCREEN_PAYLOAD_v1.tar.xz --expected-sha256 e2c0d6167ce24854d164345a14a8bef31311b6c7d28708a4e0196e8fe0002f71 --out structural-census-parent-payload
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.13.7'
+      - name: Fetch pinned organizer evaluator and full71 references
+        run: |
+          mkdir -p structural-census-evidence
+          python structural-census-parent-payload/host/fetch_evaluation.py --out "$PWD/structural-census-evaluation" > structural-census-evidence/fetch-process.log 2>&1
+      - name: Install pinned host evaluator only
+        run: |
+          set -euo pipefail
+          python -m pip install numpy==2.2.6 pandas==2.3.3 scipy==1.18.1 pyarrow==21.0.0 jsonschema==4.23.0 jsonschema-specifications==2025.9.1 attrs==26.1.0 referencing==0.37.0 rpds-py==2026.9.1 python-dateutil==2.9.0.post0 pytz==2026.5 six==1.17.0 tzdata==2026.5
+          python -m pip install --no-deps ./structural-census-evaluation/toolkit/common ./structural-census-evaluation/track3
+          python -m pip freeze > structural-census-evidence/EVALUATOR_FREEZE.txt
+      - name: Build diagnostic wrapper on exact public digest and inspect all parent bytes
+        run: python completion1009/server_classic_structural_v2/census/driver.py build --payload structural-census-parent-payload --evidence structural-census-evidence --reference-root structural-census-evaluation/references --gate-kit structural-census-evaluation/track3
+      - name: Untimed full71 all95 actual admission census and complete original output gates
+        run: python completion1009/server_classic_structural_v2/census/driver.py census --payload structural-census-parent-payload --evidence structural-census-evidence --reference-root structural-census-evaluation/references --gate-kit structural-census-evaluation/track3
+      - name: Preserve exact source ELF all outputs witnesses and lifecycle logs
+        if: always()
+        run: python completion1009/server_classic_structural_v2/census/driver.py artifact --payload structural-census-parent-payload --evidence structural-census-evidence --reference-root structural-census-evaluation/references --gate-kit structural-census-evaluation/track3 --artifact structural-census-artifact
+      - name: Upload complete unrankable diagnostic evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: t3-classic-parent-census-v1-evidence
+          path: structural-census-artifact
+          retention-days: 30
+          if-no-files-found: error
+          compression-level: 6
