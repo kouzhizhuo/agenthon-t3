@@ -113,7 +113,7 @@ def main():
             if prior is None:os.environ.pop('DOCKER_CONFIG',None)
             else:os.environ['DOCKER_CONFIG']=prior
         if meta['id']!=image:raise ValueError('published image bytes differ')
-        refs=[r for r in meta['inspection']['RepoDigests'] if r.startswith('ghcr.io/kouzhizhuo/agenthon-t3@sha256:')]
+        refs=[r for r in meta['inspection']['RepoDigests'] if r.startswith('ghcr.io/kouzhizhuo/agenthon-t3-classic@sha256:')]
         if len(set(refs))!=1:raise ValueError('one immutable published digest required')
         write(args.evidence/'PUBLICATION.json',{'image':refs[0],'digest':refs[0].split('@')[1],'image_id':image,'anonymous_pull_passed':True,'tested_image_id_equal':True,'official_submission':False});return
     class Strict(ctl.StrictCommands.__bases__[0]):

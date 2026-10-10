@@ -6,7 +6,7 @@ COPY --from=tested_screen /opt/classic-native-kernels-v1/completion1009/candidat
 COPY delivery_entry.py /opt/classic-native-kernels-v1/delivery_entry.py
 COPY LICENSE-SUBMISSION /licenses/LICENSE-SUBMISSION
 RUN find /opt/classic-native-kernels-v1 -type d -exec chmod 755 {} + && find /opt/classic-native-kernels-v1 -type f -exec chmod 644 {} +
-LABEL qfbench2.interface_version="2.0" org.opencontainers.image.licenses="BSD-3-Clause" org.opencontainers.image.title="T3 exact classic native simulator"
+LABEL org.opencontainers.image.source="https://github.com/kouzhizhuo/agenthon-t3" qfbench2.interface_version="2.0" org.opencontainers.image.licenses="BSD-3-Clause" org.opencontainers.image.title="T3 exact classic native simulator"
 ENV PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 PYTHONHASHSEED=0
 USER 65534:65534
 WORKDIR /output

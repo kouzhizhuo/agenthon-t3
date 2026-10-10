@@ -7,22 +7,24 @@
     "Original gates and strict resource/capability/readonly/mount inspection mandatory",
     "Publish only passing final image then anonymous digest pull and image-id match",
     "Original hashes/Parquet rows and truthful daemon/sidecar timing retained",
-    "Actual installed public entry and license copied from final image and byte-checked"
+    "Actual installed public entry and license copied from final image and byte-checked",
+    "Source-associated new public package avoids existing package ACL rejection; unchanged runtime source and gates"
   ],
   "expected_gates": 364,
   "expected_runs": 91,
   "files": {
-    "Dockerfile": "0a091846f3be7ef8bb18078eb171f4b8c25292c286cc1e56ae9508ac40eab00d",
+    "Dockerfile": "684d82c2631a78eeac1e37e6bc467c682e3e7c77d19e14d8d6b9dee9fd384f9e",
     "LICENSE-SUBMISSION": "ba5946c568afd98a8a77437ae44f65cd65643453d07b8bf4428da1bc1471bf65",
     "README.md": "2f562500b8cec440ec9f120e6d178cbe487385d0c6d340632e103db70dda63d6",
     "delivery_entry.py": "f0f697185a65fcc5c77fec23adbd20c57859cc26e2ba6259e2bb6e2167a472f1",
-    "driver.py": "d1aa05d8fe81bbb06711abbdbdcdd8592a30d83c55a7d04833cb7f11458bbdad",
+    "driver.py": "8cc41ec9140d648eaca65f19c50a72d5b20a3a5ddb3f23f8dded37bf2fcfa173",
     "worker.py": "be9ff110815f29cad60298a2b5c984f6a56ae6cc7db14b188d6633a9a49717d7"
   },
   "native_compiled_locally": false,
   "official_submission": false,
   "parent_archive_sha256": "e2c0d6167ce24854d164345a14a8bef31311b6c7d28708a4e0196e8fe0002f71",
   "participant_executed_locally": false,
+  "publication_repository": "ghcr.io/kouzhizhuo/agenthon-t3-classic",
   "rankable": false,
   "source_parent": "classic_native_kernels_v1",
   "status": "PASS_SOURCE_ONLY"
