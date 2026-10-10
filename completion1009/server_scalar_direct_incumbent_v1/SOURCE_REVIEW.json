@@ -1,0 +1,36 @@
+{
+  "status": "PASS_SOURCE_ONLY_ROOT_REVIEW",
+  "files": [
+    {
+      "path": "driver.py",
+      "bytes": 11654,
+      "sha256": "acace11df5efe9d942b40eb719f9d1c344e2126b432dfbf32ecb4383f1694f78"
+    },
+    {
+      "path": "worker.py",
+      "bytes": 3586,
+      "sha256": "be9ff110815f29cad60298a2b5c984f6a56ae6cc7db14b188d6633a9a49717d7"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1084,
+      "sha256": "aeedcf978e7758487b03ff6a4d20dc4615ececa680941c8a212ed917a02e6cd8"
+    }
+  ],
+  "review_method": "root exact source/AST and existing controller API review; no external certification",
+  "checks": [
+    "two frozen archives remote fullbyte verified",
+    "original controller build/controls/run_one reused in fresh processes",
+    "no simulator edits",
+    "alternating two-arm order5rounds first excluded",
+    "all four unchanged official gates required50runs",
+    "same-round/repeat fullParquet bytes and stable sidecars",
+    "cross-version fullSTATE equality",
+    "actual daemon durations and all52serial cleanup",
+    "complete artifacts retained",
+    "no local participant execution"
+  ],
+  "unresolved_source_blockers": [],
+  "actual_execution": false,
+  "full71": false
+}
