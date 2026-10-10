@@ -16,6 +16,11 @@ HERE = Path(__file__).resolve().parent
 ARMS = ("incumbent", "scalar")
 UNITS = ("t3-s001-price-time-priority", "t3-as06-throughput-fast",
     "t3-mp01-stp-newest-baseline", "t3-ra01-fundamental-shock-mid", "t3-gbatch-hetero-mix")
+REPEATS = 18
+WARMUPS = 2
+MEASURED_REPEATS = REPEATS - WARMUPS
+EXPECTED_RUNS = REPEATS * len(UNITS) * len(ARMS)
+EXPECTED_GATES = EXPECTED_RUNS * 4
 VOLATILE = {"wall_clock_sec", "events_per_sec", "peak_memory_bytes", "gpu_seconds"}
 
 
@@ -47,11 +52,17 @@ def read(path):
     return json.loads(path.read_bytes())
 
 
+def timestamp_ns(value):
+    if not isinstance(value, str) or not value.endswith("Z"):
+        raise ValueError("UTC Docker timestamp required")
+    base, dot, fraction = value[:-1].partition(".")
+    if dot and (not fraction.isdigit() or len(fraction) > 9):
+        raise ValueError("invalid Docker nanosecond fraction")
+    return calendar.timegm(datetime.strptime(base, "%Y-%m-%dT%H:%M:%S").timetuple()) * 10**9 + (int(fraction.ljust(9, "0")) if dot else 0)
+
+
 def duration(state):
-    def ns(value):
-        base, fraction = value.rstrip("Z").split(".")
-        return calendar.timegm(datetime.strptime(base, "%Y-%m-%dT%H:%M:%S").timetuple()) * 10**9 + int(fraction.ljust(9, "0"))
-    return (ns(state["FinishedAt"]) - ns(state["StartedAt"])) / 10**9
+    return (timestamp_ns(state["FinishedAt"]) - timestamp_ns(state["StartedAt"])) / 10**9
 
 
 def pair(a, b):
@@ -144,7 +155,7 @@ def main():
             if a.read_bytes() != b.read_bytes():
                 raise ValueError("cross-version actual control state/output differs")
         first = {}
-        for repeat in range(5):
+        for repeat in range(REPEATS):
             for index, unit in enumerate(UNITS):
                 order = list(ARMS if (repeat + index) % 2 == 0 else reversed(ARMS))
                 group = {}
@@ -153,8 +164,8 @@ def main():
                     folder = args.evidence / arm / "direct" / str(repeat) / unit
                     row = worker(args, arm, "one", label, {"owner": owners[arm], "item": items[unit],
                         "folder": str(folder), "suffix": label})
-                    row.update(direct_arm=arm, repeat=repeat, warmup=repeat == 0,
-                        timing_included=repeat > 0, order=order)
+                    row.update(direct_arm=arm, repeat=repeat, warmup=repeat < WARMUPS,
+                        timing_included=repeat >= WARMUPS, order=order)
                     rows.append(row)
                     group[arm] = row
                     write(args.evidence / "raw-progress" / (label + ".json"), row)
@@ -190,7 +201,7 @@ def main():
                         raise ValueError("actual daemon timing differs")
                     samples.append({"repeat": row["repeat"], "N": row["actual_events"], "T": t,
                         "EPS": row["actual_events"] / t})
-            if len(samples) == 4:
+            if len(samples) == MEASURED_REPEATS:
                 values[arm] = {"samples": samples, "median_EPS": statistics.median(s["EPS"] for s in samples)}
         if len(values) == 2:
             rates.append({"unit": unit, "arms": values,
@@ -198,21 +209,22 @@ def main():
     means = {arm: statistics.mean(row["arms"][arm]["median_EPS"] for row in rates) for arm in ARMS} if len(rates) == 5 else None
     gate_count = sum(g["passed"] is True for row in rows for g in row["developer_verifier"]["verdict"]["gate_results"].values())
     executions = [value["execution"] for value in controls.values()] + [row["execution"] for row in rows]
-    intervals = sorted((ex["state"]["StartedAt"], ex["state"]["FinishedAt"], ex["name"]) for ex in executions)
+    intervals = sorted((timestamp_ns(ex["state"]["StartedAt"]), timestamp_ns(ex["state"]["FinishedAt"]), ex["name"]) for ex in executions)
     serial = len(intervals) == len({value[2] for value in intervals}) and all(a[1] < b[0] for a, b in zip(intervals, intervals[1:]))
     settled = all(ex["succeeded"] is True and ex["exit_code"] == 0 and ex["OOMKilled"] is False
         and ex["cleanup"]["settled"] is True and ex["cleanup"]["removed"] is True
         and ex["cleanup"]["final_absent"] is True and ex["cleanup"]["errors"] == [] for ex in executions)
-    write(args.evidence / "SUMMARY.json", {"all_passed": failure is None and len(rows) == 50 and len(pairs) == 50
-        and gate_count == 200 and unchanged and len(after) == 2 and serial and settled, "failure": failure, "ordinary_runs": len(rows),
+    write(args.evidence / "TIMING_SAMPLES.json", {"per_unit": rates, "repeat_policy": {"total": REPEATS, "warmup_discarded": WARMUPS}, "rankable": False})
+    write(args.evidence / "SUMMARY.json", {"all_passed": failure is None and len(rows) == EXPECTED_RUNS and len(pairs) == EXPECTED_RUNS
+        and gate_count == EXPECTED_GATES and unchanged and len(after) == 2 and serial and settled, "failure": failure, "ordinary_runs": len(rows),
         "measured_runs": sum(row["timing_included"] for row in rows), "official_gate_passes": gate_count,
         "controls_containers": len(controls), "source_and_references_unchanged": unchanged,
         "actual_market_containers": len(executions), "actual_serial_intervals": serial, "all_settled_removed": settled,
         "per_unit": rates, "five_unit_mean_of_median_EPS": means,
         "row_ledger_vs_classic_parent_ratio": None if means is None else means["scalar"] / means["incumbent"],
         "rankable": False, "full71": False, "official_submission": False,
-        "prescribed_fixture_repeat_shape_only": "5 runs with first warmup excluded; five selected units only"})
-    if failure or len(rows) != 50 or gate_count != 200 or not unchanged or not serial or not settled:
+        "development_repeat_policy": {"repeats": REPEATS, "warmups_discarded": WARMUPS, "valid_repeats": MEASURED_REPEATS, "balanced_AB_BA_per_unit": True, "reason": "longer user-requested diagnostic window; not official Final repeat policy"}})
+    if failure or len(rows) != EXPECTED_RUNS or gate_count != EXPECTED_GATES or not unchanged or not serial or not settled:
         raise ValueError("actual direct comparison failed")
 
 
