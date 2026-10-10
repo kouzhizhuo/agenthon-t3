@@ -1,0 +1,21 @@
+{
+  "status": "PASS_ROOT_INERT_SOURCE_ONLY",
+  "parent_run": 38022961890,
+  "frozen_archive_unchanged": "41c2a2f4bb7af0f086067ca3ba3cb7859a84217cd625d7a445b9b86f65c6d77d",
+  "changes": [
+    "cProfile around actual.main, full stats retained in diagnostic stdout",
+    "native arm only three paired units, same business AST/control/gates"
+  ],
+  "files": {
+    "entry.py": "1975f10361a83ab32e594263e635ffe682323d75016b41ceda39ad0c84ddb689",
+    "phase_entry.py": "b89bdb009ab92429ee30ba5a303331ef93d44693149036db8816ccdb0651b5ea",
+    "host.py": "0de26120d76b95897213031c7e2884a084c399a4d4d67169af0b6e486d7be672",
+    "Dockerfile": "608f9c8fe5d3fe2d265dc7acb531b14d54b1d3a5d4cf0a2d409aa24b35954b9a",
+    "README.md": "102866c57dc296c65440dcb2af3aece9f2e56a36bb8215c316492eb29cc596fd"
+  },
+  "ordinary_containers": 6,
+  "control_containers": 1,
+  "rankable": false,
+  "source_only": true,
+  "runtime_executed_locally": false
+}
