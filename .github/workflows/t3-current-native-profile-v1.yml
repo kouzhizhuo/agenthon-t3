@@ -35,7 +35,7 @@ jobs:
           from pathlib import Path
           import hashlib
           root=Path('completion1009/server_current_native_profile_diagnostic_v1')
-          pins={'entry.py': '1975f10361a83ab32e594263e635ffe682323d75016b41ceda39ad0c84ddb689', 'phase_entry.py': 'b89bdb009ab92429ee30ba5a303331ef93d44693149036db8816ccdb0651b5ea', 'host.py': '0de26120d76b95897213031c7e2884a084c399a4d4d67169af0b6e486d7be672', 'Dockerfile': '608f9c8fe5d3fe2d265dc7acb531b14d54b1d3a5d4cf0a2d409aa24b35954b9a', 'README.md': '102866c57dc296c65440dcb2af3aece9f2e56a36bb8215c316492eb29cc596fd', 'SOURCE_REVIEW.json': 'cc61ebfddf8a5d220717682504f0e6637526590becd63781f31d4d8d0b182edb', 'classic_finance_tools.py': '624b25b562be6c11bc98028641ac1910994c2789a0870787847a030f8fa17cf1', 'test_classic_finance_tools.py': '648edf436023ffe40d06854913375e2989b855e5028cff267a572b9f3064a4da'}
+          pins={'entry.py': '1975f10361a83ab32e594263e635ffe682323d75016b41ceda39ad0c84ddb689', 'phase_entry.py': 'b89bdb009ab92429ee30ba5a303331ef93d44693149036db8816ccdb0651b5ea', 'host.py': '0de26120d76b95897213031c7e2884a084c399a4d4d67169af0b6e486d7be672', 'Dockerfile': '608f9c8fe5d3fe2d265dc7acb531b14d54b1d3a5d4cf0a2d409aa24b35954b9a', 'README.md': '102866c57dc296c65440dcb2af3aece9f2e56a36bb8215c316492eb29cc596fd', 'SOURCE_REVIEW.json': 'cc61ebfddf8a5d220717682504f0e6637526590becd63781f31d4d8d0b182edb', 'classic_finance_tools.py': '209f4428e8638258600c8702ab54d42dd7b9a70433851a9dc3e8a355c20a6f24', 'test_classic_finance_tools.py': 'ed3a86f19462a855d0ba55a76d985e5e18980435e1a162f1eec1e6241edb5abc'}
           for name,digest in pins.items():
               assert hashlib.sha256((root/name).read_bytes()).hexdigest()==digest,name
           PY
