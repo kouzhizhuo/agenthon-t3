@@ -1,0 +1,65 @@
+{
+  "actual_new_cost_authority_bound": false,
+  "all_passed": false,
+  "all_source_checks_passed": true,
+  "authority_fields_are_synthetic_fixture_only": true,
+  "case_count": 9,
+  "cases": [
+    {
+      "expected_reject": false,
+      "name": "actual_source_stage_positive_inert_synthetic_authority",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "source_changed_review",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "source_changed_readonly",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "source_changed_driver",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "source_changed_Dockerfile",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "source_missing_readback_path",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "source_wrong_head",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "source_bool_attempt",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "source_unready_host",
+      "passed": true
+    }
+  ],
+  "native_compiled": false,
+  "only_exact_reviewed_source_bytes_copied_as_inert_data": true,
+  "participant_imported": false,
+  "process_or_Docker_or_network": false,
+  "ready_for_linux": false,
+  "schema": "t3-cost-saved-inert-source-stage-independent-cases-v1",
+  "simulation_executed": false,
+  "source": {
+    "bytes": 54790,
+    "sha256": "3ddeb37f19525f67bab35a3d486db98d8e5f96b8a10e51810c735f363c6c6ddc"
+  }
+}

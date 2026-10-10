@@ -1,0 +1,254 @@
+{
+  "Docker_executed": false,
+  "actual_cost_artifact_accepted": false,
+  "all_passed": false,
+  "all_source_checks_passed": true,
+  "case_count": 26,
+  "cases": [
+    {
+      "case": "exact_refs15_fullbytes",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "typed_bool_not_int",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "typed_nested_reject",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "fullzip_manifest_positive_inert",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "exact_path_mapping",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "path_outside",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "path_parent",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "path_relative",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "path_windows",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "zip_extracted_mutation",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "zip_duplicate_member",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "zip_unsafe_member",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "zip_metadata",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "zip_normalized",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "zip_parent_collision",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "zip_file_dir_collision",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "zip_dir_file_collision",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "zip_directory_under_file",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "zip_reverse_under_file",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "archive_compressed_cap",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "image_stage_callable_no_property_shadow",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "absentactualparentauthority_reject",
+      "expected_reject": true,
+      "passed": true
+    },
+    {
+      "case": "real_saved_full_graph_MT624_alias_compatibility",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "actual_saved_allrowgroups_saved_trace",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "actual_saved_allrowgroups_saved_ledger",
+      "expected_reject": false,
+      "passed": true
+    },
+    {
+      "case": "no_native_participant_driver_worker_or_process_imports",
+      "expected_reject": false,
+      "passed": true
+    }
+  ],
+  "failed_v1_reference_is_deliverypass": false,
+  "fully_decoded_parquets": {
+    "09a87aa12b27f0dee85322812e7fa85810e5a09f369aaa297c2a58a9a3ef3c53": {
+      "kind": "trace.parquet",
+      "nulls": {
+        "agent_id": 0,
+        "msg_type": 0,
+        "order_id": 0,
+        "price": 0,
+        "side": 0,
+        "size": 0,
+        "t_ns": 0
+      },
+      "rows": 604
+    },
+    "ee1a9e4f1951c5b5af6576436235383dc66dd8c5ee11063b990afe87e432942c": {
+      "kind": "message_trace.parquet",
+      "nulls": {
+        "causal_parent": 84,
+        "dst_id": 0,
+        "latency_ns": 0,
+        "message_id": 0,
+        "msg_type": 0,
+        "order_id": 248,
+        "seq": 0,
+        "src_id": 0,
+        "t_recv_ns": 0,
+        "t_send_ns": 84
+      },
+      "rows": 664
+    }
+  },
+  "independent_review": false,
+  "market_executed": false,
+  "native_compiled": false,
+  "network_used": false,
+  "participant_imported": false,
+  "process_launched": false,
+  "ready_for_linux": false,
+  "references": {
+    "bytes": 2780,
+    "sha256": "c7a6b9d3c07e61dd8fc4354d38dbf92aa904705e5afe29af2cc3e722647eba20"
+  },
+  "saved_graph": {
+    "bytes": 3715485,
+    "path": "/Volumes/Alan/Nips_com/t3/completion1009/server_classic_expectations_delivery_v1/result_v1/extracted/evidence/diagnostic/parent/t3-s001-price-time-priority/diagnostic-state/market-00/STATE.json",
+    "sha256": "4e746caf26a1194b66ce048ecd2dd8bc809bec0df00e0e48903f5bb5d2923d91"
+  },
+  "saved_graph_decoded": {
+    "RandomState_full624_count": 8,
+    "agents": 5,
+    "all_backward_aliases_valid": true,
+    "definitions": 4361,
+    "encoded_tag_counts": {
+      "NoneType": 1115,
+      "RandomState": 8,
+      "Side": 428,
+      "abides_fork.agents": 4,
+      "abides_fork.config": 1,
+      "abides_markets.agents.exchange_agent": 2,
+      "abides_markets.oracles.sparse_mean_reverting_oracle": 1,
+      "abides_markets.orders": 8,
+      "binding": 1,
+      "bool": 57,
+      "defaultdict": 1,
+      "dict": 615,
+      "float": 31,
+      "float64": 3,
+      "int": 11939,
+      "int64": 3462,
+      "list": 418,
+      "ndarray": 10,
+      "original_mapping": 5,
+      "ref": 620,
+      "set": 1,
+      "str": 6194,
+      "tuple": 3287
+    },
+    "global_MT19937_full624_state": true,
+    "ledger_rows": 664,
+    "message_counter": 662,
+    "order_counter": 120,
+    "queue_rows": 0,
+    "references": 620,
+    "root_keys": [
+      "agents",
+      "oracle",
+      "kernel_rng",
+      "latency",
+      "global_rng",
+      "ttl_messages",
+      "deliver_seq",
+      "deliver_seq_by_key",
+      "current_time",
+      "current_causal_uid",
+      "agent_current_times",
+      "agent_computation_delays",
+      "current_agent_additional_delay",
+      "ledger",
+      "queue",
+      "observer",
+      "summary_log",
+      "mean_result_by_agent_type",
+      "agent_count_by_type",
+      "custom_state",
+      "message_counter",
+      "order_counter"
+    ],
+    "summary_rows": 12
+  },
+  "schema": "t3-cost-saved-auditor-inert-source-preflight-v1",
+  "source": {
+    "bytes": 54790,
+    "sha256": "3ddeb37f19525f67bab35a3d486db98d8e5f96b8a10e51810c735f363c6c6ddc"
+  }
+}

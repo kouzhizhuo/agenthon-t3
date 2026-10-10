@@ -1,0 +1,128 @@
+{
+  "actual_artifact_wrapped": false,
+  "all_passed": false,
+  "all_source_checks_passed": true,
+  "audit_source": {
+    "bytes": 54790,
+    "sha256": "3ddeb37f19525f67bab35a3d486db98d8e5f96b8a10e51810c735f363c6c6ddc"
+  },
+  "case_count": 21,
+  "cases": [
+    {
+      "expected_reject": false,
+      "name": "typed_summary_positive",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "typed_summary_reject_ordinary",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "typed_summary_reject_warmup",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "typed_summary_reject_controls",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "typed_summary_reject_actual_diagnostic_containers",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "typed_summary_reject_actual_complete_STATE_graphs",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "typed_summary_reject_actual_official_gates",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "typed_summary_reject_actual_Parquet_copies",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "typed_summary_wrong_schema",
+      "passed": true
+    },
+    {
+      "expected_reject": false,
+      "name": "wrapper_fullcopy_emptydirs_sourcepins",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "wrapper_existing_output",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "wrapper_output_in_evidence",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "wrapper_carried_pin_mismatch",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "wrapper_wrong_workflow",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "wrapper_sourceharness_not_freeze",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "wrapper_symlink_evidence",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "wrapper_no_archive_appledouble",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "wrapper_no_colon_path",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "wrapper_finite_file_cap",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "wrapper_finite_tree_cap",
+      "passed": true
+    },
+    {
+      "expected_reject": true,
+      "name": "wrapper_finite_files_and_dirs_count",
+      "passed": true
+    }
+  ],
+  "native_compiled": false,
+  "participant_imported": false,
+  "process_or_Docker_or_network": false,
+  "ready_for_linux": false,
+  "schema": "t3-cost-saved-auditor-wrapper-independent-incremental-cases-v1",
+  "simulation_executed": false,
+  "synthetic_wrapper_called_only": true,
+  "wrapper_source": {
+    "bytes": 5931,
+    "sha256": "27fe5bb234cd5991e1a0c6c006779f987e72e48f7927d4b728514c62a1ebab63"
+  }
+}

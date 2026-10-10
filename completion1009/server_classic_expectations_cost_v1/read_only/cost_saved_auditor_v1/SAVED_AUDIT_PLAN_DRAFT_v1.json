@@ -1,0 +1,106 @@
+{
+  "actual_cost_artifact_available": false,
+  "actual_cost_identity": {
+    "head": null,
+    "image_id": null,
+    "run": null,
+    "sourcepins": null,
+    "workflow": null
+  },
+  "all_passed": false,
+  "artifact_contract_additions": {
+    "ARTIFACT.json": "t3-cost-complete-artifact-manifest-v1 full actual ordinaryfile hashes no missing outputs synthesize",
+    "RUN_BINDING.json": "t3-cost-actual-run-binding-v1 exact genuine runid/attempt/head/workflow/sourcepins",
+    "proposed_wrapper": "archive_wrapper_draft_v1.py onlycopy actual existing evidence; not invoked, reviewrequired beforeworkflowfreeze",
+    "reviewed_host_driver_mutated": false
+  },
+  "audit_stages": [
+    "completeZIP finiteCRC/path/type/collision/metadata",
+    "carriedsourcefreeze+sameheadworkflow/runbinding/source-review",
+    "frozenactualfullbaseAudit in-memory all8stages+registry",
+    "base/derivedsameconfigrootfsprefix/allC-object-ELF-license rootinventories",
+    "6neverstarted sourcecopies rawargv/identity/limit/lifecycle",
+    "24requests/rawresources/metadata/gates/inputroster/output/80Parquetfull decode",
+    "rawcostparser reparse observation/profile/ticks/state exact40GraphAudit",
+    "ordinary/baseSTATE/arm/mode fullbytes comparisons",
+    "27hostrawprocess label/command/pid/reap/cap pins",
+    "recomputedsummary counts/24serialdaemonintervals"
+  ],
+  "base_fixed": {
+    "head": "2164738b7508d9554cb6bd0a37ec46375cee8199",
+    "run": 38072276259,
+    "sourcepins": "b5cf9f49879ad5fe90b760831914e6e3e19f92186df2503c5b5ca2ff0bc34279"
+  },
+  "complete_saved_inputs": [
+    "cost completeZIP/hash/size/extracted",
+    "independentcost sourcepins/source/head/workflow/runid/attempt",
+    "explicit remote source/evidence/reference/gate namespaces",
+    "actualcompletebaseZIP/hash/size/extracted +basefrozen source/readback",
+    "fullanonymousregistry receipt+manifest/config/allcompressedlayers and diffIDs",
+    "frozen/baseline payload and original referenceplan"
+  ],
+  "dispatch_allowed": false,
+  "execution_prohibited": [
+    "participantimports",
+    "simulations",
+    "nativecompilation",
+    "Docker",
+    "subprocess",
+    "network",
+    "GitHubwrites"
+  ],
+  "expected_counts": {
+    "Parquet_copies": 80,
+    "actual_cost_market_containers": 24,
+    "complete_STATE_graphs": 40,
+    "controls": 0,
+    "host_processes": 27,
+    "neverstarted_sourcecopy_containers": 6,
+    "official_gates": 96,
+    "ordinary": 0,
+    "warmup": 0
+  },
+  "limitations": [
+    "Host process rawtimestamps absent in revieweddriver: hostseriality sourcebound only; actual24daemonserialintervals revalidated",
+    "Hostmetadata rawstreams/IMAGE saved but separate rawreturncodeJSON absent; doesnotfabricate absent authority",
+    "No diagnostic cost becomes ordinaryEPS or232000 inference"
+  ],
+  "official_submission_eligible": false,
+  "preflight": {
+    "all_source_checks_passed": true,
+    "inert_self_cases": 26,
+    "new_actual_artifact_accepted": false,
+    "saved_failed_v1_reference_is_delivery_pass": false
+  },
+  "ready_for_linux": false,
+  "remaining": [
+    "independent source review",
+    "actualpassingbasecompleteaudit/publicbinding",
+    "independentworkflow/wrapperfreeze sameheadreadback",
+    "actualcomplete newcostZIP and successfulsaved fullaudit"
+  ],
+  "schema": "t3-cost-saved-auditor-source-plan-v1",
+  "source_files": {
+    "REFERENCE_PINS_v1.json": {
+      "bytes": 2780,
+      "sha256": "c7a6b9d3c07e61dd8fc4354d38dbf92aa904705e5afe29af2cc3e722647eba20"
+    },
+    "SOURCE_PREFLIGHT_SAVED_COST_v1.json": {
+      "bytes": 6076,
+      "sha256": "7fd67826eaade15207a6fe78ddb11410073d11a60620cc687b763d41b82c1053"
+    },
+    "archive_wrapper_draft_v1.py": {
+      "bytes": 5931,
+      "sha256": "27fe5bb234cd5991e1a0c6c006779f987e72e48f7927d4b728514c62a1ebab63"
+    },
+    "audit_cost_saved_v1.py": {
+      "bytes": 54790,
+      "sha256": "3ddeb37f19525f67bab35a3d486db98d8e5f96b8a10e51810c735f363c6c6ddc"
+    },
+    "preflight_saved_cost_v1.py": {
+      "bytes": 8288,
+      "sha256": "668afb4ce9bc9491db5f2af99051c802777d50c881d9ffdf19785737f96568a9"
+    }
+  },
+  "source_only": true
+}

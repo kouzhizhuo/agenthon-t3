@@ -1,0 +1,95 @@
+{
+  "Docker_executed": false,
+  "actual_cost_artifact_accepted": false,
+  "actual_cost_artifact_available": false,
+  "actual_wrapper_called": false,
+  "all_passed": false,
+  "all_source_checks_passed": true,
+  "author_inert_case_count": 26,
+  "conclusion": "Exact saved-only auditor and bounded archive-wrapper drafts pass source-scope review. Cost Linux readiness and actual acceptance remain false until an independently frozen same-head workflow/source bundle, genuine actual base binding and complete new cost artifact pass the full saved replay.",
+  "independent_case_total": 77,
+  "independent_cases": {
+    "INDEPENDENT_SAVED_COST_CASES_DRAFT_v1.json": {
+      "bytes": 15343,
+      "case_count": 47,
+      "path": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/saved_auditor_draft_v1/INDEPENDENT_SAVED_COST_CASES_DRAFT_v1.json",
+      "sha256": "3e6c97764e541306b08679cdb3fbc69fa96c2bbd5412d2e411bba018afbddd91"
+    },
+    "INDEPENDENT_SAVED_COST_INCREMENTAL_CASES_v1.json": {
+      "bytes": 3053,
+      "case_count": 21,
+      "path": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/saved_auditor_draft_v1/INDEPENDENT_SAVED_COST_INCREMENTAL_CASES_v1.json",
+      "sha256": "c15fa477661c83d2320c5ccb90c0ae0b3245b9fe90bb02818c5d120dd28a452d"
+    },
+    "INDEPENDENT_SAVED_COST_SOURCE_STAGE_CASES_v1.json": {
+      "bytes": 1588,
+      "case_count": 9,
+      "path": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/saved_auditor_draft_v1/INDEPENDENT_SAVED_COST_SOURCE_STAGE_CASES_v1.json",
+      "sha256": "18d8a530200e430dd362756cabbef2106ba2d14e87f9843e1b722e20c4972cae"
+    }
+  },
+  "native_compiled": false,
+  "network_used": false,
+  "official_submission_eligible": false,
+  "participant_imported": false,
+  "process_launched": false,
+  "rankable": false,
+  "ready_for_linux": false,
+  "reviewed_repairs": [
+    "Method/attribute image shadow repaired and independently AST checked.",
+    "Archive normalized file/directory names and all ancestor collisions checked in either order; ordinary type, SUID/SGID, encrypted, unsafe colon/NUL/backslash, metadata and finite bounds refused.",
+    "Trusted host review, exact17 helper pins, executed reference parser/BaseAudit/GraphAudit hashes and independently supplied sourcepins bound. Same-head source/workflow and typed run binding are mandatory.",
+    "Entire external base audit runs all8stages in memory, including all original controls, C/object/ELF/licenses and actual anonymous compressed registry bytes/diffIDs; inherited image Config and one-copy RootFS plus before/after source inventory verified.",
+    "Original raw cost stdout/stderr reparsed; all profile/milestones/source-contract/state/flags and exact original cell STATE paths/host mappings compared. Full graph byte aliases/RNG/cache and trace/ledger outputs compared against actual successful base and arm/mode siblings.",
+    "Every saved comparison receipt is independently reconstructed after complete output/state comparison. Actual24 diagnostics/40graphs/80Parquet/96gates and integer0ordinary/warmup/controls summary fields are independently checked.",
+    "Exact24 worker +3 auxiliary saved process roster, source/executable routes, PID/type/reap/caps and actual24daemon serial intervals independently checked.",
+    "Wrapper snapshots bounded files+directories, preserves empty directories, hashes/copies complete exact bytes with per-file/whole-tree/member caps, checks source-harness against carried sourcefreeze, records run identity and never synthesizes missing results."
+  ],
+  "schema": "t3-independent-cost-saved-auditor-source-review-v1",
+  "scope_and_limits": [
+    "47 independent cases were bound to precedingd53554199; final3ddeb54790 changes only add typedsummary/schedule/request checks and were independently reviewed with21incremental cases plus9final-source-stage cases.",
+    "All fixtures are synthetic saved files or actual saved v2 decoder/source compatibility; no participant module, simulation, native compilation, Docker, network or child process was invoked.",
+    "Perturbed cost diagnostics cannot certify ordinaryEPS,232000 threshold or leaderboard rank.",
+    "Reviewed host driver receipts have no original start/finish timestamps; host seriality is source-bound while actual24daemon intervals are revalidated. New host chronology requires a separate reviewed driver revision.",
+    "Host image metadata has complete raw streams and IMAGE content but lacks separate per-command JSON returncodes; no unavailable evidence is invented.",
+    "Local metadata exclusions in saved inventories assume separately authenticated complete extraction. ZIP itself always refuses metadata members.",
+    "The proposed wrapper has not copied an actual cost artifact or run on Linux. Its sourcefreeze/workflow contract additions require independent final bundle freeze and actual remote readback.",
+    "Ordinary trusted saved directories and no hostile concurrent replacement remain caller assumptions; saved byte hashes and exact source authority are checked before use."
+  ],
+  "simulation_executed": false,
+  "source_blockers": [],
+  "source_files": {
+    "REFERENCE_PINS_v1.json": {
+      "bytes": 2780,
+      "path": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/saved_auditor_draft_v1/REFERENCE_PINS_v1.json",
+      "sha256": "c7a6b9d3c07e61dd8fc4354d38dbf92aa904705e5afe29af2cc3e722647eba20"
+    },
+    "SAVED_AUDIT_PLAN_DRAFT_v1.json": {
+      "bytes": 4110,
+      "path": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/saved_auditor_draft_v1/SAVED_AUDIT_PLAN_DRAFT_v1.json",
+      "sha256": "65f117ca4c7171709c616d59aefca231f518db99f640038db9402ccbf85ca9ec"
+    },
+    "SOURCE_PREFLIGHT_SAVED_COST_v1.json": {
+      "bytes": 6076,
+      "path": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/saved_auditor_draft_v1/SOURCE_PREFLIGHT_SAVED_COST_v1.json",
+      "sha256": "7fd67826eaade15207a6fe78ddb11410073d11a60620cc687b763d41b82c1053"
+    },
+    "archive_wrapper_draft_v1.py": {
+      "bytes": 5931,
+      "path": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/saved_auditor_draft_v1/archive_wrapper_draft_v1.py",
+      "sha256": "27fe5bb234cd5991e1a0c6c006779f987e72e48f7927d4b728514c62a1ebab63"
+    },
+    "audit_cost_saved_v1.py": {
+      "bytes": 54790,
+      "path": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/saved_auditor_draft_v1/audit_cost_saved_v1.py",
+      "sha256": "3ddeb37f19525f67bab35a3d486db98d8e5f96b8a10e51810c735f363c6c6ddc"
+    },
+    "preflight_saved_cost_v1.py": {
+      "bytes": 8288,
+      "path": "/Volumes/Alan/Nips_com/t3/completion1009/research/classic_expectations_cost_diagnostic_v1/saved_auditor_draft_v1/preflight_saved_cost_v1.py",
+      "sha256": "668afb4ce9bc9491db5f2af99051c802777d50c881d9ffdf19785737f96568a9"
+    }
+  },
+  "source_scope_passed": true,
+  "synthetic_wrapper_only_called": true
+}
