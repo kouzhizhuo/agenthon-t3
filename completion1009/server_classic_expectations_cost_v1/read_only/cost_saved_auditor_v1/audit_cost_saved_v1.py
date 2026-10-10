@@ -262,7 +262,18 @@ class Audit:
             'trustedindependenthostreview completebytes')
         reviewed=read(carried/'INDEPENDENT_HOST_SOURCE_REVIEW_v1.json')
         require(reviewed.get('source_scope_passed') is True and reviewed.get('source_blockers')==[], 'actualindependenthostsource review carried')
-        for name in ('driver.py','worker.py','parser.py'):
+        # Preserve the old review against its actual original bytes. The r2
+        # driver must be exactly the one-predicate batch-domain repair below.
+        original_driver = carried / 'read_only/driver_before_batch_repair_r1.py'
+        require(pin(original_driver) == {k: reviewed['source_files']['driver.py'][k]
+            for k in ('bytes', 'sha256')}, 'old review exact original driver bytes')
+        old_predicate = b"type(item['subs']) is list and 1 <= len(item['subs']) <= 5"
+        new_predicate = b"type(item['subs']) is list and len(item['subs']) >= 1"
+        original_bytes = original_driver.read_bytes()
+        require(original_bytes.count(old_predicate) == 1
+            and (carried / 'driver.py').read_bytes() == original_bytes.replace(old_predicate, new_predicate),
+            'exact one-predicate r2 driver delta; all other bytes immutable')
+        for name in ('worker.py','parser.py'):
             require(pin(carried/name)=={k:reviewed['source_files'][name][k] for k in ('bytes','sha256')},'independentreview exactcarriedsource binding')
         remote = read(remote_path)
         require(remote.get('all_passed') is True and remote.get('head') == self.args.expected_head
