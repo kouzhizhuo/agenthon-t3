@@ -1,0 +1,20 @@
+{
+  "files": {
+    "classic_build_expectations_v1": {
+      "bytes": 9161,
+      "sha256": "7218ecf981fa7002865e862df9047e71a5915020962bff945329da79bb81c75c"
+    },
+    "classic_native_kernels_v1": {
+      "bytes": 9090,
+      "sha256": "88050802ab13e44cf5d193bb127a3cd98d4c89929b494491338e42f387fa9c17"
+    }
+  },
+  "original_head": "800ca7372558bba0c2db7b2323d0d1aacbd71b3f",
+  "original_run": 38086763290,
+  "participant_compiled": false,
+  "participant_imported": false,
+  "raw_zip_sha256": "9208ceb61e38a08f90a2ebd386655a3fcc15325454625ff88b96141256be6a79",
+  "schema": "t3-real-saved-AST-source-fixtures-r3",
+  "source_only": true,
+  "source_root": "evidence/overlay-native-before/completion1009/candidates"
+}
