@@ -1,0 +1,65 @@
+name: T3 exact inline scheduler latency versus classic parent v3
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: t3-serial-linux-screen-v2
+  cancel-in-progress: false
+jobs:
+  screen:
+    if: github.repository == 'kouzhizhuo/agenthon-t3'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+      NUMEXPR_NUM_THREADS: '1'
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONHASHSEED: '0'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify reviewed direct wrapper bytes
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib
+          root=Path('completion1009/server_native_inline_exact_latency_v1')
+          pins={'driver.py': '312e4d30da67b8be1d929e91d3816769d35785a92c51fa1c4ecfefcb361afb49', 'worker.py': 'be9ff110815f29cad60298a2b5c984f6a56ae6cc7db14b188d6633a9a49717d7', 'README.md': 'a30323088c888b76a22a7a4e502e854439e4e3dac7dd5a9a3e4afad0eca92f94', 'SOURCE_REVIEW.json': '0c530fe0e898e3ee2658f0cc6eae8ba1661934526b2c704e0ace5fbaf11c8e22', 'materialize.py': '1becd43b5fa775327326616358a8e2d92f52dc3c3cfa996618e06ead8bd1e739', 'common.py': 'ebef60db2601a6a1dbeee619fb925f5764c33531d531be708037db7fc0e7caf1'}
+          for name,digest in pins.items():
+              assert hashlib.sha256((root/name).read_bytes()).hexdigest()==digest, name
+          PY
+      - name: Materialize both unchanged frozen archives
+        run: |
+          python3 completion1009/server_classic_native_kernels_v1/materialize.py --archive completion1009/server_classic_native_kernels_v1/SCREEN_PAYLOAD_v1.tar.xz --expected-sha256 e2c0d6167ce24854d164345a14a8bef31311b6c7d28708a4e0196e8fe0002f71 --out inline-direct-v3-incumbent-payload
+          python3 completion1009/server_native_inline_exact_latency_v1/materialize.py --archive completion1009/server_native_inline_exact_latency_v1/SCREEN_PAYLOAD_v3.tar.xz --expected-sha256 b0b6899807d07630ea5651e4fc4fd324e1be7445ad7d9a4d9075466c05abc3ca --out inline-direct-v3-scalar-payload
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.13.7'
+      - name: Fetch the pinned official host evaluator and original references
+        run: |
+          mkdir -p inline-direct-v3-evidence
+          python inline-direct-v3-scalar-payload/host/fetch_evaluation.py --out "$PWD/inline-direct-v3-evaluation" > inline-direct-v3-evidence/fetch-process.log 2>&1
+      - name: Install the pinned host evaluator
+        run: |
+          set -euo pipefail
+          python -m pip install numpy==2.2.6 pandas==2.3.3 scipy==1.18.1 pyarrow==21.0.0 jsonschema==4.23.0 jsonschema-specifications==2025.9.1 attrs==26.1.0 referencing==0.37.0 rpds-py==2026.9.1 python-dateutil==2.9.0.post0 pytz==2026.5 six==1.17.0 tzdata==2026.5
+          python -m pip install --no-deps ./inline-direct-v3-evaluation/toolkit/common ./inline-direct-v3-evaluation/track3
+          python -m pip freeze > inline-direct-v3-evidence/EVALUATOR_FREEZE.txt
+      - name: Build both original native images and inspect all sources
+        run: python completion1009/server_native_inline_exact_latency_v1/driver.py build --incumbent-payload inline-direct-v3-incumbent-payload --scalar-payload inline-direct-v3-scalar-payload --evidence inline-direct-v3-evidence --reference-root inline-direct-v3-evaluation/references --gate-kit inline-direct-v3-evaluation/track3
+      - name: Original complete controls then50alternating exact market runs
+        run: python completion1009/server_native_inline_exact_latency_v1/driver.py screen --incumbent-payload inline-direct-v3-incumbent-payload --scalar-payload inline-direct-v3-scalar-payload --evidence inline-direct-v3-evidence --reference-root inline-direct-v3-evaluation/references --gate-kit inline-direct-v3-evaluation/track3
+      - name: Preserve both frozen sources all outputs and actual logs
+        if: always()
+        run: python completion1009/server_native_inline_exact_latency_v1/driver.py artifact --incumbent-payload inline-direct-v3-incumbent-payload --scalar-payload inline-direct-v3-scalar-payload --evidence inline-direct-v3-evidence --reference-root inline-direct-v3-evaluation/references --gate-kit inline-direct-v3-evaluation/track3 --artifact inline-direct-v3-artifact
+      - name: Retain direct comparison evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: t3-native-inline-exact-latency-v3-evidence
+          path: inline-direct-v3-artifact
+          retention-days: 30
+          if-no-files-found: error
+          compression-level: 6
