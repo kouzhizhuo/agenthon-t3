@@ -75,6 +75,7 @@ jobs:
         with:
           name: t3-cost-diagnostic-hydration-v1-evidence
           path: t3-cost-artifact
+          include-hidden-files: true
           retention-days: 30
           if-no-files-found: error
           compression-level: 6
@@ -93,6 +94,7 @@ jobs:
         with:
           name: t3-cost-hydration-raw-partial-v1
           path: ${{ runner.temp }}/t3-cost-raw
+          include-hidden-files: true
           retention-days: 30
           if-no-files-found: warn
           compression-level: 6
@@ -107,6 +109,7 @@ jobs:
             ${{ runner.temp }}/t3-cost-evaluation
             ${{ runner.temp }}/t3-cost-hydration-logs
             t3-cost-evidence
+          include-hidden-files: true
           retention-days: 30
           if-no-files-found: warn
           compression-level: 6

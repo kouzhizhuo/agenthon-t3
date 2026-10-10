@@ -1,0 +1,53 @@
+{
+  "actual_failed_raw_fullstream_audit": {
+    "bytes": 1484,
+    "sha256": "80089fc2db6a756b229ed872501db578b29a9ff3a9d570fa44acb8c51aa4fd9a"
+  },
+  "actual_saved_data_test": {
+    "bytes": 1939,
+    "sha256": "6f05f96eb4c745881bb93b8f7db6278b4d661737e1cafcae68c63f0ee186c4d2"
+  },
+  "blockers": [],
+  "counter_repair": {
+    "bytes": 5473,
+    "sha256": "15af8e89e45c79acd3cbf550a9645c31055c160762620cfc4be1bd7cf4da8f15"
+  },
+  "dispositions": [
+    {
+      "decision": "actual immutable plan has reference_frame_count underscore, verified actualsaved12cases; no key change",
+      "topic": "reference-frame_count typo in request"
+    },
+    {
+      "decision": "accepted allthree uploads includehidden true; complete publicsource no credentials saved; cannot infer Linuxarchivecomplete until realZIPaudit",
+      "topic": "all upload hiddenfiles"
+    },
+    {
+      "decision": "preserve same canonical active workflow from originalremote; futurecommit readback must compare distinct active .github path and HEREcopy",
+      "topic": "actualworkflow vs HERE draft filename"
+    },
+    {
+      "decision": "no other Python consumer of EXACT_REFERENCE_HASHES or schema; rawwrapper binds bytes only; fulloldruntime unchanged",
+      "topic": "extra count fields"
+    }
+  ],
+  "external_source_review": {
+    "bytes": 4533,
+    "sha256": "e6158e13c8343bac0eca4750f3d4f4b24871ed781ebd8b94f6c01d4d59422b44"
+  },
+  "limitations": [
+    "Additive repair source scope only; no repaired Linux run yet",
+    "Nested and wholefreeze plus allsameheadremote readback still required",
+    "Whole source reviews cumulative original105+repairdelta; not new independent106-file review"
+  ],
+  "market_executed": false,
+  "native_compiled": false,
+  "original_head": "a4f7bb78ede559744420b66c5eefb88d6958fcc0",
+  "original_linux_run": 38080428190,
+  "runtime_changed": false,
+  "schema": "t3-cost-repair-source-disposition-v1",
+  "source_scope_passed": true,
+  "workflow_repair": {
+    "bytes": 7644,
+    "sha256": "49218f45cb4d38f8ff88370930acda0dac7afa0edb57a0fcd3e63628b2d325fe"
+  }
+}

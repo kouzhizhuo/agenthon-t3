@@ -42,6 +42,10 @@
       "bytes": 462,
       "sha256": "d688ad8efbe4af1677c11975bd60de67bcc1d03e6032f159161f1682a9fc970e"
     },
+    "REPAIR_SOURCE_DISPOSITION_v1.json": {
+      "bytes": 2073,
+      "sha256": "2aa017c93396d89206fc164c0ec77e460dd36b0527fbae78f08e2cb241bed366"
+    },
     "SOURCE_PREFLIGHT_HYDRATION_v1.json": {
       "bytes": 5573,
       "sha256": "76c866338444daaa8e6e43e4ba2a1de6e593fd324a3bf2c8d0e78e8b8925c3ae"
@@ -99,24 +103,28 @@
       "sha256": "46c14dd6782511b05ca535e5af8d87b95858bbde1fe771fa7490676e1ae8aa2e"
     },
     "t3-cost-diagnostic-hydration-draft-v1.yml": {
-      "bytes": 7533,
-      "sha256": "0f7bbaf5ca04b9eeb0ba7506a327efcdacab4dc1bd3096a91c1248121d93e525"
+      "bytes": 7644,
+      "sha256": "49218f45cb4d38f8ff88370930acda0dac7afa0edb57a0fcd3e63628b2d325fe"
     },
     "validate_evaluator_hydration_v1.py": {
       "bytes": 5208,
       "sha256": "29e037fb0a691f51de9d49de942266c682b2db087ae60e05c7f1ddc9e3755772"
     },
     "validate_reference_hydration_draft_v1.py": {
-      "bytes": 3804,
-      "sha256": "33399b411019765373e0c15fd67d59f98b88e4abf9d6d5eabf11c3d1587caf21"
+      "bytes": 5473,
+      "sha256": "15af8e89e45c79acd3cbf550a9645c31055c160762620cfc4be1bd7cf4da8f15"
     }
   },
   "observed_at": "2026-10-10T18:52:51.265395+00:00",
   "ready_for_linux": true,
+  "repair_source_review": {
+    "bytes": 2073,
+    "sha256": "2aa017c93396d89206fc164c0ec77e460dd36b0527fbae78f08e2cb241bed366"
+  },
   "reviewed": true,
   "runtime_changed": false,
   "schema": "t3-cost-hydration-source-freeze-v1",
-  "scope": "saved-data hydration and activation delta reviewed; actual dispatch still requires wholefreeze and complete sameheadreadback",
+  "scope": "Cumulative reviewed original hydration+activation and actual failed-run source delta; repairedLinux not yetexecuted",
   "source_review": {
     "bytes": 6253,
     "path": "INDEPENDENT_HYDRATION_SOURCE_REVIEW_v1.json",

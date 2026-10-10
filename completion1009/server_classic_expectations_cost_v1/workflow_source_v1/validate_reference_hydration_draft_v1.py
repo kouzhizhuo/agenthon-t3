@@ -33,10 +33,31 @@ def validate(root, original):
     entries = list(root.iterdir())
     require(len(units) == 71 and all(path.is_dir() and not path.is_symlink() for path in entries)
         and {path.name for path in entries} == set(units), 'only the71 ordinary official unit directories at reference root')
-    scenarios, references, rows = 0, 0, []
+    scenarios, references, inputs, cards, batches, rows = 0, 0, 0, 0, 0, []
     for unit, item in units.items():
         folder = root / unit
         require(not folder.is_symlink(), 'ordinary official unit directory')
+        if item['shape'] == 'single':
+            scenario_files = {'scenario.json'}
+            expected_inputs = scenario_files | {'card.toml'}
+            require(item['subs'] == [], 'single unit has no batch sub roster')
+        else:
+            require(item['shape'] == 'batch' and item['subs'], 'explicit nonempty batch roster')
+            scenario_files = {sub['scenario_file'] for sub in item['subs']}
+            require(len(scenario_files) == len(item['subs']), 'unique actual batch scenario files')
+            expected_inputs = scenario_files | {'card.toml', 'batch.json'}
+        original_scenarios = set()
+        for name in item['scenario_paths']:
+            path = PurePosixPath(name)
+            marker = '/' + unit + '/'
+            require(path.is_absolute() and '..' not in path.parts
+                and path.as_posix() == name and name.count(marker) == 1,
+                'safe original unit-specific scenario path')
+            original_scenarios.add(name.split(marker, 1)[1])
+        require(set(item['input_sha256']) == expected_inputs
+            and len(item['scenario_paths']) == len(scenario_files)
+            and original_scenarios == scenario_files,
+            'exact input file roles and original market roster')
         for group in ('input_sha256', 'reference_sha256'):
             for relative, digest in item[group].items():
                 path = PurePosixPath(relative)
@@ -47,10 +68,17 @@ def validate(root, original):
                 if group == 'reference_sha256':
                     references += 1
                     with target.open('rb') as source:require(source.read(4) == b'PAR1', 'real LFS Parquet byte header')
-                else:scenarios += 1
+                else:
+                    inputs += 1
+                    scenarios += int(relative in scenario_files)
+                    cards += int(relative == 'card.toml')
+                    batches += int(relative == 'batch.json')
                 rows.append({'unit': unit, 'group': group, 'path': relative, **actual})
-    require(scenarios == 95 and references == 190, 'exact95market190reference hashes')
+    require(inputs == 172 and cards == 71 and batches == 6
+        and scenarios == 95 and references == 190,
+        'exact172inputs71cards6batchmanifests95markets190references')
     return {'schema': 't3-cost-exact-reference-hydration-v1', 'original_plan': PLAN_PIN, 'unit_count': 71,
+        'input_file_count': inputs, 'card_count': cards, 'batch_manifest_count': batches,
         'scenario_count': scenarios, 'reference_count': references, 'files': rows,
         'participant_imported': False, 'native_compiled': False, 'market_executed': False, 'reference_mounted_into_runtime': False}
 
