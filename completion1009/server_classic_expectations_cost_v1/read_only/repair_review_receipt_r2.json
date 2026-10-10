@@ -1,0 +1,53 @@
+{
+  "credentials_saved_or_printed": false,
+  "finish_reason": "stop",
+  "participant_imported": false,
+  "request_sha256": "933a5a96d9a1de8bef71b290683d8b3744c5f0abf4d789dc2391ffa3716db576",
+  "requested_model": "anthropic/claude-opus-5.5",
+  "returned_model": "anthropic/claude-opus-5.5",
+  "review_sha256": "9c72dea56eb44248fbd7c18d5dd158b4b7e3ebe627a61b51d10eb8f06e9434af",
+  "reviewed_sources": {
+    "driver.py": {
+      "bytes": 46277,
+      "sha256": "53fce86bb993522e0e5f0c2c0d5a5501e96458a44243e68745a09c88b14d0d40"
+    },
+    "overlay/cost_entry_draft_v1.py": {
+      "bytes": 29930,
+      "sha256": "b43209c991fcb6d7652f6d560b873f3a4fb9e76d92277f0586ada036f2e95af2"
+    },
+    "parser.py": {
+      "bytes": 29793,
+      "sha256": "18e8b63b5c80dc95331d64b8564be573777baeae1c10449a86cd2c5c06508db8"
+    },
+    "read_only/cost_saved_auditor_v1/audit_cost_saved_v1.py": {
+      "bytes": 55649,
+      "sha256": "e5538f9657fa53a5e8179e49de7343038c3507d1ee12f8599cc9e03db5b857f2"
+    },
+    "source_preflight_batch_r2.py": {
+      "bytes": 7386,
+      "sha256": "325aaceb6fd1caecedcb3fe4be40f0f98551655f9715e3b7d684c6e889ab273e"
+    },
+    "worker.py": {
+      "bytes": 16673,
+      "sha256": "afc32edf02d2c0a61f72fbc6de9edc3f43665becdf4ade78d910a7f7e934842e"
+    }
+  },
+  "simulation_executed": false,
+  "status": "completed",
+  "usage": {
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "completion_tokens": 4796,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "text_tokens": 4796
+    },
+    "prompt_tokens": 8923,
+    "prompt_tokens_details": {
+      "cache_creation_tokens": 0,
+      "cached_tokens": 0,
+      "text_tokens": 8923
+    },
+    "total_tokens": 13719
+  }
+}
