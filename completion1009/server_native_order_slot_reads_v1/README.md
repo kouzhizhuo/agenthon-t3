@@ -1,0 +1,1 @@
+Stable order-slot field reads are compared with the retained classic parent under original exact Linux controls. Nine new lifecycle checks precede50alternating full market runs across five diagnostic units. Full71 target performance remains unproven.
