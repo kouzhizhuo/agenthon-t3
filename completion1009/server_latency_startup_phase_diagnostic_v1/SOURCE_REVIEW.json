@@ -1,0 +1,46 @@
+{
+  "diagnostic_actual_source_copy_checked": true,
+  "files": [
+    {
+      "bytes": 240,
+      "path": "Dockerfile",
+      "sha256": "608f9c8fe5d3fe2d265dc7acb531b14d54b1d3a5d4cf0a2d409aa24b35954b9a"
+    },
+    {
+      "bytes": 1153,
+      "path": "PHASE_SOURCE_REVIEW.json",
+      "sha256": "fd3d881e9d83d508954112e03e86eccfdf2aad0ae6224d8ea3b99b06a83197bf"
+    },
+    {
+      "bytes": 845,
+      "path": "README.md",
+      "sha256": "d31ddfb2e0a98ad826844bb50233d91e5711437644cc8f6a1a5b4a84b0668b6f"
+    },
+    {
+      "bytes": 1386,
+      "path": "entry.py",
+      "sha256": "7bc7ac500a68e7ea0d15204ad0c4113c1faef5cbaf45628abdba5f874af58927"
+    },
+    {
+      "bytes": 9926,
+      "path": "host.py",
+      "sha256": "d7791ad23543f21f686ff960d6206e0293efd809d52d0af4e09925256dbe119d"
+    },
+    {
+      "bytes": 6942,
+      "path": "phase_entry.py",
+      "sha256": "6c0343815862a29444c5be0f7bde2137435d07f4d47d34fb02df23f923ba0ba6"
+    },
+    {
+      "bytes": 3442,
+      "path": "workflow.yml",
+      "sha256": "da52bf80460837f3c3e9152b381cc67136bf2cc6cb7cf970896bf026bc98ef75"
+    }
+  ],
+  "no_speed_claim": true,
+  "participant_function_called": false,
+  "rankable": false,
+  "same_build_controls_required": true,
+  "status": "PASS_SOURCE_ONLY",
+  "unchanged_frozen_candidate": true
+}
