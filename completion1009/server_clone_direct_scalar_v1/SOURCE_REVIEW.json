@@ -1,0 +1,27 @@
+{
+  "status": "PASS_ROOT_SOURCE_ONLY",
+  "experiment": "direct_clone_v3_vs_exact_scalar_v2_1",
+  "arm_identity": {
+    "incumbent": "exact_scalar_v2_1",
+    "scalar": "direct_order_clone_v3"
+  },
+  "review_method": "root AST/source comparison of unchanged controller APIs, no external certification",
+  "files": {
+    "driver.py": "552282ab8be8fec1900986da3944e3544521b2595c8f193d8bb205b6a9cdf322",
+    "worker.py": "be9ff110815f29cad60298a2b5c984f6a56ae6cc7db14b188d6633a9a49717d7",
+    "README.md": "ee37efef59618645736ae4123a4a72f869b20c1d87ef3e1e2945e21af3d4dd55"
+  },
+  "parent_driver_sha256": "acace11df5efe9d942b40eb719f9d1c344e2126b432dfbf32ecb4383f1694f78",
+  "only_driver_change": "reported ratio name; algorithm and arm ordering unchanged",
+  "worker_byte_equal": true,
+  "archives": {
+    "incumbent": "b073a6bbf405e8d97545aa9edd7ae2431b3ad731834cc9c86862647d570a187c",
+    "scalar": "41c2a2f4bb7af0f086067ca3ba3cb7859a84217cd625d7a445b9b86f65c6d77d"
+  },
+  "new_clone_controls_required": 35,
+  "runtime_executed_locally": false,
+  "planned_market_containers": 52,
+  "planned_gate_passes": 200,
+  "full71": false,
+  "official_submission": false
+}
