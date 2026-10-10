@@ -1,0 +1,65 @@
+name: T3 direct order clone versus exact scalar parent v1
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: t3-serial-linux-screen-v2
+  cancel-in-progress: false
+jobs:
+  screen:
+    if: github.repository == 'kouzhizhuo/agenthon-t3'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+      NUMEXPR_NUM_THREADS: '1'
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONHASHSEED: '0'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify reviewed direct wrapper bytes
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib
+          root=Path('completion1009/server_clone_direct_scalar_v1')
+          pins={'driver.py': '552282ab8be8fec1900986da3944e3544521b2595c8f193d8bb205b6a9cdf322', 'worker.py': 'be9ff110815f29cad60298a2b5c984f6a56ae6cc7db14b188d6633a9a49717d7', 'README.md': 'ee37efef59618645736ae4123a4a72f869b20c1d87ef3e1e2945e21af3d4dd55', 'SOURCE_REVIEW.json': 'ad9783384864a7d5db750c59efdd626a53080b9d1fc442f87d24010983df91b9'}
+          for name,digest in pins.items():
+              assert hashlib.sha256((root/name).read_bytes()).hexdigest()==digest, name
+          PY
+      - name: Materialize both unchanged frozen archives
+        run: |
+          python3 completion1009/server_cold_native_projection_scalar_reads_controls_v2_1/materialize.py --archive completion1009/server_cold_native_projection_scalar_reads_controls_v2_1/SCREEN_PAYLOAD_v1.tar.xz --expected-sha256 b073a6bbf405e8d97545aa9edd7ae2431b3ad731834cc9c86862647d570a187c --out clone-direct-v1-incumbent-payload
+          python3 completion1009/server_direct_order_clone_controls_v3/materialize.py --archive completion1009/server_direct_order_clone_controls_v3/SCREEN_PAYLOAD_v1.tar.xz --expected-sha256 41c2a2f4bb7af0f086067ca3ba3cb7859a84217cd625d7a445b9b86f65c6d77d --out clone-direct-v1-scalar-payload
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.13.7'
+      - name: Fetch the pinned official host evaluator and original references
+        run: |
+          mkdir -p clone-direct-v1-evidence
+          python clone-direct-v1-scalar-payload/host/fetch_evaluation.py --out "$PWD/clone-direct-v1-evaluation" > clone-direct-v1-evidence/fetch-process.log 2>&1
+      - name: Install the pinned host evaluator
+        run: |
+          set -euo pipefail
+          python -m pip install numpy==2.2.6 pandas==2.3.3 scipy==1.18.1 pyarrow==21.0.0 jsonschema==4.23.0 jsonschema-specifications==2025.9.1 attrs==26.1.0 referencing==0.37.0 rpds-py==2026.9.1 python-dateutil==2.9.0.post0 pytz==2026.5 six==1.17.0 tzdata==2026.5
+          python -m pip install --no-deps ./clone-direct-v1-evaluation/toolkit/common ./clone-direct-v1-evaluation/track3
+          python -m pip freeze > clone-direct-v1-evidence/EVALUATOR_FREEZE.txt
+      - name: Build both original native images and inspect all sources
+        run: python completion1009/server_clone_direct_scalar_v1/driver.py build --incumbent-payload clone-direct-v1-incumbent-payload --scalar-payload clone-direct-v1-scalar-payload --evidence clone-direct-v1-evidence --reference-root clone-direct-v1-evaluation/references --gate-kit clone-direct-v1-evaluation/track3
+      - name: Original complete controls then50alternating exact market runs
+        run: python completion1009/server_clone_direct_scalar_v1/driver.py screen --incumbent-payload clone-direct-v1-incumbent-payload --scalar-payload clone-direct-v1-scalar-payload --evidence clone-direct-v1-evidence --reference-root clone-direct-v1-evaluation/references --gate-kit clone-direct-v1-evaluation/track3
+      - name: Preserve both frozen sources all outputs and actual logs
+        if: always()
+        run: python completion1009/server_clone_direct_scalar_v1/driver.py artifact --incumbent-payload clone-direct-v1-incumbent-payload --scalar-payload clone-direct-v1-scalar-payload --evidence clone-direct-v1-evidence --reference-root clone-direct-v1-evaluation/references --gate-kit clone-direct-v1-evaluation/track3 --artifact clone-direct-v1-artifact
+      - name: Retain direct comparison evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: t3-clone-direct-scalar-v1-evidence
+          path: clone-direct-v1-artifact
+          retention-days: 30
+          if-no-files-found: error
+          compression-level: 6
